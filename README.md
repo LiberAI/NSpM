@@ -11,6 +11,8 @@ git lfs checkout
 git submodule update --init
 ```
 
+Install TensorFlow (e.g., `pip install tensorflow`).
+
 ### Data preparation
 
 #### Generation 
@@ -39,17 +41,17 @@ Alternatively, you can extract pre-generated data from `data/monument_300.zip` a
 Launch `train.sh` to train the model. The first parameter is the prefix of the data directory. The second parameter is the number of training epochs.
 
 ```bash
-sh train.sh data/monument_600 120000
+sh train.sh data/monument_300 120000
 ```
 
-This command will create a model directory called `data/monument_600_model`.
+This command will create a model directory called `data/monument_300_model`.
 
 ### Inference
 
 Predict the SPARQL sentence for a given question with a given model.
 
 ```bash
-sh ask.sh data/monument_600_model "where is edward vii monument located in?"
+sh ask.sh data/monument_300_model "where is edward vii monument located in?"
 ```
 
 ## Paper
