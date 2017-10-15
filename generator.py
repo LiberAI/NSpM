@@ -20,7 +20,7 @@ sys.setdefaultencoding("utf-8")
 ENDPOINT = "http://dbpedia.org/sparql"
 GRAPH = "http://dbpedia.org"
 
-TARGET_CLASS = "dbo:Astronaut"
+TARGET_CLASS = "dbo:Monument"
 
 EXAMPLES_PER_TEMPLATE = 300
 
@@ -118,13 +118,15 @@ def replacements(s):
 # ================================================================
 
 annot = list()
-with open('annotations_astronaut.tsv') as f:    
+with open('data/annotations_monument.tsv') as f:    
     for line in f:
         annot.append(tuple(line[:-1].split('\t')))
 
 cache = dict()
-with open('data_astronaut_300.en', 'w') as f1:
-    with open('data_astronaut_300.sparql', 'w') as f2:
+if not os.path.exists('data/monument_300/'):
+    os.makedirs('data/monument_300/')
+with open('data/monument_300/data_300.en', 'w') as f1:
+    with open('data/monument_300/data_300.sparql', 'w') as f2:
         for a in annot:
             if a[2] in cache:
                 results = cache[a[2]]

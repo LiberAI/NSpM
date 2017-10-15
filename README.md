@@ -3,20 +3,36 @@ A LSTM-based Machine Translation Approach for Question Answering.
 
 ## Code
 
-Fetch all files and submodules.
+Install `git-lfs` in your machine, then fetch all files and submodules.
 
 ```bash
+git lfs fetch
 git lfs checkout
-git submodule update
+git submodule update --init
 ```
 
-### Data generation
+### Data preparation
 
-The template used in the paper can be found in file `annotations.tsv`. To generate the training data, launch the following command.
+#### Generation 
+
+The template used in the paper can be found in a file such as `annotations_monument.tsv`. To generate the training data, launch the following command.
 
 ```bash
 python generator.py
 ```
+
+Build the vocabularies for the two languages (i.e., English and SPARQL) with:
+
+```bash
+python build_vocab.py data/monument_300/data_300.en > data/monument_300/vocab.en
+python build_vocab.py data/monument_300/data_300.sparql > data/monument_300/vocab.sparql
+```
+
+Split the `data_.*` files into `train_.*`, `dev_.*`, and `test_.*` (usually 80-10-10%).
+
+#### Pre-generated data
+
+Alternatively, you can extract pre-generated data from `data/monument_300.zip` and `data/monument_600.zip` in folders having the respective names.
 
 ### Training
 

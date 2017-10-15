@@ -1,0 +1,39 @@
+is <A> a <B>	ask where { <A> rdf:type <B> }	select distinct(?x) ?y where { ?x a C . ?x a ?y }
+what is <A>	select ?a where { <A> dbo:abstract ?a }	select distinct(?x) where { ?x a C . ?x dbo:abstract [] }
+<A>	select ?a where { <A> dbo:abstract ?a }	select distinct(?x) where { ?x a C . ?x dbo:abstract [] }
+where is <A>	select ?a where { <A> dbo:location ?a }	select distinct(?x) where { ?x a C . ?x dbo:location [] }
+where can one find <A>	select ?a where { <A> dbo:location ?a }	select distinct(?x) where { ?x a C . ?x dbo:location [] }
+location of <A>	select ?a where { <A> dbo:location ?a }	select distinct(?x) where { ?x a C . ?x dbo:location [] }
+give me the location of <A>	select ?a where { <A> dbo:location ?a }	select distinct(?x) where { ?x a C . ?x dbo:location [] }
+where is <A> located in	select ?a where { <A> dbo:location ?a }	select distinct(?x) where { ?x a C . ?x dbo:location [] }
+who designed <A>	select ?a where { <A> dbo:designer ?a }	select distinct(?x) where { ?x a C . ?x dbo:designer [] }
+when was <A> completed	select ?a where { <A> dbp:complete ?a }	select distinct(?x) where { ?x a C . ?x dbp:complete [] }
+what's <A> native name	select ?a where { <A> dbp:nativeName ?a }	select distinct(?x) where { ?x a C . ?x dbp:nativeName [] }
+what is <A> related to	select ?a where { <A> dct:subject ?a }	select distinct(?x) where { ?x a C . ?x dct:subject [] }
+what is <A> all about	select ?a where { <A> dct:subject ?a }	select distinct(?x) where { ?x a C . ?x dct:subject [] }
+what is <A> about	select ?a where { <A> dct:subject ?a }	select distinct(?x) where { ?x a C . ?x dct:subject [] }
+what are the coordinates of <A>	select ?a where { <A> georss:point ?a }	select distinct(?x) where { ?x a C . ?x georss:point [] }
+latitude of <A>	select ?a where { <A> geo:lat ?a }	select distinct(?x) where { ?x a C . ?x geo:lat [] }
+how north is <A>	select ?a where { <A> geo:lat ?a }	select distinct(?x) where { ?x a C . ?x geo:lat [] }
+longitude of <A>	select ?a where { <A> geo:long ?a }	select distinct(?x) where { ?x a C . ?x geo:long [] }
+building date of <A>	select ?a where { <A> dbp:complete ?a }	select distinct(?x) where { ?x a C . ?x dbp:complete [] }
+when was <A> built	select ?a where { <A> dbp:complete ?a }	select distinct(?x) where { ?x a C . ?x dbp:complete [] }
+is <A> older than <B>	ask where { <A> dbp:complete ?a . <B> dbp:complete ?b . FILTER(?a < ?b) }	select distinct(?x) ?y where { ?x a C . ?y a C . ?x dbp:complete [] . ?y dbp:complete [] . FILTER(?x != ?y) }
+how long is <A>	select ?a where { <A> dbp:length ?a }	select distinct(?x) where { ?x a C . ?x dbp:length [] }
+is <A> in <B>	ask where { <A> dbo:location <B> }	select distinct(?x) ?y where { ?x a C . ?x dbo:location ?y }
+what's the tallest <A>	select ?a where { ?a rdf:type <A> . ?a dbp:height ?b } order by desc(?b) limit 1	select distinct(?x) where { ?x a C . ?x rdf:type ?a . ?x dbp:height [] }
+the longest <A>	select ?a where { ?a rdf:type <A> . ?a dbp:length?b } order by desc(?b) limit 1	select distinct(?x) where { ?x a C . ?x rdf:type ?a . ?x dbp:length [] }
+was <A> finished by <B>	ask where { <A> dbp:complete ?a . FILTER(?a <= <B>) }	select distinct(?x) where { ?x a C . ?x dbp:complete [] }
+is <A> more recent than <B>	ask where { <A> dbp:complete ?a . <B> dbp:complete ?b . FILTER(?a > ?b) }	select distinct(?x) ?y where { ?x a C . ?y a C . ?x dbp:complete [] . ?y dbp:complete [] . FILTER(?x != ?y) }
+which is taller between <A> and <B>	select ?a where { ?a dbp:height ?b . FILTER(?a = <A> || ?a = <B>) } order by ?b limit 1	select distinct(?x) ?y where { ?x a C . ?y a C . ?x dbp:height [] . ?y dbp:height [] }
+which is longer <A> or <B>	select ?a where { ?a dbp:length ?b . FILTER(?a = <A> || ?a = <B>) } order by ?b limit 1	select distinct(?x) ?y where { ?x a C . ?y a C . ?x dbp:length [] . ?y dbp:height [] }
+give me the <A> tallest <B>	select ?a where { ?a rdf:type <B> . ?a dbp:height ?b } order by desc(?b) limit <A>	select distinct(?x) where { ?x a C . ?x dbp:height [] }
+how many <A> does <B> have	select count(*) where { ?a rdf:type <A> . ?a dbo:location <B> } group by ?a	select distinct(?x) ?y where { ?a a C . ?a rdf:type ?x . ?a dbo:location ?y }
+how many <A> are there in <B>	select count(*) where { ?a rdf:type <A> . ?a dbo:location <B> } group by ?a	select distinct(?x) ?y where { ?a a C . ?a rdf:type ?x . ?a dbo:location ?y }
+what do <A> and <B> have in common	select * where { { <A> ?a ?b . <B> ?a ?b } UNION { ?c ?d <A> . ?c ?d <B> } }	select distinct(?x) ?y where { ?x a C . { ?x ?a ?b . ?y ?a ?b } UNION { ?c ?d ?x . ?c ?d ?y } }
+what's the oldest <A> of <B>	select ?a where { ?a rdf:type <A> . ?a dbo:location <B> . ?a dbp:complete ?c } order by ?c limit 1	select distinct(?x) ?y where { ?a a C . ?a rdf:type ?x . ?a dbo:location ?y . ?a dbp:complete [] }
+what's the most recent <A> of <B>	select ?a where { ?a rdf:type <A> . ?a dbo:location <B> . ?a dbp:complete ?c } order by desc(?c) limit 1	select distinct(?x) ?y where { ?a a C . ?a rdf:type ?x . ?a dbo:location ?y . ?a dbp:complete [] }
+what are the <A> northernmost <B>	select ?a where { ?a rdf:type <B> . ?a geo:lat ?b } order by desc(?b) limit <A>	select distinct(?x) where { ?a a C . ?a rdf:type ?x . ?a geo:lat [] }
+what are the <A> southernmost <B>	select ?a where { ?a rdf:type <B> . ?a geo:lat ?b } order by ?b limit <A>	select distinct(?x) where { ?a a C . ?a rdf:type ?x . ?a geo:lat [] }
+what is the <A> with the most <B>	select ?a count(*) as ?c where { ?a rdf:type <A> . ?b rdf:type <B> . ?b [] ?a } group by ?a order by desc(?c)	select distinct(?x) ?y where { ?a a C . ?a rdf:type ?x . ?b rdf:type ?y . ?b [] ?a }
+which <A> has the most <B>	select ?a count(*) as ?c where { ?a rdf:type <A> . ?b rdf:type <B> . ?b [] ?a } group by ?a order by desc(?c)	select distinct(?x) ?y where { ?a a C . ?a rdf:type ?x . ?b rdf:type ?y . ?b [] ?a }
