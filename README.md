@@ -1,5 +1,9 @@
-# Neural SPARQL Machines
+# 🤖 Neural SPARQL Machines
 A LSTM-based Machine Translation Approach for Question Answering.
+
+![alt text](http://www.liberai.org/img/flag-uk-160px.png "English")
+![alt text](http://www.liberai.org/img/seq2seq-webexport-160px.png "seq2seq")
+![alt text](http://www.liberai.org/img/flag-sparql-160px.png "SPARQL")
 
 ## Code
 
