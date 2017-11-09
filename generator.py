@@ -8,25 +8,20 @@ https://w3id.org/neural-sparql-machines/soru-marx-semantics2017.html
 https://arxiv.org/abs/1708.07624
 
 """
+import argparse
+import logging
+import os
 import sys
-import json
 import urllib2, urllib, httplib, json
 import random
 import re
 
-reload(sys)
-sys.setdefaultencoding("utf-8")
-
+logging.basicConfig(filename='generator.log', level=logging.DEBUG)
 ENDPOINT = "http://dbpedia.org/sparql"
 GRAPH = "http://dbpedia.org"
 
-TARGET_CLASS = "dbo:Monument"
 
-EXAMPLES_PER_TEMPLATE = 300
-
-# ================================================================
-
-def sparql_query(query):
+def query_dbpedia( query ):
     param = dict()
     param["default-graph-uri"] = GRAPH
     param["query"] = query
@@ -40,43 +35,48 @@ def sparql_query(query):
         j = resp.read()
         resp.close()
     except (urllib2.HTTPError, httplib.BadStatusLine):
-        print "*** Query error. Empty result set. ***"
+        logging.debug("*** Query error. Empty result set. ***")
         j = '{ "results": { "bindings": [] } }'
     sys.stdout.flush()
     return json.loads(j)
 
 def extract(data):
+    EXAMPLES_PER_TEMPLATE = 300
     res = list()
     for result in data:
         res.append(result)
-    print res
+    logging.debug(res)
     
     if len(res) == 0:
         return None
     
-    indx = set()
-    while True:
-        indx.add(int(random.random() * len(res)))
-        print indx
-        if len(indx) == EXAMPLES_PER_TEMPLATE or len(indx) == len(res):
-            break
-    
-    xy = list()
-    for i in indx:
-        result = res[i]
+    indexes = set()
+
+    if len(res) < EXAMPLES_PER_TEMPLATE:
+        index_range = range(len(res))
+        indexes = set(random.shuffle(index_range))
+    else:
+        while len(indexes) < EXAMPLES_PER_TEMPLATE:
+            indexes.add(int(random.random() * len(res)))
+
+    logging.debug(indexes)
+
+    uri_label_pairs = list()
+    for index in indexes:
+        result = res[index]
         x = result["x"]["value"]
         lx = result["lx"]["value"]
-        print "x = {} -> {}".format(x, lx)
-        try:
+        logging.debug("x = {} -> {}".format(x, lx))
+        if "y" in result:
             y = result["y"]["value"]
             ly = result["ly"]["value"]
-            print "y = {} -> {}".format(y, ly)
-        except KeyError:
+            logging.debug("y = {} -> {}".format(y, ly))
+        else:
             y = None
             ly = None
-        xy.append((x,lx,y,ly))
+        uri_label_pairs.append((x,lx,y,ly))
         
-    return xy
+    return uri_label_pairs
     
 def strip_brackets(s):
     # strip off brackets
@@ -117,48 +117,133 @@ def replacements(s):
     
 # ================================================================
 
-annot = list()
-with open('data/annotations_monument.tsv') as f:    
-    for line in f:
-        annot.append(tuple(line[:-1].split('\t')))
+class Annotation:
+    def __init__(self, question, query, generator_query, id=None, target_classes=None):
+        self.question = question
+        self.query = query
+        self.generator_query = generator_query
+        self.id = id
+        self.target_classes = target_classes if target_classes != None else []
 
-cache = dict()
-if not os.path.exists('data/monument_300/'):
-    os.makedirs('data/monument_300/')
-with open('data/monument_300/data_300.en', 'w') as f1:
-    with open('data/monument_300/data_300.sparql', 'w') as f2:
-        for a in annot:
-            if a[2] in cache:
-                results = cache[a[2]]
-            else:
-                q = a[2].replace(" C ", " {} ".format(TARGET_CLASS)).replace(" where { ", " (str(?labx) as ?lx) where { ?x rdfs:label ?labx . FILTER(lang(?labx) = 'en') . ")
-                if "?y" in q:
-                    q = q.replace(" where { ", " (str(?laby) as ?ly) where { ?y rdfs:label ?laby . FILTER(lang(?laby) = 'en') . ")
-                print q
-                results = sparql_query(q)
-                cache[a[2]] = results
-            print "ans length = {}".format(len(str(results)))
-    
-            xy_array = extract(results["results"]["bindings"])
-            if xy_array is None:
-                print "\nNO DATA FOR '{}'".format(a[0])
-                continue
-            
-            for xy in xy_array:
-                inp = a[0].replace("<A>", strip_brackets(xy[1]))
-                outp = a[1].replace("<A>", xy[0])
-                if "<B>" in inp:
-                    if xy[3] is not None:
-                        inp = inp.replace("<B>", strip_brackets(xy[3]))
-                    else:
-                        continue
-                if "<B>" in outp:
-                    if xy[2] is not None:
-                        outp = outp.replace("<B>", xy[2])
-                    else:
-                        continue
-                outp = replacements(outp)
-    
-                print "\n{}\n{}\n{}".format(xy, inp, outp)
-                f1.write("{}\n".format(inp))
-                f2.write("{}\n".format(outp))
+def read_template_file(file):
+    annotations = list()
+    line_number = 1
+    with open(file) as f:
+        for line in f:
+            values = line[:-1].split(';')
+            target_classes = [values[0] or None, values[1] or None]
+            question = values[2]
+            query = values[3]
+            generator_query = values[4]
+            id = values[5] if len(values) >= 6 else line_number
+            line_number += 1
+            annotation = Annotation(question, query, generator_query, id, target_classes)
+            annotations.append(annotation)
+    return annotations
+
+def build_dataset_pair(binding, template):
+    english_template_question = getattr(template, 'question')
+    sparql_template_query = getattr(template, 'query')
+    uri_a = binding[0]
+    label_a = binding[1]
+    english = english_template_question.replace("<A>", strip_brackets(label_a))
+    sparql = sparql_template_query.replace("<A>", uri_a)
+    if "<B>" in english:
+        label_b = binding[3]
+        if label_b is not None:
+            english = english.replace("<B>", strip_brackets(label_b))
+        else:
+            return None
+    if "<B>" in sparql:
+        uri_b = binding[2]
+        if uri_b is not None:
+            sparql = sparql.replace("<B>", uri_b)
+        else:
+            return None
+    sparql = replacements(sparql)
+    dataset_pair = {'english': english, 'sparql': sparql}
+    return dataset_pair
+
+
+def extract_variables(query):
+    variables = []
+    variable_pattern = variable_pattern = r'select.*?\?([a-zA-Z]).*?(\?([a-zA-Z]).*?)?where'
+    variable_match = re.search(variable_pattern, query, re.IGNORECASE)
+    groups = variable_match.groups()
+    variable_group_indexes = [0, 2]
+    for i in variable_group_indexes:
+        if groups[i]:
+            variables.append(groups[i])
+    return variables
+
+
+def generate_dataset(templates, output_dir):
+    cache = dict()
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
+    with open(output_dir + '/data_300.en', 'w') as english_questions:
+        with open(output_dir + '/data_300.sparql', 'w') as sparql_queries:
+            for template in templates:
+                results = get_results_of_generator_query(cache, template)
+                logging.debug("ans length = {}".format(len(str(results))))
+
+                bindings = extract(results["results"]["bindings"])
+                if bindings is None:
+                    logging.debug("\nNO DATA FOR '{}'".format(getattr(template, 'id')))
+                    continue
+
+                for binding in bindings:
+                    dataset_pair = build_dataset_pair(binding, template)
+
+                    if (dataset_pair):
+                        logging.debug("\n{}\n{}\n{}".format(binding, dataset_pair['english'], dataset_pair['sparql']))
+                        english_questions.write("{}\n".format(dataset_pair['english']))
+                        sparql_queries.write("{}\n".format(dataset_pair['sparql']))
+
+
+def get_results_of_generator_query( cache, template ):
+    generator_query = getattr(template, 'generator_query')
+
+    if generator_query in cache:
+        results = cache[generator_query]
+    else:
+        query = prepare_generator_query(template)
+        logging.debug(query)
+        results = query_dbpedia(query)
+        cache[generator_query] = results
+    return results
+
+
+def prepare_generator_query( template ):
+    query = getattr(template, 'generator_query')
+    target_classes = getattr(template, 'target_classes')
+    variables = extract_variables(query)
+
+    add_requirement = lambda query, where_replacement: query.replace(" where { ", where_replacement)
+    LABEL_REPLACEMENT = " (str(?lab%(variable)s) as ?l%(variable)s) where { ?%(variable)s rdfs:label ?lab%(variable)s . FILTER(lang(?lab%(variable)s) = 'en') . "
+    CLASS_REPLACEMENT = " where { ?%(variable)s a %(class)s . "
+
+
+    for i, variable in enumerate(variables):
+        query = add_requirement(query, LABEL_REPLACEMENT % {'variable': variable})
+        variable_has_a_type = len(target_classes) > i and target_classes[i]
+        if variable_has_a_type:
+            query = add_requirement(query, CLASS_REPLACEMENT % {'variable': variable, 'class': target_classes[i]})
+
+    return query
+
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser()
+    requiredNamed = parser.add_argument_group('required named arguments')
+    requiredNamed.add_argument('--templates', dest='templates', metavar='templateFile', help='templates', required=True)
+    requiredNamed.add_argument('--output', dest='output', metavar='outputDirectory', help='dataset directory', required=True)
+    args = parser.parse_args()
+    template_file = args.templates
+    output_dir = args.output
+
+    reload(sys)
+    sys.setdefaultencoding("utf-8")
+
+    templates = read_template_file(template_file)
+    generate_dataset(templates, output_dir)
