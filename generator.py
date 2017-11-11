@@ -10,15 +10,36 @@ https://arxiv.org/abs/1708.07624
 """
 import argparse
 import logging
+import operator
 import os
 import sys
 import urllib2, urllib, httplib, json
-import random
 import re
 
 logging.basicConfig(filename='generator.log', level=logging.DEBUG)
 ENDPOINT = "http://dbpedia.org/sparql"
 GRAPH = "http://dbpedia.org"
+EXAMPLES_PER_TEMPLATE = 300
+
+def count_usage ( resource ):
+    if resource in used_resources:
+        used_resources[resource] += 1
+    else:
+        used_resources[resource] = 1
+
+
+def log_statistics ( used_resources ):
+    statistics = {}
+    total_number_of_resources = len(used_resources)
+    for resource in used_resources:
+        usages = used_resources[resource]
+        if usages in statistics:
+            statistics[usages] += 1
+        else:
+            statistics[usages] = 1
+    logging.info('{:6d} used resources'.format(total_number_of_resources))
+    for usage in statistics:
+        logging.info('{:6d} resources occur \t{:6d} times \t({:6.2f} %) '.format(statistics[usage], usage, statistics[usage]*100/total_number_of_resources))
 
 
 def query_dbpedia( query ):
@@ -40,44 +61,102 @@ def query_dbpedia( query ):
     sys.stdout.flush()
     return json.loads(j)
 
-def extract(data):
-    EXAMPLES_PER_TEMPLATE = 300
-    res = list()
-    for result in data:
-        res.append(result)
-    logging.debug(res)
-    
-    if len(res) == 0:
+def extract_bindings( data, template ):
+    matches = list()
+    for match in data:
+        matches.append(match)
+    logging.debug('{} matches for {}'.format(len(matches), getattr(template, 'id')))
+
+    if len(matches) == 0:
         return None
-    
-    indexes = set()
 
-    if len(res) < EXAMPLES_PER_TEMPLATE:
-        index_range = range(len(res))
-        indexes = set(random.shuffle(index_range))
+    if len(matches) <= EXAMPLES_PER_TEMPLATE:
+        best_matches = matches
     else:
-        while len(indexes) < EXAMPLES_PER_TEMPLATE:
-            indexes.add(int(random.random() * len(res)))
+        best_matches = sort_matches(matches, template)[0:EXAMPLES_PER_TEMPLATE]
 
-    logging.debug(indexes)
+    bindings = list()
+    variables = getattr(template, 'variables')
 
-    uri_label_pairs = list()
-    for index in indexes:
-        result = res[index]
-        x = result["x"]["value"]
-        lx = result["lx"]["value"]
-        logging.debug("x = {} -> {}".format(x, lx))
-        if "y" in result:
-            y = result["y"]["value"]
-            ly = result["ly"]["value"]
-            logging.debug("y = {} -> {}".format(y, ly))
-        else:
-            y = None
-            ly = None
-        uri_label_pairs.append((x,lx,y,ly))
+    for match in best_matches:
+        pairs = []
+        for variable in variables:
+            resource = match[variable]["value"]
+            label = match["l" + variable]["value"]
+            pairs.extend([resource, label])
+            count_usage(resource)
+            # logging.debug("resource = {} -> {}".format(resource, label))
+        bindings.append(pairs)
         
-    return uri_label_pairs
-    
+    return bindings
+
+
+def sort_matches( matches, template ):
+    variables = getattr(template, 'variables')
+    get_usages = lambda match : map(lambda variable : get_number_of_usages(match[variable]["value"]), variables)
+
+    matches_with_usages = map(lambda match : {'usages': get_usages(match), 'match': match}, matches)
+    sorted_matches_with_usages = sorted(matches_with_usages, key=prioritize_usage)
+    sorted_matches = map(operator.itemgetter('match'), sorted_matches_with_usages)
+
+    return sorted_matches
+
+
+def get_number_of_usages ( uri ):
+    if uri in used_resources:
+        return used_resources[uri]
+    return 0
+
+
+def prioritize_usage ( match ):
+    usages = match['usages']
+    if len(usages) == 1:
+        return prioritize_single_match(usages[0])
+    else:
+        return prioritize_couple_match(usages)
+
+def prioritize_single_match( usage ):
+    # realises prioritity: 2 < 1 < 0 < 3
+    highest_priority = usage == 2
+    second_highest_priority = usage == 1
+    third_highest_priority = usage == 0
+    if highest_priority:
+        return 0
+    if second_highest_priority:
+        return 1
+    if third_highest_priority:
+        return 2
+    return usage
+
+
+def prioritize_couple_match( usages ):
+    usage, other_usage = usages
+    highest_priority = usages == [2, 2]
+    second_highest_priority = usages in [[2, 1], [1, 2]]
+    third_highest_priority = usages == [1, 1]
+    fourth_highest_priority = usages in [[0, 1], [1, 0]]
+    fifth_highest_priority = (usage == 2 and other_usage <= 10) or (other_usage == 2 and usage <= 10)
+    sixth_highest_priority = (usage == 1 and other_usage <= 10) or (other_usage == 1 and usage <= 10)
+    seventh_highest_priority = usages == [0, 0]
+
+    if highest_priority:
+        return 0
+    if second_highest_priority:
+        return 1
+    if third_highest_priority:
+        return 2
+    if fourth_highest_priority:
+        return 3
+    if fifth_highest_priority:
+        return 4
+    if sixth_highest_priority:
+        return 5
+    if seventh_highest_priority:
+        return 6
+    # smallest not prioritized pair is (3,0)
+    return sum(usages) + 4
+
+
 def strip_brackets(s):
     # strip off brackets
     s = re.sub(r'\([^)]*\)', '', s)
@@ -114,8 +193,6 @@ def replacements(s):
     for r in repl:
         s = s.replace(r[0], r[1])
     return s
-    
-# ================================================================
 
 class Annotation:
     def __init__(self, question, query, generator_query, id=None, target_classes=None):
@@ -124,6 +201,7 @@ class Annotation:
         self.generator_query = generator_query
         self.id = id
         self.target_classes = target_classes if target_classes != None else []
+        self.variables = extract_variables(generator_query)
 
 def read_template_file(file):
     annotations = list()
@@ -148,18 +226,20 @@ def build_dataset_pair(binding, template):
     label_a = binding[1]
     english = english_template_question.replace("<A>", strip_brackets(label_a))
     sparql = sparql_template_query.replace("<A>", uri_a)
-    if "<B>" in english:
-        label_b = binding[3]
-        if label_b is not None:
-            english = english.replace("<B>", strip_brackets(label_b))
-        else:
-            return None
-    if "<B>" in sparql:
-        uri_b = binding[2]
-        if uri_b is not None:
-            sparql = sparql.replace("<B>", uri_b)
-        else:
-            return None
+    has_more_than_one_placeholder = len(getattr(template, 'variables')) > 1
+    if has_more_than_one_placeholder:
+        if "<B>" in english:
+            label_b = binding[3]
+            if label_b is not None:
+                english = english.replace("<B>", strip_brackets(label_b))
+            else:
+                return None
+        if "<B>" in sparql:
+            uri_b = binding[2]
+            if uri_b is not None:
+                sparql = sparql.replace("<B>", uri_b)
+            else:
+                return None
     sparql = replacements(sparql)
     dataset_pair = {'english': english, 'sparql': sparql}
     return dataset_pair
@@ -167,7 +247,7 @@ def build_dataset_pair(binding, template):
 
 def extract_variables(query):
     variables = []
-    variable_pattern = variable_pattern = r'select.*?\?([a-zA-Z]).*?(\?([a-zA-Z]).*?)?where'
+    variable_pattern = r'select.*?\?([a-zA-Z]).*?(\?([a-zA-Z]).*?)?where'
     variable_match = re.search(variable_pattern, query, re.IGNORECASE)
     groups = variable_match.groups()
     variable_group_indexes = [0, 2]
@@ -177,28 +257,31 @@ def extract_variables(query):
     return variables
 
 
-def generate_dataset(templates, output_dir):
+def generate_dataset(templates, output_dir, file_mode):
     cache = dict()
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
-    with open(output_dir + '/data_300.en', 'w') as english_questions:
-        with open(output_dir + '/data_300.sparql', 'w') as sparql_queries:
+    with open(output_dir + '/data_300.en', file_mode) as english_questions:
+        with open(output_dir + '/data_300.sparql', file_mode) as sparql_queries:
             for template in templates:
-                results = get_results_of_generator_query(cache, template)
-                logging.debug("ans length = {}".format(len(str(results))))
+                try:
+                    results = get_results_of_generator_query(cache, template)
+                    bindings = extract_bindings(results["results"]["bindings"], template)
 
-                bindings = extract(results["results"]["bindings"])
-                if bindings is None:
-                    logging.debug("\nNO DATA FOR '{}'".format(getattr(template, 'id')))
-                    continue
+                    if bindings is None:
+                        logging.debug("no data for {}".format(getattr(template, 'id')))
+                        continue
 
-                for binding in bindings:
-                    dataset_pair = build_dataset_pair(binding, template)
+                    for binding in bindings:
+                        dataset_pair = build_dataset_pair(binding, template)
 
-                    if (dataset_pair):
-                        logging.debug("\n{}\n{}\n{}".format(binding, dataset_pair['english'], dataset_pair['sparql']))
-                        english_questions.write("{}\n".format(dataset_pair['english']))
-                        sparql_queries.write("{}\n".format(dataset_pair['sparql']))
+                        if (dataset_pair):
+                            english_questions.write("{}\n".format(dataset_pair['english']))
+                            sparql_queries.write("{}\n".format(dataset_pair['sparql']))
+                except:
+                    logging.error('template {} caused exception'.format(getattr(template, 'id')))
+                    logging.info('1. fix problem\n2. remove templates until the exception template in the template file\n3. restart with `--continue` parameter')
+                    raise Exception()
 
 
 def get_results_of_generator_query( cache, template ):
@@ -208,7 +291,7 @@ def get_results_of_generator_query( cache, template ):
         results = cache[generator_query]
     else:
         query = prepare_generator_query(template)
-        logging.debug(query)
+        logging.debug('ready generator_query: ' + query)
         results = query_dbpedia(query)
         cache[generator_query] = results
     return results
@@ -217,10 +300,10 @@ def get_results_of_generator_query( cache, template ):
 def prepare_generator_query( template ):
     query = getattr(template, 'generator_query')
     target_classes = getattr(template, 'target_classes')
-    variables = extract_variables(query)
+    variables = getattr(template, 'variables')
 
     add_requirement = lambda query, where_replacement: query.replace(" where { ", where_replacement)
-    LABEL_REPLACEMENT = " (str(?lab%(variable)s) as ?l%(variable)s) where { ?%(variable)s rdfs:label ?lab%(variable)s . FILTER(lang(?lab%(variable)s) = 'en') . "
+    LABEL_REPLACEMENT = " , (str(?lab%(variable)s) as ?l%(variable)s) where { ?%(variable)s rdfs:label ?lab%(variable)s . FILTER(lang(?lab%(variable)s) = 'en') . "
     CLASS_REPLACEMENT = " where { ?%(variable)s a %(class)s . "
 
 
@@ -233,17 +316,41 @@ def prepare_generator_query( template ):
     return query
 
 
+def saveCache (file, cache):
+    with open(file, 'w') as outfile:
+        json.dump(cache, outfile)
+
+
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
+    parser.add_argument('--continue', dest='continue_generation', action='store_true', help='Continue after exception')
     requiredNamed = parser.add_argument_group('required named arguments')
     requiredNamed.add_argument('--templates', dest='templates', metavar='templateFile', help='templates', required=True)
     requiredNamed.add_argument('--output', dest='output', metavar='outputDirectory', help='dataset directory', required=True)
     args = parser.parse_args()
+
     template_file = args.templates
     output_dir = args.output
+    use_resources_dump = args.continue_generation
+    RESOURCE_DUMP_FILE = 'resource_dump.json'
+    resource_dump_exists = os.path.exists(RESOURCE_DUMP_FILE)
 
-    reload(sys)
-    sys.setdefaultencoding("utf-8")
+    if (resource_dump_exists and not use_resources_dump):
+        warning_message = 'Warning: The file {} exists which indicates an error. Remove file or continue generation after fixing with --continue'.format(
+            RESOURCE_DUMP_FILE)
+        print warning_message
+    else:
+        reload(sys)
+        sys.setdefaultencoding("utf-8")
 
-    templates = read_template_file(template_file)
-    generate_dataset(templates, output_dir)
+        used_resources = json.loads(open(RESOURCE_DUMP_FILE).read()) if use_resources_dump else dict()
+        file_mode = 'a' if use_resources_dump else 'w'
+        templates = read_template_file(template_file)
+        try:
+            generate_dataset(templates, output_dir, file_mode)
+        except:
+            saveCache(RESOURCE_DUMP_FILE, used_resources)
+            print 'exception occured, look for error in log file'
+        finally:
+            log_statistics(used_resources)
