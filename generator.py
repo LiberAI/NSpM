@@ -12,14 +12,24 @@ import argparse
 import logging
 import operator
 import os
+import random
 import sys
+import traceback
 import urllib2, urllib, httplib, json
 import re
+
+import datetime
 
 logging.basicConfig(filename='generator.log', level=logging.DEBUG)
 ENDPOINT = "http://dbpedia.org/sparql"
 GRAPH = "http://dbpedia.org"
 EXAMPLES_PER_TEMPLATE = 300
+CELEBRITY_LIST = ['http://dbpedia.org/class/yago/Wikicat21st-centuryActors',
+                  'http://dbpedia.org/class/yago/WikicatPresidentsOfTheUnitedStates',
+                  'dbo:Royalty',
+                  'http://dbpedia.org/class/yago/Honoree110183757'
+                  ]
+
 
 def count_usage ( resource ):
     if resource in used_resources:
@@ -65,6 +75,8 @@ def extract_bindings( data, template ):
     matches = list()
     for match in data:
         matches.append(match)
+
+    random.shuffle(matches)
     logging.debug('{} matches for {}'.format(len(matches), getattr(template, 'id')))
 
     if len(matches) == 0:
@@ -113,7 +125,10 @@ def prioritize_usage ( match ):
     if len(usages) == 1:
         return prioritize_single_match(usages[0])
     else:
-        return prioritize_couple_match(usages)
+        if len(usages) == 2:
+            return prioritize_couple_match(usages)
+        else:
+            return prioritize_triple_match(usages)
 
 def prioritize_single_match( usage ):
     # realises prioritity: 2 < 1 < 0 < 3
@@ -155,6 +170,21 @@ def prioritize_couple_match( usages ):
         return 6
     # smallest not prioritized pair is (3,0)
     return sum(usages) + 4
+
+def prioritize_triple_match( usages ):
+    between_zero_and_three = lambda value : value > 0 and value < 3
+    highest_priority = all(map(between_zero_and_three, usages))
+    second_highest_priority = filter(between_zero_and_three, usages) > 1
+    third_highest_priority = any(map(between_zero_and_three, usages))
+
+    if highest_priority:
+        return 0
+    if second_highest_priority:
+        return 1
+    if third_highest_priority:
+        return 2
+
+    return sum(usages)
 
 
 def strip_brackets(s):
@@ -209,11 +239,11 @@ def read_template_file(file):
     with open(file) as f:
         for line in f:
             values = line[:-1].split(';')
-            target_classes = [values[0] or None, values[1] or None]
-            question = values[2]
-            query = values[3]
-            generator_query = values[4]
-            id = values[5] if len(values) >= 6 else line_number
+            target_classes = [values[0] or None, values[1] or None, values[2] or None]
+            question = values[3]
+            query = values[4]
+            generator_query = values[5]
+            id = values[6] if (len(values) >= 7 and values[6]) else line_number
             line_number += 1
             annotation = Annotation(question, query, generator_query, id, target_classes)
             annotations.append(annotation)
@@ -240,6 +270,18 @@ def build_dataset_pair(binding, template):
                 sparql = sparql.replace("<B>", uri_b)
             else:
                 return None
+        if "<C>" in english:
+            label_c = binding[5]
+            if label_c is not None:
+                english = english.replace("<C>", strip_brackets(label_c))
+            else:
+                return None
+        if "<C>" in sparql:
+            uri_c = binding[4]
+            if uri_c is not None:
+                sparql = sparql.replace("<C>", uri_c)
+            else:
+                return None
     sparql = replacements(sparql)
     dataset_pair = {'english': english, 'sparql': sparql}
     return dataset_pair
@@ -247,13 +289,11 @@ def build_dataset_pair(binding, template):
 
 def extract_variables(query):
     variables = []
-    variable_pattern = r'select.*?\?([a-zA-Z]).*?(\?([a-zA-Z]).*?)?where'
+    variable_pattern = r'select\s(distinct)?(.*?)where'
     variable_match = re.search(variable_pattern, query, re.IGNORECASE)
-    groups = variable_match.groups()
-    variable_group_indexes = [0, 2]
-    for i in variable_group_indexes:
-        if groups[i]:
-            variables.append(groups[i])
+    if variable_match:
+        letter_pattern = r'\?(\w)'
+        variables = re.findall(letter_pattern, variable_match.group((2)))
     return variables
 
 
@@ -279,7 +319,8 @@ def generate_dataset(templates, output_dir, file_mode):
                             english_questions.write("{}\n".format(dataset_pair['english']))
                             sparql_queries.write("{}\n".format(dataset_pair['sparql']))
                 except:
-                    logging.error('template {} caused exception'.format(getattr(template, 'id')))
+                    exception = traceback.format_exc()
+                    logging.error('template {} caused exception {}'.format(getattr(template, 'id'), exception))
                     logging.info('1. fix problem\n2. remove templates until the exception template in the template file\n3. restart with `--continue` parameter')
                     raise Exception()
 
@@ -298,22 +339,35 @@ def get_results_of_generator_query( cache, template ):
 
 
 def prepare_generator_query( template ):
-    query = getattr(template, 'generator_query')
+    generator_query = getattr(template, 'generator_query')
     target_classes = getattr(template, 'target_classes')
     variables = getattr(template, 'variables')
+
+    def variable_is_subclass ( query, variable ):
+        predicate_pattern = r'\s+?(rdf:type|a)\s+?\?' + variable
+        predicate_match = re.search(predicate_pattern, query)
+        return bool(predicate_match)
 
     add_requirement = lambda query, where_replacement: query.replace(" where { ", where_replacement)
     LABEL_REPLACEMENT = " , (str(?lab%(variable)s) as ?l%(variable)s) where { ?%(variable)s rdfs:label ?lab%(variable)s . FILTER(lang(?lab%(variable)s) = 'en') . "
     CLASS_REPLACEMENT = " where { ?%(variable)s a %(class)s . "
+    SUBCLASS_REPLACEMENT = " where { ?%(variable)s rdfs:subClassOf %(class)s . "
 
 
     for i, variable in enumerate(variables):
-        query = add_requirement(query, LABEL_REPLACEMENT % {'variable': variable})
+        generator_query = add_requirement(generator_query, LABEL_REPLACEMENT % {'variable': variable})
         variable_has_a_type = len(target_classes) > i and target_classes[i]
         if variable_has_a_type:
-            query = add_requirement(query, CLASS_REPLACEMENT % {'variable': variable, 'class': target_classes[i]})
+            if variable_is_subclass(generator_query, variable):
+                generator_query = add_requirement(generator_query, SUBCLASS_REPLACEMENT % {'variable': variable, 'class': target_classes[i]})
+            else:
+                # if target_classes[i] == 'dbo:Person':
+                #     target_class = random.choice(CELEBRITY_LIST)
+                # else:
+                target_class = target_classes[i]
+                generator_query = add_requirement(generator_query, CLASS_REPLACEMENT % {'variable': variable, 'class': target_class})
 
-    return query
+    return generator_query
 
 
 def saveCache (file, cache):
@@ -350,7 +404,7 @@ if __name__ == '__main__':
         try:
             generate_dataset(templates, output_dir, file_mode)
         except:
-            saveCache(RESOURCE_DUMP_FILE, used_resources)
             print 'exception occured, look for error in log file'
         finally:
             log_statistics(used_resources)
+            saveCache('used_resources_{:%Y-%m-%d-%H-%M}.json'.format(datetime.datetime.today()), used_resources)
