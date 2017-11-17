@@ -22,6 +22,17 @@ import traceback
 
 from generator_utils import log_statistics, saveCache, query_dbpedia, strip_brackets, replacements, read_template_file
 
+CELEBRITY_LIST = [
+    'dbo:Royalty',
+    '<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>',
+    '<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>',
+    '<http://dbpedia.org/class/yago/Honoree110183757>'
+    ]
+
+SPECIAL_CLASSES = {
+    'dbo:Person': ['dbo:TableTennisPlayer'],
+    'dbo:Athlete': ['dbo:TableTennisPlayer']
+}
 EXAMPLES_PER_TEMPLATE = 300
 
 def extract_bindings( data, template ):
@@ -77,27 +88,21 @@ def prioritize_usage ( match ):
 
 def prioritize_single_match( usage ):
     # realises prioritity: 2 < 1 < 0 < 3
-    highest_priority = usage == 2
-    second_highest_priority = usage == 1
-    third_highest_priority = usage == 0
+    highest_priority = 30 > usage > 0
+    second_highest_priority = usage == 0
     if highest_priority:
         return 0
     if second_highest_priority:
         return 1
-    if third_highest_priority:
-        return 2
     return usage
 
 
 def prioritize_couple_match( usages ):
+    between_zero_and_upper_limit = lambda value : 0 < value < 30
     usage, other_usage = usages
-    highest_priority = usages == [2, 2]
-    second_highest_priority = usages in [[2, 1], [1, 2]]
-    third_highest_priority = usages == [1, 1]
-    fourth_highest_priority = usages in [[0, 1], [1, 0]]
-    fifth_highest_priority = (usage == 2 and other_usage <= 10) or (other_usage == 2 and usage <= 10)
-    sixth_highest_priority = (usage == 1 and other_usage <= 10) or (other_usage == 1 and usage <= 10)
-    seventh_highest_priority = usages == [0, 0]
+    highest_priority = all(map(between_zero_and_upper_limit, usages))
+    second_highest_priority = any(map(between_zero_and_upper_limit, usages))
+    third_highest_priority = usage == 0 and other_usage == 0
 
     if highest_priority:
         return 0
@@ -105,16 +110,7 @@ def prioritize_couple_match( usages ):
         return 1
     if third_highest_priority:
         return 2
-    if fourth_highest_priority:
-        return 3
-    if fifth_highest_priority:
-        return 4
-    if sixth_highest_priority:
-        return 5
-    if seventh_highest_priority:
-        return 6
-    # smallest not prioritized pair is (3,0)
-    return sum(usages) + 4
+    return sum(usages)
 
 def prioritize_triple_match( usages ):
     between_zero_and_three = lambda value : value > 0 and value < 3
@@ -192,17 +188,6 @@ LABEL_REPLACEMENT = " , (str(?lab{variable}) as ?l{variable}) where {{ ?{variabl
 CLASS_REPLACEMENT = " where {{ ?{variable} a {ontology_class} . "
 CLASSES_REPLACEMENT = " where {{ ?{variable} a ?t . VALUES (?t) {{ {classes} }} . "
 SUBCLASS_REPLACEMENT = " where {{ ?{variable} rdfs:subClassOf {ontology_class} . "
-CELEBRITY_LIST = [
-    'dbo:Royalty',
-    '<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>',
-    '<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>',
-    '<http://dbpedia.org/class/yago/Honoree110183757>'
-    ]
-
-SPECIAL_CLASSES = {
-    'dbo:Person': CELEBRITY_LIST,
-    'dbo:Athlete': ['dbo:TableTennisPlayer']
-}
 
 def prepare_generator_query( template ):
     generator_query = getattr(template, 'generator_query')
