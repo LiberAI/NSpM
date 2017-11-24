@@ -7,22 +7,27 @@ Neural SPARQL Machines - Generator module
 https://w3id.org/neural-sparql-machines/soru-marx-semantics2017.html
 https://arxiv.org/abs/1708.07624
 
+Version 0.0.3
+
 """
 import sys
 import json
 import urllib2, urllib, httplib, json
 import random
 import re
+import os
 
 reload(sys)
 sys.setdefaultencoding("utf-8")
 
-ENDPOINT = "http://dbpedia.org/sparql"
+ENDPOINT = "http://live.dbpedia.org/sparql"
 GRAPH = "http://dbpedia.org"
 
 TARGET_CLASS = "dbo:Monument"
 
 EXAMPLES_PER_TEMPLATE = 300
+BASE_DIR = "data/movies_300/"
+ANNOT_FILE = 'data/annotations_movies.tsv'
 
 # ================================================================
 
@@ -88,29 +93,17 @@ def strip_brackets(s):
     return s.strip().lower()
     
 def replacements(s):
-    repl = [
-        ('http://dbpedia.org/ontology/', 'dbo_'),
-        ('http://dbpedia.org/property/', 'dbp_'),
-        ('http://dbpedia.org/resource/', 'dbr_'),
-        ('dbr:', 'dbr_'),
-        ('dbo:', 'dbo_'),
-        ('dbp:', 'dbp_'),
-        ('dct:', 'dct_'),
-        ('geo:', 'geo_'),
-        ('georss:', 'georss_'),
-        ('rdf:type', 'rdf_type'),
-        ('(', ' par_open '),
-        (')', ' par_close '),
-        ('{', 'brack_open'),
-        ('}', 'brack_close'),
-        (' . ', ' sep_dot '),
-        ('?', 'var_'),
-        ('*', 'wildcard'),
-        (' <= ', 'math_leq'),
-        (' >= ', 'math_geq'),
-        (' < ', 'math_lt'),
-        (' > ', 'math_gt'),
-    ]
+    repl = []
+    with open('sparql.grammar') as f:
+        for line in f:
+            line = line[:-1].split('\t')
+            spaces = list()
+            for i in range(4):
+                if line[i+2] == '1':
+                    spaces.append(' ')
+                else:
+                    spaces.append('')
+            repl.append((spaces[0] + line[0] + spaces[1], spaces[2] + line[1] + spaces[3]))
     for r in repl:
         s = s.replace(r[0], r[1])
     return s
@@ -118,15 +111,15 @@ def replacements(s):
 # ================================================================
 
 annot = list()
-with open('data/annotations_monument.tsv') as f:    
+with open(ANNOT_FILE) as f:    
     for line in f:
         annot.append(tuple(line[:-1].split('\t')))
 
 cache = dict()
-if not os.path.exists('data/monument_300/'):
-    os.makedirs('data/monument_300/')
-with open('data/monument_300/data_300.en', 'w') as f1:
-    with open('data/monument_300/data_300.sparql', 'w') as f2:
+if not os.path.exists(BASE_DIR):
+    os.makedirs(BASE_DIR)
+with open(BASE_DIR + 'data_300.en', 'w') as f1:
+    with open(BASE_DIR + 'data_300.sparql', 'w') as f2:
         for a in annot:
             if a[2] in cache:
                 results = cache[a[2]]

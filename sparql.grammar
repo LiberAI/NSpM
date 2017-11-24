@@ -1,0 +1,22 @@
+dbr:	dbr_	0	0	0	0
+dbo:	dbo_	0	0	0	0
+dbp:	dbp_	0	0	0	0
+dct:	dct_	0	0	0	0
+geo:	geo_	0	0	0	0
+georss:	georss_	0	0	0	0
+rdf:type	rdf_type	0	0	0	0
+(*)	par_open wildcard par_close	0	0	1	1
+(	par_open	1	0	1	1
+)	par_close	0	1	1	1
+{	brack_open	0	0	0	0
+}	brack_close	0	0	0	0
+.	sep_dot	1	1	1	1
+;	sep_scn	1	1	1	1
+?	var_	0	0	0	0
+*	math_mult	0	0	1	1
+/	math_div	0	0	1	1
+<=	math_leq	1	1	1	1
+>=	math_geq	1	1	1	1
+<	math_lt	1	1	1	1
+>	math_gt	1	1	1	1
+=	math_eq	1	1	1	1
