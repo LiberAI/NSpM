@@ -20,7 +20,7 @@ import re
 import sys
 import traceback
 
-from generator_utils import log_statistics, saveCache, query_dbpedia, strip_brackets, replacements, read_template_file
+from generator_utils import log_statistics, saveCache, query_dbpedia, strip_brackets, encode, read_template_file
 
 CELEBRITY_LIST = [
     'dbo:Royalty',
@@ -140,7 +140,7 @@ def build_dataset_pair(binding, template):
         if placeholder in sparql and uri is not None:
             sparql = sparql.replace(placeholder, uri)
 
-    sparql = replacements(sparql)
+    sparql = encode(sparql)
     dataset_pair = {'english': english, 'sparql': sparql}
     return dataset_pair
 

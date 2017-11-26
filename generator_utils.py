@@ -55,33 +55,46 @@ def strip_brackets(s):
     return s.strip().lower()
 
 
-def replacements(s):
-    repl = [
-        ('http://dbpedia.org/ontology/', 'dbo_'),
-        ('http://dbpedia.org/property/', 'dbp_'),
-        ('http://dbpedia.org/resource/', 'dbr_'),
-        ('dbr:', 'dbr_'),
-        ('dbo:', 'dbo_'),
-        ('dbp:', 'dbp_'),
-        ('dct:', 'dct_'),
-        ('geo:', 'geo_'),
-        ('georss:', 'georss_'),
-        ('rdf:type', 'rdf_type'),
-        ('(', ' par_open '),
-        (')', ' par_close '),
-        ('{', 'brack_open'),
-        ('}', 'brack_close'),
-        (' . ', ' sep_dot '),
-        ('?', 'var_'),
-        ('*', 'wildcard'),
-        (' <= ', 'math_leq'),
-        (' >= ', 'math_geq'),
-        (' < ', 'math_lt'),
-        (' > ', 'math_gt'),
-    ]
-    for r in repl:
-        s = s.replace(r[0], r[1])
-    return s
+REPLACEMENTS = [
+    ['dbo:', 'http://dbpedia.org/ontology/', 'dbo_'],
+    ['dbp:', 'http://dbpedia.org/property/', 'dbp_'],
+    ['dbr:', 'http://dbpedia.org/resource/', 'dbr_'],
+    ['dct:', 'dct_'],
+    ['geo:', 'geo_'],
+    ['georss:', 'georss_'],
+    ['rdf:type', 'rdf_type'],
+    ['(', ' par_open '],
+    [')', ' par_close '],
+    ['{', 'brack_open'],
+    ['}', 'brack_close'],
+    [' . ', ' sep_dot '],
+    ['?', 'var_'],
+    ['*', 'wildcard'],
+    [' <= ', 'math_leq'],
+    [' >= ', 'math_geq'],
+    [' < ', 'math_lt'],
+    [' > ', 'math_gt']
+]
+
+
+def encode( sparql ):
+    encoded_sparql = sparql
+    for r in REPLACEMENTS:
+        encoding = r[-1]
+        for original in r[:-1]:
+            encoded_sparql = encoded_sparql.replace(original, encoding)
+    return encoded_sparql
+
+
+def decode ( encoded_sparql ):
+    sparql = encoded_sparql
+    for r in REPLACEMENTS:
+        original = r[0]
+        encoding = r[-1]
+        sparql = sparql.replace(encoding, original)
+        stripped_encoding = str.strip(encoding)
+        sparql = sparql.replace(stripped_encoding, original)
+    return sparql
 
 
 def read_template_file(file):
