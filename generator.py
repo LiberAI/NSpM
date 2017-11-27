@@ -20,7 +20,7 @@ import re
 import sys
 import traceback
 
-from generator_utils import log_statistics, saveCache, query_dbpedia, strip_brackets, encode, read_template_file
+from generator_utils import log_statistics, save_cache, query_dbpedia, strip_brackets, encode, read_template_file
 
 CELEBRITY_LIST = [
     'dbo:Royalty',
@@ -251,8 +251,8 @@ if __name__ == '__main__':
         generate_dataset(templates, output_dir, file_mode)
     except:
         print 'exception occured, look for error in log file'
-        saveCache(resource_dump_file, used_resources)
+        save_cache(resource_dump_file, used_resources)
     else:
-        saveCache('{}/used_resources_{:%Y-%m-%d-%H-%M}.json'.format(output_dir, time), used_resources)
+        save_cache('{}/used_resources_{:%Y-%m-%d-%H-%M}.json'.format(output_dir, time), used_resources)
     finally:
         log_statistics(used_resources)

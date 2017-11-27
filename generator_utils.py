@@ -22,7 +22,7 @@ def log_statistics ( used_resources ):
         logging.info('{:6d} resources occur \t{:6d} times \t({:6.2f} %) '.format(examples_per_instance[usage], usage, examples_per_instance[usage]*100/total_number_of_resources))
 
 
-def saveCache (file, cache):
+def save_cache ( file, cache ):
     ordered = collections.OrderedDict(cache.most_common())
     with open(file, 'w') as outfile:
         json.dump(ordered, outfile)
