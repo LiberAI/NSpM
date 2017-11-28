@@ -16,7 +16,7 @@ http://dbpedia.org/property/	dbp_	0	0	0	0
 .	sep_dot	1	1	1	1
 ;	sep_scn	1	1	1	1
 ?	var_	0	0	0	0
-*	math_mult	0	0	1	1
+*	math_mult	0	0	0	0
 /	math_div	0	0	1	1
 <=	math_leq	1	1	1	1
 >=	math_geq	1	1	1	1
