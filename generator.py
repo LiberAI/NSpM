@@ -25,8 +25,8 @@ GRAPH = "http://dbpedia.org"
 
 TARGET_CLASS = "dbo:Monument"
 
-EXAMPLES_PER_TEMPLATE = 300
-BASE_DIR = "data/movies_300/"
+EXAMPLES_PER_TEMPLATE = 1
+BASE_DIR = "data/movies_300_nsp/"
 ANNOT_FILE = 'data/annotations_movies.tsv'
 
 # ================================================================
@@ -54,7 +54,7 @@ def extract(data):
     res = list()
     for result in data:
         res.append(result)
-    print res
+    # print res
     
     if len(res) == 0:
         return None
@@ -107,6 +107,24 @@ def replacements(s):
     for r in repl:
         s = s.replace(r[0], r[1])
     return s
+
+def recheck(s):
+    s2 = s.split(' ')
+    old = None
+    for i in range(len(s2)):
+        print i, s2
+        if i == len(s2):
+            break
+        token = s2[i]
+        if old is not None:
+            if old.startswith("dbr_") or old.startswith("dbo_"):
+                if token == "par_close":
+                    s2[i-1] += ')'
+                    s2 = s2[:i] + s2[i+1:]
+                    i -= 1
+                    print s2
+        old = token
+    return " ".join(s2)
     
 # ================================================================
 
@@ -151,6 +169,7 @@ with open(BASE_DIR + 'data_300.en', 'w') as f1:
                     else:
                         continue
                 outp = replacements(outp)
+                outp = recheck(outp)
     
                 print "\n{}\n{}\n{}".format(xy, inp, outp)
                 f1.write("{}\n".format(inp))
