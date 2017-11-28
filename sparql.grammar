@@ -5,6 +5,9 @@ dct:	dct_	0	0	0	0
 geo:	geo_	0	0	0	0
 georss:	georss_	0	0	0	0
 rdf:type	rdf_type	0	0	0	0
+http://dbpedia.org/resource/	dbr_	0	0	0	0
+http://dbpedia.org/ontology/	dbo_	0	0	0	0
+http://dbpedia.org/property/	dbp_	0	0	0	0
 (*)	par_open wildcard par_close	0	0	1	1
 (	par_open	1	0	1	1
 )	par_close	0	1	1	1
