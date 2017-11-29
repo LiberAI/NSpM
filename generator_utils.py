@@ -132,3 +132,17 @@ def extract_variables(query):
         letter_pattern = r'\?(\w)'
         variables = re.findall(letter_pattern, variable_match.group((2)))
     return variables
+
+
+def extract_encoded_entities( encoded_sparql ):
+    entity_pattern = r'(dbr_.*?)\s'
+    encoded_entities = re.findall(entity_pattern, encoded_sparql)
+    return encoded_entities
+
+
+def extract_entities( sparql ):
+    entity_pattern_1 = r'(dbr:.*?)\s'
+    encoded_entities = re.findall(entity_pattern_1, sparql)
+    entity_pattern_2 = r'(http://dbpedia.org/resource/.*?)\s'
+    encoded_entities += re.findall(entity_pattern_2, sparql)
+    return encoded_entities

@@ -14,8 +14,9 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     lines = int(args.lines)
-    sparql_file = args.dataset
-    en_file = os.path.splitext(sparql_file)[0] + '.en'
+    dataset_file = os.path.splitext(args.dataset)[0]
+    sparql_file = dataset_file + '.sparql'
+    en_file = dataset_file + '.en'
 
     random.seed()
 

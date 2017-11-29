@@ -2,17 +2,9 @@ import argparse
 import collections
 import json
 import os
-import re
 import sys
 
-from generator_utils import encode, save_cache
-
-
-def extract_entities( encoded_sparql ):
-    entity_pattern = r'(dbr_.*?)\s'
-    encoded_entities = re.findall(entity_pattern, encoded_sparql)
-    return encoded_entities
-
+from generator_utils import encode, save_cache, extract_encoded_entities
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
@@ -47,7 +39,7 @@ if __name__ == '__main__':
     filtered_queries = []
     with open(dataset_root+'.sparql', 'r') as sparql_file:
         for linenumber, line in enumerate(sparql_file):
-            entities = extract_entities(line)
+            entities = extract_encoded_entities(line)
             valid = COMP(map(check, entities))
             if valid:
                 filtered_queries.append(line)
