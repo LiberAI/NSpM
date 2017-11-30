@@ -19,7 +19,7 @@ def test_single_resource_sort():
 
     result = sorted(matches, key=generator.prioritize_usage)
 
-    assert map(operator.itemgetter(0), map(operator.itemgetter('usages'), result)) == [2, 1, 0, 3, 17]
+    assert map(operator.itemgetter(0), map(operator.itemgetter('usages'), result)) == [17, 3, 2, 1, 0 ]
 
 
 def test_couple_resource_sort():

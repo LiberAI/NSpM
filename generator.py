@@ -25,13 +25,21 @@ from generator_utils import log_statistics, save_cache, query_dbpedia, strip_bra
 CELEBRITY_LIST = [
     'dbo:Royalty',
     '<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>',
+    '<http://dbpedia.org/class/yago/WikicatEnglishMusicians>',
     '<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>',
     '<http://dbpedia.org/class/yago/Honoree110183757>'
     ]
 
 SPECIAL_CLASSES = {
-    'dbo:Person': ['dbo:TableTennisPlayer'],
-    'dbo:Athlete': ['dbo:TableTennisPlayer']
+    'dbo:Person': [
+        '<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>',
+        '<http://dbpedia.org/class/yago/WikicatEnglishMusicians>',
+        '<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>',
+        '<http://dbpedia.org/class/yago/Honoree110183757>',
+        'dbo:LacrossePlayer'
+    ],
+    'dbo:Athlete': ['dbo:LacrossePlayer'],
+    'dbo:SportsTeam': ['dboBasketballTeam']
 }
 EXAMPLES_PER_TEMPLATE = 300
 
@@ -87,13 +95,21 @@ def prioritize_usage ( match ):
             return prioritize_triple_match(usages)
 
 def prioritize_single_match( usage ):
-    # realises prioritity: 2 < 1 < 0 < 3
-    highest_priority = 30 > usage > 0
-    second_highest_priority = usage == 0
+    highest_priority = 20 >= usage > 10
+    second_highest_priority = 30 >= usage > 20
+    third_highest_priority = 10 >= usage > 0
+    fourth_highest_priority = 50 >= usage > 30
+    fifth_highest_priority = usage == 0
     if highest_priority:
         return 0
     if second_highest_priority:
         return 1
+    if third_highest_priority:
+        return 2
+    if fourth_highest_priority:
+        return 3
+    if fifth_highest_priority:
+        return 4
     return usage
 
 
@@ -113,10 +129,10 @@ def prioritize_couple_match( usages ):
     return sum(usages)
 
 def prioritize_triple_match( usages ):
-    between_zero_and_three = lambda value : value > 0 and value < 3
-    highest_priority = all(map(between_zero_and_three, usages))
-    second_highest_priority = filter(between_zero_and_three, usages) > 1
-    third_highest_priority = any(map(between_zero_and_three, usages))
+    between_zero_and_upper_limit = lambda value : 0 < value < 30
+    highest_priority = all(map(between_zero_and_upper_limit, usages))
+    second_highest_priority = filter(between_zero_and_upper_limit, usages) >= 2
+    third_highest_priority = any(map(between_zero_and_upper_limit, usages))
 
     if highest_priority:
         return 0
@@ -156,7 +172,9 @@ def generate_dataset(templates, output_dir, file_mode):
                 bindings = extract_bindings(results["results"]["bindings"], template)
 
                 if bindings is None:
-                    logging.debug("no data for {}".format(getattr(template, 'id')))
+                    id_or_question = getattr(template, 'id') or getattr(template, 'question')
+                    logging.debug("no data for {}".format(id_or_question))
+                    not_instanced_templates.update([id_or_question])
                     continue
 
                 for binding in bindings:
@@ -189,33 +207,45 @@ CLASS_REPLACEMENT = " where {{ ?{variable} a {ontology_class} . "
 CLASSES_REPLACEMENT = " where {{ ?{variable} a ?t . VALUES (?t) {{ {classes} }} . "
 SUBCLASS_REPLACEMENT = " where {{ ?{variable} rdfs:subClassOf {ontology_class} . "
 
+
+def variable_is_subclass ( query, variable ):
+    predicate_pattern = r'\s+?(rdf:type|a)\s+?\?' + variable
+    predicate_match = re.search(predicate_pattern, query)
+    return bool(predicate_match)
+
+
+def add_requirement( query, where_replacement ):
+    return query.replace(" where { ", where_replacement)
+
+
 def prepare_generator_query( template ):
     generator_query = getattr(template, 'generator_query')
     target_classes = getattr(template, 'target_classes')
     variables = getattr(template, 'variables')
 
-    def variable_is_subclass ( query, variable ):
-        predicate_pattern = r'\s+?(rdf:type|a)\s+?\?' + variable
-        predicate_match = re.search(predicate_pattern, query)
-        return bool(predicate_match)
-
-    add_requirement = lambda query, where_replacement: query.replace(" where { ", where_replacement)
-
-
     for i, variable in enumerate(variables):
         generator_query = add_requirement(generator_query, LABEL_REPLACEMENT.format(variable=variable))
         variable_has_a_type = len(target_classes) > i and target_classes[i]
         if variable_has_a_type:
+            normalized_target_class = normalize(target_classes[i])
             if variable_is_subclass(generator_query, variable):
-                generator_query = add_requirement(generator_query, SUBCLASS_REPLACEMENT.format(variable=variable, ontology_class=target_classes[i]))
+                generator_query = add_requirement(generator_query, SUBCLASS_REPLACEMENT.format(variable=variable, ontology_class=normalized_target_class))
             else:
-                if target_classes[i] in SPECIAL_CLASSES:
-                    classes = ' '.join(map(lambda c : '({})'.format(c), SPECIAL_CLASSES[target_classes[i]]))
+                if normalized_target_class in SPECIAL_CLASSES:
+                    classes = ' '.join(map(lambda c : '({})'.format(c), SPECIAL_CLASSES[normalized_target_class]))
                     generator_query = add_requirement(generator_query, CLASSES_REPLACEMENT.format(variable=variable,classes=classes))
                 else:
-                    ontology_class = target_classes[i]
+                    ontology_class = normalized_target_class
                     generator_query = add_requirement(generator_query, CLASS_REPLACEMENT.format(variable=variable, ontology_class=ontology_class))
     return generator_query
+
+
+def normalize (ontology_class):
+    if str.startswith(ontology_class, 'http://dbpedia.org/ontology/'):
+        return str.replace(ontology_class, 'http://dbpedia.org/ontology/', 'dbo:')
+    if str.startswith(ontology_class, 'http'):
+        return '<{}>'.format(ontology_class)
+    return ontology_class
 
 
 if __name__ == '__main__':
@@ -244,6 +274,7 @@ if __name__ == '__main__':
     reload(sys)
     sys.setdefaultencoding("utf-8")
 
+    not_instanced_templates = collections.Counter()
     used_resources = collections.Counter(json.loads(open(resource_dump_file).read())) if use_resources_dump else collections.Counter()
     file_mode = 'a' if use_resources_dump else 'w'
     templates = read_template_file(template_file)
@@ -255,4 +286,4 @@ if __name__ == '__main__':
     else:
         save_cache('{}/used_resources_{:%Y-%m-%d-%H-%M}.json'.format(output_dir, time), used_resources)
     finally:
-        log_statistics(used_resources)
+        log_statistics(used_resources, SPECIAL_CLASSES, not_instanced_templates)
