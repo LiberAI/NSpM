@@ -13,16 +13,16 @@ def analyse( translation ):
     result = {}
     for test in TESTS:
         result[test] = TESTS[test](translation)
+
+    everything_okay = all(map(lambda test: result[test], TESTS))
+    details['everything_okay'].update([everything_okay])
+
     return result
 
 
 def validate( translation ):
     _, query = translation
-    # rdflib parser does not accept parantheses in URIs
-    rdflib_parser_valid_parentheses_open = '\('
-    rdflib_parser_valid_parentheses_close = '\)'
-    query = query.replace('(', rdflib_parser_valid_parentheses_open)
-    query = query.replace(')', rdflib_parser_valid_parentheses_close)
+    # TODO: rdflib parser does not accept parantheses in URIs
     try:
         parser.parseQuery(query)
     except ParseException as exception:
@@ -60,6 +60,8 @@ def extract_result_description (sparqlQuery):
 def check_entities ( translation ):
     target, generated = translation
     entities = extract_entities(target)
+    if not entities:
+        return False
     entities_detected = map(lambda entity : entity in generated, entities)
     if all(entities_detected):
         return True
@@ -68,6 +70,33 @@ def check_entities ( translation ):
         details['partly_detected_entities'].update([True])
 
     details['undetected_entity'].update(map(lambda (entity, detected) : entity, filter(lambda (entity, detected) : not detected, zip(entities, entities_detected))))
+    return False
+
+
+def extract_predicates( sparql ):
+    predicates = []
+    predicate_pattern = r'((rdfs?|dbp:|http://dbpedia.org/property/|dbo:[a-z]|http://dbpedia.org/ontology/[a-z]).*?)\s'
+    predicate_matches = re.findall(predicate_pattern, sparql)
+    for match in predicate_matches:
+        predicates.append(match[0])
+    return predicates
+
+
+def check_predicates ( translation ):
+    target, generated = translation
+    predicates = extract_predicates(target)
+    if not predicates:
+        return False
+    predicates_detected = map(lambda predicate: predicate in generated, predicates)
+    if all(predicates_detected):
+        return True
+
+    if any(predicates_detected):
+        details['partly_detected_predicates'].update([True])
+
+    details['undetected_predicates'].update(map(lambda (predicate, detected): predicate,
+                                            filter(lambda (predicate, detected): not detected,
+                                                   zip(predicates, predicates_detected))))
     return False
 
 
@@ -83,6 +112,7 @@ def log_summary( summary, details, org_file, ask_output_file ):
     print 'Analysis based on {} and {}'.format(org_file, ask_output_file)
     for test in TESTS:
         print '{:30}: {:6d} True / {:6d} False'.format(test, summary[test][True], summary[test][False])
+    print '{:30}: {:6d} True / {:6d} False'.format('everything_okay', details['everything_okay'][True], details['everything_okay'][False])
     print '\n\nDetails\n'
     for detail in details:
         for key in details[detail]:
@@ -111,13 +141,17 @@ if __name__ == '__main__':
     TESTS = {
         'valid_sparql': validate,
         'correct_query_type': check_type,
-        'entities_detected': check_entities
+        'entities_detected': check_entities,
+        'predicates_detected': check_predicates
     }
 
     details = {
         'parse_exception': collections.Counter(),
         'undetected_entity': collections.Counter(),
-        'partly_detected_entities': collections.Counter()
+        'partly_detected_entities': collections.Counter(),
+        'partly_detected_predicates': collections.Counter(),
+        'undetected_predicates': collections.Counter(),
+        'everything_okay': collections.Counter()
     }
 
     encoded_targets = read(targets_file)

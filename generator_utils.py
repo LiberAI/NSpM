@@ -142,7 +142,7 @@ def extract_encoded_entities( encoded_sparql ):
 
 def extract_entities( sparql ):
     entity_pattern_1 = r'(dbr:.*?)\s'
-    encoded_entities = re.findall(entity_pattern_1, sparql)
+    entities = re.findall(entity_pattern_1, sparql)
     entity_pattern_2 = r'(http://dbpedia.org/resource/.*?)\s'
-    encoded_entities += re.findall(entity_pattern_2, sparql)
-    return encoded_entities
+    entities += re.findall(entity_pattern_2, sparql)
+    return entities
