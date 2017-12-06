@@ -192,13 +192,20 @@ def generate_dataset(templates, output_dir, file_mode):
 
 def get_results_of_generator_query( cache, template ):
     generator_query = getattr(template, 'generator_query')
+    first_attempt = lambda template : prepare_generator_query(template)
+    second_attempt = lambda template : prepare_generator_query(template, do_special_class_replacement=False)
+    third_attempt = lambda template : prepare_generator_query(template, add_type_requirements=False)
 
     if generator_query in cache:
         results = cache[generator_query]
     else:
-        query = prepare_generator_query(template)
-        logging.debug('ready generator_query: ' + query)
-        results = query_dbpedia(query)
+        for attempt, prepare_query in enumerate([first_attempt, second_attempt, third_attempt], start=1):
+            query = prepare_query(template)
+            logging.debug('{}. attempt generator_query: {}'.format(attempt, query))
+            results = query_dbpedia(query)
+            sufficient_examples = len(results["results"]["bindings"]) >= EXAMPLES_PER_TEMPLATE/3
+            if sufficient_examples:
+                break
         cache[generator_query] = results
     return results
 
@@ -218,7 +225,7 @@ def add_requirement( query, where_replacement ):
     return query.replace(" where { ", where_replacement)
 
 
-def prepare_generator_query( template ):
+def prepare_generator_query( template, add_type_requirements=True, do_special_class_replacement=True):
     generator_query = getattr(template, 'generator_query')
     target_classes = getattr(template, 'target_classes')
     variables = getattr(template, 'variables')
@@ -226,12 +233,12 @@ def prepare_generator_query( template ):
     for i, variable in enumerate(variables):
         generator_query = add_requirement(generator_query, LABEL_REPLACEMENT.format(variable=variable))
         variable_has_a_type = len(target_classes) > i and target_classes[i]
-        if variable_has_a_type:
+        if variable_has_a_type and add_type_requirements:
             normalized_target_class = normalize(target_classes[i])
             if variable_is_subclass(generator_query, variable):
                 generator_query = add_requirement(generator_query, SUBCLASS_REPLACEMENT.format(variable=variable, ontology_class=normalized_target_class))
             else:
-                if normalized_target_class in SPECIAL_CLASSES:
+                if normalized_target_class in SPECIAL_CLASSES and do_special_class_replacement:
                     classes = ' '.join(map(lambda c : '({})'.format(c), SPECIAL_CLASSES[normalized_target_class]))
                     generator_query = add_requirement(generator_query, CLASSES_REPLACEMENT.format(variable=variable,classes=classes))
                 else:

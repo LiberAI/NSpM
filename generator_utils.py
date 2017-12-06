@@ -64,13 +64,19 @@ def strip_brackets(s):
 REPLACEMENTS = [
     ['dbo:', 'http://dbpedia.org/ontology/', 'dbo_'],
     ['dbp:', 'http://dbpedia.org/property/', 'dbp_'],
+    ['dbc:', 'http://dbpedia.org/resource/Category:', 'dbc_'],
     ['dbr:', 'http://dbpedia.org/resource/', 'dbr_'],
     ['dct:', 'dct_'],
     ['geo:', 'geo_'],
     ['georss:', 'georss_'],
-    ['rdf:type', 'rdf_type'],
-    ['(', ' par_open '],
-    [')', ' par_close '],
+    ['rdf:', 'rdf_'],
+    ['rdfs:', 'rdfs_'],
+    ['foaf:', 'foaf_'],
+    ['skos:', 'skos_'],
+    [' ( ', '  par_open  '],
+    [' ) ', '  par_close  '],
+    ['(', ' attr_open '],
+    [')', ' attr_close '],
     ['{', 'brack_open'],
     ['}', 'brack_close'],
     [' . ', ' sep_dot '],
@@ -83,23 +89,71 @@ REPLACEMENTS = [
 ]
 
 
+STANDARDS = {
+        'dbo_almaMater': ['dbp_almaMater'],
+        'dbo_award': ['dbp_awards'],
+        'dbo_birthPlace': ['dbp_birthPlace', 'dbp_placeOfBirth'],
+        'dbo_deathPlace': ['dbp_deathPlace', 'dbp_placeOfDeath'],
+        'dbo_child': ['dbp_children'],
+        'dbo_college': ['dbp_college'],
+        'dbo_hometown': ['dbp_hometown'],
+        'dbo_nationality': ['dbo_stateOfOrigin'],
+        'dbo_relative': ['dbp_relatives'],
+        'dbo_restingPlace': ['dbp_restingPlaces', 'dbp_placeOfBurial', 'dbo_placeOfBurial', 'dbp_restingplace'],
+        'dbo_spouse': ['dbp_spouse'],
+        'dbo_partner': ['dbp_partner']
+}
+
+
 def encode( sparql ):
-    encoded_sparql = sparql
-    for r in REPLACEMENTS:
-        encoding = r[-1]
-        for original in r[:-1]:
-            encoded_sparql = encoded_sparql.replace(original, encoding)
-    return encoded_sparql
+    encoded_sparql = do_replacements(sparql)
+    shorter_encoded_sparql = shorten_query(encoded_sparql)
+    normalized = normalize_predicates(shorter_encoded_sparql)
+    return normalized
 
 
 def decode ( encoded_sparql ):
-    sparql = encoded_sparql
+    short_sparql = reverse_replacements(encoded_sparql)
+    sparql = reverse_shorten_query(short_sparql)
+    return sparql
+
+
+def normalize_predicates( sparql ):
+    for standard in STANDARDS:
+        for alternative in STANDARDS[standard]:
+            sparql = sparql.replace(alternative, standard)
+
+    return sparql
+
+
+def do_replacements( sparql ):
+    for r in REPLACEMENTS:
+        encoding = r[-1]
+        for original in r[:-1]:
+            sparql = sparql.replace(original, encoding)
+    return sparql
+
+
+def reverse_replacements( sparql ):
     for r in REPLACEMENTS:
         original = r[0]
         encoding = r[-1]
         sparql = sparql.replace(encoding, original)
         stripped_encoding = str.strip(encoding)
         sparql = sparql.replace(stripped_encoding, original)
+    return sparql
+
+
+def shorten_query( sparql ):
+    sparql = re.sub(r'order by desc\s+....?_open\s+([\S]+)\s+....?_close', '_obd_ \\1', sparql, flags=re.IGNORECASE)
+    sparql = re.sub(r'order by asc\s+....?_open\s+([\S]+)\s+....?_close', '_oba_ \\1', sparql, flags=re.IGNORECASE)
+    sparql = re.sub(r'order by\s+([\S]+)', '_oba_ \\1', sparql, flags=re.IGNORECASE)
+    return sparql
+
+
+def reverse_shorten_query( sparql ):
+    sparql = re.sub(r'_oba_ ([\S]+)', 'order by asc (\\1)', sparql, flags=re.IGNORECASE)
+    sparql = re.sub(r'_obd_ ([\S]+)', 'order by desc (\\1)', sparql, flags=re.IGNORECASE)
     return sparql
 
 
@@ -132,11 +186,11 @@ class Annotation:
 
 def extract_variables(query):
     variables = []
-    variable_pattern = r'select\s(distinct)?(.*?)where'
-    variable_match = re.search(variable_pattern, query, re.IGNORECASE)
-    if variable_match:
+    query_form_pattern = r'^.*?where'
+    query_form_match = re.search(query_form_pattern, query, re.IGNORECASE)
+    if query_form_match:
         letter_pattern = r'\?(\w)'
-        variables = re.findall(letter_pattern, variable_match.group((2)))
+        variables = re.findall(letter_pattern, query_form_match.group(0))
     return variables
 
 
