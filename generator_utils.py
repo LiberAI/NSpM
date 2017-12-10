@@ -65,13 +65,15 @@ REPLACEMENTS = [
     ['dbo:', 'http://dbpedia.org/ontology/', 'dbo_'],
     ['dbp:', 'http://dbpedia.org/property/', 'dbp_'],
     ['dbc:', 'http://dbpedia.org/resource/Category:', 'dbc_'],
-    ['dbr:', 'http://dbpedia.org/resource/', 'dbr_'],
+    ['dbr:', 'res:', 'http://dbpedia.org/resource/', 'dbr_'],
     ['dct:', 'dct_'],
     ['geo:', 'geo_'],
     ['georss:', 'georss_'],
     ['rdf:', 'rdf_'],
     ['rdfs:', 'rdfs_'],
     ['foaf:', 'foaf_'],
+    ['owl:', 'owl_'],
+    ['yago:', 'yago_'],
     ['skos:', 'skos_'],
     [' ( ', '  par_open  '],
     [' ) ', '  par_close  '],
@@ -195,14 +197,77 @@ def extract_variables(query):
 
 
 def extract_encoded_entities( encoded_sparql ):
-    entity_pattern = r'(dbr_.*?)\s'
-    encoded_entities = re.findall(entity_pattern, encoded_sparql)
+    sparql = decode(encoded_sparql)
+    entities = extract_entities(sparql)
+    encoded_entities = map(encode, entities)
     return encoded_entities
 
 
 def extract_entities( sparql ):
-    entity_pattern_1 = r'(dbr:.*?)\s'
-    entities = re.findall(entity_pattern_1, sparql)
-    entity_pattern_2 = r'(http://dbpedia.org/resource/.*?)\s'
-    entities += re.findall(entity_pattern_2, sparql)
+    triples = extractTriples(sparql)
+    entities = set()
+    for triple in triples:
+        subj = triple['subject']
+        obj = triple['object']
+        if not subj.startswith('?'):
+            entities.add(subj)
+        if not obj.startswith('?'):
+            entities.add(obj)
     return entities
+
+
+def extract_predicates( sparql ):
+    triples = extractTriples(sparql)
+    predicates = set()
+    for triple in triples:
+        pred = triple['predicate']
+        predicates.add(pred)
+    return predicates
+
+
+def extractTriples (sparqlQuery):
+    triples = []
+    whereStatementPattern = r'where\s*?{(.*?)}'
+    whereStatementMatch = re.search(whereStatementPattern, sparqlQuery, re.IGNORECASE)
+    if whereStatementMatch:
+        whereStatement = whereStatementMatch.group(1)
+        triples = splitIntoTriples(whereStatement)
+    return triples
+
+
+def splitIntoTriples (whereStatement):
+    tripleAndSeparators = re.split('(\.[\s\?\<$])', whereStatement)
+    trimmed = map(lambda str : str.strip(), tripleAndSeparators)
+
+    def repair (list, element):
+        if element not in ['.', '.?', '.<']:
+            previousElement = list[-1]
+            del list[-1]
+            if previousElement in ['.', '.?', '.<']:
+                cutoff = previousElement[1] if previousElement in ['.?', '.<'] else ''
+                list.append(cutoff + element)
+            else:
+                list.append(previousElement + ' ' + element)
+        else:
+            list.append(element)
+
+        return list
+
+    tripleStatements = reduce(repair, trimmed, [''])
+    triplesWithNones = map(splitIntoTripleParts, tripleStatements)
+    triples = filter(lambda triple : triple != None, triplesWithNones)
+    return triples
+
+
+def splitIntoTripleParts (triple):
+    statementPattern = r'(\S+)\s+(\S+)\s+(\S+)'
+    statementPatternMatch = re.search(statementPattern, triple)
+
+    if statementPatternMatch:
+        return {
+            'subject': statementPatternMatch.group(1),
+            'predicate': statementPatternMatch.group(2),
+            'object': statementPatternMatch.group(3)
+        }
+    else:
+        return None

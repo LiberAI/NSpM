@@ -6,12 +6,14 @@ python -m nmt.nmt  --vocab_prefix=../$1/vocab --model_dir=../$1_model  --inferen
 
 if [ $? -eq 0 ]
 then
-    cat output.txt > ../"$1"/output.txt
-    python ../analyse.py --target ../"$3" --generated ../"$1"/output.txt > ../"$1"/analysis.txt
+    BASENAME="$(basename $2 .en)"
+    DIRNAME="$(dirname $1/.)"
+    cat output.txt > ../"${DIRNAME}"/output_"${BASENAME}".txt
+    python ../analyse.py --target ../"$3" --generated output.txt > ../"${DIRNAME}"/analysis_"${BASENAME}".txt
 
     if [ $? -eq 0 ]
     then
-        cat ../"$1"/analysis.txt
+        cat ../"${DIRNAME}"/analysis_"${BASENAME}".txt
     fi
 fi
 cd ..

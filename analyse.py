@@ -6,7 +6,7 @@ import sys
 from pyparsing import ParseException
 from rdflib.plugins.sparql import parser
 
-from generator_utils import decode, extract_entities
+from generator_utils import decode, extract_entities, extract_predicates
 
 
 def analyse( translation ):
@@ -73,20 +73,17 @@ def check_entities ( translation ):
     return False
 
 
-def extract_predicates( sparql ):
-    predicates = []
-    predicate_pattern = r'((rdfs?|dbp:|http://dbpedia.org/property/|dbo:[a-z]|http://dbpedia.org/ontology/[a-z]).*?)\s'
-    predicate_matches = re.findall(predicate_pattern, sparql)
-    for match in predicate_matches:
-        predicates.append(match[0])
-    return predicates
-
-
-def check_predicates ( translation ):
+def check_predicates ( translation, ignore_prefix=True, ignore_case=True ):
+    strip_prefix = lambda entity : entity[entity.find(':') :]
     target, generated = translation
     predicates = extract_predicates(target)
     if not predicates:
         return False
+    if ignore_prefix:
+        predicates = map(strip_prefix, predicates)
+    if ignore_case:
+        predicates = map(str.lower, predicates)
+        generated = str.lower(generated)
     predicates_detected = map(lambda predicate: predicate in generated, predicates)
     if all(predicates_detected):
         return True
