@@ -78,16 +78,17 @@ REPLACEMENTS = [
     [' ( ', '  par_open  '],
     [' ) ', '  par_close  '],
     ['(', ' attr_open '],
-    [')', ' attr_close '],
-    ['{', 'brack_open'],
-    ['}', 'brack_close'],
+    [') ', ')', ' attr_close '],
+    ['{', ' brack_open '],
+    ['}', ' brack_close '],
     [' . ', ' sep_dot '],
+    ['. ', ' sep_dot '],
     ['?', 'var_'],
     ['*', 'wildcard'],
-    [' <= ', 'math_leq'],
-    [' >= ', 'math_geq'],
-    [' < ', 'math_lt'],
-    [' > ', 'math_gt']
+    [' <= ', ' math_leq '],
+    [' >= ', ' math_geq '],
+    [' < ', ' math_lt '],
+    [' > ', ' math_gt ']
 ]
 
 
@@ -207,12 +208,9 @@ def extract_entities( sparql ):
     triples = extractTriples(sparql)
     entities = set()
     for triple in triples:
-        subj = triple['subject']
-        obj = triple['object']
-        if not subj.startswith('?'):
-            entities.add(subj)
-        if not obj.startswith('?'):
-            entities.add(obj)
+        possible_entities = [triple['subject'], triple['object']]
+        sorted_out = filter(lambda e : not e.startswith('?') and ':' in e, possible_entities)
+        entities = entities.union(map(lambda e : re.sub(r'^optional{', '', e, flags=re.IGNORECASE), sorted_out))
     return entities
 
 

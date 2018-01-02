@@ -1,8 +1,10 @@
 import argparse
 import collections
+import json
+import os
 import re
 import sys
-
+import urllib
 from pyparsing import ParseException
 from rdflib.plugins.sparql import parser
 
@@ -22,12 +24,24 @@ def analyse( translation ):
 
 def validate( translation ):
     _, query = translation
-    # TODO: rdflib parser does not accept parantheses in URIs
+    # encode slash in prefix uri
+    entity_with_attribute = r'\w+:\w+\(<?\w+>?\)'
+    match = re.search(entity_with_attribute, query)
+    if match:
+        entity = match.group(0)
+        entity_encoded = re.sub(r'\(<?', '\(', entity)
+        entity_encoded = re.sub(r'>?\)', '\)', entity_encoded)
+        query = query.replace(entity, entity_encoded)
     try:
         parser.parseQuery(query)
     except ParseException as exception:
         print '{} in "{}", loc: {}'.format(exception.msg, exception.line, exception.loc)
         details['parse_exception'].update([exception.msg])
+        return False
+    except Exception as exception:
+        msg = str(exception)
+        print '{}'.format(msg)
+        details['other_exception'].update([msg])
         return False
     else:
         return True
@@ -41,7 +55,7 @@ def check_type( translation ):
 
 def extract_type( query ):
     result_description = extract_result_description(query)
-    types = ['ask', 'describe', 'select']
+    types = [r'select.*?count.*?where', 'select', 'ask', 'describe']
     for query_type in types:
         match = re.search(query_type, result_description, re.IGNORECASE)
         if match:
@@ -63,13 +77,15 @@ def check_entities ( translation ):
     if not entities:
         return False
     entities_detected = map(lambda entity : entity in generated, entities)
+    entities_with_occurence_count = map(lambda entity: '{} [{}]'.format(entity, get_occurence_count(entity)), entities)
     if all(entities_detected):
+        details['detected_entity'].update(entities_with_occurence_count)
         return True
 
     if any(entities_detected):
         details['partly_detected_entities'].update([True])
 
-    details['undetected_entity'].update(map(lambda (entity, detected) : entity, filter(lambda (entity, detected) : not detected, zip(entities, entities_detected))))
+    details['undetected_entity'].update(map(lambda (entity, detected) : entity, filter(lambda (entity, detected) : not detected, zip(entities_with_occurence_count, entities_detected))))
     return False
 
 
@@ -122,6 +138,17 @@ def read( file_name ):
     return questions
 
 
+def get_occurence_count ( entity ):
+    key = unicode(entity)
+    occurence_count = used_entities_counter[key] if key in used_entities_counter else 0
+    if not occurence_count:
+        key += '.'
+        occurence_count = used_entities_counter[key] if key in used_entities_counter else 0
+        if not occurence_count:
+            print 'not found: {}'.format(entity)
+    return occurence_count
+
+
 if __name__ == '__main__':
     arg_parser = argparse.ArgumentParser()
     requiredNamed = arg_parser.add_argument_group('required named arguments')
@@ -144,6 +171,8 @@ if __name__ == '__main__':
 
     details = {
         'parse_exception': collections.Counter(),
+        'other_exception': collections.Counter(),
+        'detected_entity': collections.Counter(),
         'undetected_entity': collections.Counter(),
         'partly_detected_entities': collections.Counter(),
         'partly_detected_predicates': collections.Counter(),
@@ -151,6 +180,8 @@ if __name__ == '__main__':
         'everything_okay': collections.Counter()
     }
 
+    directory = os.path.dirname(ask_output_file)
+    used_entities_counter = json.load(open('{}/used_resources_normalized.json'.format(directory)))
     encoded_targets = read(targets_file)
     encoded_generated = read(ask_output_file)
 
