@@ -63,8 +63,6 @@ sh ask.sh data/monument_300_model "where is edward vii monument located in?"
 * Permanent URI: http://w3id.org/neural-sparql-machines/soru-marx-semantics2017.html
 * arXiv: https://arxiv.org/abs/1708.07624
 
-## Cite
-
 ```
 @proceedings{soru-marx-2017,
     author = "Tommaso Soru and Edgard Marx and Diego Moussallem and Gustavo Publio and Andr\'e Valdestilhas and Diego Esteves and Ciro Baron Neto",
@@ -74,3 +72,8 @@ sh ask.sh data/monument_300_model "where is edward vii monument located in?"
     url = "http://w3id.org/neural-sparql-machines/soru-marx-semantics2017.html",
 }
 ```
+
+## Contact
+
+* Neural SPARQL Machines [mailing list](https://groups.google.com/forum/#!forum/neural-sparql-machines).
+* Follow the [project on ResearchGate](https://www.researchgate.net/project/Neural-SPARQL-Machines).
