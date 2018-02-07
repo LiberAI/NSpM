@@ -216,6 +216,7 @@ CLASS_REPLACEMENT = " where {{ ?{variable} a {ontology_class} . "
 CLASSES_REPLACEMENT = " where {{ ?{variable} a ?t . VALUES (?t) {{ {classes} }} . "
 SUBCLASS_REPLACEMENT = " where {{ ?{variable} rdfs:subClassOf {ontology_class} . "
 
+
 def variable_is_subclass ( query, variable ):
     predicate_pattern = r'\s+?(rdf:type|a)\s+?\?' + variable
     predicate_match = re.search(predicate_pattern, query)
@@ -294,4 +295,4 @@ if __name__ == '__main__':
     else:
         save_cache('{}/used_resources_{:%Y-%m-%d-%H-%M}.json'.format(output_dir, time), used_resources)
     finally:
-log_statistics(used_resources, SPECIAL_CLASSES, not_instanced_templates)
+        log_statistics(used_resources, SPECIAL_CLASSES, not_instanced_templates)
