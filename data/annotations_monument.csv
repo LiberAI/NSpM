@@ -1,0 +1,39 @@
+dbo:Monument;;;is <A> a <B>;ask where { <A> rdf:type <B> };select distinct(?x) ?y where { ?x a ?y }
+dbo:Monument;;;what is <A>;select ?a where { <A> dbo:abstract ?a };select distinct(?x) where { ?x dbo:abstract [] }
+dbo:Monument;;;<A>;select ?a where { <A> dbo:abstract ?a };select distinct(?x) where { ?x dbo:abstract [] }
+dbo:Monument;;;where is <A>;select ?a where { <A> dbo:location ?a };select distinct(?x) where { ?x dbo:location [] }
+dbo:Monument;;;where can one find <A>;select ?a where { <A> dbo:location ?a };select distinct(?x) where { ?x dbo:location [] }
+dbo:Monument;;;location of <A>;select ?a where { <A> dbo:location ?a };select distinct(?x) where { ?x dbo:location [] }
+dbo:Monument;;;give me the location of <A>;select ?a where { <A> dbo:location ?a };select distinct(?x) where { ?x dbo:location [] }
+dbo:Monument;;;where is <A> located in;select ?a where { <A> dbo:location ?a };select distinct(?x) where { ?x dbo:location [] }
+dbo:Monument;;;who designed <A>;select ?a where { <A> dbo:designer ?a };select distinct(?x) where { ?x dbo:designer [] }
+dbo:Monument;;;when was <A> completed;select ?a where { <A> dbp:complete ?a };select distinct(?x) where { ?x dbp:complete [] }
+dbo:Monument;;;what's <A> native name;select ?a where { <A> dbp:nativeName ?a };select distinct(?x) where { ?x dbp:nativeName [] }
+dbo:Monument;;;what is <A> related to;select ?a where { <A> dct:subject ?a };select distinct(?x) where { ?x dct:subject [] }
+dbo:Monument;;;what is <A> all about;select ?a where { <A> dct:subject ?a };select distinct(?x) where { ?x dct:subject [] }
+dbo:Monument;;;what is <A> about;select ?a where { <A> dct:subject ?a };select distinct(?x) where { ?x dct:subject [] }
+dbo:Monument;;;what are the coordinates of <A>;select ?a where { <A> georss:point ?a };select distinct(?x) where { ?x georss:point [] }
+dbo:Monument;;;latitude of <A>;select ?a where { <A> geo:lat ?a };select distinct(?x) where { ?x geo:lat [] }
+dbo:Monument;;;how north is <A>;select ?a where { <A> geo:lat ?a };select distinct(?x) where { ?x geo:lat [] }
+dbo:Monument;;;longitude of <A>;select ?a where { <A> geo:long ?a };select distinct(?x) where { ?x geo:long [] }
+dbo:Monument;;;building date of <A>;select ?a where { <A> dbp:complete ?a };select distinct(?x) where { ?x dbp:complete [] }
+dbo:Monument;;;when was <A> built;select ?a where { <A> dbp:complete ?a };select distinct(?x) where { ?x dbp:complete [] }
+dbo:Monument;;dbo:Monument;is <A> older than <B>;ask where { <A> dbp:complete ?a . <B> dbp:complete ?b . FILTER(?a < ?b) };select distinct(?x) ?y where { ?x dbp:complete [] . ?y dbp:complete [] . FILTER(?x != ?y) }
+dbo:Monument;;;how long is <A>;select ?a where { <A> dbp:length ?a };select distinct(?x) where { ?x dbp:length [] }
+dbo:Monument;;;is <A> in <B>;ask where { <A> dbo:location <B> };select distinct(?x) ?y where { ?x dbo:location ?y }
+dbo:Monument;;;what's the tallest <A>;select ?a where { ?a rdf:type <A> . ?a dbp:height ?b } order by desc(?b) limit 1;select distinct(?x) where { ?x rdf:type ?a . ?x dbp:height [] }
+dbo:Monument;;;the longest <A>;select ?a where { ?a rdf:type <A> . ?a dbp:length?b } order by desc(?b) limit 1;select distinct(?x) where { ?x rdf:type ?a . ?x dbp:length [] }
+dbo:Monument;;;was <A> finished by <B>;ask where { <A> dbp:complete ?a . FILTER(?a <= <B>) };select distinct(?x) where { ?x dbp:complete [] }
+dbo:Monument;;dbo:Monument;is <A> more recent than <B>;ask where { <A> dbp:complete ?a . <B> dbp:complete ?b . FILTER(?a > ?b) };select distinct(?x) ?y where { ?x dbp:complete [] . ?y dbp:complete [] . FILTER(?x != ?y) }
+dbo:Monument;;dbo:Monument;which is taller between <A> and <B>;select ?a where { ?a dbp:height ?b . FILTER(?a = <A> || ?a = <B>) } order by ?b limit 1;select distinct(?x) ?y where { ?x dbp:height [] . ?y dbp:height [] }
+dbo:Monument;;dbo:Monument;which is longer <A> or <B>;select ?a where { ?a dbp:length ?b . FILTER(?a = <A> || ?a = <B>) } order by ?b limit 1;select distinct(?x) ?y where { ?x dbp:length [] . ?y dbp:height [] }
+dbo:Monument;;;give me the <A> tallest <B>;select ?a where { ?a rdf:type <B> . ?a dbp:height ?b } order by desc(?b) limit <A>;select distinct(?x) where { ?x dbp:height [] }
+;;;how many <A> does <B> have;select count(*) where { ?a rdf:type <A> . ?a dbo:location <B> } group by ?a;select distinct(?x) ?y where { ?a a dbo:Monument . ?a rdf:type ?x . ?a dbo:location ?y }
+;;;how many <A> are there in <B>;select count(*) where { ?a rdf:type <A> . ?a dbo:location <B> } group by ?a;select distinct(?x) ?y where { ?a a dbo:Monument . ?a rdf:type ?x . ?a dbo:location ?y }
+dbo:Monument;;;what do <A> and <B> have in common;select * where { { <A> ?a ?b . <B> ?a ?b } UNION { ?c ?d <A> . ?c ?d <B> } };select distinct(?x) ?y where { { ?x ?a ?b . ?y ?a ?b } UNION { ?c ?d ?x . ?c ?d ?y } }
+;;;what's the oldest <A> of <B>;select ?a where { ?a rdf:type <A> . ?a dbo:location <B> . ?a dbp:complete ?c } order by ?c limit 1;select distinct(?x) ?y where { ?a a dbo:Monument . ?a rdf:type ?x . ?a dbo:location ?y . ?a dbp:complete [] }
+;;;what's the most recent <A> of <B>;select ?a where { ?a rdf:type <A> . ?a dbo:location <B> . ?a dbp:complete ?c } order by desc(?c) limit 1;select distinct(?x) ?y where { ?a a dbo:Monument . ?a rdf:type ?x . ?a dbo:location ?y . ?a dbp:complete [] }
+;;;what are the <A> northernmost <B>;select ?a where { ?a rdf:type <B> . ?a geo:lat ?b } order by desc(?b) limit <A>;select distinct(?x) where { ?a a dbo:Monument . ?a rdf:type ?x . ?a geo:lat [] }
+;;;what are the <A> southernmost <B>;select ?a where { ?a rdf:type <B> . ?a geo:lat ?b } order by ?b limit <A>;select distinct(?x) where { ?a a dbo:Monument . ?a rdf:type ?x . ?a geo:lat [] }
+;;;what is the <A> with the most <B>;select ?a count(*) as ?c where { ?a rdf:type <A> . ?b rdf:type <B> . ?b [] ?a } group by ?a order by desc(?c);select distinct(?x) ?y where { ?a a dbo:Monument . ?a rdf:type ?x . ?b rdf:type ?y . ?b [] ?a }
+;;;which <A> has the most <B>;select ?a count(*) as ?c where { ?a rdf:type <A> . ?b rdf:type <B> . ?b [] ?a } group by ?a order by desc(?c);select distinct(?x) ?y where { ?a a dbo:Monument . ?a rdf:type ?x . ?b rdf:type ?y . ?b [] ?a }

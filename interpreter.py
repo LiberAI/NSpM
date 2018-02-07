@@ -7,39 +7,17 @@ Neural SPARQL Machines - Interpreter module
 https://w3id.org/neural-sparql-machines/soru-marx-semantics2017.html
 https://arxiv.org/abs/1708.07624
 
-Version 0.0.3
+Version 0.1.0-akaha
 
 """
 import sys
-# import json
-# import urllib2, urllib, httplib, json
-# import random
-# import re
-# import os
 
-reload(sys)
-sys.setdefaultencoding("utf-8")
+from generator_utils import decode
 
-# load grammar
-SPARQL_GRAMMAR = []
-with open('sparql.grammar') as f:
-    for line in f:
-        line = line[:-1].split('\t')
-        SPARQL_GRAMMAR.append((line[0], line[1]))
+if __name__ == '__main__':
+    reload(sys)
+    sys.setdefaultencoding("utf-8")
 
-def inverse_replacements(s):
-    for r in SPARQL_GRAMMAR:
-        s = s.replace(r[1], r[0]) # inverse (Neural SPARQL to SPARQL grammar)
-    return s
-
-en_q = list()
-with open(sys.argv[2]) as f:
-    for line in f:
-        en_q.append(line[:-1])
-
-with open(sys.argv[1]) as f:
-    i = 0
-    for line in f:
-        print "{}\n\t{}\t{}\n-----".format(en_q[i], line, inverse_replacements(line[:-1]))
-        i += 1
-        
+    encoded_sparql = sys.argv[1]
+    decoded_sparql = decode(encoded_sparql)
+    print decoded_sparql

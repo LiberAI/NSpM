@@ -24,7 +24,7 @@ Install TensorFlow (e.g., `pip install tensorflow`).
 The template used in the paper can be found in a file such as `annotations_monument.tsv`. To generate the training data, launch the following command.
 
 ```bash
-python generator.py
+python generator.py --templates data/annotations_monument.csv  --output data/monument_300
 ```
 
 Build the vocabularies for the two languages (i.e., English and SPARQL) with:
@@ -35,6 +35,12 @@ python build_vocab.py data/monument_300/data_300.sparql > data/monument_300/voca
 ```
 
 Split the `data_.*` files into `train_.*`, `dev_.*`, and `test_.*` (usually 80-10-10%).
+```bash
+wc -l data/monument_300/data.sparql 
+# 8544
+cd data/monument_300/
+python ../../split_in_train_dev_test.py --lines 8544  --dataset data.sparql
+```
 
 #### Pre-generated data
 
