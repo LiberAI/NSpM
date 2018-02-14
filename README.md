@@ -66,7 +66,7 @@ This command will create a model directory called `data/monument_300_model`.
 Predict the SPARQL sentence for a given question with a given model.
 
 ```bash
-sh ask.sh data/monument_300_model "where is edward vii monument located in?"
+sh ask.sh data/monument_300 "where is edward vii monument located in?"
 ```
 
 ## Paper
