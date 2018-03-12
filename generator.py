@@ -211,7 +211,7 @@ def get_results_of_generator_query( cache, template ):
             break
     return results
 
-LABEL_REPLACEMENT = " , (str(?lab{variable}) as ?l{variable}) where {{ ?{variable} rdfs:label ?lab{variable} . FILTER(lang(?lab{variable}) = 'en') . "
+LABEL_REPLACEMENT = "  (str(?lab{variable}) as ?l{variable}) where {{ ?{variable} rdfs:label ?lab{variable} . FILTER(lang(?lab{variable}) = 'en') . "
 CLASS_REPLACEMENT = " where {{ ?{variable} a {ontology_class} . "
 CLASSES_REPLACEMENT = " where {{ ?{variable} a ?t . VALUES (?t) {{ {classes} }} . "
 SUBCLASS_REPLACEMENT = " where {{ ?{variable} rdfs:subClassOf {ontology_class} . "
