@@ -198,17 +198,17 @@ def get_results_of_generator_query( cache, template ):
     second_attempt = lambda template : prepare_generator_query(template, do_special_class_replacement=False)
     third_attempt = lambda template : prepare_generator_query(template, add_type_requirements=False)
 
-    if generator_query in cache:
-        results = cache[generator_query]
-    else:
-        for attempt, prepare_query in enumerate([first_attempt, second_attempt, third_attempt], start=1):
-            query = prepare_query(template)
-            logging.debug('{}. attempt generator_query: {}'.format(attempt, query))
-            results = query_dbpedia(query)
-            sufficient_examples = len(results["results"]["bindings"]) >= EXAMPLES_PER_TEMPLATE/3
-            if sufficient_examples:
-                break
-        cache[generator_query] = results
+    for attempt, prepare_query in enumerate([first_attempt, second_attempt, third_attempt], start=1):
+        query = prepare_query(template)
+        if query in cache:
+            results = cache[query]
+            break
+        logging.debug('{}. attempt generator_query: {}'.format(attempt, query))
+        results = query_dbpedia(query)
+        sufficient_examples = len(results["results"]["bindings"]) >= EXAMPLES_PER_TEMPLATE/3
+        if sufficient_examples:
+            cache[query] = results
+            break
     return results
 
 LABEL_REPLACEMENT = " , (str(?lab{variable}) as ?l{variable}) where {{ ?{variable} rdfs:label ?lab{variable} . FILTER(lang(?lab{variable}) = 'en') . "

@@ -34,12 +34,17 @@ python build_vocab.py data/monument_300/data_300.en > data/monument_300/vocab.en
 python build_vocab.py data/monument_300/data_300.sparql > data/monument_300/vocab.sparql
 ```
 
+Count lines in `data_.*`
+```bash
+NUMLINES= $(echo awk '{ print $1}' | cat data/monument_300/data_300.sparql |  wc -l)
+echo $NUMLINES
+# 7097
+```
+
 Split the `data_.*` files into `train_.*`, `dev_.*`, and `test_.*` (usually 80-10-10%).
 ```bash
-wc -l data/monument_300/data.sparql 
-# 8544
 cd data/monument_300/
-python ../../split_in_train_dev_test.py --lines 8544  --dataset data.sparql
+python ../../split_in_train_dev_test.py --lines $NUMLINES  --dataset data.sparql
 ```
 
 #### Pre-generated data
@@ -61,7 +66,7 @@ This command will create a model directory called `data/monument_300_model`.
 Predict the SPARQL sentence for a given question with a given model.
 
 ```bash
-sh ask.sh data/monument_300_model "where is edward vii monument located in?"
+sh ask.sh data/monument_300 "where is edward vii monument located in?"
 ```
 
 ## Paper
