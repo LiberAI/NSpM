@@ -88,3 +88,9 @@ sh ask.sh data/monument_300 "where is edward vii monument located in?"
 
 * Neural SPARQL Machines [mailing list](https://groups.google.com/forum/#!forum/neural-sparql-machines).
 * Follow the [project on ResearchGate](https://www.researchgate.net/project/Neural-SPARQL-Machines).
+
+
+
+## AMAN MEHTA - GSoC
+
+Hi, this is a first commit test on gsoc-aman branch
