@@ -1,3 +1,7 @@
+#!/usr/bin/env python
+"""
+Usage: python build_vocab.py data.en > vocab.en
+"""
 import numpy as np
 from tensorflow.contrib import learn
 import sys
@@ -44,6 +48,7 @@ else: # any other language
     ## word with id i goes at index i of the list.
     vocabulary = set(list(zip(*sorted_vocab))[0])
     
+    # split also by apostrophe
     to_remove = set()
     to_add = set()
     for t0 in vocabulary:
@@ -56,8 +61,7 @@ else: # any other language
     for t0 in to_add:
         vocabulary.add(t0)
     
-# print(vocabulary)
-# print(x)
+# print terms
 for v in vocabulary:
     if v != "":
         print v
