@@ -184,6 +184,7 @@ def generate_dataset(templates, output_dir, file_mode):
 
                     if (dataset_pair):
                         english_questions.write("{}\n".format(dataset_pair['english']))
+                        dataset_pair['sparql'] = re.sub("\s\s+" , " " , dataset_pair['sparql'])
                         sparql_queries.write("{}\n".format(dataset_pair['sparql']))
             except:
                 exception = traceback.format_exc()
