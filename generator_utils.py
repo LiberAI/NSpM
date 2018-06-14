@@ -79,8 +79,8 @@ REPLACEMENTS = [
     [' ) ', '  par_close  '],
     ['(', ' attr_open '],
     [') ', ')', ' attr_close '],
-    ['{', ' brack_open '],
-    ['}', ' brack_close '],
+    ['{', 'brack_open'],
+    ['}', 'brack_close'],
     [' . ', ' sep_dot '],
     ['. ', ' sep_dot '],
     ['?', 'var_'],
@@ -107,13 +107,11 @@ STANDARDS = {
         'dbo_partner': ['dbp_partner']
 }
 
-
 def encode( sparql ):
     encoded_sparql = do_replacements(sparql)
     shorter_encoded_sparql = shorten_query(encoded_sparql)
     normalized = normalize_predicates(shorter_encoded_sparql)
     return normalized
-
 
 def decode ( encoded_sparql ):
     short_sparql = reverse_replacements(encoded_sparql)
