@@ -18,19 +18,10 @@ for rows in soup.find_all("tr"):
 	dom = rows.find_all("td")[2].get_text()
 	rng = rows.find_all("td")[3].get_text()
 
-		# name = r.get_text()
-	# props.append([name, label, dom, rng])
 	final = name + "," + label + ","  + dom + ","  + rng 
 	print final.encode('utf-8')
 
-		# print r/
-	# print rows
-	# if cnt > 30:
-	# 	break
-# print final
 # with io.open("test.csv", mode='w', encoding='utf-8') as toWrite:
 # 	writer = csv.writer(toWrite)
 # 	writer.writerows(props)
 
-# print("ESPN College Football listings fetched.")
-# print cnt
