@@ -143,22 +143,22 @@ dateAgreement,date of an agreement,xsd:date,what is the date of an agreement of 
 dateBudget,date budget,xsd:date,what is the date budget of <X>,what is the date budget of <X>,,,,
 dateOfAbandonment,date of abandonment,xsd:date,what is the date of abandonment of <X>,what is the date of abandonment of <X>,,,http://dbpedia.org/ontology/dateOfAbandonment,200
 daylightSavingTimeZone,daylight saving time zone,owl:Thing,what is the daylight saving time zone of <X>,what is the daylight saving time zone of <X>,,,http://dbpedia.org/ontology/daylightSavingTimeZone,4677
-dc:creator,creator (literal),xsd:string,what is the creator (literal) of <X>,what is the creator (literal) of <X>,,,,
+dc:creator,creator (literal),xsd:string,what is the creator (literal) of <X>,what is the creator (literal) of <X>,,,http://purl.org/dc/terms/creator,1
 dc:identifier,identifier,xsd:string,what is the identifier of <X>,what is the identifier of <X>,,,,
-dc:language,language (literal),xsd:string,what is the language (literal) of <X>,what is the language (literal) of <X>,,,,
-dc:rights,rights,owl:Thing,what is the rights of <X>,what is the rights of <X>,,,,
-dc:subject,subject,owl:Thing,what is the subject of <X>,what is the subject of <X>,,,,
+dc:language,language (literal),xsd:string,what is the language (literal) of <X>,what is the language (literal) of <X>,,,http://purl.org/dc/elements/1.1/language,12845235
+dc:rights,rights,owl:Thing,what is the rights of <X>,what is the rights of <X>,,,http://purl.org/dc/elements/1.1/rights,2897004
+dc:subject,subject,owl:Thing,what is the subject of <X>,what is the subject of <X>,,,http://purl.org/dc/elements/1.1/subject,2397
 dc:title,title,xsd:string,what is the title of <X>,what is the title of <X>,,,,
-dc:type,type (literal),xsd:string,what is the type (literal) of <X>,what is the type (literal) of <X>,,,,
+dc:type,type (literal),xsd:string,what is the type (literal) of <X>,what is the type (literal) of <X>,,,http://purl.org/dc/elements/1.1/type,2636
 dct:created,Date or range when this object was created,xsd:string,what is the Date or range when this object was created of <X>,what is the Date or range when this object was created of <X>,,,,
 dct:dateSubmitted,date submitted,xsd:date,what is the date submitted of <X>,what is the date submitted of <X>,,,,
-dct:description,Description,rdf:langString,what is the Description of <X>,what is the Description of <X>,,,,
+dct:description,Description,rdf:langString,what is the Description of <X>,what is the Description of <X>,,,http://purl.org/dc/terms/description,1289109
 dct:extent,medium,xsd:string,what is the medium of <X>,what is the medium of <X>,,,,
 dct:format,format (literal),xsd:string,what is the format (literal) of <X>,what is the format (literal) of <X>,,,,
 dct:medium,medium,xsd:string,what is the medium of <X>,what is the medium of <X>,,,,
-dct:modified,modified,xsd:date,what is the modified of <X>,what is the modified of <X>,,,,
+dct:modified,modified,xsd:date,what is the modified of <X>,what is the modified of <X>,,,http://purl.org/dc/terms/modified,1
 dct:spatial,spatial,owl:Thing,what is the spatial of <X>,what is the spatial of <X>,,,,
-dct:subject,subject,owl:Thing,what is the subject of <X>,what is the subject of <X>,,,,
+dct:subject,subject,owl:Thing,what is the subject of <X>,what is the subject of <X>,,,http://purl.org/dc/terms/subject,23990506
 dct:temporal,temporal,owl:Thing,what is the temporal of <X>,what is the temporal of <X>,,,,
 dct:type,type,owl:Thing,what is the type of <X>,what is the type of <X>,,,,
 deFactoLanguage,de facto language,Language,what is the de facto language of <X>,what is the de facto language of <X>,,,,
@@ -226,23 +226,23 @@ floodingDate,flooding date,xsd:date,what is the flooding date of <X>,what is the
 flora,flora,xsd:string,what is the flora of <X>,what is the flora of <X>,,,http://dbpedia.org/ontology/flora,2
 flower,flower,Species,what is the flower of <X>,what is the flower of <X>,,,http://dbpedia.org/ontology/flower,1106
 foaf:based_near,based near,owl:Thing,what is the based near of <X>,what is the based near of <X>,,,,
-foaf:depiction,depiction from http://xmlns.com/foaf/spec/#term_depiction,Image,what is the depiction from http://xmlns.com/foaf/spec/#term_depiction of <X>,what is the depiction from http://xmlns.com/foaf/spec/#term_depiction of <X>,,,,
-foaf:familyName,family name,rdf:langString,what is the family name of <X>,what is the family name of <X>,,,,
-foaf:gender,gender,xsd:string,what is the gender of <X>,what is the gender of <X>,,,,
-foaf:givenName,given name,rdf:langString,what is the given name of <X>,what is the given name of <X>,,,,
+foaf:depiction,depiction from http://xmlns.com/foaf/spec/#term_depiction,Image,what is the depiction from http://xmlns.com/foaf/spec/#term_depiction of <X>,what is the depiction from http://xmlns.com/foaf/spec/#term_depiction of <X>,,,http://xmlns.com/foaf/0.1/depiction,1698618
+foaf:familyName,family name,rdf:langString,what is the family name of <X>,what is the family name of <X>,,,http://xmlns.com/foaf/0.1/familyName,20
+foaf:gender,gender,xsd:string,what is the gender of <X>,what is the gender of <X>,,,http://xmlns.com/foaf/0.1/gender,1418209
+foaf:givenName,given name,rdf:langString,what is the given name of <X>,what is the given name of <X>,,,http://xmlns.com/foaf/0.1/givenName,1175375
 foaf:img,image,owl:Thing,what is the image of <X>,what is the image of <X>,,,,
-foaf:isPrimaryTopicOf,A document that this thing is the primary topic of.,foaf:Document,what is the A document that this thing is the primary topic of. of <X>,what is the A document that this thing is the primary topic of. of <X>,,,,
-foaf:logo,logo,owl:Thing,what is the logo of <X>,what is the logo of <X>,,,,
+foaf:isPrimaryTopicOf,A document that this thing is the primary topic of.,foaf:Document,what is the A document that this thing is the primary topic of. of <X>,what is the A document that this thing is the primary topic of. of <X>,,,http://xmlns.com/foaf/0.1/isPrimaryTopicOf,12845234
+foaf:logo,logo,owl:Thing,what is the logo of <X>,what is the logo of <X>,,,http://xmlns.com/foaf/0.1/logo,116
 foaf:mbox,Email address (mbox),xsd:string,what is the Email address (mbox) of <X>,what is the Email address (mbox) of <X>,,,,
-foaf:name,name,rdf:langString,what is the name of <X>,what is the name of <X>,,,,
-foaf:nick,nickname,rdf:langString,what is the nickname of <X>,what is the nickname of <X>,,,,
-foaf:page,A page or document about this thing.,foaf:Document,what is the A page or document about this thing. of <X>,what is the A page or document about this thing. of <X>,,,,
+foaf:name,name,rdf:langString,what is the name of <X>,what is the name of <X>,,,http://xmlns.com/foaf/0.1/name,4146581
+foaf:nick,nickname,rdf:langString,what is the nickname of <X>,what is the nickname of <X>,,,http://xmlns.com/foaf/0.1/nick,52506
+foaf:page,A page or document about this thing.,foaf:Document,what is the A page or document about this thing. of <X>,what is the A page or document about this thing. of <X>,,,http://xmlns.com/foaf/0.1/page,4055
 foaf:phone,Telephone (phone) number,xsd:string,what is the Telephone (phone) number of <X>,what is the Telephone (phone) number of <X>,,,,
-foaf:surname,surname,rdf:langString,what is the surname of <X>,what is the surname of <X>,,,,
-foaf:thumbnail,thumbnail,Image,what is the thumbnail of <X>,what is the thumbnail of <X>,,,,
+foaf:surname,surname,rdf:langString,what is the surname of <X>,what is the surname of <X>,,,http://xmlns.com/foaf/0.1/surname,890728
+foaf:thumbnail,thumbnail,Image,what is the thumbnail of <X>,what is the thumbnail of <X>,,,http://xmlns.com/foaf/0.1/thumbnail,1448505
 foaf:topic,A topic of some page or document.,owl:Thing,what is the topic or document. of <X>,what is the topic or document. of <X>,0.5,"omit words (""of the page"")",,
 focus,focus,owl:Thing,what is the focus of <X>,what is the focus of <X>,,,http://dbpedia.org/ontology/focus,4
-followedBy,followed by,owl:Thing,what is the followed by of <X>,what is <X> followed by ,0.4,,http://dbpedia.org/ontology/followedBy,3576
+followedBy,followed by,owl:Thing,what is the followed by of <X>,what is <X> followed by,0.4,,http://dbpedia.org/ontology/followedBy,3576
 follows,follows,owl:Thing,what is the follows of <X>,what is the follows of <X>,,,http://dbpedia.org/ontology/follows,151
 forces,forces,xsd:string,what is the forces of <X>,what is the forces of <X>,,,http://dbpedia.org/ontology/forces,9
 foresterDistrict,foresterDistrict,owl:Thing,what is the foresterDistrict of <X>,what is the foresterDistrict of <X>,,,,
@@ -451,8 +451,8 @@ originalName,original name,rdf:langString,what is the original name of <X>,what 
 originallyUsedFor,originally used for,xsd:string,what is the originally used for of <X>,what is the originally used for of <X>,,,http://dbpedia.org/ontology/originallyUsedFor,38
 orogeny,orogeny,owl:Thing,what is the orogeny of <X>,what is the orogeny of <X>,,,http://dbpedia.org/ontology/orogeny,333
 output,output,xsd:float,what is the output of <X>,what is the output of <X>,,,http://dbpedia.org/ontology/output,8
-owl:differentFrom,An owl:differentFrom statement indicates that two URI references refer to different individuals,owl:Thing,what is the An owl:differentFrom statement indicates that two URI references refer to different individuals of <X>,what is the An owl:differentFrom statement indicates that two URI references refer to different individuals of <X>,,,,
-owl:sameAs,same as,owl:Thing,what is the same as of <X>,what is the same as of <X>,,,,
+owl:differentFrom,An owl:differentFrom statement indicates that two URI references refer to different individuals,owl:Thing,what is the An owl:differentFrom statement indicates that two URI references refer to different individuals of <X>,what is the An owl:differentFrom statement indicates that two URI references refer to different individuals of <X>,,,http://www.w3.org/2002/07/owl#differentFrom,57623
+owl:sameAs,same as,owl:Thing,what is the same as of <X>,what is the same as of <X>,,,http://www.w3.org/2002/07/owl#sameAs,33623696
 owner,owner,Agent,what is the owner of <X>,what is the owner of <X>,,,http://dbpedia.org/ontology/owner,42584
 owningCompany,owning company,Company,what is the owning company of <X>,what is the owning company of <X>,,,http://dbpedia.org/ontology/owningCompany,6
 owningOrganisation,owning organisation,Organisation,what is the owning organisation of <X>,what is the owning organisation of <X>,,,http://dbpedia.org/ontology/owningOrganisation,13186
@@ -513,11 +513,11 @@ raceHorse,race horse,Horse,what is the race horse of <X>,what is the race horse 
 rank,rank,xsd:string,what is the rank of <X>,what is the rank of <X>,,,http://dbpedia.org/ontology/rank,69412
 rankAgreement,rank of an agreement,xsd:nonNegativeInteger,what is the rank of an agreement of <X>,what is the rank of an agreement of <X>,,,,
 rating,rating,xsd:float,what is the rating of <X>,what is the rating of <X>,,,http://dbpedia.org/ontology/rating,2992
-rdf:type,undefined,owl:Thing,what is the undefined of <X>,what is the undefined of <X>,,,,
-rdfs:comment,undefined,rdf:langString,what is the undefined of <X>,what is the undefined of <X>,,,,
-rdfs:label,undefined,rdf:langString,what is the undefined of <X>,what is the undefined of <X>,,,,
-rdfs:seeAlso,is used to indicate a resource that might provide additional information about the subject resource,owl:Thing,what is the is used to indicate a resource that might provide additional information about the subject resource of <X>,what is the is used to indicate a resource that might provide additional information about the subject resource of <X>,,,,
-rdfs,subclass of,owl:Thing,what is the subclass of of <X>,what is the subclass of of <X>,,,,
+rdf:type,undefined,owl:Thing,what is the undefined of <X>,what is the undefined of <X>,,,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,113715893
+rdfs:comment,undefined,rdf:langString,what is the undefined of <X>,what is the undefined of <X>,,,http://www.w3.org/2000/01/rdf-schema#comment,12391811
+rdfs:label,undefined,rdf:langString,what is the undefined of <X>,what is the undefined of <X>,,,http://www.w3.org/2000/01/rdf-schema#label,22430852
+rdfs:seeAlso,is used to indicate a resource that might provide additional information about the subject resource,owl:Thing,what is the is used to indicate a resource that might provide additional information about the subject resource of <X>,what is the is used to indicate a resource that might provide additional information about the subject resource of <X>,,,http://www.w3.org/2000/01/rdf-schema#seeAlso,180729
+rdfs:subClassOf,subclass of,owl:Thing,what is the subclass of of <X>,what is the subclass of of <X>,,,http://www.w3.org/2000/01/rdf-schema#subClassOf,570397
 rebuildDate,rebuild date,xsd:date,what is the rebuild date of <X>,what is the rebuild date of <X>,,,http://dbpedia.org/ontology/rebuildDate,1
 recordLabel,record label,RecordLabel,what is the record label of <X>,what is the record label of <X>,,,http://dbpedia.org/ontology/recordLabel,36
 redLongDistancePisteNumber,red long distance piste number,xsd:nonNegativeInteger,what is the red long distance piste number of <X>,what is the red long distance piste number of <X>,,,,
@@ -578,9 +578,9 @@ skiPisteKilometre,ski piste kilometre,Length,what is the ski piste kilometre of 
 skiPisteNumber,ski piste number,xsd:nonNegativeInteger,what is the ski piste number of <X>,what is the ski piste number of <X>,,,,
 skiTow,ski tow,xsd:nonNegativeInteger,what is the ski tow of <X>,what is the ski tow of <X>,,,,
 skills,skills,owl:Thing,what is the skills of <X>,what is the skills of <X>,,,http://dbpedia.org/ontology/skills,1512
-skos,broader,owl:Thing,what is the broader of <X>,what is the broader of <X>,,,,
-skos,prefLabel,rdf:langString,what is the prefLabel of <X>,what is the prefLabel of <X>,,,,
-skos,related,owl:Thing,what is the related of <X>,what is the related of <X>,,,,
+skos:broader,broader,owl:Thing,what is the broader of <X>,what is the broader of <X>,,,http://www.w3.org/2004/02/skos/core#broader,3080338
+skos:prefLabel,prefLabel,rdf:langString,what is the prefLabel of <X>,what is the prefLabel of <X>,,,http://www.w3.org/2004/02/skos/core#prefLabel,1475015
+skos:related,related,owl:Thing,what is the related of <X>,what is the related of <X>,,,http://www.w3.org/2004/02/skos/core#related,52661
 slogan,slogan,rdf:langString,what is the slogan of <X>,what is the slogan of <X>,,,http://dbpedia.org/ontology/slogan,6915
 snowParkNumber,snow park number,xsd:nonNegativeInteger,what is the snow park number of <X>,what is the snow park number of <X>,,,,
 soundRecording,sound recording,Sound,what is the sound recording of <X>,what is the sound recording of <X>,,,http://dbpedia.org/ontology/soundRecording,1
