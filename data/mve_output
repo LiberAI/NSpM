@@ -706,3 +706,5 @@ What is the wins of <X>
 What is the year of <X>
 What is the year of construction of <X>
 What is the zodiac sign of <X>
+
+SELECT ?p WHERE { ?s a dbo:President . ?o a dbo:Place . ?s ?p ?o . }

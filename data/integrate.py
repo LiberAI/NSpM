@@ -1,6 +1,6 @@
 import sys
 
-f = open('dbpedia-201610-properties.tsv','r')
+f = open('dbpedia-ontology-properties.csv','r')
 file = f.readlines()
 d = {};
 
@@ -8,7 +8,7 @@ for l in file:
 	l = l.strip().split('\t')
 	d[l[0].split('/')[-1]] = l[1];
 
-# print d;
+# print d["abstract"];
 
 
 f = open('manual-annotation.csv','r')
@@ -25,6 +25,7 @@ for m in manual:
 		l.append("http://dbpedia.org/ontology/"+m)
 		l.append(d[m])
 	else:
+		
 		l.append('')
 		l.append('')
 		print m
@@ -33,6 +34,6 @@ for m in manual:
 	final += '\n';
 
 print final
-f = open('manual-annotation-updated.csv','w');
+f = open('manual-annotation-updated-v2.csv','w');
 f.write(final);
 print cnt, tot

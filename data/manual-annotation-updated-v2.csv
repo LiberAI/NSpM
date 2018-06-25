@@ -1,0 +1,708 @@
+abbreviation,abbreviation,xsd:string,what is the abbreviation of <X>,what is the abbreviation of <X>,1,,http://dbpedia.org/ontology/abbreviation,10464
+abstract,has abstract (omti has),rdf:langString,what is the abstract of <X>,what is the abstract of <X>,0,"omit has, 1",http://dbpedia.org/ontology/abstract,12390578
+access,access,xsd:string,what is the access of <X>,what is the access of <X>,1,,http://dbpedia.org/ontology/access,387
+accessDate,access date,xsd:date,what is the access date of <X>,what is the access date of <X>,1,,,
+activeYearsEndDate,active years end date,xsd:date,when is the end of active years of <X>,When did <X> end being active,0.5,,http://dbpedia.org/ontology/activeYearsEndDate,84148
+activeYearsEndYear,active years end year,xsd:gYear,what is the end year of active years of <X>,What year did <X> end being active,0.5,"insert an extra ""of"" and requires jumbling",http://dbpedia.org/ontology/activeYearsEndYear,151754
+activeYearsStartDate,active years start date,xsd:date,when is the start of active years of <X>,When did <X> start being active,0.5,"insert an extra ""of"" and requires jumbling",http://dbpedia.org/ontology/activeYearsStartDate,103132
+activeYearsStartYear,active years start year,xsd:gYear,when is the start year of active years of <X>,What year did <X> start being active,0.5,"insert an extra ""of"" and requires jumbling",http://dbpedia.org/ontology/activeYearsStartYear,254812
+address,address,rdf:langString,what is the address of <X>,what is the address of <X>,1,"insert an extra ""of"" and requires jumbling",http://dbpedia.org/ontology/address,56143
+administrativeStatus,administrative status,xsd:string,what is the administrative status of <X>,what is the administrative status of <X>,1,,,
+affiliation,affiliation,Organisation,what is the affiliation of <X>,which organization is affiliated with <X>,1,,http://dbpedia.org/ontology/affiliation,24846
+ageRange,age range,xsd:nonNegativeInteger,what is the age range of <X>,what is the range of age of <X>,1,,http://dbpedia.org/ontology/ageRange,830
+agglomerationPopulationTotal,agglomeration population total,xsd:nonNegativeInteger,what is the agglomeration population total of <X>,what is the population total of <X>,1,,,
+aitaCode,aita code,xsd:string,what is the aita code of <X>,what is the aita code of <X>,1,,,
+album,album,Album,what is the album of <X>,what is the album of <X>,1,,http://dbpedia.org/ontology/album,48245
+alias,alias,rdf:langString,what is the alias of <X>,what is the alias of <X>,1,,http://dbpedia.org/ontology/alias,55278
+alongside,alongside,Person,who is the alongside of <X>,who is alongside <X>,0.1,"omit ""the"" and ""of"", 1",,
+alternativeName,alternative name,rdf:langString,what is the alternative name of <X>,what is the alternative name of <X>,1,,http://dbpedia.org/ontology/alternativeName,31
+altitude,altitude,Altitude,what is the altitude of <X>,what is the altitude of <X>,1,,,
+animal,animal,Animal,what is the animal of <X>,what is the animal of <X>,1,,http://dbpedia.org/ontology/animal,279
+annualTemperature,annual temperature,Temperature,what is the annual temperature of <X>,what is the annual temperature of <X>,1,,,
+anthem,anthem,Work,what is the anthem of <X>,what is the anthem of <X>,1,,http://dbpedia.org/ontology/anthem,783
+apcPresident,apc president,Person,who is the apc president of <X>,who is the apc president of <X>,0.2,"who instead of what, 1",,
+appearance,appearance,xsd:string,what is the appearance of <X>,how does <X> appear,0.8,"correct but, ""how does x appear"" is a better query",,
+appointer,appointer,Person,who is the appointer of <X>,who appointed <X>,0.2,"who instead of what, 1",http://dbpedia.org/ontology/appointer,1618
+area,area,Area,what is the area of <X>,what is the area of <X>,1,,http://dbpedia.org/ontology/area,70572
+areaCode,area code,xsd:string,what is the area code of <X>,what is the area code of <X>,1,,http://dbpedia.org/ontology/areaCode,129943
+areaDate,area date,xsd:date,what is the area date of <X>,what is the area date of <X>,1,,,
+areaLand,area land,Area,what is the land area of <X>,what is the land area of <X>,0.5,jumble the label's words,http://dbpedia.org/ontology/areaLand,72766
+areaMetro,area metro,Area,what is the metro are of <X>,what is the metro are of <X>,0.5,jumble the label's words,http://dbpedia.org/ontology/areaMetro,779
+areaOfCatchmentQuote,area of catchment quote,xsd:string,what is the area of catchment quote of <X>,what is the area of catchment quote of <X>,1,,http://dbpedia.org/ontology/areaOfCatchmentQuote,1
+areaQuote,**area quote,xsd:string,what is the area quote of <X>,what is the area quote of <X>,1,,http://dbpedia.org/ontology/areaQuote,1
+areaRank,area rank,xsd:string,what is the area rank of <X>,what is the area rank of <X>,1,,,
+areaTotal,area total,Area,what is the area total of <X>,what is the total area of <X>,0.5,,http://dbpedia.org/ontology/areaTotal,179581
+areaWater,area water,Area,what is the area water of <X>,what is the area occupied by water in <X>,0.4,,http://dbpedia.org/ontology/areaWater,55568
+artificialSnowArea,artificial snow area,xsd:float,what is the artificial snow area of <X>,what is the area of artificial snow of <X>,0.8,"jumbling and an extra ""of""",,
+asWikiText,as Wiki text,xsd:string,what is the WikiText representation of <X>,what is the WikiText representation of <X>,0.1,crop subwords,,
+ascent,ascent,xsd:string,what is the ascent of <X>,what is the ascent of <X>,1,,,
+associate,associate,Person,who is the associate of <X>,who is the associate of <X>,0,who,http://dbpedia.org/ontology/associate,3528
+associateStar,associateStar,Constellation,what is the star associated to <X>,which star is associated with <X>,0.6,,,
+associatedBand,associated band,Band,what is the associated band of <X>,which band is associated with <X>,1,but other queries possible: which band is associated to x,http://dbpedia.org/ontology/associatedBand,131347
+associatedMusicalArtist,associated musical artist,MusicalArtist,what is the associated musical artist of <X>,who is the musical artist associated with <X>,,same^,http://dbpedia.org/ontology/associatedMusicalArtist,131338
+atcCode,ATC code,xsd:string,what is the ATC code of <X>,what is the ATC code of <X>,1,,,
+atcPrefix,ATC prefix,xsd:string,what is the ATC prefix of <X>,what is the ATC prefix of <X>,1,,http://dbpedia.org/ontology/atcPrefix,4699
+atcSuffix,ATC suffix,xsd:string,what is the ATC suffix of <X>,what is the ATC suffix of <X>,1,,http://dbpedia.org/ontology/atcSuffix,2700
+authority,authority,owl:Thing,what is the authority of <X>,what is the authority of <X>,1,,http://dbpedia.org/ontology/authority,374
+authorityMandate,authority mandate,xsd:string,what is the authority mandate of <X>,what is the authority mandate of <X>,1,,,
+autonomy,autonomy,owl:Thing,what is the autonomy of <X>,what is the autonomy of <X>,1,,,
+average,average,xsd:double,what is the average of <X>,what is the average of <X>,1,,,
+averageDepth,average depth,Length,what is the average depth of <X>,what is the average depth of <X>,1,,http://dbpedia.org/ontology/averageDepth,2500
+averageDepthQuote,**average depth quote,xsd:string,what is the average depth quote of <X>,what is the average depth quote of <X>,,,http://dbpedia.org/ontology/averageDepthQuote,1
+averageSpeed,average speed,Speed,what is the average speed of <X>,what is the average speed of <X>,1,,http://dbpedia.org/ontology/averageSpeed,735
+avifaunaPopulation,avifauna population,xsd:string,what is the avifauna population of <X>,what is the population of avifauna of <X>,0.8,better: what is the population of avifauna of x,,
+award,award,Award,what is the award of <X>,what did <X> win,0.3,,http://dbpedia.org/ontology/award,90933
+awayColourHexCode,colour hex code of away jersey or its parts,xsd:string,what is the colour hex code of away jersey or its parts of <X>,what is the colour hex code of away jersey or its parts of <X>,1,,,
+background,background,xsd:string,what is the background of <X>,what is the background of <X>,1,,http://dbpedia.org/ontology/background,83192
+battery,battery,Battery,what is the battery of <X>,what is the battery of <X>,1,,,
+battle,battle,MilitaryConflict,what is the battle of <X>,what is the battle of <X>,1,,http://dbpedia.org/ontology/battle,117539
+bibsysId,BIBSYS Id,xsd:string,what is the BIBSYS Id of <X>,what is the BIBSYS Id of <X>,1,,http://dbpedia.org/ontology/bibsysId,3
+biggestCity,biggest city,PopulatedPlace,what is the biggest city of <X>,which is the biggest city of <X>,0.5,which instead of what,,
+bioclimate,bioclimate,xsd:string,what is the bioclimate of <X>,what is the bioclimate of <X>,1,,,
+biome,biome,owl:Thing,what is the biome of <X>,what is the biome of <X>,1,,http://dbpedia.org/ontology/biome,259
+bird,bird,Species,what is the bird of <X>,what is the bird of <X>,1,,,
+blackLongDistancePisteNumber,*long distance piste number,xsd:nonNegativeInteger,what is the long distance piste number of <X>,what is the long distance piste number of <X>,1,"but, subset of words also correct. eg: what is the long distance number of ..",,
+blackSkiPisteNumber,black ski piste number,xsd:nonNegativeInteger,what is the black ski piste number of <X>,what is the black ski piste number of <X>,1,,,
+blazon,*blazon,xsd:string,what is the blazon of <X>,what is the blazon of <X>,1,,,
+blazonLink,*blazon link,xsd:string,what is the blazon link of <X>,what is the blazon link of <X>,0.5,better: what is the link for blazon for x,,
+blazonRatio,*blazon ratio,xsd:double,what is the blazon ratio of <X>,what is the blazon ratio of <X>,0.5,better: what is the blazon ratio for,,
+blueLongDistancePisteNumber,blue long distance piste number,xsd:nonNegativeInteger,what is the blue long distance piste number of <X>,what is the blue long distance piste number of <X>,,,,
+blueSkiPisteNumber,blue ski piste number,xsd:nonNegativeInteger,what is the blue ski piste number of <X>,what is the blue ski piste number of <X>,,,,
+bnfId,BNF Id,xsd:string,what is the BNF Id of <X>,what is the BNF Id of <X>,1,,http://dbpedia.org/ontology/bnfId,97
+book,name,xsd:string,what is the name of <X>,what is the name of <X>,1,,,
+border,border,Area,what is the border of <X>,what is the border of <X>,1,,http://dbpedia.org/ontology/border,486
+bpnId,BPN Id,xsd:string,what is the BPN Id of <X>,what is the BPN Id of <X>,1,,http://dbpedia.org/ontology/bpnId,1
+budget,budget,Currency,what is the budget of <X>,what is the budget of <X>,1,,http://dbpedia.org/ontology/budget,18222
+budgetYear,budget year,xsd:string,what is the budget year of <X>,what is the budget year of <X>,1,,,
+builder,builder,owl:Thing,who is the builder of <X>,what is the builder of <X>,0.2,who but range not Person,http://dbpedia.org/ontology/builder,39938
+buildingEndDate,building end date,xsd:string,what is the building end date of <X>,what is the building end date of <X>,0.8,what or when is the building end date of x,http://dbpedia.org/ontology/buildingEndDate,16636
+buildingStartDate,building start date,xsd:string,what is the building start date of <X>,what is the building start date of <X>,0.8,,http://dbpedia.org/ontology/buildingStartDate,11634
+cableCar,cable car,xsd:nonNegativeInteger,what is the cable car of <X>,what is the cable car of <X>,1,,,
+calculationNeeds,its calculation needs,owl:Thing,what are the calculation needs of <X>,what are the calculation needs of <X>,0.2,are instead of is,,
+callSign,call sign,xsd:string,what is the call sign of <X>,what is the call sign of <X>,1,,http://dbpedia.org/ontology/callSign,3742
+cannonNumber,cannon number,xsd:nonNegativeInteger,what is the cannon number of <X>,what is the cannon number of <X>,1,,,
+capacity,capacity,xsd:nonNegativeInteger,what is the capacity of <X>,what is the capacity of <X>,1,,http://dbpedia.org/ontology/capacity,15227
+capitalCoordinates,capital coordinates,xsd:string,what are the capital coordinates of <X>,what are the coordinates of capital of <X>,0.2,are instead of is,,
+casNumber,CAS number,xsd:string,what is the CAS number of <X>,what is the CAS number of <X>,1,,http://dbpedia.org/ontology/casNumber,5548
+casSupplemental,CAS supplemental,xsd:string,what is the CAS supplemental of <X>,what is the CAS supplemental of <X>,11,,http://dbpedia.org/ontology/casSupplemental,309
+category,category,owl:Thing,what is the category of <X>,what is the category of <X>,1,,http://dbpedia.org/ontology/category,781
+chain,chain,Company,what is the chain of <X>,what is the chain of <X>,1,,http://dbpedia.org/ontology/chain,143
+chairLabel,chair label,owl:Thing,what is the chair label of <X>,what is the label of <X>'s chair,0.5,,http://dbpedia.org/ontology/chairLabel,5
+chairman,chairman,Person,who is the chairman of <X>,who is the chairman of <X>,1,"who instead of what, 1",http://dbpedia.org/ontology/chairman,6994
+chancellor,chancellor,Person,who is the chancellor of <X>,who is the chancellor of <X>,1,"who instead of what, 1",http://dbpedia.org/ontology/chancellor,1512
+channel,channel,Broadcaster,what is the channel of <X>,what is the channel of <X>,0.9,,http://dbpedia.org/ontology/channel,15282
+chiefPlace,chief place,PopulatedPlace,which is the chief place of <X>,which is the chief place of <X>,0.5,which instead of what,,
+city,city,City,what is the city of <X>,what is the city of <X>,0.8,maybe which suits better instead of whhat,http://dbpedia.org/ontology/city,112483
+cityLink,city link,xsd:string,what is the city link of <X>,what is the city link of <X>,1,,,
+class,class,owl:Thing,what is the class of <X>,what is the class of <X>,1,,http://dbpedia.org/ontology/class,323249
+classification,classification,xsd:string,what is the classification of <X>,what is the classification of <X>,1,,,
+climate,climate,owl:Thing,what is the climate of <X>,how is the climate of <X>,0.5,how instead of what,,
+climbUpNumber,clip up number,xsd:nonNegativeInteger,what is the clip up number of <X>,what is the clip up number of <X>,1,,,
+closeTo,is close to,Place,what is the is close to of <X>,what is the is close to of <X>,,,,
+closingDate,closing date,xsd:date,what is the closing date of <X>,what is the closing date of <X>,,,http://dbpedia.org/ontology/closingDate,1887
+closingYear,closing year,xsd:gYear,what is the closing year of <X>,what is the closing year of <X>,,,http://dbpedia.org/ontology/closingYear,4084
+coach,coach,Person,what is the coach of <X>,what is the coach of <X>,,,http://dbpedia.org/ontology/coach,24026
+coachedTeam,coached team,SportsTeam,what is the coached team of <X>,what is the coached team of <X>,,,http://dbpedia.org/ontology/coachedTeam,200
+coastLength,length of a coast,xsd:float,what is the length of a coast of <X>,what is the length of a coast of <X>,,,,
+coatOfArms,coat of arms image,owl:Thing,what is the coat of arms image of <X>,what is the coat of arms image of <X>,,,,
+code,code,xsd:string,what is the code of <X>,what is the code of <X>,,,http://dbpedia.org/ontology/code,1564
+codeMunicipalMonument,monument code (municipal),xsd:string,what is the monument code (municipal) of <X>,what is the monument code (municipal) of <X>,,,,
+codeNationalMonument,monument code (national),xsd:string,what is the monument code (national) of <X>,what is the monument code (national) of <X>,,,,
+codeProvincialMonument,monument code (provinciall),xsd:string,what is the monument code (provinciall) of <X>,what is the monument code (provinciall) of <X>,,,,
+collectionSize,country,owl:Thing,what is the country of <X>,what is the country of <X>,,,,
+colour,colour,Colour,what is the colour of <X>,what is the colour of <X>,,,http://dbpedia.org/ontology/colour,7638
+colourHexCode,colour hex code,xsd:string,what is the colour hex code of <X>,what is the colour hex code of <X>,,,http://dbpedia.org/ontology/colourHexCode,1105
+colourName,colour name,rdf:langString,what is the colour name of <X>,what is the colour name of <X>,,,http://dbpedia.org/ontology/colourName,8796
+commandant,commandant,Person,who is the commandant of <X>,who is the commandant of <X>,1,who,,
+commander,commander,Person,who is the commander of <X>,who is the commander of <X>,1,who,http://dbpedia.org/ontology/commander,48960
+comment,comment,xsd:string,what is the comment of <X>,what is the comment of <X>,,,,
+committee,committee,xsd:string,what is the committee of <X>,what is the committee of <X>,,,http://dbpedia.org/ontology/committee,837
+commonName,common name,rdf:langString,what is the common name of <X>,what is the common name of <X>,,,http://dbpedia.org/ontology/commonName,8
+company,company,Organisation,what is the company of <X>,what is the company of <X>,,,http://dbpedia.org/ontology/company,18783
+conflict,conflict,MilitaryConflict,what is the conflict of <X>,what is the conflict of <X>,,,,
+connotation,connotation,owl:Thing,what is the connotation of <X>,what is the connotation of <X>,,,http://dbpedia.org/ontology/connotation,34
+constituencyDistrict,constituency district,PopulatedPlace,what is the constituency district of <X>,what is the constituency district of <X>,0.9,,,
+cosparId,COSPAR id,xsd:string,what is the COSPAR id of <X>,what is the COSPAR id of <X>,,,http://dbpedia.org/ontology/cosparId,1908
+cost,cost,Currency,what is the cost of <X>,what is the cost of <X>,,,http://dbpedia.org/ontology/cost,4338
+country,country,Country,what is the country of <X>,what country does <X> belong to,0.5,,http://dbpedia.org/ontology/country,769223
+countryCode,country code,xsd:string,what is the country code of <X>,what is the country code of <X>,,,,
+county,county,PopulatedPlace,what is the county of <X>,what is the county of <X>,0.8,,http://dbpedia.org/ontology/county,9337
+courseArea,course area,Area,what is the course area of <X>,what is the course area of <X>,0.9,,,
+cpu,CPU,owl:Thing,what is the CPU of <X>,what is the CPU of <X>,,,http://dbpedia.org/ontology/cpu,1680
+creationYear,year of creation,xsd:gYear,what is the year of creation of <X>,what is the year of creation of <X>,,,,
+creator,creator (agent),Agent,who is the creator (agent) of <X>,who is the creator of <X>,0.5,what or who depends (who majorly),http://dbpedia.org/ontology/creator,27165
+crest,crest,owl:Thing,what is the crest of <X>,what is the crest of <X>,,,,
+criteria,criteria,xsd:string,what is the criteria of <X>,what is the criteria of <X>,,,,
+cuisine,cuisine,xsd:string,what is the cuisine of <X>,what is the cuisine of <X>,,,http://dbpedia.org/ontology/cuisine,817
+currency,currency,Currency,what is the currency of <X>,what is the currency of <X>,,,http://dbpedia.org/ontology/currency,1792
+currencyCode,currency code,xsd:string,what is the currency code of <X>,what is the currency code of <X>,,,,
+currentCity,current city,City,what is the current city of <X>,which city is the current city of <X>,,which,,
+currentStatus,current status,xsd:string,what is the current status of <X>,what is the current status of <X>,,,http://dbpedia.org/ontology/currentStatus,731
+date,date,xsd:date,what is the date of <X>,what is the date of <X>,,,http://dbpedia.org/ontology/date,17586
+dateAgreement,date of an agreement,xsd:date,what is the date of an agreement of <X>,what is the date of an agreement of <X>,,,,
+dateBudget,date budget,xsd:date,what is the date budget of <X>,what is the date budget of <X>,,,,
+dateOfAbandonment,date of abandonment,xsd:date,what is the date of abandonment of <X>,what is the date of abandonment of <X>,,,http://dbpedia.org/ontology/dateOfAbandonment,200
+daylightSavingTimeZone,daylight saving time zone,owl:Thing,what is the daylight saving time zone of <X>,what is the daylight saving time zone of <X>,,,http://dbpedia.org/ontology/daylightSavingTimeZone,4677
+dc:creator,creator (literal),xsd:string,what is the creator (literal) of <X>,what is the creator (literal) of <X>,,,,
+dc:identifier,identifier,xsd:string,what is the identifier of <X>,what is the identifier of <X>,,,,
+dc:language,language (literal),xsd:string,what is the language (literal) of <X>,what is the language (literal) of <X>,,,,
+dc:rights,rights,owl:Thing,what is the rights of <X>,what is the rights of <X>,,,,
+dc:subject,subject,owl:Thing,what is the subject of <X>,what is the subject of <X>,,,,
+dc:title,title,xsd:string,what is the title of <X>,what is the title of <X>,,,,
+dc:type,type (literal),xsd:string,what is the type (literal) of <X>,what is the type (literal) of <X>,,,,
+dct:created,Date or range when this object was created,xsd:string,what is the Date or range when this object was created of <X>,what is the Date or range when this object was created of <X>,,,,
+dct:dateSubmitted,date submitted,xsd:date,what is the date submitted of <X>,what is the date submitted of <X>,,,,
+dct:description,Description,rdf:langString,what is the Description of <X>,what is the Description of <X>,,,,
+dct:extent,medium,xsd:string,what is the medium of <X>,what is the medium of <X>,,,,
+dct:format,format (literal),xsd:string,what is the format (literal) of <X>,what is the format (literal) of <X>,,,,
+dct:medium,medium,xsd:string,what is the medium of <X>,what is the medium of <X>,,,,
+dct:modified,modified,xsd:date,what is the modified of <X>,what is the modified of <X>,,,,
+dct:spatial,spatial,owl:Thing,what is the spatial of <X>,what is the spatial of <X>,,,,
+dct:subject,subject,owl:Thing,what is the subject of <X>,what is the subject of <X>,,,,
+dct:temporal,temporal,owl:Thing,what is the temporal of <X>,what is the temporal of <X>,,,,
+dct:type,type,owl:Thing,what is the type of <X>,what is the type of <X>,,,,
+deFactoLanguage,de facto language,Language,what is the de facto language of <X>,what is the de facto language of <X>,,,,
+deliveryDate,delivery date,xsd:date,what is the delivery date of <X>,what is the delivery date of <X>,,,http://dbpedia.org/ontology/deliveryDate,34
+demonym,demonym,rdf:langString,what is the demonym of <X>,what is the demonym of <X>,,,http://dbpedia.org/ontology/demonym,685
+density,density,Density,what is the density of <X>,what is the density of <X>,1,,http://dbpedia.org/ontology/density,123
+depictionDescription,depiction description (caption),rdf:langString,what is the depiction description (caption) of <X>,what is the depiction description (caption) of <X>,1,,http://dbpedia.org/ontology/depictionDescription,2710
+depth,depth,Length,what is the depth of <X>,what is the depth of <X>,,,http://dbpedia.org/ontology/depth,649
+depthQuote,depth quote,xsd:string,what is the depth quote of <X>,what is the depth quote of <X>,,,,
+depths,depths,Depth,what is the depths of <X>,what are the depths of <X>,0.4,are instead of is,,
+deputy,deputy,Person,who is the deputy of <X>,who is the deputy of <X>,1,,http://dbpedia.org/ontology/deputy,2550
+description,description,rdf:langString,what is the description of <X>,what is the description of <X>,1,,http://dbpedia.org/ontology/description,13291
+designCompany,designer company,Company,what is the designer company of <X>,which company is the designer of <X>,0.5,which,http://dbpedia.org/ontology/designCompany,1528
+designer,designer,Person,who is the designer of <X>,who is the designer of <X>,1,what or who depends (who majorly),http://dbpedia.org/ontology/designer,10597
+destructionDate,destruction date,xsd:date,what is the destruction date of <X>,when was <X> destroyed,0.5,,http://dbpedia.org/ontology/destructionDate,42
+developer,developer,Agent,what is the developer of <X>,what is the developer of <X>,,,http://dbpedia.org/ontology/developer,28834
+diameter,diameter,Length,what is the diameter of <X>,what is the diameter of <X>,,,http://dbpedia.org/ontology/diameter,1325
+diocese,diocese,Diocese,what is the diocese of <X>,what is the diocese of <X>,,,,
+discoverer,discoverer,Person,who is the discoverer of <X>,who is the discoverer of <X>,1,,http://dbpedia.org/ontology/discoverer,3756
+disease,disease,Disease,what is the disease of <X>,what is the disease of <X>,,,,
+distance,distance,Length,what is the distance of <X>,what is the distance of <X>,,,http://dbpedia.org/ontology/distance,2670
+distributor,distributor,Organisation,what is the distributor of <X>,who is the distributor of <X>,1,,http://dbpedia.org/ontology/distributor,68036
+district,district,PopulatedPlace,what is the district of <X>,what is the district of <X>,1,,http://dbpedia.org/ontology/district,47332
+division,division,owl:Thing,what is the division of <X>,what is the division of <X>,1,,http://dbpedia.org/ontology/division,68235
+documentDesignation,String designation of the WrittenWork describing the resource,xsd:string,what is the String designation of the WrittenWork describing the resource of <X>,what is the String designation of the WrittenWork describing <X>,0.5,omit subwords and of,,
+draft,draft,xsd:string,what is the draft of <X>,what is the draft of <X>,1,,http://dbpedia.org/ontology/draft,10063
+draftYear,draft year,xsd:gYear,what is the draft year of <X>,what is the draft year of <X>,,,http://dbpedia.org/ontology/draftYear,24521
+drugbank,DrugBank,xsd:string,what is the DrugBank of <X>,what is the DrugBank of <X>,,,http://dbpedia.org/ontology/drugbank,1637
+duration,duration,Time,what is the duration of <X>,what is the duration of <X>,1,,http://dbpedia.org/ontology/duration,57
+dynasty,dynasty,owl:Thing,what is the dynasty of <X>,what is the dynasty of <X>,,,,
+eastPlace,east place,Place,what is the east place of <X>,where is the east place of <X>,0.8,,,
+editor,editor,Agent,what is the editor of <X>,what is the editor of <X>,,,http://dbpedia.org/ontology/editor,5557
+einecsNumber,EINECS number,xsd:string,what is the EINECS number of <X>,what is the EINECS number of <X>,,,,
+electionMajority,election majority,xsd:nonNegativeInteger,what is the election majority of <X>,what is the election majority of <X>,,,http://dbpedia.org/ontology/electionMajority,2055
+elementAbove,element above,ChemicalSubstance,what is the element above of <X>,what is the element above <X>,0.5,omit of,,
+elevation,elevation,Length,what is the elevation of <X>,what is the elevation of <X>,,,http://dbpedia.org/ontology/elevation,247824
+elevationQuote,elevation quote,xsd:string,what is the elevation quote of <X>,what is the elevation quote of <X>,,,http://dbpedia.org/ontology/elevationQuote,2
+endOccupation,end occupation,xsd:string,what is the end occupation of <X>,what is the end occupation of <X>,,,,
+endPoint,end point,Place,what is the end point of <X>,where is the end point of <X>,0.6,,http://dbpedia.org/ontology/endPoint,217
+endYear,end year,xsd:gYear,what is the end year of <X>,what is the end year of <X>,,,,
+endangeredSince,endangered since,xsd:date,what is the endangered since of <X>,what is the endangered since of <X>,,,,
+engineer,engineer,Person,what is the engineer of <X>,what is the engineer of <X>,,,http://dbpedia.org/ontology/engineer,152
+era,era,owl:Thing,what is the era of <X>,what is the era of <X>,,,http://dbpedia.org/ontology/era,1323
+ethnicGroupsInYear,ethnic groups in year,xsd:gYear,what is the ethnic groups in year of <X>,what is the ethnic groups in year of <X>,,,http://dbpedia.org/ontology/ethnicGroupsInYear,120
+event,event,Event,what is the event of <X>,what is the event of <X>,,,http://dbpedia.org/ontology/event,861
+eventDate,event date,xsd:date,what is the event date of <X>,what is the event date of <X>,,,,
+executiveProducer,executive producer,Person,what is the executive producer of <X>,what is the executive producer of <X>,,,http://dbpedia.org/ontology/executiveProducer,12377
+exhibition,exhibition,xsd:string,what is the exhibition of <X>,what is the exhibition of <X>,,,,
+existence,existence,owl:Thing,what is the existence of <X>,what is the existence of <X>,,,,
+extinctionDate,extinction date,xsd:date,what is the extinction date of <X>,what is the extinction date of <X>,,,http://dbpedia.org/ontology/extinctionDate,2183
+failedLaunches,failed launches,xsd:nonNegativeInteger,what is the failed launches of <X>,what is the failed launches of <X>,,,http://dbpedia.org/ontology/failedLaunches,200
+fauna,fauna,xsd:string,what is the fauna of <X>,what is the fauna of <X>,,,,
+fdaUniiCode,FDA UNII code,xsd:string,what is the FDA UNII code of <X>,what is the FDA UNII code of <X>,,,http://dbpedia.org/ontology/fdaUniiCode,3925
+feastDay,"feast day, holiday",what is the feast day of <X>,what is the feast day of <X>,,,,http://dbpedia.org/ontology/feastDay,28
+fighter,fighter,xsd:string,what is the fighter of <X>,what is the fighter of <X>,,,,
+filmPolskiId,FilmPolski.pl id,xsd:string,what is the FilmPolski.pl id of <X>,what is the FilmPolski.pl id of <X>,,,,
+firstLeader,firstLeader,Person,what is the firstLeader of <X>,what is the firstLeader of <X>,,,http://dbpedia.org/ontology/firstLeader,3299
+firstOwner,first owner,Agent,what is the first owner of <X>,what is the first owner of <X>,,,,
+firstPlace,first place,xsd:string,what is the first place of <X>,what is the first place of <X>,,,,
+firstPopularVote,firstPopularVote,Person,what is the firstPopularVote of <X>,what is the firstPopularVote of <X>,,,http://dbpedia.org/ontology/firstPopularVote,21
+flag,flag (image),xsd:string,what is the flag (image) of <X>,what is the flag (image) of <X>,,,http://dbpedia.org/ontology/flag,411
+flagBorder,flag border,xsd:string,what is the flag border of <X>,what is the flag border of <X>,,,,
+flagLink,flag Link,xsd:string,what is the flag Link of <X>,what is the flag Link of <X>,,,,
+floodingDate,flooding date,xsd:date,what is the flooding date of <X>,what is the flooding date of <X>,,,http://dbpedia.org/ontology/floodingDate,16
+flora,flora,xsd:string,what is the flora of <X>,what is the flora of <X>,,,,
+flower,flower,Species,what is the flower of <X>,what is the flower of <X>,,,,
+foaf:based_near,based near,owl:Thing,what is the based near of <X>,what is the based near of <X>,,,,
+foaf:depiction,depiction from http://xmlns.com/foaf/spec/#term_depiction,Image,what is the depiction from http://xmlns.com/foaf/spec/#term_depiction of <X>,what is the depiction from http://xmlns.com/foaf/spec/#term_depiction of <X>,,,,
+foaf:familyName,family name,rdf:langString,what is the family name of <X>,what is the family name of <X>,,,,
+foaf:gender,gender,xsd:string,what is the gender of <X>,what is the gender of <X>,,,,
+foaf:givenName,given name,rdf:langString,what is the given name of <X>,what is the given name of <X>,,,,
+foaf:img,image,owl:Thing,what is the image of <X>,what is the image of <X>,,,,
+foaf:isPrimaryTopicOf,A document that this thing is the primary topic of.,foaf:Document,what is the A document that this thing is the primary topic of. of <X>,what is the A document that this thing is the primary topic of. of <X>,,,,
+foaf:logo,logo,owl:Thing,what is the logo of <X>,what is the logo of <X>,,,,
+foaf:mbox,Email address (mbox),xsd:string,what is the Email address (mbox) of <X>,what is the Email address (mbox) of <X>,,,,
+foaf:name,name,rdf:langString,what is the name of <X>,what is the name of <X>,,,,
+foaf:nick,nickname,rdf:langString,what is the nickname of <X>,what is the nickname of <X>,,,,
+foaf:page,A page or document about this thing.,foaf:Document,what is the A page or document about this thing. of <X>,what is the A page or document about this thing. of <X>,,,,
+foaf:phone,Telephone (phone) number,xsd:string,what is the Telephone (phone) number of <X>,what is the Telephone (phone) number of <X>,,,,
+foaf:surname,surname,rdf:langString,what is the surname of <X>,what is the surname of <X>,,,,
+foaf:thumbnail,thumbnail,Image,what is the thumbnail of <X>,what is the thumbnail of <X>,,,,
+foaf:topic,A topic of some page or document.,owl:Thing,what is the topic or document. of <X>,what is the topic or document. of <X>,0.5,"omit words (""of the page"")",,
+focus,focus,owl:Thing,what is the focus of <X>,what is the focus of <X>,,,,
+followedBy,followed by,owl:Thing,what is the followed by of <X>,what is <X> followed by ,0.4,,,
+follows,follows,owl:Thing,what is the follows of <X>,what is the follows of <X>,,,,
+forces,forces,xsd:string,what is the forces of <X>,what is the forces of <X>,,,,
+foresterDistrict,foresterDistrict,owl:Thing,what is the foresterDistrict of <X>,what is the foresterDistrict of <X>,,,,
+format,format (object),owl:Thing,what is the format (object) of <X>,what is the format (object) of <X>,,,http://dbpedia.org/ontology/format,81482
+formerName,former name,rdf:langString,what is the former name of <X>,what is the former name of <X>,,,http://dbpedia.org/ontology/formerName,16479
+foundedBy,founded by,Agent,what is the founded by of <X>,what is the founded by of <X>,,,http://dbpedia.org/ontology/foundedBy,12895
+founder,founder,Person,what is the founder of <X>,what is the founder of <X>,,,http://dbpedia.org/ontology/founder,1574
+foundingDate,founding date,xsd:date,what is the founding date of <X>,what is the founding date of <X>,,,http://dbpedia.org/ontology/foundingDate,23926
+foundingYear,founding year,xsd:gYear,what is the founding year of <X>,what is the founding year of <X>,,,http://dbpedia.org/ontology/foundingYear,90919
+frequency,frequency,Frequency,what is the frequency of <X>,what is the frequency of <X>,,,http://dbpedia.org/ontology/frequency,16350
+frontierLength,length of a frontier,xsd:float,what is the length of a frontier of <X>,what is the length of a frontier of <X>,,,,
+fuel,fuel,owl:Thing,what is the fuel of <X>,what is the fuel of <X>,,,,
+fuelType,fuel type,owl:Thing,what is the fuel type of <X>,what is the fuel type of <X>,,,http://dbpedia.org/ontology/fuelType,464
+gameModus,Modus the game can be played in,xsd:string,what is the Modus the game can be played in of <X>,what is the Modus the game can be played in of <X>,,,,
+gender,gender,owl:Thing,what is the gender of <X>,what is the gender of <X>,,,http://dbpedia.org/ontology/gender,4834
+genre,genre,Genre,what is the genre of <X>,what is the genre of <X>,,,http://dbpedia.org/ontology/genre,576001
+geolocDual,geolocdual,xsd:string,what is the geolocdual of <X>,what is the geolocdual of <X>,,,,
+geologicPeriod,geologic period,xsd:string,what is the geologic period of <X>,what is the geologic period of <X>,,,http://dbpedia.org/ontology/geologicPeriod,99
+geology,geology,xsd:string,what is the geology of <X>,what is the geology of <X>,,,http://dbpedia.org/ontology/geology,406
+governingBody,governing body,Organisation,what is the governing body of <X>,what is the governing body of <X>,,,http://dbpedia.org/ontology/governingBody,6181
+governmentType,government type,GovernmentType,what is the government type of <X>,what is the government type of <X>,,,http://dbpedia.org/ontology/governmentType,11767
+governor,governor,Person,what is the governor of <X>,what is the governor of <X>,,,http://dbpedia.org/ontology/governor,4473
+governorGeneral,governor general,Person,what is the governor general of <X>,what is the governor general of <X>,,,http://dbpedia.org/ontology/governorGeneral,239
+greekName,name in ancient Greek,xsd:string,what is the name in ancient Greek of <X>,what is the name in ancient Greek of <X>,,,,
+greenLongDistancePisteNumber,green long distance piste number,xsd:nonNegativeInteger,what is the green long distance piste number of <X>,what is the green long distance piste number of <X>,,,,
+greenSkiPisteNumber,green ski piste number,xsd:nonNegativeInteger,what is the green ski piste number of <X>,what is the green ski piste number of <X>,,,,
+gridReference,grid reference,xsd:string,what is the grid reference of <X>,what is the grid reference of <X>,,,http://dbpedia.org/ontology/gridReference,23925
+grossDomesticProductPerPeople,gross domestic product per people,xsd:string,what is the gross domestic product per people of <X>,what is the gross domestic product per people of <X>,,,,
+grossDomesticProductRank,gross domestic product rank,xsd:string,what is the gross domestic product rank of <X>,what is the gross domestic product rank of <X>,,,,
+hasChannel,has channel,owl:Thing,what is the has channel of <X>,what is the has channel of <X>,,,,
+hasInput,has input,owl:Thing,what is the has input of <X>,what is the has input of <X>,,,,
+hasInsidePlace,has inside place,Place,what is the has inside place of <X>,what is the has inside place of <X>,,,,
+hasOutsidePlace,has outside place,Place,what is the has outside place of <X>,what is the has outside place of <X>,,,,
+hasSurfaceForm,undefined,xsd:string,what is the undefined of <X>,what is the undefined of <X>,,,,
+hasVariant,variant or variation,owl:Thing,what is the variant or variation of <X>,what is the variant or variation of <X>,,,http://dbpedia.org/ontology/hasVariant,653
+height,height,Length,what is the height of <X>,what is the height of <X>,,,http://dbpedia.org/ontology/height,202143
+heritageRegister,heritage register,owl:Thing,what is the heritage register of <X>,what is the heritage register of <X>,,,,
+highestAltitude,highest altitude,Altitude,what is the highest altitude of <X>,what is the highest altitude of <X>,,,,
+highestMountain,highest mountain,Mountain,what is the highest mountain of <X>,what is the highest mountain of <X>,,,http://dbpedia.org/ontology/highestMountain,79
+highestPlace,highest place,PopulatedPlace,what is the highest place of <X>,what is the highest place of <X>,,,http://dbpedia.org/ontology/highestPlace,250
+highestPosition,highest position,geo:SpatialThing,what is the highest position of <X>,what is the highest position of <X>,,,http://dbpedia.org/ontology/highestPosition,374
+highschool,highschool,School,what is the highschool of <X>,what is the highschool of <X>,,,http://dbpedia.org/ontology/highschool,6491
+historicalMap,historical map,xsd:string,what is the historical map of <X>,what is the historical map of <X>,,,,
+historicalName,historical name,rdf:langString,what is the historical name of <X>,what is the historical name of <X>,,,,
+homeArena,home arena,Arena,what is the home arena of <X>,what is the home arena of <X>,,,http://dbpedia.org/ontology/homeArena,1072
+homeColourHexCode,colour hex code of home jersey or its parts,xsd:string,what is the colour hex code of home jersey or its parts of <X>,what is the colour hex code of home jersey or its parts of <X>,,,,
+homeStadium,home stadium,Stadium,what is the home stadium of <X>,what is the home stadium of <X>,,,http://dbpedia.org/ontology/homeStadium,7403
+honours,honours,owl:Thing,what is the honours of <X>,what is the honours of <X>,,,http://dbpedia.org/ontology/honours,1551
+humanDevelopmentIndexRank,human development index rank,xsd:string,what is the human development index rank of <X>,what is the human development index rank of <X>,,,,
+imageSize,image size (px),xsd:integer,what is the image size (px) of <X>,what is the image size (px) of <X>,,,http://dbpedia.org/ontology/imageSize,1675
+imdbId,IMDB id,xsd:string,what is the IMDB id of <X>,what is the IMDB id of <X>,,,http://dbpedia.org/ontology/imdbId,72380
+incumbent,incumbent,Person,what is the incumbent of <X>,what is the incumbent of <X>,,,http://dbpedia.org/ontology/incumbent,96
+individualisedGnd,individualised GND number,xsd:string,what is the individualised GND number of <X>,what is the individualised GND number of <X>,,,http://dbpedia.org/ontology/individualisedGnd,229
+influenced,influenced,owl:Thing,what is the influenced of <X>,what is the influenced of <X>,,,http://dbpedia.org/ontology/influenced,10966
+influencedBy,influenced by,owl:Thing,what is the influenced by of <X>,what is the influenced by of <X>,,,http://dbpedia.org/ontology/influencedBy,23422
+information,information,xsd:string,what is the information of <X>,what is the information of <X>,,,,
+informationName,information name,xsd:string,what is the information name of <X>,what is the information name of <X>,,,,
+inscription,inscription,xsd:string,what is the inscription of <X>,what is the inscription of <X>,,,,
+institution,institution,Organisation,what is the institution of <X>,what is the institution of <X>,,,http://dbpedia.org/ontology/institution,2264
+intercommunality,intercommunality,PopulatedPlace,what is the intercommunality of <X>,what is the intercommunality of <X>,,,http://dbpedia.org/ontology/intercommunality,7847
+introduced,introduced,xsd:date,what is the introduced of <X>,what is the introduced of <X>,,,http://dbpedia.org/ontology/introduced,15
+isPartOf,is part of,owl:Thing,what is the is part of of <X>,what is the is part of of <X>,,,http://dbpedia.org/ontology/isPartOf,912054
+isPartOfName,is part of (literal),xsd:string,what is the is part of (literal) of <X>,what is the is part of (literal) of <X>,,,http://dbpedia.org/ontology/isPartOfName,1614
+isRouteStop,is route stop,RouteStop,what is the is route stop of <X>,what is the is route stop of <X>,,,,
+isniId,ISNI Id,xsd:string,what is the ISNI Id of <X>,what is the ISNI Id of <X>,,,http://dbpedia.org/ontology/isniId,50
+iso31661Code,ISO 3166-1 code,xsd:string,what is the ISO 3166-1 code of <X>,what is the ISO 3166-1 code of <X>,,,,
+isoCode,iso code of a place,xsd:string,what is the iso code of a place of <X>,what is the iso code of a place of <X>,,,,
+jureLanguage,jure language,Language,what is the jure language of <X>,what is the jure language of <X>,,,,
+jurisdiction,jurisdiction,owl:Thing,what is the jurisdiction of <X>,what is the jurisdiction of <X>,,,http://dbpedia.org/ontology/jurisdiction,6457
+keyPerson,key person,Person,what is the key person of <X>,what is the key person of <X>,,,http://dbpedia.org/ontology/keyPerson,32206
+kinOfLanguage,kindOfLanguage,xsd:string,what is the kindOfLanguage of <X>,what is the kindOfLanguage of <X>,,,,
+kindOfCoordinate,kind of coordinate,xsd:string,what is the kind of coordinate of <X>,what is the kind of coordinate of <X>,,,,
+kindOfRock,kind of rock,xsd:string,what is the kind of rock of <X>,what is the kind of rock of <X>,,,,
+knownFor,known for,owl:Thing,what is the known for of <X>,what is the known for of <X>,,,http://dbpedia.org/ontology/knownFor,46996
+lake,vastest lake,BodyOfWater,what is the vastest lake of <X>,what is the vastest lake of <X>,,,http://dbpedia.org/ontology/lake,2406
+land,land,Place,what is the land of <X>,what is the land of <X>,,,,
+landArea,area of a land,Area,what is the area of a land of <X>,what is the area of a land of <X>,,,,
+landPercentage,land percentage of a place,xsd:float,what is the land percentage of a place of <X>,what is the land percentage of a place of <X>,,,,
+language,language,Language,what is the language of <X>,what is the language of <X>,,,http://dbpedia.org/ontology/language,108092
+languageRegulator,language regulator or academy,Language,what is the language regulator or academy of <X>,what is the language regulator or academy of <X>,,,http://dbpedia.org/ontology/languageRegulator,233
+latinName,name in latin,xsd:string,what is the name in latin of <X>,what is the name in latin of <X>,,,,
+lawCountry,law country,xsd:string,what is the law country of <X>,what is the law country of <X>,,,,
+lccnId,LCCN Id,xsd:string,what is the LCCN Id of <X>,what is the LCCN Id of <X>,,,http://dbpedia.org/ontology/lccnId,457
+leader,leader,Person,what is the leader of <X>,what is the leader of <X>,,,http://dbpedia.org/ontology/leader,8870
+league,league,SportsLeague,what is the league of <X>,what is the league of <X>,,,http://dbpedia.org/ontology/league,45411
+length,length,Length,what is the length of <X>,what is the length of <X>,,,http://dbpedia.org/ontology/length,75987
+lengthQuote,length quote,xsd:string,what is the length quote of <X>,what is the length quote of <X>,,,http://dbpedia.org/ontology/lengthQuote,1
+licensee,licensee,xsd:string,what is the licensee of <X>,what is the licensee of <X>,,,http://dbpedia.org/ontology/licensee,9403
+lieutenant,lieutenant,Person,what is the lieutenant of <X>,what is the lieutenant of <X>,,,http://dbpedia.org/ontology/lieutenant,1859
+limit,limit,xsd:string,what is the limit of <X>,what is the limit of <X>,,,,
+linkedSpace,linked space,xsd:string,what is the linked space of <X>,what is the linked space of <X>,,,,
+listItemOf,list item,owl:Thing,what is the list item of <X>,what is the list item of <X>,,,,
+localAuthority,local authority,owl:Thing,what is the local authority of <X>,what is the local authority of <X>,,,http://dbpedia.org/ontology/localAuthority,2396
+locatedInArea,located in area,Place,what is the located in area of <X>,what is the located in area of <X>,,,http://dbpedia.org/ontology/locatedInArea,48899
+location,location,Place,what is the location of <X>,what is the location of <X>,,,http://dbpedia.org/ontology/location,413893
+locationCountry,państwo,Country,what is the państwo of <X>,what is the państwo of <X>,,,http://dbpedia.org/ontology/locationCountry,21851
+locationName,locationName,xsd:string,what is the locationName of <X>,what is the locationName of <X>,,,,
+logo,logo,xsd:string,what is the logo of <X>,what is the logo of <X>,,,http://dbpedia.org/ontology/logo,1317
+longDistancePisteKilometre,long distance piste kilometre,Length,what is the long distance piste kilometre of <X>,what is the long distance piste kilometre of <X>,,,,
+longDistancePisteNumber,long distance piste number,xsd:nonNegativeInteger,what is the long distance piste number of <X>,what is the long distance piste number of <X>,,,,
+longName,longName,rdf:langString,what is the longName of <X>,what is the longName of <X>,,,http://dbpedia.org/ontology/longName,476
+lowest,lowest,xsd:string,what is the lowest of <X>,what is the lowest of <X>,,,http://dbpedia.org/ontology/lowest,358
+lowestAltitude,lowest altitude,Altitude,what is the lowest altitude of <X>,what is the lowest altitude of <X>,,,,
+lowestMountain,lowest mountain,Mountain,what is the lowest mountain of <X>,what is the lowest mountain of <X>,,,http://dbpedia.org/ontology/lowestMountain,133
+lowestPlace,lowest place,PopulatedPlace,what is the lowest place of <X>,what is the lowest place of <X>,,,http://dbpedia.org/ontology/lowestPlace,166
+lowestPosition,lowest position,geo:SpatialThing,what is the lowest position of <X>,what is the lowest position of <X>,,,http://dbpedia.org/ontology/lowestPosition,101
+mainInterest,main interest,owl:Thing,what is the main interest of <X>,what is the main interest of <X>,,,http://dbpedia.org/ontology/mainInterest,4301
+mainIsland,main island,Place,what is the main island of <X>,what is the main island of <X>,,,,
+majorityFloorLeader,majority floor leader,xsd:integer,what is the majority floor leader of <X>,what is the majority floor leader of <X>,,,,
+majorityLeader,majority leader,xsd:integer,what is the majority leader of <X>,what is the majority leader of <X>,,,,
+management,management,owl:Thing,what is the management of <X>,what is the management of <X>,,,http://dbpedia.org/ontology/management,597
+managementElevation,management elevation,Length,what is the management elevation of <X>,what is the management elevation of <X>,,,http://dbpedia.org/ontology/managementElevation,17
+managementMountain,management mountain,Mountain,what is the management mountain of <X>,what is the management mountain of <X>,,,http://dbpedia.org/ontology/managementMountain,46
+managementPlace,management place,PopulatedPlace,what is the management place of <X>,what is the management place of <X>,,,http://dbpedia.org/ontology/managementPlace,46
+managementPosition,management position,geo:SpatialThing,what is the management position of <X>,what is the management position of <X>,,,http://dbpedia.org/ontology/managementPosition,34
+managerYearsEndYear,manager years end year,xsd:gYear,what is the manager years end year of <X>,what is the manager years end year of <X>,,,,
+managerYearsStartYear,manager years start year,xsd:gYear,what is the manager years start year of <X>,what is the manager years start year of <X>,,,,
+mandate,political mandate,xsd:string,what is the political mandate of <X>,what is the political mandate of <X>,,,,
+manufactory,manufactory,Factory,what is the manufactory of <X>,what is the manufactory of <X>,,,,
+manufacturer,manufacturer,Organisation,what is the manufacturer of <X>,what is the manufacturer of <X>,,,http://dbpedia.org/ontology/manufacturer,35962
+map,map,owl:Thing,what is the map of <X>,what is the map of <X>,,,http://dbpedia.org/ontology/map,177
+mapCaption,map caption,xsd:string,what is the map caption of <X>,what is the map caption of <X>,,,http://dbpedia.org/ontology/mapCaption,41
+mapDescription,map description,xsd:string,what is the map description of <X>,what is the map description of <X>,,,,
+mascot,mascot,xsd:string,what is the mascot of <X>,what is the mascot of <X>,,,http://dbpedia.org/ontology/mascot,14752
+mass,mass,Mass,what is the mass of <X>,what is the mass of <X>,,,http://dbpedia.org/ontology/mass,409
+material,material,owl:Thing,what is the material of <X>,what is the material of <X>,,,http://dbpedia.org/ontology/material,576
+max,max,xsd:nonNegativeInteger,what is the max of <X>,what is the max of <X>,,,,
+maximumArea,maximum area,xsd:string,what is the maximum area of <X>,what is the maximum area of <X>,,,,
+maximumAreaQuote,maximum area quote,xsd:string,what is the maximum area quote of <X>,what is the maximum area quote of <X>,,,,
+maximumDepth,maximum depth,Length,what is the maximum depth of <X>,what is the maximum depth of <X>,,,http://dbpedia.org/ontology/maximumDepth,4069
+maximumDepthQuote,maximum depth quote,xsd:string,what is the maximum depth quote of <X>,what is the maximum depth quote of <X>,,,http://dbpedia.org/ontology/maximumDepthQuote,1
+maximumDischarge,maximum discharge,FlowRate,what is the maximum discharge of <X>,what is the maximum discharge of <X>,,,http://dbpedia.org/ontology/maximumDischarge,995
+maximumElevation,maximum elevation,Length,what is the maximum elevation of <X>,what is the maximum elevation of <X>,,,http://dbpedia.org/ontology/maximumElevation,38564
+mayor,mayor,Mayor,what is the mayor of <X>,what is the mayor of <X>,,,http://dbpedia.org/ontology/mayor,943
+mayorArticle,mayor article,xsd:string,what is the mayor article of <X>,what is the mayor article of <X>,,,,
+mayorCouncillor,mayor councillor,xsd:string,what is the mayor councillor of <X>,what is the mayor councillor of <X>,,,,
+mbaId,MBA Id,xsd:string,what is the MBA Id of <X>,what is the MBA Id of <X>,,,http://dbpedia.org/ontology/mbaId,19
+meaning,meaning,xsd:string,what is the meaning of <X>,what is the meaning of <X>,,,http://dbpedia.org/ontology/meaning,3479
+mediaItem,media item,File,what is the media item of <X>,what is the media item of <X>,,,,
+medlinePlus,MedlinePlus,xsd:string,what is the MedlinePlus of <X>,what is the MedlinePlus of <X>,,,,
+meltingPoint,melting point,Temperature,what is the melting point of <X>,what is the melting point of <X>,,,,
+memberOfParliament,Member of Parliament,Person,what is the Member of Parliament of <X>,what is the Member of Parliament of <X>,,,,
+mergerDate,merger date,xsd:date,what is the merger date of <X>,what is the merger date of <X>,,,,
+militaryGovernment,military government,xsd:string,what is the military government of <X>,what is the military government of <X>,,,,
+militaryUnitSize,military unit size,xsd:string,what is the military unit size of <X>,what is the military unit size of <X>,,,http://dbpedia.org/ontology/militaryUnitSize,7887
+min,min,xsd:nonNegativeInteger,what is the min of <X>,what is the min of <X>,,,,
+minimumArea,minimum area,xsd:string,what is the minimum area of <X>,what is the minimum area of <X>,,,,
+minimumAreaQuote,minimum area quote,xsd:string,what is the minimum area quote of <X>,what is the minimum area quote of <X>,,,,
+minimumDischarge,minimum discharge,FlowRate,what is the minimum discharge of <X>,what is the minimum discharge of <X>,,,http://dbpedia.org/ontology/minimumDischarge,934
+minimumElevation,minimum elevation,Length,what is the minimum elevation of <X>,what is the minimum elevation of <X>,,,http://dbpedia.org/ontology/minimumElevation,37766
+minister,minister,Politician,what is the minister of <X>,what is the minister of <X>,,,,
+minorityFloorLeader,minority floor leader,xsd:integer,what is the minority floor leader of <X>,what is the minority floor leader of <X>,,,,
+minorityLeader,minority leader,xsd:integer,what is the minority leader of <X>,what is the minority leader of <X>,,,,
+mission,mission,SpaceMission,what is the mission of <X>,what is the mission of <X>,,,http://dbpedia.org/ontology/mission,1501
+monarch,monarch,Person,what is the monarch of <X>,what is the monarch of <X>,,,http://dbpedia.org/ontology/monarch,6433
+month,month,xsd:string,what is the month of <X>,what is the month of <X>,,,http://dbpedia.org/ontology/month,88
+motto,motto,xsd:string,what is the motto of <X>,what is the motto of <X>,,,http://dbpedia.org/ontology/motto,42633
+mouthElevation,mouth elevation,Length,what is the mouth elevation of <X>,what is the mouth elevation of <X>,,,http://dbpedia.org/ontology/mouthElevation,7664
+municipality,municipality,PopulatedPlace,what is the municipality of <X>,what is the municipality of <X>,,,http://dbpedia.org/ontology/municipality,3233
+municipalityCode,municipality code,xsd:string,what is the municipality code of <X>,what is the municipality code of <X>,,,http://dbpedia.org/ontology/municipalityCode,2767
+name,name,rdf:langString,what is the name of <X>,what is the name of <X>,,,http://dbpedia.org/ontology/name,1228
+nameAsOf,so named since,xsd:gYear,what is the so named since of <X>,what is the so named since of <X>,,,,
+nameInCantoneseChinese,name in Yue Chinese,rdf:langString,what is the name in Yue Chinese of <X>,what is the name in Yue Chinese of <X>,,,,
+nameInHangulKorean,name in Hangul-written Korean,rdf:langString,what is the name in Hangul-written Korean of <X>,what is the name in Hangul-written Korean of <X>,,,,
+nameInHanjaKorean,name in Hanja-written (traditional) Korean,rdf:langString,what is the name in Hanja-written (traditional) Korean of <X>,what is the name in Hanja-written (traditional) Korean of <X>,,,,
+nameInJapanese,name in Japanese,rdf:langString,what is the name in Japanese of <X>,what is the name in Japanese of <X>,,,,
+nameInMindongyuChinese,name in Mindongyu Chinese,rdf:langString,what is the name in Mindongyu Chinese of <X>,what is the name in Mindongyu Chinese of <X>,,,,
+nameInMinnanyuChinese,name in Minnanyu Chinese,rdf:langString,what is the name in Minnanyu Chinese of <X>,what is the name in Minnanyu Chinese of <X>,,,,
+nameInPinyinChinese,name in Pinyin Chinese,rdf:langString,what is the name in Pinyin Chinese of <X>,what is the name in Pinyin Chinese of <X>,,,,
+nameInSimplifiedChinese,name in Simplified Chinese,rdf:langString,what is the name in Simplified Chinese of <X>,what is the name in Simplified Chinese of <X>,,,,
+nameInTraditionalChinese,name in Traditional Chinese,rdf:langString,what is the name in Traditional Chinese of <X>,what is the name in Traditional Chinese of <X>,,,,
+nameInWadeGilesChinese,name in the Wade-Giles transscription of Chinese,rdf:langString,what is the name in the Wade-Giles transscription of Chinese of <X>,what is the name in the Wade-Giles transscription of Chinese of <X>,,,,
+namedAfter,named after,owl:Thing,what is the named after of <X>,what is the named after of <X>,,,http://dbpedia.org/ontology/namedAfter,40
+namedByLanguage,named by language,Place,what is the named by language of <X>,what is the named by language of <X>,,,,
+nationalTopographicSystemMapNumber,National Topographic System map number,xsd:string,what is the National Topographic System map number of <X>,what is the National Topographic System map number of <X>,,,http://dbpedia.org/ontology/nationalTopographicSystemMapNumber,5419
+ndlId,NDL id,xsd:string,what is the NDL id of <X>,what is the NDL id of <X>,,,http://dbpedia.org/ontology/ndlId,23
+nearestCity,nearest city,PopulatedPlace,what is the nearest city of <X>,what is the nearest city of <X>,,,http://dbpedia.org/ontology/nearestCity,18582
+neighbourRegion,neighbour region,xsd:string,what is the neighbour region of <X>,what is the neighbour region of <X>,,,,
+newspaper,newspaper,PeriodicalLiterature,what is the newspaper of <X>,what is the newspaper of <X>,,,,
+nextEntity,next entity,Place,what is the next entity of <X>,what is the next entity of <X>,,,,
+nlaId,NLA Id,xsd:string,what is the NLA Id of <X>,what is the NLA Id of <X>,,,http://dbpedia.org/ontology/nlaId,27
+nominee,nominee,Person,what is the nominee of <X>,what is the nominee of <X>,,,http://dbpedia.org/ontology/nominee,31
+northEastPlace,north-east place,Place,what is the north-east place of <X>,what is the north-east place of <X>,,,,
+northPlace,north place,Place,what is the north place of <X>,what is the north place of <X>,,,,
+northWestPlace,north-west place,Place,what is the north-west place of <X>,what is the north-west place of <X>,,,,
+notableWork,notable work,Work,what is the notable work of <X>,what is the notable work of <X>,,,http://dbpedia.org/ontology/notableWork,6833
+notes,notes,xsd:string,what is the notes of <X>,what is the notes of <X>,,,http://dbpedia.org/ontology/notes,756
+numberOfIsland,number of islands,xsd:string,what is the number of islands of <X>,what is the number of islands of <X>,,,,
+numberOfPixels,number of pixels (millions),xsd:nonNegativeInteger,what is the number of pixels (millions) of <X>,what is the number of pixels (millions) of <X>,,,,
+numberOfSports,number of sports,xsd:nonNegativeInteger,what is the number of sports of <X>,what is the number of sports of <X>,,,http://dbpedia.org/ontology/numberOfSports,723
+numberOfSportsEvents,number of sports events,xsd:nonNegativeInteger,what is the number of sports events of <X>,what is the number of sports events of <X>,,,,
+numberOfVisitors,number of visitors,xsd:nonNegativeInteger,what is the number of visitors of <X>,what is the number of visitors of <X>,,,http://dbpedia.org/ontology/numberOfVisitors,1532
+nutsCode,NUTS code,xsd:string,what is the NUTS code of <X>,what is the NUTS code of <X>,,,http://dbpedia.org/ontology/nutsCode,20
+occupation,occupation,PersonFunction,what is the occupation of <X>,what is the occupation of <X>,,,http://dbpedia.org/ontology/occupation,335407
+odor,Odor,xsd:string,what is the Odor of <X>,what is the Odor of <X>,,,,
+office,(political) office,xsd:string,what is the (political) office of <X>,what is the (political) office of <X>,,,http://dbpedia.org/ontology/office,177682
+openingDate,opening date,xsd:date,what is the opening date of <X>,what is the opening date of <X>,,,http://dbpedia.org/ontology/openingDate,20352
+openingYear,opening year,xsd:gYear,what is the opening year of <X>,what is the opening year of <X>,,,http://dbpedia.org/ontology/openingYear,43756
+operator,operator,owl:Thing,what is the operator of <X>,what is the operator of <X>,,,http://dbpedia.org/ontology/operator,20061
+orbits,orbits,xsd:integer,what is the orbits of <X>,what is the orbits of <X>,,,http://dbpedia.org/ontology/orbits,6
+orcidId,ORCID Id,xsd:string,what is the ORCID Id of <X>,what is the ORCID Id of <X>,,,http://dbpedia.org/ontology/orcidId,1
+orderInOffice,order in office,xsd:string,what is the order in office of <X>,what is the order in office of <X>,,,http://dbpedia.org/ontology/orderInOffice,46824
+organisation,organisation,Organisation,what is the organisation of <X>,what is the organisation of <X>,,,http://dbpedia.org/ontology/organisation,393
+origin,origin,PopulatedPlace,what is the origin of <X>,what is the origin of <X>,,,http://dbpedia.org/ontology/origin,11211
+originalName,original name,rdf:langString,what is the original name of <X>,what is the original name of <X>,,,,
+originallyUsedFor,originally used for,xsd:string,what is the originally used for of <X>,what is the originally used for of <X>,,,http://dbpedia.org/ontology/originallyUsedFor,38
+orogeny,orogeny,owl:Thing,what is the orogeny of <X>,what is the orogeny of <X>,,,http://dbpedia.org/ontology/orogeny,13
+output,output,xsd:float,what is the output of <X>,what is the output of <X>,,,,
+owl:differentFrom,An owl:differentFrom statement indicates that two URI references refer to different individuals,owl:Thing,what is the An owl:differentFrom statement indicates that two URI references refer to different individuals of <X>,what is the An owl:differentFrom statement indicates that two URI references refer to different individuals of <X>,,,,
+owl:sameAs,same as,owl:Thing,what is the same as of <X>,what is the same as of <X>,,,,
+owner,owner,Agent,what is the owner of <X>,what is the owner of <X>,,,http://dbpedia.org/ontology/owner,60352
+owningCompany,owning company,Company,what is the owning company of <X>,what is the owning company of <X>,,,http://dbpedia.org/ontology/owningCompany,13345
+owningOrganisation,owning organisation,Organisation,what is the owning organisation of <X>,what is the owning organisation of <X>,,,http://dbpedia.org/ontology/owningOrganisation,13186
+parentCompany,parent company,Company,what is the parent company of <X>,what is the parent company of <X>,,,http://dbpedia.org/ontology/parentCompany,12213
+parliament,parliament,Parliament,what is the parliament of <X>,what is the parliament of <X>,,,,
+parliamentType,parliament type,xsd:string,what is the parliament type of <X>,what is the parliament type of <X>,,,,
+part,part,owl:Thing,what is the part of <X>,what is the part of <X>,,,http://dbpedia.org/ontology/part,16892
+partialFailedLaunches,partial failed launches,xsd:nonNegativeInteger,what is the partial failed launches of <X>,what is the partial failed launches of <X>,,,http://dbpedia.org/ontology/partialFailedLaunches,76
+party,party,PoliticalParty,what is the party of <X>,what is the party of <X>,,,http://dbpedia.org/ontology/party,88099
+partyNumber,party number,xsd:integer,what is the party number of <X>,what is the party number of <X>,,,,
+pastMember,past member,Person,what is the past member of <X>,what is the past member of <X>,,,http://dbpedia.org/ontology/pastMember,46
+patronSaint,patron saint,Person,what is the patron saint of <X>,what is the patron saint of <X>,,,,
+pccSecretary,pcc secretary,xsd:string,what is the pcc secretary of <X>,what is the pcc secretary of <X>,,,,
+percentage,percentage,owl:Thing,what is the percentage of <X>,what is the percentage of <X>,,,,
+percentageOfAreaWater,percentage of area water,xsd:float,what is the percentage of area water of <X>,what is the percentage of area water of <X>,,,http://dbpedia.org/ontology/percentageOfAreaWater,10169
+perimeter,perimeter,Length,what is the perimeter of <X>,what is the perimeter of <X>,,,,
+period,event period,owl:Thing,what is the event period of <X>,what is the event period of <X>,,,,
+picture,picture,owl:Thing,what is the picture of <X>,what is the picture of <X>,,,http://dbpedia.org/ontology/picture,3669
+pictureDescription,picture description,owl:Thing,what is the picture description of <X>,what is the picture description of <X>,,,,
+picturesCommonsCategory,pictures Commons category,xsd:string,what is the pictures Commons category of <X>,what is the pictures Commons category of <X>,,,,
+pisciculturalPopulation,piscicultural population,xsd:string,what is the piscicultural population of <X>,what is the piscicultural population of <X>,,,,
+plant,plant,Plant,what is the plant of <X>,what is the plant of <X>,,,http://dbpedia.org/ontology/plant,228
+playRole,play role,owl:Thing,what is the play role of <X>,what is the play role of <X>,,,,
+playingTime,playing time,Time,what is the playing time of <X>,what is the playing time of <X>,,,,
+pole,pole,xsd:string,what is the pole of <X>,what is the pole of <X>,,,,
+politicalLeader,political leader,PersonFunction,what is the political leader of <X>,what is the political leader of <X>,,,,
+populationQuote,population quote,xsd:string,what is the population quote of <X>,what is the population quote of <X>,,,,
+populationTotal,population total,xsd:nonNegativeInteger,what is the population total of <X>,what is the population total of <X>,,,http://dbpedia.org/ontology/populationTotal,327277
+portfolio,portfolio,xsd:string,what is the portfolio of <X>,what is the portfolio of <X>,,,http://dbpedia.org/ontology/portfolio,343
+position,position,owl:Thing,what is the position of <X>,what is the position of <X>,,,http://dbpedia.org/ontology/position,240407
+postalCode,postal code,xsd:string,what is the postal code of <X>,what is the postal code of <X>,,,http://dbpedia.org/ontology/postalCode,188395
+predecessor,predecessor,owl:Thing,what is the predecessor of <X>,what is the predecessor of <X>,,,http://dbpedia.org/ontology/predecessor,89375
+prefix,prefix,xsd:string,what is the prefix of <X>,what is the prefix of <X>,,,,
+president,president,Person,what is the president of <X>,what is the president of <X>,,,http://dbpedia.org/ontology/president,16042
+presidentGeneralCouncilMandate,mandate of the president of the general council,xsd:string,what is the mandate of the president of the general council of <X>,what is the mandate of the president of the general council of <X>,,,,
+presidentRegionalCouncilMandate,mandate of the president council of the regional council,xsd:string,what is the mandate of the president council of the regional council of <X>,what is the mandate of the president council of the regional council of <X>,,,,
+previousEntity,previous entity,Place,what is the previous entity of <X>,what is the previous entity of <X>,,,,
+price,price,Currency,what is the price of <X>,what is the price of <X>,,,,
+primeMinister,prime minister,Person,what is the prime minister of <X>,what is the prime minister of <X>,,,http://dbpedia.org/ontology/primeMinister,14012
+produces,produces,owl:Thing,what is the produces of <X>,what is the produces of <X>,,,,
+productionEndDate,production end date,xsd:date,what is the production end date of <X>,what is the production end date of <X>,,,http://dbpedia.org/ontology/productionEndDate,15
+productionEndYear,production end year,xsd:gYear,what is the production end year of <X>,what is the production end year of <X>,,,http://dbpedia.org/ontology/productionEndYear,8072
+productionStartDate,production start date,xsd:date,what is the production start date of <X>,what is the production start date of <X>,,,http://dbpedia.org/ontology/productionStartDate,40
+productionStartYear,production start year,xsd:gYear,what is the production start year of <X>,what is the production start year of <X>,,,http://dbpedia.org/ontology/productionStartYear,10087
+prominence,prominence,Length,what is the prominence of <X>,what is the prominence of <X>,,,http://dbpedia.org/ontology/prominence,7499
+pronunciation,pronunciation,xsd:string,what is the pronunciation of <X>,what is the pronunciation of <X>,,,,
+protectionStatus,monument protection status,xsd:string,what is the monument protection status of <X>,what is the monument protection status of <X>,,,,
+provides,provides,owl:Thing,what is the provides of <X>,what is the provides of <X>,,,,
+province,province,Province,what is the province of <X>,what is the province of <X>,,,http://dbpedia.org/ontology/province,11254
+provinceLink,province link,Province,what is the province link of <X>,what is the province link of <X>,,,,
+publicationDate,publication date,xsd:date,what is the publication date of <X>,what is the publication date of <X>,,,http://dbpedia.org/ontology/publicationDate,3603
+publiclyAccessible,publicly accessible,xsd:string,what is the publicly accessible of <X>,what is the publicly accessible of <X>,,,http://dbpedia.org/ontology/publiclyAccessible,478
+purpose,purpose,xsd:string,what is the purpose of <X>,what is the purpose of <X>,,,http://dbpedia.org/ontology/purpose,6176
+quotation,quotation,xsd:string,what is the quotation of <X>,what is the quotation of <X>,,,,
+quote,quote,xsd:string,what is the quote of <X>,what is the quote of <X>,,,http://dbpedia.org/ontology/quote,635
+race,race,Race,what is the race of <X>,what is the race of <X>,,,http://dbpedia.org/ontology/race,31133
+raceHorse,race horse,Horse,what is the race horse of <X>,what is the race horse of <X>,,,http://dbpedia.org/ontology/raceHorse,3964
+rank,rank,xsd:string,what is the rank of <X>,what is the rank of <X>,,,,
+rankAgreement,rank of an agreement,xsd:nonNegativeInteger,what is the rank of an agreement of <X>,what is the rank of an agreement of <X>,,,,
+rating,rating,xsd:float,what is the rating of <X>,what is the rating of <X>,,,http://dbpedia.org/ontology/rating,224
+rdf:type,undefined,owl:Thing,what is the undefined of <X>,what is the undefined of <X>,,,,
+rdfs:comment,undefined,rdf:langString,what is the undefined of <X>,what is the undefined of <X>,,,,
+rdfs:label,undefined,rdf:langString,what is the undefined of <X>,what is the undefined of <X>,,,,
+rdfs:seeAlso,is used to indicate a resource that might provide additional information about the subject resource,owl:Thing,what is the is used to indicate a resource that might provide additional information about the subject resource of <X>,what is the is used to indicate a resource that might provide additional information about the subject resource of <X>,,,,
+rdfs,subclass of,owl:Thing,what is the subclass of of <X>,what is the subclass of of <X>,,,,
+rebuildDate,rebuild date,xsd:date,what is the rebuild date of <X>,what is the rebuild date of <X>,,,http://dbpedia.org/ontology/rebuildDate,2
+recordLabel,record label,RecordLabel,what is the record label of <X>,what is the record label of <X>,,,http://dbpedia.org/ontology/recordLabel,282756
+redLongDistancePisteNumber,red long distance piste number,xsd:nonNegativeInteger,what is the red long distance piste number of <X>,what is the red long distance piste number of <X>,,,,
+redSkiPisteNumber,red ski piste number,xsd:nonNegativeInteger,what is the red ski piste number of <X>,what is the red ski piste number of <X>,,,,
+refcul,reference for cultural data,xsd:string,what is the reference for cultural data of <X>,what is the reference for cultural data of <X>,,,,
+refgen,reference for general data,xsd:string,what is the reference for general data of <X>,what is the reference for general data of <X>,,,,
+refgeo,reference for geographic data,xsd:string,what is the reference for geographic data of <X>,what is the reference for geographic data of <X>,,,,
+refpol,reference for politic data,xsd:string,what is the reference for politic data of <X>,what is the reference for politic data of <X>,,,,
+regency,regency,PopulatedPlace,what is the regency of <X>,what is the regency of <X>,,,,
+region,region,Place,what is the region of <X>,what is the region of <X>,,,http://dbpedia.org/ontology/region,76716
+regionLink,region link,xsd:string,what is the region link of <X>,what is the region link of <X>,,,,
+regionType,region type,xsd:string,what is the region type of <X>,what is the region type of <X>,,,,
+regionalPrefecture,regional prefecture,xsd:string,what is the regional prefecture of <X>,what is the regional prefecture of <X>,,,,
+registry,registry,xsd:string,what is the registry of <X>,what is the registry of <X>,,,,
+related,related,owl:Thing,what is the related of <X>,what is the related of <X>,,,http://dbpedia.org/ontology/related,17148
+relatedPlaces,related places,List,what is the related places of <X>,what is the related places of <X>,,,,
+releaseDate,release date,xsd:date,what is the release date of <X>,what is the release date of <X>,,,http://dbpedia.org/ontology/releaseDate,212290
+relief,relief,xsd:string,what is the relief of <X>,what is the relief of <X>,,,,
+religion,religion,owl:Thing,what is the religion of <X>,what is the religion of <X>,,,http://dbpedia.org/ontology/religion,50735
+religiousHead,religious head,Person,what is the religious head of <X>,what is the religious head of <X>,,,http://dbpedia.org/ontology/religiousHead,22
+reopened,reopened,xsd:date,what is the reopened of <X>,what is the reopened of <X>,,,,
+representative,number of representatives,xsd:nonNegativeInteger,what is the number of representatives of <X>,what is the number of representatives of <X>,,,,
+requirement,requirement,xsd:string,what is the requirement of <X>,what is the requirement of <X>,,,,
+restoreDate,restore date,xsd:date,what is the restore date of <X>,what is the restore date of <X>,,,http://dbpedia.org/ontology/restoreDate,14
+restriction,restriction,xsd:string,what is the restriction of <X>,what is the restriction of <X>,,,,
+retentionTime,relation time,xsd:string,what is the relation time of <X>,what is the relation time of <X>,,,,
+retired,retired,xsd:date,what is the retired of <X>,what is the retired of <X>,,,http://dbpedia.org/ontology/retired,182
+ridId,RID Id,xsd:string,what is the RID Id of <X>,what is the RID Id of <X>,,,,
+river,river,River,what is the river of <X>,what is the river of <X>,,,http://dbpedia.org/ontology/river,2650
+rkdArtistsId,RKDartists id,xsd:string,what is the RKDartists id of <X>,what is the RKDartists id of <X>,,,http://dbpedia.org/ontology/rkdArtistsId,1
+role,role,xsd:string,what is the role of <X>,what is the role of <X>,,,http://dbpedia.org/ontology/role,9160
+route,route,xsd:string,what is the route of <X>,what is the route of <X>,,,,
+royalAnthem,royal anthem,owl:Thing,what is the royal anthem of <X>,what is the royal anthem of <X>,,,http://dbpedia.org/ontology/royalAnthem,16
+runningMate,running mate,Person,what is the running mate of <X>,what is the running mate of <X>,,,http://dbpedia.org/ontology/runningMate,17
+sales,sales,Sales,what is the sales of <X>,what is the sales of <X>,,,http://dbpedia.org/ontology/sales,1983
+scale,scale,xsd:string,what is the scale of <X>,what is the scale of <X>,,,,
+score,score,xsd:double,what is the score of <X>,what is the score of <X>,,,,
+sea,sea,Sea,what is the sea of <X>,what is the sea of <X>,,,,
+secondLeader,secondLeader,Person,what is the secondLeader of <X>,what is the secondLeader of <X>,,,http://dbpedia.org/ontology/secondLeader,3056
+secondPlace,second place,xsd:string,what is the second place of <X>,what is the second place of <X>,,,,
+secondPopularVote,secondPopularVote,Person,what is the secondPopularVote of <X>,what is the secondPopularVote of <X>,,,http://dbpedia.org/ontology/secondPopularVote,31
+selibrId,SELIBR Id,xsd:string,what is the SELIBR Id of <X>,what is the SELIBR Id of <X>,,,http://dbpedia.org/ontology/selibrId,5
+senator,senator,Person,what is the senator of <X>,what is the senator of <X>,,,,
+seniority,seniority,xsd:string,what is the seniority of <X>,what is the seniority of <X>,,,http://dbpedia.org/ontology/seniority,729
+series,series,owl:Thing,what is the series of <X>,what is the series of <X>,,,http://dbpedia.org/ontology/series,27450
+sessionNumber,session number,xsd:integer,what is the session number of <X>,what is the session number of <X>,,,,
+settlement,settlement,PopulatedPlace,what is the settlement of <X>,what is the settlement of <X>,,,,
+setupTime,setup time,Time,what is the setup time of <X>,what is the setup time of <X>,,,,
+show,show,TelevisionShow,what is the show of <X>,what is the show of <X>,,,http://dbpedia.org/ontology/show,2
+similar,similar,owl:Thing,what is the similar of <X>,what is the similar of <X>,,,http://dbpedia.org/ontology/similar,971
+siren,siren number,xsd:nonNegativeInteger,what is the siren number of <X>,what is the siren number of <X>,,,,
+sizeBlazon,size blazon,xsd:string,what is the size blazon of <X>,what is the size blazon of <X>,,,,
+sizeLogo,size logo,xsd:nonNegativeInteger,what is the size logo of <X>,what is the size logo of <X>,,,,
+sizeMap,size map,xsd:string,what is the size map of <X>,what is the size map of <X>,,,,
+sizeThumbnail,size thumbnail,xsd:string,what is the size thumbnail of <X>,what is the size thumbnail of <X>,,,,
+skiLift,ski lift,xsd:nonNegativeInteger,what is the ski lift of <X>,what is the ski lift of <X>,,,,
+skiPisteKilometre,ski piste kilometre,Length,what is the ski piste kilometre of <X>,what is the ski piste kilometre of <X>,,,,
+skiPisteNumber,ski piste number,xsd:nonNegativeInteger,what is the ski piste number of <X>,what is the ski piste number of <X>,,,,
+skiTow,ski tow,xsd:nonNegativeInteger,what is the ski tow of <X>,what is the ski tow of <X>,,,,
+skills,skills,owl:Thing,what is the skills of <X>,what is the skills of <X>,,,,
+skos,broader,owl:Thing,what is the broader of <X>,what is the broader of <X>,,,,
+skos,prefLabel,rdf:langString,what is the prefLabel of <X>,what is the prefLabel of <X>,,,,
+skos,related,owl:Thing,what is the related of <X>,what is the related of <X>,,,,
+slogan,slogan,rdf:langString,what is the slogan of <X>,what is the slogan of <X>,,,http://dbpedia.org/ontology/slogan,18098
+snowParkNumber,snow park number,xsd:nonNegativeInteger,what is the snow park number of <X>,what is the snow park number of <X>,,,,
+soundRecording,sound recording,Sound,what is the sound recording of <X>,what is the sound recording of <X>,,,http://dbpedia.org/ontology/soundRecording,10943
+source,source,owl:Thing,what is the source of <X>,what is the source of <X>,,,http://dbpedia.org/ontology/source,2960
+sourceConfluenceElevation,source confluence elevation,Length,what is the source confluence elevation of <X>,what is the source confluence elevation of <X>,,,http://dbpedia.org/ontology/sourceConfluenceElevation,208
+sourceDistrict,source district,PopulatedPlace,what is the source district of <X>,what is the source district of <X>,,,,
+sourceElevation,source elevation,Length,what is the source elevation of <X>,what is the source elevation of <X>,,,http://dbpedia.org/ontology/sourceElevation,4541
+sourceMountain,source mountain,Mountain,what is the source mountain of <X>,what is the source mountain of <X>,,,http://dbpedia.org/ontology/sourceMountain,6147
+sourcePlace,source place,PopulatedPlace,what is the source place of <X>,what is the source place of <X>,,,http://dbpedia.org/ontology/sourcePlace,6147
+sourcePosition,source position,geo:SpatialThing,what is the source position of <X>,what is the source position of <X>,,,http://dbpedia.org/ontology/sourcePosition,4649
+sourceRegion,source region,PopulatedPlace,what is the source region of <X>,what is the source region of <X>,,,http://dbpedia.org/ontology/sourceRegion,1252
+sourceState,source state,PopulatedPlace,what is the source state of <X>,what is the source state of <X>,,,,
+sourceText,sourceText,rdf:langString,what is the sourceText of <X>,what is the sourceText of <X>,,,,
+southEastPlace,south-east place,Place,what is the south-east place of <X>,what is the south-east place of <X>,,,,
+southPlace,south place,Place,what is the south place of <X>,what is the south place of <X>,,,,
+southWestPlace,south-west place,Place,what is the south-west place of <X>,what is the south-west place of <X>,,,,
+sovereignCountry,sovereign country,PopulatedPlace,what is the sovereign country of <X>,what is the sovereign country of <X>,,,,
+speaker,speaker,xsd:integer,what is the speaker of <X>,what is the speaker of <X>,,,http://dbpedia.org/ontology/speaker,46
+specialist,specialist,PersonFunction,what is the specialist of <X>,what is the specialist of <X>,,,http://dbpedia.org/ontology/specialist,721
+specialization,specialization,owl:Thing,what is the specialization of <X>,what is the specialization of <X>,,,,
+sport,sport,Sport,what is the sport of <X>,what is the sport of <X>,,,http://dbpedia.org/ontology/sport,5873
+sportGoverningBody,sport governing body,owl:Thing,what is the sport governing body of <X>,what is the sport governing body of <X>,,,http://dbpedia.org/ontology/sportGoverningBody,173
+stadium,Stadium,Stadium,what is the Stadium of <X>,what is the Stadium of <X>,,,http://dbpedia.org/ontology/stadium,2503
+startOccupation,start occupation,xsd:string,what is the start occupation of <X>,what is the start occupation of <X>,,,,
+startPoint,start point,Place,what is the start point of <X>,what is the start point of <X>,,,http://dbpedia.org/ontology/startPoint,221
+startYear,start year,xsd:gYear,what is the start year of <X>,what is the start year of <X>,,,,
+statName,stat name,xsd:string,what is the stat name of <X>,what is the stat name of <X>,,,,
+statValue,stat value,xsd:double,what is the stat value of <X>,what is the stat value of <X>,,,,
+state,state,PopulatedPlace,what is the state of <X>,what is the state of <X>,,,http://dbpedia.org/ontology/state,43597
+stateDelegate,state delegate,Person,what is the state delegate of <X>,what is the state delegate of <X>,,,,
+status,status,xsd:string,what is the status of <X>,what is the status of <X>,,,http://dbpedia.org/ontology/status,47976
+statusYear,status year,xsd:string,what is the status year of <X>,what is the status year of <X>,,,,
+subPrefecture,subprefecture,xsd:string,what is the subprefecture of <X>,what is the subprefecture of <X>,,,,
+subdivision,subdivision,owl:Thing,what is the subdivision of <X>,what is the subdivision of <X>,,,,
+subdivisionLink,subdivision link,xsd:string,what is the subdivision link of <X>,what is the subdivision link of <X>,,,,
+subdivisions,subdivisions,xsd:nonNegativeInteger,what is the subdivisions of <X>,what is the subdivisions of <X>,,,http://dbpedia.org/ontology/subdivisions,5
+sublimationPoint,sublimation point,Temperature,what is the sublimation point of <X>,what is the sublimation point of <X>,,,,
+subregion,subregion,Place,what is the subregion of <X>,what is the subregion of <X>,,,http://dbpedia.org/ontology/subregion,438
+subsystem,subsystem,xsd:string,what is the subsystem of <X>,what is the subsystem of <X>,,,,
+subsystemLink,subsystem link,xsd:string,what is the subsystem link of <X>,what is the subsystem link of <X>,,,,
+subtitle,subtitle,xsd:string,what is the subtitle of <X>,what is the subtitle of <X>,,,http://dbpedia.org/ontology/subtitle,248
+successfulLaunches,successful launches,xsd:nonNegativeInteger,what is the successful launches of <X>,what is the successful launches of <X>,,,http://dbpedia.org/ontology/successfulLaunches,267
+successor,successor,owl:Thing,what is the successor of <X>,what is the successor of <X>,,,http://dbpedia.org/ontology/successor,114130
+sudocId,SUDOC id,xsd:string,what is the SUDOC id of <X>,what is the SUDOC id of <X>,,,http://dbpedia.org/ontology/sudocId,58
+supply,supply,Place,what is the supply of <X>,what is the supply of <X>,,,,
+surfaceFormOccurrenceOffset,position in which a surface occurs in a text,xsd:string,what is the position in which a surface occurs in a text of <X>,what is the position in which a surface occurs in a text of <X>,,,,
+surfaceType,type of surface,xsd:string,what is the type of surface of <X>,what is the type of surface of <X>,,,,
+synonym,synonym,xsd:string,what is the synonym of <X>,what is the synonym of <X>,,,http://dbpedia.org/ontology/synonym,253511
+systemRequirements,minimum system requirements,xsd:string,what is the minimum system requirements of <X>,what is the minimum system requirements of <X>,,,,
+tag,tag,xsd:date,what is the tag of <X>,what is the tag of <X>,,,,
+taoiseach,taoiseach,Person,what is the taoiseach of <X>,what is the taoiseach of <X>,,,http://dbpedia.org/ontology/taoiseach,160
+team,team,SportsTeam,what is the team of <X>,what is the team of <X>,,,http://dbpedia.org/ontology/team,2007122
+teamSize,team size,xsd:nonNegativeInteger,what is the team size of <X>,what is the team size of <X>,,,http://dbpedia.org/ontology/teamSize,93
+televisionSeries,television series,TelevisionShow,what is the television series of <X>,what is the television series of <X>,,,http://dbpedia.org/ontology/televisionSeries,2291
+temperature,temperature,Temperature,what is the temperature of <X>,what is the temperature of <X>,,,http://dbpedia.org/ontology/temperature,405
+tennisSurfaceType,type of tennis surface,xsd:string,what is the type of tennis surface of <X>,what is the type of tennis surface of <X>,,,http://dbpedia.org/ontology/tennisSurfaceType,933
+termPeriod,term period,TimePeriod,what is the term period of <X>,what is the term period of <X>,,,http://dbpedia.org/ontology/termPeriod,148574
+thirdPlace,third place,xsd:string,what is the third place of <X>,what is the third place of <X>,,,,
+thumbnail,thumbnail,Image,what is the thumbnail of <X>,what is the thumbnail of <X>,,,http://dbpedia.org/ontology/thumbnail,1695460
+thumbnailCaption,thumbnail caption,xsd:string,what is the thumbnail caption of <X>,what is the thumbnail caption of <X>,,,,
+time,time,xsd:string,what is the time of <X>,what is the time of <X>,,,http://dbpedia.org/ontology/time,36444
+timeInSpace,total time person has spent in space,Time,what is the total time person has spent in space of <X>,what is the total time person has spent in space of <X>,,,http://dbpedia.org/ontology/timeInSpace,120
+timeZone,time zone,owl:Thing,what is the time zone of <X>,what is the time zone of <X>,,,http://dbpedia.org/ontology/timeZone,377227
+title,title,rdf:langString,what is the title of <X>,what is the title of <X>,,,http://dbpedia.org/ontology/title,247497
+topSpeed,top speed,Speed,what is the top speed of <X>,what is the top speed of <X>,,,http://dbpedia.org/ontology/topSpeed,18114
+totalLaunches,total launches,xsd:nonNegativeInteger,what is the total launches of <X>,what is the total launches of <X>,,,http://dbpedia.org/ontology/totalLaunches,362
+tradeMark,TradeMark,owl:Thing,what is the TradeMark of <X>,what is the TradeMark of <X>,,,,
+translatedMotto,translated motto,xsd:string,what is the translated motto of <X>,what is the translated motto of <X>,,,,
+tree,tree,Species,what is the tree of <X>,what is the tree of <X>,,,,
+type,type,owl:Thing,what is the type of <X>,what is the type of <X>,,,http://dbpedia.org/ontology/type,403198
+typeCoordinate,type coordinate,xsd:string,what is the type coordinate of <X>,what is the type coordinate of <X>,,,,
+ulanId,ULAN id,xsd:string,what is the ULAN id of <X>,what is the ULAN id of <X>,,,http://dbpedia.org/ontology/ulanId,11
+unesco,unesco,PopulatedPlace,what is the unesco of <X>,what is the unesco of <X>,,,,
+university,university,EducationalInstitution,what is the university of <X>,what is the university of <X>,,,http://dbpedia.org/ontology/university,2795
+unloCode,UN/LOCODE,xsd:string,what is the UN/LOCODE of <X>,what is the UN/LOCODE of <X>,,,,
+updated,updated,xsd:date,what is the updated of <X>,what is the updated of <X>,,,,
+uses,uses,owl:Thing,what is the uses of <X>,what is the uses of <X>,,,,
+usk,approved rating of the Entertainment Software Self-Regulation Body in Germany,xsd:integer,what is the approved rating of the Entertainment Software Self-Regulation Body in Germany of <X>,what is the approved rating of the Entertainment Software Self-Regulation Body in Germany of <X>,,,,
+utcOffset,UTC offset,xsd:string,what is the UTC offset of <X>,what is the UTC offset of <X>,,,http://dbpedia.org/ontology/utcOffset,445717
+value,value,xsd:nonNegativeInteger,what is the value of <X>,what is the value of <X>,,,,
+variantOf,variant or variation,owl:Thing,what is the variant or variation of <X>,what is the variant or variation of <X>,,,http://dbpedia.org/ontology/variantOf,4180
+vehicle,vehicle,Automobile,what is the vehicle of <X>,what is the vehicle of <X>,,,http://dbpedia.org/ontology/vehicle,185
+vehicleCode,vehicle code,xsd:string,what is the vehicle code of <X>,what is the vehicle code of <X>,,,,
+viafId,VIAF Id,xsd:string,what is the VIAF Id of <X>,what is the VIAF Id of <X>,,,http://dbpedia.org/ontology/viafId,1599
+viceChancellor,vice chancellor,Person,what is the vice chancellor of <X>,what is the vice chancellor of <X>,,,http://dbpedia.org/ontology/viceChancellor,423
+vicePresident,vice president,Person,what is the vice president of <X>,what is the vice president of <X>,,,http://dbpedia.org/ontology/vicePresident,1005
+vicePrimeMinister,vice prime minister,Person,what is the vice prime minister of <X>,what is the vice prime minister of <X>,,,http://dbpedia.org/ontology/vicePrimeMinister,29
+victim,victim (resource),owl:Thing,what is the victim (resource) of <X>,what is the victim (resource) of <X>,,,http://dbpedia.org/ontology/victim,154
+victims,victims (string),xsd:string,what is the victims (string) of <X>,what is the victims (string) of <X>,,,http://dbpedia.org/ontology/victims,95
+voice,voice,Person,what is the voice of <X>,what is the voice of <X>,,,http://dbpedia.org/ontology/voice,11182
+volume,volume,Volume,what is the volume of <X>,what is the volume of <X>,,,http://dbpedia.org/ontology/volume,4082
+volumeQuote,volume quote,xsd:string,what is the volume quote of <X>,what is the volume quote of <X>,,,http://dbpedia.org/ontology/volumeQuote,1
+water,water,xsd:string,what is the water of <X>,what is the water of <X>,,,,
+waterArea,area of water,Area,what is the area of water of <X>,what is the area of water of <X>,,,,
+waterPercentage,water percentage of a place,xsd:float,what is the water percentage of a place of <X>,what is the water percentage of a place of <X>,,,,
+webcast,webcast,owl:Thing,what is the webcast of <X>,what is the webcast of <X>,,,http://dbpedia.org/ontology/webcast,9065
+websiteLabel,label of a website,rdf:langString,what is the label of a website of <X>,what is the label of a website of <X>,,,,
+weight,weight,Mass,what is the weight of <X>,what is the weight of <X>,,,http://dbpedia.org/ontology/weight,80374
+westPlace,west place,Place,what is the west place of <X>,what is the west place of <X>,,,,
+wholeArea,whole area,Area,what is the whole area of <X>,what is the whole area of <X>,,,,
+width,width,Length,what is the width of <X>,what is the width of <X>,,,http://dbpedia.org/ontology/width,13316
+widthQuote,width quote,xsd:string,what is the width quote of <X>,what is the width quote of <X>,,,http://dbpedia.org/ontology/widthQuote,2
+wikiPageCharacterSize,Character size of wiki page,xsd:nonNegativeInteger,what is the Character size of wiki page of <X>,what is the Character size of wiki page of <X>,,,,
+wikiPageDisambiguates,Wikipage disambiguates,owl:Thing,what is the Wikipage disambiguates of <X>,what is the Wikipage disambiguates of <X>,,,http://dbpedia.org/ontology/wikiPageDisambiguates,1537180
+wikiPageEditLink,Link to the Wikipage edit URL,owl:Thing,what is the Link to the Wikipage edit URL of <X>,what is the Link to the Wikipage edit URL of <X>,,,,
+wikiPageExternalLink,Link from a Wikipage to an external page,owl:Thing,what is the Link from a Wikipage to an external page of <X>,what is the Link from a Wikipage to an external page of <X>,,,http://dbpedia.org/ontology/wikiPageExternalLink,7772279
+wikiPageExtracted,extraction datetime,xsd:dateTime,what is the extraction datetime of <X>,what is the extraction datetime of <X>,,,,
+wikiPageHistoryLink,Link to the Wikipage history URL,owl:Thing,what is the Link to the Wikipage history URL of <X>,what is the Link to the Wikipage history URL of <X>,,,,
+wikiPageID,Wikipage page ID,xsd:integer,what is the Wikipage page ID of <X>,what is the Wikipage page ID of <X>,,,http://dbpedia.org/ontology/wikiPageID,15797811
+wikiPageInDegree,Wiki page in degree,xsd:nonNegativeInteger,what is the Wiki page in degree of <X>,what is the Wiki page in degree of <X>,,,,
+wikiPageInterLanguageLink,Link from a Wikipage to a Wikipage in a different language about the same or a related subject.,owl:Thing,what is the Link from a Wikipage to a Wikipage in a different language about the same or a related subject. of <X>,what is the Link from a Wikipage to a Wikipage in a different language about the same or a related subject. of <X>,,,,
+wikiPageLength,page length (characters) of wiki page,xsd:nonNegativeInteger,what is the page length (characters) of wiki page of <X>,what is the page length (characters) of wiki page of <X>,,,,
+wikiPageModified,Wikipage modification datetime,xsd:dateTime,what is the Wikipage modification datetime of <X>,what is the Wikipage modification datetime of <X>,,,,
+wikiPageOutDegree,Wiki page out degree,xsd:nonNegativeInteger,what is the Wiki page out degree of <X>,what is the Wiki page out degree of <X>,,,,
+wikiPageRedirects,Wikipage redirect,owl:Thing,what is the Wikipage redirect of <X>,what is the Wikipage redirect of <X>,,,http://dbpedia.org/ontology/wikiPageRedirects,7632358
+wikiPageRevisionID,Wikipage revision ID,xsd:integer,what is the Wikipage revision ID of <X>,what is the Wikipage revision ID of <X>,,,http://dbpedia.org/ontology/wikiPageRevisionID,15797811
+wikiPageRevisionLink,Link to the Wikipage revision URL,owl:Thing,what is the Link to the Wikipage revision URL of <X>,what is the Link to the Wikipage revision URL of <X>,,,,
+wikiPageUsesTemplate,wiki page uses template,WikimediaTemplate,what is the wiki page uses template of <X>,what is the wiki page uses template of <X>,,,,
+wikiPageWikiLink,Link from a Wikipage to another Wikipage,owl:Thing,what is the Link from a Wikipage to another Wikipage of <X>,what is the Link from a Wikipage to another Wikipage of <X>,,,,
+wikiPageWikiLinkText,Text used to link from a Wikipage to another Wikipage,owl:Thing,what is the Text used to link from a Wikipage to another Wikipage of <X>,what is the Text used to link from a Wikipage to another Wikipage of <X>,,,,
+wikidataSplitIri,Wikidata IRI slit,owl:Thing,what is the Wikidata IRI slit of <X>,what is the Wikidata IRI slit of <X>,,,,
+wins,wins,xsd:nonNegativeInteger,what is the wins of <X>,what is the wins of <X>,,,http://dbpedia.org/ontology/wins,1190
+year,year,xsd:gYear,what is the year of <X>,what is the year of <X>,,,http://dbpedia.org/ontology/year,40047
+yearOfConstruction,year of construction,xsd:gYear,what is the year of construction of <X>,what is the year of construction of <X>,,,http://dbpedia.org/ontology/yearOfConstruction,49389
+zodiacSign,zodiac sign,owl:Thing,what is the zodiac sign of <X>,what is the zodiac sign of <X>,,,,
