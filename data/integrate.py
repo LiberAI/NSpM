@@ -1,6 +1,6 @@
 import sys
 
-f = open('dbpedia-ontology-properties.csv','r')
+f = open('dbpedia-ontology-properties.tsv','r')
 file = f.readlines()
 d = {};
 
@@ -25,7 +25,7 @@ for m in manual:
 		l.append("http://dbpedia.org/ontology/"+m)
 		l.append(d[m])
 	else:
-		
+
 		l.append('')
 		l.append('')
 		print m
