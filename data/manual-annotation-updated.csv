@@ -1,6 +1,6 @@
 Property,Label ,Range,Fuzzy Score,Comment about expr,URI,Number of Occurrences,MVE,Optimal Expression
 abbreviation,abbreviation,xsd:string,1,,http://dbpedia.org/ontology/abbreviation,3,what is the abbreviation of <X>,what is the abbreviation of <X>
-abstract,has abstract (omti has),rdf:langString,0,"omit has, 1",http://dbpedia.org/ontology/abstract,1,what is the abstract of <X>,what is the abstract of <X>
+abstract,has abstract,rdf:langString,0,"omit has, 1",http://dbpedia.org/ontology/abstract,1,what is the abstract of <X>,what is the abstract of <X>
 access,access,xsd:string,1,,http://dbpedia.org/ontology/access,308,what is the access of <X>,what is the access of <X>
 accessDate,access date,xsd:date,1,,http://dbpedia.org/ontology/accessDate,1135,what is the access date of <X>,what is the access date of <X>
 activeYearsEndDate,active years end date,xsd:date,0.5,,http://dbpedia.org/ontology/activeYearsEndDate,84148,when is the end of active years of <X>,When did <X> end being active
