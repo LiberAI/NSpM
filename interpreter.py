@@ -19,7 +19,6 @@ if __name__ == '__main__':
     reload(sys)
     sys.setdefaultencoding("utf-8")
     encoded_sparql = sys.argv[1]
-    print encoded_sparql
     decoded_sparql = decode(encoded_sparql)
     decoded_sparql = re.sub(r"dbr:([^\s]+)" , r"<http://dbpedia.org/resource/\1>" , decoded_sparql)
     print decoded_sparql
