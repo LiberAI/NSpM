@@ -1,6 +1,6 @@
-f = open('manual.csv','rw')
-f2 = open('temp.csv','rw')
-f3 = open('newtemp.csv','w')
+f = open('data/manual.csv','rw')
+f2 = open('data/temp.csv','rw')
+f3 = open('data/newtemp.csv','w')
 
 l2 = f2.readlines();
 

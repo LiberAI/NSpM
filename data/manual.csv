@@ -1,4 +1,3 @@
-label,rdf:Range,MVE ,Optimal Expression,"How accurate is ""what is the $label of x""",Comment
 abbreviation,xsd:string,what is the abbreviation of x,,1,
 has abstract (omti has),,what is the abstract of x,,0,"omit has, 1"
 access,,what is the access of x,,1,

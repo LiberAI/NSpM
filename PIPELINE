@@ -1,0 +1,22 @@
+The final output file has each row of the form: 
+['Property', 'Label ', 'Range', 'Fuzzy Score', 'Comment about expr', 'URI', 'Number of Occurrences', 'MVE', 'Optimal Expression', 'SPARQL Query Template', 'Generator Query\r\n']
+
+# STEP 1 - Get properties from web page #
+Command: python get_properties.py > temp.csv
+- change cnt value (depends from web page to web page)
+- change quote_page to required web page
+
+# STEP 2 - Get number of occurrences and URI #
+Store only the rows of required namespace properties
+
+# STEP 3 - Integrate STEP 2 values with their corresponding property metadata row in temp.csv #
+Command: python integrate.py temp.csv
+Output file: manual-annotation-updated-v2.csv (change it in the file if needed)
+- Change the namespace to the required (it is 'ontology' right now) 
+
+# STEP 4 - MVE generation #
+Command: python decision_tree.py data/manual-annotation-updated-v2.csv
+Output file: GS_with_mve.csv
+
+# STEP 5 - SPARQL Query Template and Generator Query generation #
+Command: python sparql_generator.py  GS_with_mve.csv

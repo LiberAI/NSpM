@@ -1,6 +1,6 @@
 import sys
 
-f = open('dbpedia-ontology-properties.tsv','r')
+f = open(sys.argv[2],'r')
 file = f.readlines()
 d = {};
 
@@ -11,7 +11,7 @@ for l in file:
 # print d["abstract"];
 
 
-f = open('manual-annotation.csv','r')
+f = open(sys.argv[1],'r')
 manual = f.readlines()
 cnt,tot = 0,0;
 final = ""
