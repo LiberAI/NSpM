@@ -267,3 +267,9 @@ def splitIntoTripleParts (triple):
         }
     else:
         return None
+
+def fix_URI(query):
+	query = re.sub(r"dbr:([^\s]+)" , r"<http://dbpedia.org/resource/\1>" , query)
+	if query[-2:]=="}>":
+		query = query[:-2]+">}"
+	return query
