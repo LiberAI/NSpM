@@ -2,9 +2,8 @@ The final output file has each row of the form:
 ['Property', 'Label ', 'Range', 'Fuzzy Score', 'Comment about expr', 'URI', 'Number of Occurrences', 'MVE', 'Optimal Expression', 'SPARQL Query Template', 'Generator Query\r\n']
 
 # STEP 1 - Get properties from web page #
-Command: python get_properties.py > temp.csv
-- change cnt value (depends from web page to web page)
-- change quote_page to required web page
+Command: python get_properties.py --url <WEBPAGE URL> > temp.csv
+- --url argument is the webpage from where property metadata is to scraped
 
 # STEP 2 - Get number of occurrences and URI #
 Store only the rows of required namespace properties
