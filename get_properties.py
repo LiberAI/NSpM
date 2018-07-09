@@ -1,20 +1,23 @@
 import urllib2, urllib, httplib, json, sys, csv, io
+import argparse
 from bs4 import BeautifulSoup
 
-quote_page = "http://mappings.dbpedia.org/server/ontology/classes/Place"
+parser = argparse.ArgumentParser()
+requiredNamed = parser.add_argument_group('Required Arguments');
+requiredNamed.add_argument('--url', dest='url', metavar='url', help='Webpage URL: eg-http://mappings.dbpedia.org/server/ontology/classes/Place', required=True)
+args = parser.parse_args()
+
+quote_page = args.url
 page = urllib2.urlopen(quote_page)
 
 soup = BeautifulSoup(page, "html.parser")
 # print type(soup)
 
-props = []
-final = ""
-cnt = 0
 for rows in soup.find_all("tr"):
 	
-	cnt += 1
-	if cnt<=18: continue
-	
+	x = rows.find_all("td");
+	if len(x) <= 2: continue
+
 	name = rows.find_all("td")[0].get_text().replace(" (edit)","")
 	label = rows.find_all("td")[1].get_text()
 	dom = rows.find_all("td")[2].get_text()

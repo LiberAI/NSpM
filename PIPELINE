@@ -20,3 +20,4 @@ Output file: GS_with_mve.csv
 
 # STEP 5 - SPARQL Query Template and Generator Query generation #
 Command: python sparql_generator.py  GS_with_mve.csv
+
