@@ -12,18 +12,11 @@ page = urllib2.urlopen(quote_page)
 
 soup = BeautifulSoup(page, "html.parser")
 # print type(soup)
-fl = 0
+
 for rows in soup.find_all("tr"):
 	
 	x = rows.find_all("td");
-
-	if len(x) <= 2:
-		fl = 1
-		continue
-		
-	if fl == 1:
-		fl = 2
-		continue
+	if len(x) <= 2: continue
 
 	name = rows.find_all("td")[0].get_text().replace(" (edit)","")
 	label = rows.find_all("td")[1].get_text()
