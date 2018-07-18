@@ -35,7 +35,7 @@ for line in lines:
 			continue
 		if '<' not in nlq[i] and '?' not in nlq[i]:
 			nlq[i] = nlq[i].lower()
-			
+
 	for x in to_remove:
 		nlq.remove(x);
 
@@ -44,10 +44,15 @@ for line in lines:
 		if '<' not in spq[i] and '?' not in spq[i]:
 			spq[i] = spq[i].lower()
 
+	gq = l[-1].split();
+	for i in range(len(gq)):
+		if '<' not in gq[i] and '?' not in gq[i] and '[' not in gq[i]: 
+			gq[i] = gq[i].lower()
+
 	newl.append(" ".join(nlq))
 	newl.append(" ".join(spq))
-	newl.append(l[-1])
-	output += ";".join(newl);
+	newl.append(" ".join(gq))
+	output += ";".join(newl) + "\n";
 
 
 fw = open(sys.argv[2],'w')
