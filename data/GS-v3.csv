@@ -706,4 +706,3 @@ wins,wins,xsd:nonNegativeInteger,,,http://dbpedia.org/ontology/wins,1190,what is
 year,year,xsd:gYear,,,http://dbpedia.org/ontology/year,40047,what is the year of <X>,what is the year of <X>,SELECT ?x WHERE { <X> <http://dbpedia.org/ontology/year> ?x },SELECT ?a WHERE { ?a <http://dbpedia.org/ontology/year> [] . ?a a <http://dbpedia.org/ontology/Place> }
 yearOfConstruction,year of construction,xsd:gYear,,,http://dbpedia.org/ontology/yearOfConstruction,49389,what is the year of construction of <X>,what is the year of construction of <X>,SELECT ?x WHERE { <X> <http://dbpedia.org/ontology/yearOfConstruction> ?x },SELECT ?a WHERE { ?a <http://dbpedia.org/ontology/yearOfConstruction> [] . ?a a <http://dbpedia.org/ontology/Place> }
 zodiacSign,zodiac sign,owl:Thing,,,,,what is the zodiac sign of <X>,what is the zodiac sign of <X>,,
-
