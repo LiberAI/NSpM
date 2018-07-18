@@ -22,12 +22,30 @@ for line in lines:
 	# print l
 	if l[5] == "" or len(l[5])==0:
 		continue;
-	newl = []
+
+	newl,to_remove = [],[]
 	newl.append("dbo:Place")
 	newl.append("")
 	newl.append("")
-	newl.append(l[7])
-	newl.append(l[-2])
+
+	nlq = l[7].split();
+	for i in range(len(nlq)):
+		if '(' in nlq[i] or ')' in nlq[i]:
+			to_remove.append(nlq[i]);
+			continue
+		if '<' not in nlq[i] and '?' not in nlq[i]:
+			nlq[i] = nlq[i].lower()
+			
+	for x in to_remove:
+		nlq.remove(x);
+
+	spq = l[-2].split();
+	for i in range(len(spq)):
+		if '<' not in spq[i] and '?' not in spq[i]:
+			spq[i] = spq[i].lower()
+
+	newl.append(" ".join(nlq))
+	newl.append(" ".join(spq))
 	newl.append(l[-1])
 	output += ";".join(newl);
 
