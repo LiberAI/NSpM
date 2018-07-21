@@ -33,6 +33,11 @@ def save_cache ( file, cache ):
     with open(file, 'w') as outfile:
         json.dump(ordered, outfile)
 
+proxies = {'http': 'http://proxy.iiit.ac.in:8080/', 'https': 'http://proxy.iiit.ac.in:8080/'}
+proxy_handler = urllib2.ProxyHandler(proxies)
+opener = urllib2.build_opener(proxy_handler)
+urllib2.install_opener(opener)
+
 
 def query_dbpedia( query ):
     param = dict()
