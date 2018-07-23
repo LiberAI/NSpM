@@ -112,13 +112,11 @@ STANDARDS = {
         'dbo_partner': ['dbp_partner']
 }
 
-
 def encode( sparql ):
     encoded_sparql = do_replacements(sparql)
     shorter_encoded_sparql = shorten_query(encoded_sparql)
     normalized = normalize_predicates(shorter_encoded_sparql)
     return normalized
-
 
 def decode ( encoded_sparql ):
     short_sparql = reverse_replacements(encoded_sparql)
@@ -274,3 +272,9 @@ def splitIntoTripleParts (triple):
         }
     else:
         return None
+
+def fix_URI(query):
+	query = re.sub(r"dbr:([^\s]+)" , r"<http://dbpedia.org/resource/\1>" , query)
+	if query[-2:]=="}>":
+		query = query[:-2]+">}"
+	return query
