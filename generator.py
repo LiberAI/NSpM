@@ -198,7 +198,7 @@ def generate_dataset(templates, output_dir, file_mode):
                         b = b.replace(' attr_open ','(') 
                         b = b.replace(' attr_close',')')
                         dataset_pair['sparql'] = a + 'brack_open' + b + 'brack_close' + c
-                        print "lol", dataset_pair['sparql']
+                        # print "lol", dataset_pair['sparql']
 
 
                         sparql_queries.write("{}\n".format(dataset_pair['sparql']))
