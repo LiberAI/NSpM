@@ -188,6 +188,19 @@ def generate_dataset(templates, output_dir, file_mode):
                     if (dataset_pair):
                         english_questions.write("{}\n".format(dataset_pair['english']))
                         dataset_pair['sparql'] = re.sub("\s\s+" , " " , dataset_pair['sparql'])
+                        a = re.search('(.*)brack_open',dataset_pair['sparql']);
+                        b = re.search('brack_open(.*)brack_close',dataset_pair['sparql']);
+                        c = re.search('brack_close(.*)',dataset_pair['sparql']);
+                        # print a.group(1),b.group(1)
+                        a = a.group(1)
+                        b = b.group(1)
+                        c = c.group(1)
+                        b = b.replace(' attr_open ','(') 
+                        b = b.replace(' attr_close',')')
+                        dataset_pair['sparql'] = a + 'brack_open' + b + 'brack_close' + c
+                        print "lol", dataset_pair['sparql']
+
+
                         sparql_queries.write("{}\n".format(dataset_pair['sparql']))
             except:
                 exception = traceback.format_exc()
