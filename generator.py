@@ -186,6 +186,7 @@ def generate_dataset(templates, output_dir, file_mode):
                     dataset_pair = build_dataset_pair(binding, template)
                     # print "x", det_pair
                     if (dataset_pair):
+                        dataset_pair['english'] = " ".join(dataset_pair['english'].split())
                         english_questions.write("{}\n".format(dataset_pair['english']))
                         dataset_pair['sparql'] = re.sub("\s\s+" , " " , dataset_pair['sparql'])
                         a = re.search('(.*)brack_open',dataset_pair['sparql']);
@@ -197,7 +198,10 @@ def generate_dataset(templates, output_dir, file_mode):
                         c = c.group(1)
                         b = b.replace(' attr_open ','(') 
                         b = b.replace(' attr_close',')')
-                        dataset_pair['sparql'] = a + 'brack_open' + b + 'brack_close' + c
+                        dataset_pair['sparql'] = a + ' brack_open ' + b + ' brack_close ' + c
+                        dataset_pair['sparql'] = " ".join(dataset_pair['sparql'].split())
+                        # print 
+
                         # print "lol", dataset_pair['sparql']
 
 
