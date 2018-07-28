@@ -43,7 +43,7 @@ SPECIAL_CLASSES = {
     'dbo:Athlete': ['dbo:LacrossePlayer'],
     'dbo:SportsTeam': ['dboBasketballTeam']
 }
-EXAMPLES_PER_TEMPLATE = 300
+EXAMPLES_PER_TEMPLATE = 600
 
 def extract_bindings( data, template ):
     matches = list()
