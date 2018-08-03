@@ -13,16 +13,13 @@ fl = 1
 
 output = ""
 for line in lines:
-	if len(line) == 0:
-		continue
+	
 	if fl:
 		fl = 0
 		continue
 	l = line.split(',');
 	# print l
-	if l[5] == "" or len(l[5])==0:
-		continue;
-
+	
 	newl,to_remove = [],[]
 	newl.append("dbo:Place")
 	newl.append("")

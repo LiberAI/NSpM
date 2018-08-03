@@ -2,8 +2,8 @@ import argparse
 import random
 import os
 
-TRAINING_PERCENTAGE = 80
-TEST_PERCENTAGE = 10
+TRAINING_PERCENTAGE = 90
+TEST_PERCENTAGE = 0
 DEV_PERCENTAGE = 10
 
 if __name__ == '__main__':
