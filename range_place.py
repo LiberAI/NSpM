@@ -2,6 +2,9 @@ import sys
 f = open(sys.argv[1],'r')
 lines = f.readlines()
 
+# RUN: python range_place.py data/GS-v3.csv > data/annotations_compositions.csv 
+
+
 for l in lines:
 	l = l.split(',');
 	if len(l) == 0:
@@ -49,3 +52,4 @@ for l in lines:
 		newl.append((gq))
 		
 		print ";".join(newl)
+		

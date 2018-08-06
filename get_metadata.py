@@ -4,6 +4,7 @@ reload(sys)
 sys.setdefaultencoding('utf-8')
 
 endpoint = "http://dbpedia.org/sparql"
+
 proxies = {'http': 'http://proxy.iiit.ac.in:8080/', 'https': 'http://proxy.iiit.ac.in:8080/'}
 graph = "http://dbpedia.org"
 
@@ -53,13 +54,14 @@ def sparql_query(query):
 
 ## MAIN ## 
 
-q = create_query("Place","prop-metadata-dom", 10000, 100)
+q = create_query("Place","prop-metadata-dom", 0, 10)
 result = sparql_query(q)
 
 total_prop = len(result["results"]["bindings"])
 print total_prop
-with open("test.txt", "a") as myfile:
-    myfile.write(json.dumps(result["results"]["bindings"]))
+print (result["results"]["bindings"])
+# with open("test.txt", "a") as myfile:
+    # myfile.write(json.dumps(result["results"]["bindings"]))
 
 # TOTAL = 
 
