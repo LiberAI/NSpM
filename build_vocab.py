@@ -17,7 +17,7 @@ with open(sys.argv[1]) as f:
 vocabulary = set()
 
 lang = sys.argv[1].split('.')[-1].lower()
-print lang
+# print lang
 
 if lang == "sparql":
     
