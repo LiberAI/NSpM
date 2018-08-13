@@ -93,4 +93,5 @@ sh ask.sh data/monument_300 "where is edward vii monument located in?"
 
 ## Aman Mehta - [GSoC]
 
-Hi, this is a first commit test on gsoc-aman branch
+Hi, this is a first commit test on gsoc-aman branch.
+Please find my blog [here](https://amanmehta-maniac.github.io)
