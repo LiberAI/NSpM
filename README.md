@@ -97,4 +97,4 @@ Hi, this is a first commit test on gsoc-aman branch.
 Please find my blog [here](https://amanmehta-maniac.github.io) - here you will find details about what this project had to offer. 
 To be able to generate the dataset automatically, there is a five step pipeline which you would have to follow, guided at 'PIPELINE' file.
 
-Hope you like my work! Thanks.
+Hope you like my work! 

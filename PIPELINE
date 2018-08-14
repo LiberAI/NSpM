@@ -22,7 +22,7 @@ Command: python decision_tree.py data/manual-annotation-updated-v2.csv
 Output file: GS_with_mve.csv
 
 # STEP 5 - SPARQL Query Template and Generator Query generation #
-Command: python sparql_generator.py  GS_with_mve.csv
+Command: python sparql_generator.py GS_with_mve.csv
 
 # STEP 6 - Follow the original data generation and training steps (readme of master branch)
 
