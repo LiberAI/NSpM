@@ -24,7 +24,10 @@ Output file: GS_with_mve.csv
 # STEP 5 - SPARQL Query Template and Generator Query generation #
 Command: python sparql_generator.py GS_with_mve.csv
 
-# STEP 6 - Follow the original data generation and training steps (readme of master branch)
+# STEP 6 - Formatting the data into required format
+Command: python final_formatting.py data/GS-v3.csv data/annotations_place_v2.csv
+
+# STEP 7 - Follow the original data generation and training steps (readme of master branch)
 
 ### COMPOSITIONALITY EXPERIMENT: ###
 
