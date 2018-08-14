@@ -95,6 +95,7 @@ sh ask.sh data/monument_300 "where is edward vii monument located in?"
 
 Hi, this is a first commit test on gsoc-aman branch.
 Please find my blog [here](https://amanmehta-maniac.github.io) - here you will find details about what this project had to offer. 
-To be able to generate the dataset automatically, there is a five step pipeline which you would have to follow, guided at 'PIPELINE' file.
+1. To be able to generate the dataset automatically, there is a five step pipeline which you would have to follow, guided at 'PIPELINE' file.
+2. Otherwise you can directly use the data generated under data/place_v2.zip and data/Compositions_v2.zip 
 
-Hope you like my work! 
+
