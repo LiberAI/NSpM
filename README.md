@@ -69,13 +69,15 @@ Predict the SPARQL sentence for a given question with a given model.
 sh ask.sh data/monument_300 "where is edward vii monument located in?"
 ```
 
-## Paper
+## Papers
+
+### Soru and Marx et al., 2017
 
 * Permanent URI: http://w3id.org/neural-sparql-machines/soru-marx-semantics2017.html
 * arXiv: https://arxiv.org/abs/1708.07624
 
 ```
-@proceedings{soru-marx-2017,
+@inproceedings{soru-marx-2017,
     author = "Tommaso Soru and Edgard Marx and Diego Moussallem and Gustavo Publio and Andr\'e Valdestilhas and Diego Esteves and Ciro Baron Neto",
     title = "{SPARQL} as a Foreign Language",
     year = "2017",
@@ -84,18 +86,22 @@ sh ask.sh data/monument_300 "where is edward vii monument located in?"
 }
 ```
 
+### Soru et al., 2018
+
+* NAMPI Website: https://uclmr.github.io/nampi/
+* arXiv: https://arxiv.org/abs/1806.10478
+
+```
+@inproceedings{soru-marx-nampi2018,
+    author = "Tommaso Soru and Edgard Marx and Andr\'e Valdestilhas and Diego Esteves and Diego Moussallem and Gustavo Publio",
+    title = "Neural Machine Translation for Query Construction and Composition",
+    year = "2018",
+    journal = "ICML Workshop on Neural Abstract Machines \& Program Induction (NAMPI v2)",
+    url = "https://arxiv.org/abs/1806.10478",
+```
+
 ## Contact
 
+* Primary contact: [Tommaso Soru](http://tommaso-soru.it)
 * Neural SPARQL Machines [mailing list](https://groups.google.com/forum/#!forum/neural-sparql-machines).
 * Follow the [project on ResearchGate](https://www.researchgate.net/project/Neural-SPARQL-Machines).
-
-
-
-## Aman Mehta - [GSoC]
-
-Hi, this is a first commit test on gsoc-aman branch.
-Please find my blog [here](https://amanmehta-maniac.github.io) - here you will find details about what this project had to offer. 
-1. To be able to generate the dataset automatically, there is a five step pipeline which you would have to follow, guided at 'PIPELINE' file.
-2. Otherwise you can directly use the data generated under data/place_v2.zip and data/Compositions_v2.zip 
-
-
