@@ -33,6 +33,11 @@ def save_cache ( file, cache ):
     with open(file, 'w') as outfile:
         json.dump(ordered, outfile)
 
+# proxies = {'http': 'http://proxy.iiit.ac.in:8080/', 'https': 'http://proxy.iiit.ac.in:8080/'}
+# proxy_handler = urllib2.ProxyHandler(proxies)
+# opener = urllib2.build_opener(proxy_handler)
+# urllib2.install_opener(opener)
+
 
 def query_dbpedia( query ):
     param = dict()
@@ -41,7 +46,7 @@ def query_dbpedia( query ):
     param["format"] = "JSON"
     param["CXML_redir_for_subjs"] = "121"
     param["CXML_redir_for_hrefs"] = ""
-    param["timeout"] = "600" # ten minutes - works with Virtuoso endpoints
+    param["timeout"] = "600" 
     param["debug"] = "on"
     try:
         resp = urllib2.urlopen(ENDPOINT + "?" + urllib.urlencode(param))
@@ -107,13 +112,11 @@ STANDARDS = {
         'dbo_partner': ['dbp_partner']
 }
 
-
 def encode( sparql ):
     encoded_sparql = do_replacements(sparql)
     shorter_encoded_sparql = shorten_query(encoded_sparql)
     normalized = normalize_predicates(shorter_encoded_sparql)
     return normalized
-
 
 def decode ( encoded_sparql ):
     short_sparql = reverse_replacements(encoded_sparql)
@@ -269,3 +272,9 @@ def splitIntoTripleParts (triple):
         }
     else:
         return None
+
+def fix_URI(query):
+	query = re.sub(r"dbr:([^\s]+)" , r"<http://dbpedia.org/resource/\1>" , query)
+	if query[-2:]=="}>":
+		query = query[:-2]+">}"
+	return query

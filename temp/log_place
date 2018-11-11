@@ -1,0 +1,9 @@
+SELECT DISTINCT ?p ?lab ?dom WHERE { ?s ?p ?o . ?s a dbo:Place . ?p a rdf:Property . ?p rdfs:label ?lab . OPTIONAL { ?p rdfs:domain ?dom } . FILTER(lang(?lab) = 'en') . }  OFFSET 0 LIMIT 10000
+SELECT DISTINCT ?p ?lab ?dom WHERE { ?s ?p ?o . ?s a dbo:Place . ?p a rdf:Property . ?p rdfs:label ?lab . OPTIONAL { ?p rdfs:domain ?dom } . FILTER(lang(?lab) = 'en') . }  OFFSET 0 LIMIT 10000
+<addinfourl at 139978197854256 whose fp = <socket._fileobject object at 0x7f4f36d3b8d0>>
+SELECT DISTINCT ?p ?lab ?dom WHERE { ?s ?p ?o . ?s a dbo:Place . ?p a rdf:Property . ?p rdfs:label ?lab . OPTIONAL { ?p rdfs:domain ?dom } . FILTER(lang(?lab) = 'en') . }  OFFSET 10000 LIMIT 10000
+SELECT DISTINCT ?p ?lab ?dom WHERE { ?s ?p ?o . ?s a dbo:Place . ?p a rdf:Property . ?p rdfs:label ?lab . OPTIONAL { ?p rdfs:domain ?dom } . FILTER(lang(?lab) = 'en') . }  OFFSET 10000 LIMIT 10000
+<addinfourl at 139978174693672 whose fp = <socket._fileobject object at 0x7f4f3567d350>>
+SELECT DISTINCT ?p ?lab ?rng WHERE { ?s ?p ?o . ?s a dbo:Place . ?p a rdf:Property . ?p rdfs:label ?lab . OPTIONAL { ?p rdfs:range ?rng } . FILTER(lang(?lab) = 'en') .  }  OFFSET 0 LIMIT 10000
+SELECT DISTINCT ?p ?lab ?rng WHERE { ?s ?p ?o . ?s a dbo:Place . ?p a rdf:Property . ?p rdfs:label ?lab . OPTIONAL { ?p rdfs:range ?rng } . FILTER(lang(?lab) = 'en') .  }  OFFSET 0 LIMIT 10000
+<addinfourl at 139978174694536 whose fp = <socket._fileobject object at 0x7f4f3567d350>>

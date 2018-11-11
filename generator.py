@@ -43,7 +43,7 @@ SPECIAL_CLASSES = {
     'dbo:Athlete': ['dbo:LacrossePlayer'],
     'dbo:SportsTeam': ['dboBasketballTeam']
 }
-EXAMPLES_PER_TEMPLATE = 300
+EXAMPLES_PER_TEMPLATE = 600
 
 def extract_bindings( data, template ):
     matches = list()
@@ -167,12 +167,15 @@ def generate_dataset(templates, output_dir, file_mode):
     cache = dict()
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
+    it = 0
     with open(output_dir + '/data_300.en', file_mode) as english_questions, open(output_dir + '/data_300.sparql', file_mode) as sparql_queries:
         for template in templates:
+            it = it + 1
+            print "for {}th template".format(it)
             try:
                 results = get_results_of_generator_query(cache, template)
                 bindings = extract_bindings(results["results"]["bindings"], template)
-
+                # print bindings
                 if bindings is None:
                     id_or_question = getattr(template, 'id') or getattr(template, 'question')
                     logging.debug("no data for {}".format(id_or_question))
@@ -181,9 +184,27 @@ def generate_dataset(templates, output_dir, file_mode):
 
                 for binding in bindings:
                     dataset_pair = build_dataset_pair(binding, template)
-
+                    # print "x", det_pair
                     if (dataset_pair):
+                        dataset_pair['english'] = " ".join(dataset_pair['english'].split())
                         english_questions.write("{}\n".format(dataset_pair['english']))
+                        dataset_pair['sparql'] = re.sub("\s\s+" , " " , dataset_pair['sparql'])
+                        a = re.search('(.*)brack_open',dataset_pair['sparql']);
+                        b = re.search('brack_open(.*)brack_close',dataset_pair['sparql']);
+                        c = re.search('brack_close(.*)',dataset_pair['sparql']);
+                        # print a.group(1),b.group(1)
+                        a = a.group(1)
+                        b = b.group(1)
+                        c = c.group(1)
+                        b = b.replace(' attr_open ','(') 
+                        b = b.replace(' attr_close',')')
+                        dataset_pair['sparql'] = a + ' brack_open ' + b + ' brack_close ' + c
+                        dataset_pair['sparql'] = " ".join(dataset_pair['sparql'].split())
+                        # print 
+
+                        # print "lol", dataset_pair['sparql']
+
+
                         sparql_queries.write("{}\n".format(dataset_pair['sparql']))
             except:
                 exception = traceback.format_exc()
@@ -269,16 +290,22 @@ if __name__ == '__main__':
     output_dir = args.output
     use_resources_dump = args.continue_generation
 
+   # print use_resources_dump => False
+
     time = datetime.datetime.today()
     logging.basicConfig(filename='{}/generator_{:%Y-%m-%d-%H-%M}.log'.format(output_dir, time), level=logging.DEBUG)
     resource_dump_file = output_dir + '/resource_dump.json'
     resource_dump_exists = os.path.exists(resource_dump_file)
+
+    # print resource_dump_file, resource_dump_exists => data/place_v1/resource_dump.json False
 
     if (resource_dump_exists and not use_resources_dump):
         warning_message = 'Warning: The file {} exists which indicates an error. Remove file or continue generation after fixing with --continue'.format(
             resource_dump_file)
         print warning_message
         sys.exit(1)
+
+    # reload(sys) to set default encoding
 
     reload(sys)
     sys.setdefaultencoding("utf-8")
@@ -287,8 +314,10 @@ if __name__ == '__main__':
     used_resources = collections.Counter(json.loads(open(resource_dump_file).read())) if use_resources_dump else collections.Counter()
     file_mode = 'a' if use_resources_dump else 'w'
     templates = read_template_file(template_file)
+    print len(templates)
     try:
         generate_dataset(templates, output_dir, file_mode)
+        # print "lol"
     except:
         print 'exception occured, look for error in log file'
         save_cache(resource_dump_file, used_resources)
