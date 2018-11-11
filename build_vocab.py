@@ -17,7 +17,7 @@ with open(sys.argv[1]) as f:
 vocabulary = set()
 
 lang = sys.argv[1].split('.')[-1].lower()
-print lang
+# print lang
 
 if lang == "sparql":
     
@@ -49,6 +49,7 @@ else: # any other language
     vocabulary = set(list(zip(*sorted_vocab))[0])
     
     # split also by apostrophe
+    
     to_remove = set()
     to_add = set()
     for t0 in vocabulary:

@@ -1,0 +1,708 @@
+abbreviation,abbreviation,owl:Thing,xsd:string,http://dbpedia.org/ontology/abbreviation,10464
+abstract,has abstract,owl:Thing,rdf:langString,http://dbpedia.org/ontology/abstract,12390578
+access,access,owl:Thing,xsd:string,http://dbpedia.org/ontology/access,387
+accessDate,access date,owl:Thing,xsd:date,,
+activeYearsEndDate,active years end date,owl:Thing,xsd:date,http://dbpedia.org/ontology/activeYearsEndDate,84148
+activeYearsEndYear,active years end year,owl:Thing,xsd:gYear,http://dbpedia.org/ontology/activeYearsEndYear,151754
+activeYearsStartDate,active years start date,owl:Thing,xsd:date,http://dbpedia.org/ontology/activeYearsStartDate,103132
+activeYearsStartYear,active years start year,owl:Thing,xsd:gYear,http://dbpedia.org/ontology/activeYearsStartYear,254812
+address,address,Place,rdf:langString,http://dbpedia.org/ontology/address,56143
+administrativeStatus,administrative status,owl:Thing,xsd:string,,
+affiliation,affiliation,owl:Thing,Organisation,http://dbpedia.org/ontology/affiliation,24846
+ageRange,age range,owl:Thing,xsd:nonNegativeInteger,http://dbpedia.org/ontology/ageRange,830
+agglomerationPopulationTotal,agglomeration population total,owl:Thing,xsd:nonNegativeInteger,,
+aitaCode,aita code,owl:Thing,xsd:string,,
+album,album,owl:Thing,Album,http://dbpedia.org/ontology/album,48245
+alias,alias,owl:Thing,rdf:langString,http://dbpedia.org/ontology/alias,55278
+alongside,alongside,owl:Thing,Person,,
+alternativeName,alternative name,owl:Thing,rdf:langString,http://dbpedia.org/ontology/alternativeName,31
+altitude,altitude,Place,Altitude,,
+animal,animal,owl:Thing,Animal,http://dbpedia.org/ontology/animal,279
+annualTemperature,annual temperature,Place,Temperature,,
+anthem,anthem,owl:Thing,Work,http://dbpedia.org/ontology/anthem,783
+apcPresident,apc president,owl:Thing,Person,,
+appearance,appearance,owl:Thing,xsd:string,,
+appointer,appointer,owl:Thing,Person,http://dbpedia.org/ontology/appointer,1618
+area,area,owl:Thing,Area,http://dbpedia.org/ontology/area,70572
+areaCode,area code,Place,xsd:string,http://dbpedia.org/ontology/areaCode,129943
+areaDate,area date,Place,xsd:date,,
+areaLand,area land,Place,Area,http://dbpedia.org/ontology/areaLand,72766
+areaMetro,area metro,owl:Thing,Area,http://dbpedia.org/ontology/areaMetro,779
+areaOfCatchmentQuote,area of catchment quote,Place,xsd:string,http://dbpedia.org/ontology/areaOfCatchmentQuote,1
+areaQuote,area quote,Place,xsd:string,http://dbpedia.org/ontology/areaQuote,1
+areaRank,area rank,Place,xsd:string,,
+areaTotal,area total,Place,Area,http://dbpedia.org/ontology/areaTotal,179581
+areaWater,area water,Place,Area,http://dbpedia.org/ontology/areaWater,55568
+artificialSnowArea,artificial snow area,Place,xsd:float,,
+asWikiText,Contains a WikiText representation of this thing,owl:Thing,xsd:string,,
+ascent,ascent,owl:Thing,xsd:string,,
+associate,associate,owl:Thing,Person,http://dbpedia.org/ontology/associate,3528
+associateStar,associateStar,owl:Thing,Constellation,,
+associatedBand,associated band,owl:Thing,Band,http://dbpedia.org/ontology/associatedBand,131347
+associatedMusicalArtist,associated musical artist,owl:Thing,MusicalArtist,http://dbpedia.org/ontology/associatedMusicalArtist,131338
+atcCode,ATC code,owl:Thing,xsd:string,,
+atcPrefix,ATC prefix,owl:Thing,xsd:string,http://dbpedia.org/ontology/atcPrefix,4699
+atcSuffix,ATC suffix,owl:Thing,xsd:string,http://dbpedia.org/ontology/atcSuffix,2700
+authority,authority,owl:Thing,owl:Thing,http://dbpedia.org/ontology/authority,374
+authorityMandate,authority mandate,Place,xsd:string,,
+autonomy,autonomy,owl:Thing,owl:Thing,,
+average,average,owl:Thing,xsd:double,,
+averageDepth,average depth,Place,Length,http://dbpedia.org/ontology/averageDepth,2500
+averageDepthQuote,average depth quote,Place,xsd:string,http://dbpedia.org/ontology/averageDepthQuote,1
+averageSpeed,average speed,owl:Thing,Speed,http://dbpedia.org/ontology/averageSpeed,735
+avifaunaPopulation,avifauna population,Place,xsd:string,,
+award,award,owl:Thing,Award,http://dbpedia.org/ontology/award,90933
+awayColourHexCode,colour hex code of away jersey or its parts,owl:Thing,xsd:string,,
+background,background,owl:Thing,xsd:string,http://dbpedia.org/ontology/background,83192
+battery,battery,owl:Thing,Battery,,
+battle,battle,owl:Thing,MilitaryConflict,http://dbpedia.org/ontology/battle,117539
+bibsysId,BIBSYS Id,owl:Thing,xsd:string,http://dbpedia.org/ontology/bibsysId,3
+biggestCity,biggest city,Place,PopulatedPlace,,
+bioclimate,bioclimate,Place,xsd:string,,
+biome,biome,owl:Thing,owl:Thing,http://dbpedia.org/ontology/biome,259
+bird,bird,Place,Species,,
+blackLongDistancePisteNumber,long distance piste number,Place,xsd:nonNegativeInteger,,
+blackSkiPisteNumber,black ski piste number,Place,xsd:nonNegativeInteger,,
+blazon,blazon,owl:Thing,xsd:string,,
+blazonLink,blazon link,owl:Thing,xsd:string,,
+blazonRatio,blazon ratio,owl:Thing,xsd:double,,
+blueLongDistancePisteNumber,blue long distance piste number,Place,xsd:nonNegativeInteger,,
+blueSkiPisteNumber,blue ski piste number,Place,xsd:nonNegativeInteger,,
+bnfId,BNF Id,owl:Thing,xsd:string,http://dbpedia.org/ontology/bnfId,97
+book,name,owl:Thing,xsd:string,,
+border,border,owl:Thing,Area,http://dbpedia.org/ontology/border,486
+bpnId,BPN Id,owl:Thing,xsd:string,http://dbpedia.org/ontology/bpnId,1
+budget,budget,owl:Thing,Currency,http://dbpedia.org/ontology/budget,18222
+budgetYear,budget year,Place,xsd:string,,
+builder,builder,owl:Thing,owl:Thing,http://dbpedia.org/ontology/builder,39938
+buildingEndDate,building end date,owl:Thing,xsd:string,http://dbpedia.org/ontology/buildingEndDate,16636
+buildingStartDate,building start date,owl:Thing,xsd:string,http://dbpedia.org/ontology/buildingStartDate,11634
+cableCar,cable car,Place,xsd:nonNegativeInteger,,
+calculationNeeds,its calculation needs,owl:Thing,owl:Thing,,
+callSign,call sign,owl:Thing,xsd:string,http://dbpedia.org/ontology/callSign,3742
+cannonNumber,cannon number,Place,xsd:nonNegativeInteger,,
+capacity,capacity,owl:Thing,xsd:nonNegativeInteger,http://dbpedia.org/ontology/capacity,15227
+capitalCoordinates,capital coordinates,Place,xsd:string,,
+casNumber,CAS number,owl:Thing,xsd:string,http://dbpedia.org/ontology/casNumber,5548
+casSupplemental,CAS supplemental,owl:Thing,xsd:string,http://dbpedia.org/ontology/casSupplemental,309
+category,category,owl:Thing,owl:Thing,http://dbpedia.org/ontology/category,781
+chain,chain,owl:Thing,Company,http://dbpedia.org/ontology/chain,143
+chairLabel,chair label,owl:Thing,owl:Thing,http://dbpedia.org/ontology/chairLabel,5
+chairman,chairman,owl:Thing,Person,http://dbpedia.org/ontology/chairman,6994
+chancellor,chancellor,owl:Thing,Person,http://dbpedia.org/ontology/chancellor,1512
+channel,channel,owl:Thing,Broadcaster,http://dbpedia.org/ontology/channel,15282
+chiefPlace,chief place,owl:Thing,PopulatedPlace,,
+city,city,owl:Thing,City,http://dbpedia.org/ontology/city,112483
+cityLink,city link,Place,xsd:string,,
+class,class,owl:Thing,owl:Thing,http://dbpedia.org/ontology/class,323249
+classification,classification,owl:Thing,xsd:string,,
+climate,climate,Place,owl:Thing,,
+climbUpNumber,clip up number,Place,xsd:nonNegativeInteger,,
+closeTo,is close to,Place,Place,,
+closingDate,closing date,owl:Thing,xsd:date,http://dbpedia.org/ontology/closingDate,1887
+closingYear,closing year,owl:Thing,xsd:gYear,http://dbpedia.org/ontology/closingYear,4084
+coach,coach,owl:Thing,Person,http://dbpedia.org/ontology/coach,24026
+coachedTeam,coached team,owl:Thing,SportsTeam,http://dbpedia.org/ontology/coachedTeam,200
+coastLength,length of a coast,Place,xsd:float,,
+coatOfArms,coat of arms image,owl:Thing,owl:Thing,,
+code,code,owl:Thing,xsd:string,http://dbpedia.org/ontology/code,1564
+codeMunicipalMonument,monument code (municipal),Place,xsd:string,,
+codeNationalMonument,monument code (national),Place,xsd:string,,
+codeProvincialMonument,monument code (provinciall),Place,xsd:string,,
+collectionSize,country,owl:Thing,owl:Thing,,
+colour,colour,owl:Thing,Colour,http://dbpedia.org/ontology/colour,7638
+colourHexCode,colour hex code,owl:Thing,xsd:string,http://dbpedia.org/ontology/colourHexCode,1105
+colourName,colour name,owl:Thing,rdf:langString,http://dbpedia.org/ontology/colourName,8796
+commandant,commandant,owl:Thing,Person,,
+commander,commander,owl:Thing,Person,http://dbpedia.org/ontology/commander,48960
+comment,comment,owl:Thing,xsd:string,,
+committee,committee,owl:Thing,xsd:string,http://dbpedia.org/ontology/committee,837
+commonName,common name,owl:Thing,rdf:langString,http://dbpedia.org/ontology/commonName,8
+company,company,owl:Thing,Organisation,http://dbpedia.org/ontology/company,18783
+conflict,conflict,owl:Thing,MilitaryConflict,,
+connotation,connotation,owl:Thing,owl:Thing,http://dbpedia.org/ontology/connotation,34
+constituencyDistrict,constituency district,owl:Thing,PopulatedPlace,,
+cosparId,COSPAR id,owl:Thing,xsd:string,http://dbpedia.org/ontology/cosparId,1908
+cost,cost,owl:Thing,Currency,http://dbpedia.org/ontology/cost,4338
+country,country,owl:Thing,Country,http://dbpedia.org/ontology/country,769223
+countryCode,country code,Place,xsd:string,,
+county,county,owl:Thing,PopulatedPlace,http://dbpedia.org/ontology/county,9337
+courseArea,course area,owl:Thing,Area,,
+cpu,CPU,owl:Thing,owl:Thing,http://dbpedia.org/ontology/cpu,1680
+creationYear,year of creation,owl:Thing,xsd:gYear,,
+creator,creator (agent),owl:Thing,Agent,http://dbpedia.org/ontology/creator,27165
+crest,crest,owl:Thing,owl:Thing,,
+criteria,criteria,owl:Thing,xsd:string,,
+cuisine,cuisine,owl:Thing,xsd:string,http://dbpedia.org/ontology/cuisine,817
+currency,currency,owl:Thing,Currency,http://dbpedia.org/ontology/currency,1792
+currencyCode,currency code,Place,xsd:string,,
+currentCity,current city,owl:Thing,City,,
+currentStatus,current status,owl:Thing,xsd:string,http://dbpedia.org/ontology/currentStatus,731
+date,date,owl:Thing,xsd:date,http://dbpedia.org/ontology/date,17586
+dateAgreement,date of an agreement,Place,xsd:date,,
+dateBudget,date budget,owl:Thing,xsd:date,,
+dateOfAbandonment,date of abandonment,owl:Thing,xsd:date,http://dbpedia.org/ontology/dateOfAbandonment,200
+daylightSavingTimeZone,daylight saving time zone,Place,owl:Thing,http://dbpedia.org/ontology/daylightSavingTimeZone,4677
+dc:creator,creator (literal),owl:Thing,xsd:string,,
+dc:identifier,identifier,owl:Thing,xsd:string,,
+dc:language,language (literal),owl:Thing,xsd:string,,
+dc:rights,rights,owl:Thing,owl:Thing,,
+dc:subject,subject,owl:Thing,owl:Thing,,
+dc:title,title,owl:Thing,xsd:string,,
+dc:type,type (literal),owl:Thing,xsd:string,,
+dct:created,Date or range when this object was created,owl:Thing,xsd:string,,
+dct:dateSubmitted,date submitted,owl:Thing,xsd:date,,
+dct:description,Description,owl:Thing,rdf:langString,,
+dct:extent,medium,owl:Thing,xsd:string,,
+dct:format,format (literal),owl:Thing,xsd:string,,
+dct:medium,medium,owl:Thing,xsd:string,,
+dct:modified,modified,owl:Thing,xsd:date,,
+dct:spatial,spatial,owl:Thing,owl:Thing,,
+dct:subject,subject,owl:Thing,owl:Thing,,
+dct:temporal,temporal,owl:Thing,owl:Thing,,
+dct:type,type,owl:Thing,owl:Thing,,
+deFactoLanguage,de facto language,owl:Thing,Language,,
+deliveryDate,delivery date,owl:Thing,xsd:date,http://dbpedia.org/ontology/deliveryDate,34
+demonym,demonym,owl:Thing,rdf:langString,http://dbpedia.org/ontology/demonym,685
+density,density,owl:Thing,Density,http://dbpedia.org/ontology/density,123
+depictionDescription,depiction description (caption),owl:Thing,rdf:langString,http://dbpedia.org/ontology/depictionDescription,2710
+depth,depth,Place,Length,http://dbpedia.org/ontology/depth,649
+depthQuote,depth quote,Place,xsd:string,,
+depths,depths,Place,Depth,,
+deputy,deputy,owl:Thing,Person,http://dbpedia.org/ontology/deputy,2550
+description,description,owl:Thing,rdf:langString,http://dbpedia.org/ontology/description,13291
+designCompany,designer company,owl:Thing,Company,http://dbpedia.org/ontology/designCompany,1528
+designer,designer,owl:Thing,Person,http://dbpedia.org/ontology/designer,10597
+destructionDate,destruction date,owl:Thing,xsd:date,http://dbpedia.org/ontology/destructionDate,42
+developer,developer,owl:Thing,Agent,http://dbpedia.org/ontology/developer,28834
+diameter,diameter,owl:Thing,Length,http://dbpedia.org/ontology/diameter,1325
+diocese,diocese,owl:Thing,Diocese,,
+discoverer,discoverer,owl:Thing,Person,http://dbpedia.org/ontology/discoverer,3756
+disease,disease,owl:Thing,Disease,,
+distance,distance,owl:Thing,Length,http://dbpedia.org/ontology/distance,2670
+distributor,distributor,owl:Thing,Organisation,http://dbpedia.org/ontology/distributor,68036
+district,district,Place,PopulatedPlace,http://dbpedia.org/ontology/district,47332
+division,division,owl:Thing,owl:Thing,http://dbpedia.org/ontology/division,68235
+documentDesignation,String designation of the WrittenWork describing the resource,owl:Thing,xsd:string,,
+draft,draft,owl:Thing,xsd:string,http://dbpedia.org/ontology/draft,10063
+draftYear,draft year,owl:Thing,xsd:gYear,http://dbpedia.org/ontology/draftYear,24521
+drugbank,DrugBank,owl:Thing,xsd:string,http://dbpedia.org/ontology/drugbank,1637
+duration,duration,owl:Thing,Time,http://dbpedia.org/ontology/duration,57
+dynasty,dynasty,owl:Thing,owl:Thing,,
+eastPlace,east place,Place,Place,,
+editor,editor,owl:Thing,Agent,http://dbpedia.org/ontology/editor,5557
+einecsNumber,EINECS number,owl:Thing,xsd:string,,
+electionMajority,election majority,owl:Thing,xsd:nonNegativeInteger,http://dbpedia.org/ontology/electionMajority,2055
+elementAbove,element above,owl:Thing,ChemicalSubstance,,
+elevation,elevation,Place,Length,http://dbpedia.org/ontology/elevation,247824
+elevationQuote,elevation quote,Place,xsd:string,http://dbpedia.org/ontology/elevationQuote,2
+endOccupation,end occupation,owl:Thing,xsd:string,,
+endPoint,end point,Place,Place,http://dbpedia.org/ontology/endPoint,217
+endYear,end year,owl:Thing,xsd:gYear,,
+endangeredSince,endangered since,Place,xsd:date,,
+engineer,engineer,owl:Thing,Person,http://dbpedia.org/ontology/engineer,152
+era,era,owl:Thing,owl:Thing,http://dbpedia.org/ontology/era,1323
+ethnicGroupsInYear,ethnic groups in year,owl:Thing,xsd:gYear,http://dbpedia.org/ontology/ethnicGroupsInYear,120
+event,event,owl:Thing,Event,http://dbpedia.org/ontology/event,861
+eventDate,event date,Place,xsd:date,,
+executiveProducer,executive producer,owl:Thing,Person,http://dbpedia.org/ontology/executiveProducer,12377
+exhibition,exhibition,owl:Thing,xsd:string,,
+existence,existence,owl:Thing,owl:Thing,,
+extinctionDate,extinction date,owl:Thing,xsd:date,http://dbpedia.org/ontology/extinctionDate,2183
+failedLaunches,failed launches,owl:Thing,xsd:nonNegativeInteger,http://dbpedia.org/ontology/failedLaunches,200
+fauna,fauna,Place,xsd:string,,
+fdaUniiCode,FDA UNII code,owl:Thing,xsd:string,http://dbpedia.org/ontology/fdaUniiCode,3925
+feastDay,feast day, holiday,owl:Thing,xsd:date,http://dbpedia.org/ontology/feastDay,28
+fighter,fighter,owl:Thing,xsd:string,,
+filmPolskiId,FilmPolski.pl id,owl:Thing,xsd:string,,
+firstLeader,firstLeader,owl:Thing,Person,http://dbpedia.org/ontology/firstLeader,3299
+firstOwner,first owner,owl:Thing,Agent,,
+firstPlace,first place,owl:Thing,xsd:string,,
+firstPopularVote,firstPopularVote,owl:Thing,Person,http://dbpedia.org/ontology/firstPopularVote,21
+flag,flag (image),owl:Thing,xsd:string,http://dbpedia.org/ontology/flag,411
+flagBorder,flag border,owl:Thing,xsd:string,,
+flagLink,flag Link,owl:Thing,xsd:string,,
+floodingDate,flooding date,owl:Thing,xsd:date,http://dbpedia.org/ontology/floodingDate,16
+flora,flora,Place,xsd:string,,
+flower,flower,Place,Species,,
+foaf:based_near,based near,owl:Thing,owl:Thing,,
+foaf:depiction,depiction from http://xmlns.com/foaf/spec/#term_depiction,owl:Thing,Image,,
+foaf:familyName,family name,owl:Thing,rdf:langString,,
+foaf:gender,gender,owl:Thing,xsd:string,,
+foaf:givenName,given name,owl:Thing,rdf:langString,,
+foaf:img,image,owl:Thing,owl:Thing,,
+foaf:isPrimaryTopicOf,A document that this thing is the primary topic of.,owl:Thing,foaf:Document,,
+foaf:logo,logo,owl:Thing,owl:Thing,,
+foaf:mbox,Email address (mbox),owl:Thing,xsd:string,,
+foaf:name,name,owl:Thing,rdf:langString,,
+foaf:nick,nickname,owl:Thing,rdf:langString,,
+foaf:page,A page or document about this thing.,owl:Thing,foaf:Document,,
+foaf:phone,Telephone (phone) number,owl:Thing,xsd:string,,
+foaf:surname,surname,owl:Thing,rdf:langString,,
+foaf:thumbnail,thumbnail,owl:Thing,Image,,
+foaf:topic,A topic of some page or document.,owl:Thing,owl:Thing,,
+focus,focus,owl:Thing,owl:Thing,,
+followedBy,followed by,owl:Thing,owl:Thing,,
+follows,follows,owl:Thing,owl:Thing,,
+forces,forces,owl:Thing,xsd:string,,
+foresterDistrict,foresterDistrict,Place,owl:Thing,,
+format,format (object),owl:Thing,owl:Thing,http://dbpedia.org/ontology/format,81482
+formerName,former name,owl:Thing,rdf:langString,http://dbpedia.org/ontology/formerName,16479
+foundedBy,founded by,owl:Thing,Agent,http://dbpedia.org/ontology/foundedBy,12895
+founder,founder,owl:Thing,Person,http://dbpedia.org/ontology/founder,1574
+foundingDate,founding date,owl:Thing,xsd:date,http://dbpedia.org/ontology/foundingDate,23926
+foundingYear,founding year,owl:Thing,xsd:gYear,http://dbpedia.org/ontology/foundingYear,90919
+frequency,frequency,owl:Thing,Frequency,http://dbpedia.org/ontology/frequency,16350
+frontierLength,length of a frontier,Place,xsd:float,,
+fuel,fuel,owl:Thing,owl:Thing,,
+fuelType,fuel type,owl:Thing,owl:Thing,http://dbpedia.org/ontology/fuelType,464
+gameModus,Modus the game can be played in,owl:Thing,xsd:string,,
+gender,gender,owl:Thing,owl:Thing,http://dbpedia.org/ontology/gender,4834
+genre,genre,owl:Thing,Genre,http://dbpedia.org/ontology/genre,576001
+geolocDual,geolocdual,Place,xsd:string,,
+geologicPeriod,geologic period,Place,xsd:string,http://dbpedia.org/ontology/geologicPeriod,99
+geology,geology,owl:Thing,xsd:string,http://dbpedia.org/ontology/geology,406
+governingBody,governing body,Place,Organisation,http://dbpedia.org/ontology/governingBody,6181
+governmentType,government type,owl:Thing,GovernmentType,http://dbpedia.org/ontology/governmentType,11767
+governor,governor,owl:Thing,Person,http://dbpedia.org/ontology/governor,4473
+governorGeneral,governor general,owl:Thing,Person,http://dbpedia.org/ontology/governorGeneral,239
+greekName,name in ancient Greek,owl:Thing,xsd:string,,
+greenLongDistancePisteNumber,green long distance piste number,Place,xsd:nonNegativeInteger,,
+greenSkiPisteNumber,green ski piste number,Place,xsd:nonNegativeInteger,,
+gridReference,grid reference,Place,xsd:string,http://dbpedia.org/ontology/gridReference,23925
+grossDomesticProductPerPeople,gross domestic product per people,Place,xsd:string,,
+grossDomesticProductRank,gross domestic product rank,Place,xsd:string,,
+hasChannel,has channel,owl:Thing,owl:Thing,,
+hasInput,has input,owl:Thing,owl:Thing,,
+hasInsidePlace,has inside place,Place,Place,,
+hasOutsidePlace,has outside place,Place,Place,,
+hasSurfaceForm,undefined,owl:Thing,xsd:string,,
+hasVariant,variant or variation,owl:Thing,owl:Thing,http://dbpedia.org/ontology/hasVariant,653
+height,height,owl:Thing,Length,http://dbpedia.org/ontology/height,202143
+heritageRegister,heritage register,Place,owl:Thing,,
+highestAltitude,highest altitude,Place,Altitude,,
+highestMountain,highest mountain,owl:Thing,Mountain,http://dbpedia.org/ontology/highestMountain,79
+highestPlace,highest place,owl:Thing,PopulatedPlace,http://dbpedia.org/ontology/highestPlace,250
+highestPosition,highest position,owl:Thing,geo:SpatialThing,http://dbpedia.org/ontology/highestPosition,374
+highschool,highschool,owl:Thing,School,http://dbpedia.org/ontology/highschool,6491
+historicalMap,historical map,Place,xsd:string,,
+historicalName,historical name,Place,rdf:langString,,
+homeArena,home arena,owl:Thing,Arena,http://dbpedia.org/ontology/homeArena,1072
+homeColourHexCode,colour hex code of home jersey or its parts,owl:Thing,xsd:string,,
+homeStadium,home stadium,owl:Thing,Stadium,http://dbpedia.org/ontology/homeStadium,7403
+honours,honours,owl:Thing,owl:Thing,http://dbpedia.org/ontology/honours,1551
+humanDevelopmentIndexRank,human development index rank,Place,xsd:string,,
+imageSize,image size (px),owl:Thing,xsd:integer,http://dbpedia.org/ontology/imageSize,1675
+imdbId,IMDB id,owl:Thing,xsd:string,http://dbpedia.org/ontology/imdbId,72380
+incumbent,incumbent,owl:Thing,Person,http://dbpedia.org/ontology/incumbent,96
+individualisedGnd,individualised GND number,owl:Thing,xsd:string,http://dbpedia.org/ontology/individualisedGnd,229
+influenced,influenced,owl:Thing,owl:Thing,http://dbpedia.org/ontology/influenced,10966
+influencedBy,influenced by,owl:Thing,owl:Thing,http://dbpedia.org/ontology/influencedBy,23422
+information,information,Place,xsd:string,,
+informationName,information name,Place,xsd:string,,
+inscription,inscription,owl:Thing,xsd:string,,
+institution,institution,owl:Thing,Organisation,http://dbpedia.org/ontology/institution,2264
+intercommunality,intercommunality,owl:Thing,PopulatedPlace,http://dbpedia.org/ontology/intercommunality,7847
+introduced,introduced,owl:Thing,xsd:date,http://dbpedia.org/ontology/introduced,15
+isPartOf,is part of,owl:Thing,owl:Thing,http://dbpedia.org/ontology/isPartOf,912054
+isPartOfName,is part of (literal),owl:Thing,xsd:string,http://dbpedia.org/ontology/isPartOfName,1614
+isRouteStop,is route stop,Place,RouteStop,,
+isniId,ISNI Id,owl:Thing,xsd:string,http://dbpedia.org/ontology/isniId,50
+iso31661Code,ISO 3166-1 code,Place,xsd:string,,
+isoCode,iso code of a place,Place,xsd:string,,
+jureLanguage,jure language,owl:Thing,Language,,
+jurisdiction,jurisdiction,owl:Thing,owl:Thing,http://dbpedia.org/ontology/jurisdiction,6457
+keyPerson,key person,owl:Thing,Person,http://dbpedia.org/ontology/keyPerson,32206
+kinOfLanguage,kindOfLanguage,owl:Thing,xsd:string,,
+kindOfCoordinate,kind of coordinate,Place,xsd:string,,
+kindOfRock,kind of rock,Place,xsd:string,,
+knownFor,known for,owl:Thing,owl:Thing,http://dbpedia.org/ontology/knownFor,46996
+lake,vastest lake,Place,BodyOfWater,http://dbpedia.org/ontology/lake,2406
+land,land,Place,Place,,
+landArea,area of a land,Place,Area,,
+landPercentage,land percentage of a place,Place,xsd:float,,
+language,language,owl:Thing,Language,http://dbpedia.org/ontology/language,108092
+languageRegulator,language regulator or academy,owl:Thing,Language,http://dbpedia.org/ontology/languageRegulator,233
+latinName,name in latin,owl:Thing,xsd:string,,
+lawCountry,law country,Place,xsd:string,,
+lccnId,LCCN Id,owl:Thing,xsd:string,http://dbpedia.org/ontology/lccnId,457
+leader,leader,owl:Thing,Person,http://dbpedia.org/ontology/leader,8870
+league,league,owl:Thing,SportsLeague,http://dbpedia.org/ontology/league,45411
+length,length,owl:Thing,Length,http://dbpedia.org/ontology/length,75987
+lengthQuote,length quote,Place,xsd:string,http://dbpedia.org/ontology/lengthQuote,1
+licensee,licensee,owl:Thing,xsd:string,http://dbpedia.org/ontology/licensee,9403
+lieutenant,lieutenant,owl:Thing,Person,http://dbpedia.org/ontology/lieutenant,1859
+limit,limit,Place,xsd:string,,
+linkedSpace,linked space,Place,xsd:string,,
+listItemOf,list item,owl:Thing,owl:Thing,,
+localAuthority,local authority,owl:Thing,owl:Thing,http://dbpedia.org/ontology/localAuthority,2396
+locatedInArea,located in area,Place,Place,http://dbpedia.org/ontology/locatedInArea,48899
+location,location,owl:Thing,Place,http://dbpedia.org/ontology/location,413893
+locationCountry,państwo,owl:Thing,Country,http://dbpedia.org/ontology/locationCountry,21851
+locationName,locationName,owl:Thing,xsd:string,,
+logo,logo,owl:Thing,xsd:string,http://dbpedia.org/ontology/logo,1317
+longDistancePisteKilometre,long distance piste kilometre,Place,Length,,
+longDistancePisteNumber,long distance piste number,Place,xsd:nonNegativeInteger,,
+longName,longName,owl:Thing,rdf:langString,http://dbpedia.org/ontology/longName,476
+lowest,lowest,Place,xsd:string,http://dbpedia.org/ontology/lowest,358
+lowestAltitude,lowest altitude,Place,Altitude,,
+lowestMountain,lowest mountain,Place,Mountain,http://dbpedia.org/ontology/lowestMountain,133
+lowestPlace,lowest place,Place,PopulatedPlace,http://dbpedia.org/ontology/lowestPlace,166
+lowestPosition,lowest position,Place,geo:SpatialThing,http://dbpedia.org/ontology/lowestPosition,101
+mainInterest,main interest,owl:Thing,owl:Thing,http://dbpedia.org/ontology/mainInterest,4301
+mainIsland,main island,Place,Place,,
+majorityFloorLeader,majority floor leader,owl:Thing,xsd:integer,,
+majorityLeader,majority leader,owl:Thing,xsd:integer,,
+management,management,owl:Thing,owl:Thing,http://dbpedia.org/ontology/management,597
+managementElevation,management elevation,owl:Thing,Length,http://dbpedia.org/ontology/managementElevation,17
+managementMountain,management mountain,owl:Thing,Mountain,http://dbpedia.org/ontology/managementMountain,46
+managementPlace,management place,owl:Thing,PopulatedPlace,http://dbpedia.org/ontology/managementPlace,46
+managementPosition,management position,owl:Thing,geo:SpatialThing,http://dbpedia.org/ontology/managementPosition,34
+managerYearsEndYear,manager years end year,owl:Thing,xsd:gYear,,
+managerYearsStartYear,manager years start year,owl:Thing,xsd:gYear,,
+mandate,political mandate,owl:Thing,xsd:string,,
+manufactory,manufactory,owl:Thing,Factory,,
+manufacturer,manufacturer,owl:Thing,Organisation,http://dbpedia.org/ontology/manufacturer,35962
+map,map,Place,owl:Thing,http://dbpedia.org/ontology/map,177
+mapCaption,map caption,Place,xsd:string,http://dbpedia.org/ontology/mapCaption,41
+mapDescription,map description,Place,xsd:string,,
+mascot,mascot,owl:Thing,xsd:string,http://dbpedia.org/ontology/mascot,14752
+mass,mass,owl:Thing,Mass,http://dbpedia.org/ontology/mass,409
+material,material,owl:Thing,owl:Thing,http://dbpedia.org/ontology/material,576
+max,max,owl:Thing,xsd:nonNegativeInteger,,
+maximumArea,maximum area,Place,xsd:string,,
+maximumAreaQuote,maximum area quote,Place,xsd:string,,
+maximumDepth,maximum depth,Place,Length,http://dbpedia.org/ontology/maximumDepth,4069
+maximumDepthQuote,maximum depth quote,Place,xsd:string,http://dbpedia.org/ontology/maximumDepthQuote,1
+maximumDischarge,maximum discharge,owl:Thing,FlowRate,http://dbpedia.org/ontology/maximumDischarge,995
+maximumElevation,maximum elevation,Place,Length,http://dbpedia.org/ontology/maximumElevation,38564
+mayor,mayor,owl:Thing,Mayor,http://dbpedia.org/ontology/mayor,943
+mayorArticle,mayor article,Place,xsd:string,,
+mayorCouncillor,mayor councillor,owl:Thing,xsd:string,,
+mbaId,MBA Id,owl:Thing,xsd:string,http://dbpedia.org/ontology/mbaId,19
+meaning,meaning,owl:Thing,xsd:string,http://dbpedia.org/ontology/meaning,3479
+mediaItem,media item,owl:Thing,File,,
+medlinePlus,MedlinePlus,owl:Thing,xsd:string,,
+meltingPoint,melting point,owl:Thing,Temperature,,
+memberOfParliament,Member of Parliament,owl:Thing,Person,,
+mergerDate,merger date,Place,xsd:date,,
+militaryGovernment,military government,owl:Thing,xsd:string,,
+militaryUnitSize,military unit size,owl:Thing,xsd:string,http://dbpedia.org/ontology/militaryUnitSize,7887
+min,min,owl:Thing,xsd:nonNegativeInteger,,
+minimumArea,minimum area,Place,xsd:string,,
+minimumAreaQuote,minimum area quote,Place,xsd:string,,
+minimumDischarge,minimum discharge,owl:Thing,FlowRate,http://dbpedia.org/ontology/minimumDischarge,934
+minimumElevation,minimum elevation,Place,Length,http://dbpedia.org/ontology/minimumElevation,37766
+minister,minister,owl:Thing,Politician,,
+minorityFloorLeader,minority floor leader,owl:Thing,xsd:integer,,
+minorityLeader,minority leader,owl:Thing,xsd:integer,,
+mission,mission,owl:Thing,SpaceMission,http://dbpedia.org/ontology/mission,1501
+monarch,monarch,owl:Thing,Person,http://dbpedia.org/ontology/monarch,6433
+month,month,owl:Thing,xsd:string,http://dbpedia.org/ontology/month,88
+motto,motto,owl:Thing,xsd:string,http://dbpedia.org/ontology/motto,42633
+mouthElevation,mouth elevation,owl:Thing,Length,http://dbpedia.org/ontology/mouthElevation,7664
+municipality,municipality,owl:Thing,PopulatedPlace,http://dbpedia.org/ontology/municipality,3233
+municipalityCode,municipality code,Place,xsd:string,http://dbpedia.org/ontology/municipalityCode,2767
+name,name,owl:Thing,rdf:langString,http://dbpedia.org/ontology/name,1228
+nameAsOf,so named since,owl:Thing,xsd:gYear,,
+nameInCantoneseChinese,name in Yue Chinese,owl:Thing,rdf:langString,,
+nameInHangulKorean,name in Hangul-written Korean,owl:Thing,rdf:langString,,
+nameInHanjaKorean,name in Hanja-written (traditional) Korean,owl:Thing,rdf:langString,,
+nameInJapanese,name in Japanese,owl:Thing,rdf:langString,,
+nameInMindongyuChinese,name in Mindongyu Chinese,owl:Thing,rdf:langString,,
+nameInMinnanyuChinese,name in Minnanyu Chinese,owl:Thing,rdf:langString,,
+nameInPinyinChinese,name in Pinyin Chinese,owl:Thing,rdf:langString,,
+nameInSimplifiedChinese,name in Simplified Chinese,owl:Thing,rdf:langString,,
+nameInTraditionalChinese,name in Traditional Chinese,owl:Thing,rdf:langString,,
+nameInWadeGilesChinese,name in the Wade-Giles transscription of Chinese,owl:Thing,rdf:langString,,
+namedAfter,named after,owl:Thing,owl:Thing,http://dbpedia.org/ontology/namedAfter,40
+namedByLanguage,named by language,Place,Place,,
+nationalTopographicSystemMapNumber,National Topographic System map number,Place,xsd:string,http://dbpedia.org/ontology/nationalTopographicSystemMapNumber,5419
+ndlId,NDL id,owl:Thing,xsd:string,http://dbpedia.org/ontology/ndlId,23
+nearestCity,nearest city,Place,PopulatedPlace,http://dbpedia.org/ontology/nearestCity,18582
+neighbourRegion,neighbour region,Place,xsd:string,,
+newspaper,newspaper,owl:Thing,PeriodicalLiterature,,
+nextEntity,next entity,Place,Place,,
+nlaId,NLA Id,owl:Thing,xsd:string,http://dbpedia.org/ontology/nlaId,27
+nominee,nominee,owl:Thing,Person,http://dbpedia.org/ontology/nominee,31
+northEastPlace,north-east place,Place,Place,,
+northPlace,north place,Place,Place,,
+northWestPlace,north-west place,Place,Place,,
+notableWork,notable work,owl:Thing,Work,http://dbpedia.org/ontology/notableWork,6833
+notes,notes,owl:Thing,xsd:string,http://dbpedia.org/ontology/notes,756
+numberOfIsland,number of islands,Place,xsd:string,,
+numberOfPixels,number of pixels (millions),owl:Thing,xsd:nonNegativeInteger,,
+numberOfSports,number of sports,owl:Thing,xsd:nonNegativeInteger,http://dbpedia.org/ontology/numberOfSports,723
+numberOfSportsEvents,number of sports events,owl:Thing,xsd:nonNegativeInteger,,
+numberOfVisitors,number of visitors,owl:Thing,xsd:nonNegativeInteger,http://dbpedia.org/ontology/numberOfVisitors,1532
+nutsCode,NUTS code,Place,xsd:string,http://dbpedia.org/ontology/nutsCode,20
+occupation,occupation,owl:Thing,PersonFunction,http://dbpedia.org/ontology/occupation,335407
+odor,Odor,owl:Thing,xsd:string,,
+office,(political) office,owl:Thing,xsd:string,http://dbpedia.org/ontology/office,177682
+openingDate,opening date,owl:Thing,xsd:date,http://dbpedia.org/ontology/openingDate,20352
+openingYear,opening year,owl:Thing,xsd:gYear,http://dbpedia.org/ontology/openingYear,43756
+operator,operator,owl:Thing,owl:Thing,http://dbpedia.org/ontology/operator,20061
+orbits,orbits,owl:Thing,xsd:integer,http://dbpedia.org/ontology/orbits,6
+orcidId,ORCID Id,owl:Thing,xsd:string,http://dbpedia.org/ontology/orcidId,1
+orderInOffice,order in office,owl:Thing,xsd:string,http://dbpedia.org/ontology/orderInOffice,46824
+organisation,organisation,owl:Thing,Organisation,http://dbpedia.org/ontology/organisation,393
+origin,origin,owl:Thing,PopulatedPlace,http://dbpedia.org/ontology/origin,11211
+originalName,original name,owl:Thing,rdf:langString,,
+originallyUsedFor,originally used for,owl:Thing,xsd:string,http://dbpedia.org/ontology/originallyUsedFor,38
+orogeny,orogeny,owl:Thing,owl:Thing,http://dbpedia.org/ontology/orogeny,13
+output,output,Place,xsd:float,,
+owl:differentFrom,An owl:differentFrom statement indicates that two URI references refer to different individuals,owl:Thing,owl:Thing,,
+owl:sameAs,same as,owl:Thing,owl:Thing,,
+owner,owner,owl:Thing,Agent,http://dbpedia.org/ontology/owner,60352
+owningCompany,owning company,owl:Thing,Company,http://dbpedia.org/ontology/owningCompany,13345
+owningOrganisation,owning organisation,owl:Thing,Organisation,http://dbpedia.org/ontology/owningOrganisation,13186
+parentCompany,parent company,owl:Thing,Company,http://dbpedia.org/ontology/parentCompany,12213
+parliament,parliament,owl:Thing,Parliament,,
+parliamentType,parliament type,Place,xsd:string,,
+part,part,owl:Thing,owl:Thing,http://dbpedia.org/ontology/part,16892
+partialFailedLaunches,partial failed launches,owl:Thing,xsd:nonNegativeInteger,http://dbpedia.org/ontology/partialFailedLaunches,76
+party,party,owl:Thing,PoliticalParty,http://dbpedia.org/ontology/party,88099
+partyNumber,party number,owl:Thing,xsd:integer,,
+pastMember,past member,owl:Thing,Person,http://dbpedia.org/ontology/pastMember,46
+patronSaint,patron saint,owl:Thing,Person,,
+pccSecretary,pcc secretary,owl:Thing,xsd:string,,
+percentage,percentage,owl:Thing,owl:Thing,,
+percentageOfAreaWater,percentage of area water,owl:Thing,xsd:float,http://dbpedia.org/ontology/percentageOfAreaWater,10169
+perimeter,perimeter,Place,Length,,
+period,event period,owl:Thing,owl:Thing,,
+picture,picture,owl:Thing,owl:Thing,http://dbpedia.org/ontology/picture,3669
+pictureDescription,picture description,owl:Thing,owl:Thing,,
+picturesCommonsCategory,pictures Commons category,owl:Thing,xsd:string,,
+pisciculturalPopulation,piscicultural population,Place,xsd:string,,
+plant,plant,Place,Plant,http://dbpedia.org/ontology/plant,228
+playRole,play role,owl:Thing,owl:Thing,,
+playingTime,playing time,owl:Thing,Time,,
+pole,pole,owl:Thing,xsd:string,,
+politicalLeader,political leader,Place,PersonFunction,,
+populationQuote,population quote,Place,xsd:string,,
+populationTotal,population total,owl:Thing,xsd:nonNegativeInteger,http://dbpedia.org/ontology/populationTotal,327277
+portfolio,portfolio,owl:Thing,xsd:string,http://dbpedia.org/ontology/portfolio,343
+position,position,owl:Thing,owl:Thing,http://dbpedia.org/ontology/position,240407
+postalCode,postal code,owl:Thing,xsd:string,http://dbpedia.org/ontology/postalCode,188395
+predecessor,predecessor,owl:Thing,owl:Thing,http://dbpedia.org/ontology/predecessor,89375
+prefix,prefix,owl:Thing,xsd:string,,
+president,president,owl:Thing,Person,http://dbpedia.org/ontology/president,16042
+presidentGeneralCouncilMandate,mandate of the president of the general council,Place,xsd:string,,
+presidentRegionalCouncilMandate,mandate of the president council of the regional council,Place,xsd:string,,
+previousEntity,previous entity,Place,Place,,
+price,price,owl:Thing,Currency,,
+primeMinister,prime minister,owl:Thing,Person,http://dbpedia.org/ontology/primeMinister,14012
+produces,produces,owl:Thing,owl:Thing,,
+productionEndDate,production end date,owl:Thing,xsd:date,http://dbpedia.org/ontology/productionEndDate,15
+productionEndYear,production end year,owl:Thing,xsd:gYear,http://dbpedia.org/ontology/productionEndYear,8072
+productionStartDate,production start date,owl:Thing,xsd:date,http://dbpedia.org/ontology/productionStartDate,40
+productionStartYear,production start year,owl:Thing,xsd:gYear,http://dbpedia.org/ontology/productionStartYear,10087
+prominence,prominence,owl:Thing,Length,http://dbpedia.org/ontology/prominence,7499
+pronunciation,pronunciation,owl:Thing,xsd:string,,
+protectionStatus,monument protection status,Place,xsd:string,,
+provides,provides,owl:Thing,owl:Thing,,
+province,province,Place,Province,http://dbpedia.org/ontology/province,11254
+provinceLink,province link,Place,Province,,
+publicationDate,publication date,owl:Thing,xsd:date,http://dbpedia.org/ontology/publicationDate,3603
+publiclyAccessible,publicly accessible,owl:Thing,xsd:string,http://dbpedia.org/ontology/publiclyAccessible,478
+purpose,purpose,owl:Thing,xsd:string,http://dbpedia.org/ontology/purpose,6176
+quotation,quotation,owl:Thing,xsd:string,,
+quote,quote,Place,xsd:string,http://dbpedia.org/ontology/quote,635
+race,race,owl:Thing,Race,http://dbpedia.org/ontology/race,31133
+raceHorse,race horse,owl:Thing,Horse,http://dbpedia.org/ontology/raceHorse,3964
+rank,rank,owl:Thing,xsd:string,,
+rankAgreement,rank of an agreement,Place,xsd:nonNegativeInteger,,
+rating,rating,owl:Thing,xsd:float,http://dbpedia.org/ontology/rating,224
+rdf:type,undefined,owl:Thing,owl:Thing,,
+rdfs:comment,undefined,owl:Thing,rdf:langString,,
+rdfs:label,undefined,owl:Thing,rdf:langString,,
+rdfs:seeAlso,is used to indicate a resource that might provide additional information about the subject resource,owl:Thing,owl:Thing,,
+rdfs:subClassOf,subclass of,owl:Thing,owl:Thing,,
+rebuildDate,rebuild date,owl:Thing,xsd:date,http://dbpedia.org/ontology/rebuildDate,2
+recordLabel,record label,owl:Thing,RecordLabel,http://dbpedia.org/ontology/recordLabel,282756
+redLongDistancePisteNumber,red long distance piste number,Place,xsd:nonNegativeInteger,,
+redSkiPisteNumber,red ski piste number,Place,xsd:nonNegativeInteger,,
+refcul,reference for cultural data,Place,xsd:string,,
+refgen,reference for general data,Place,xsd:string,,
+refgeo,reference for geographic data,Place,xsd:string,,
+refpol,reference for politic data,Place,xsd:string,,
+regency,regency,Place,PopulatedPlace,,
+region,region,owl:Thing,Place,http://dbpedia.org/ontology/region,76716
+regionLink,region link,Place,xsd:string,,
+regionType,region type,Place,xsd:string,,
+regionalPrefecture,regional prefecture,Place,xsd:string,,
+registry,registry,owl:Thing,xsd:string,,
+related,related,owl:Thing,owl:Thing,http://dbpedia.org/ontology/related,17148
+relatedPlaces,related places,Place,List,,
+releaseDate,release date,owl:Thing,xsd:date,http://dbpedia.org/ontology/releaseDate,212290
+relief,relief,Place,xsd:string,,
+religion,religion,owl:Thing,owl:Thing,http://dbpedia.org/ontology/religion,50735
+religiousHead,religious head,owl:Thing,Person,http://dbpedia.org/ontology/religiousHead,22
+reopened,reopened,owl:Thing,xsd:date,,
+representative,number of representatives,Place,xsd:nonNegativeInteger,,
+requirement,requirement,owl:Thing,xsd:string,,
+restoreDate,restore date,owl:Thing,xsd:date,http://dbpedia.org/ontology/restoreDate,14
+restriction,restriction,owl:Thing,xsd:string,,
+retentionTime,relation time,Place,xsd:string,,
+retired,retired,owl:Thing,xsd:date,http://dbpedia.org/ontology/retired,182
+ridId,RID Id,owl:Thing,xsd:string,,
+river,river,Place,River,http://dbpedia.org/ontology/river,2650
+rkdArtistsId,RKDartists id,owl:Thing,xsd:string,http://dbpedia.org/ontology/rkdArtistsId,1
+role,role,owl:Thing,xsd:string,http://dbpedia.org/ontology/role,9160
+route,route,Place,xsd:string,,
+royalAnthem,royal anthem,owl:Thing,owl:Thing,http://dbpedia.org/ontology/royalAnthem,16
+runningMate,running mate,owl:Thing,Person,http://dbpedia.org/ontology/runningMate,17
+sales,sales,owl:Thing,Sales,http://dbpedia.org/ontology/sales,1983
+scale,scale,Place,xsd:string,,
+score,score,owl:Thing,xsd:double,,
+sea,sea,Place,Sea,,
+secondLeader,secondLeader,owl:Thing,Person,http://dbpedia.org/ontology/secondLeader,3056
+secondPlace,second place,owl:Thing,xsd:string,,
+secondPopularVote,secondPopularVote,owl:Thing,Person,http://dbpedia.org/ontology/secondPopularVote,31
+selibrId,SELIBR Id,owl:Thing,xsd:string,http://dbpedia.org/ontology/selibrId,5
+senator,senator,owl:Thing,Person,,
+seniority,seniority,owl:Thing,xsd:string,http://dbpedia.org/ontology/seniority,729
+series,series,owl:Thing,owl:Thing,http://dbpedia.org/ontology/series,27450
+sessionNumber,session number,owl:Thing,xsd:integer,,
+settlement,settlement,Place,PopulatedPlace,,
+setupTime,setup time,owl:Thing,Time,,
+show,show,owl:Thing,TelevisionShow,http://dbpedia.org/ontology/show,2
+similar,similar,owl:Thing,owl:Thing,http://dbpedia.org/ontology/similar,971
+siren,siren number,owl:Thing,xsd:nonNegativeInteger,,
+sizeBlazon,size blazon,owl:Thing,xsd:string,,
+sizeLogo,size logo,owl:Thing,xsd:nonNegativeInteger,,
+sizeMap,size map,owl:Thing,xsd:string,,
+sizeThumbnail,size thumbnail,owl:Thing,xsd:string,,
+skiLift,ski lift,Place,xsd:nonNegativeInteger,,
+skiPisteKilometre,ski piste kilometre,Place,Length,,
+skiPisteNumber,ski piste number,Place,xsd:nonNegativeInteger,,
+skiTow,ski tow,Place,xsd:nonNegativeInteger,,
+skills,skills,owl:Thing,owl:Thing,,
+skos:broader,broader,owl:Thing,owl:Thing,,
+skos:prefLabel,prefLabel,owl:Thing,rdf:langString,,
+skos:related,related,owl:Thing,owl:Thing,,
+slogan,slogan,owl:Thing,rdf:langString,http://dbpedia.org/ontology/slogan,18098
+snowParkNumber,snow park number,Place,xsd:nonNegativeInteger,,
+soundRecording,sound recording,owl:Thing,Sound,http://dbpedia.org/ontology/soundRecording,10943
+source,source,owl:Thing,owl:Thing,http://dbpedia.org/ontology/source,2960
+sourceConfluenceElevation,source confluence elevation,owl:Thing,Length,http://dbpedia.org/ontology/sourceConfluenceElevation,208
+sourceDistrict,source district,owl:Thing,PopulatedPlace,,
+sourceElevation,source elevation,owl:Thing,Length,http://dbpedia.org/ontology/sourceElevation,4541
+sourceMountain,source mountain,owl:Thing,Mountain,http://dbpedia.org/ontology/sourceMountain,6147
+sourcePlace,source place,owl:Thing,PopulatedPlace,http://dbpedia.org/ontology/sourcePlace,6147
+sourcePosition,source position,owl:Thing,geo:SpatialThing,http://dbpedia.org/ontology/sourcePosition,4649
+sourceRegion,source region,owl:Thing,PopulatedPlace,http://dbpedia.org/ontology/sourceRegion,1252
+sourceState,source state,owl:Thing,PopulatedPlace,,
+sourceText,sourceText,owl:Thing,rdf:langString,,
+southEastPlace,south-east place,Place,Place,,
+southPlace,south place,Place,Place,,
+southWestPlace,south-west place,Place,Place,,
+sovereignCountry,sovereign country,Place,PopulatedPlace,,
+speaker,speaker,owl:Thing,xsd:integer,http://dbpedia.org/ontology/speaker,46
+specialist,specialist,owl:Thing,PersonFunction,http://dbpedia.org/ontology/specialist,721
+specialization,specialization,owl:Thing,owl:Thing,,
+sport,sport,owl:Thing,Sport,http://dbpedia.org/ontology/sport,5873
+sportGoverningBody,sport governing body,owl:Thing,owl:Thing,http://dbpedia.org/ontology/sportGoverningBody,173
+stadium,Stadium,owl:Thing,Stadium,http://dbpedia.org/ontology/stadium,2503
+startOccupation,start occupation,owl:Thing,xsd:string,,
+startPoint,start point,Place,Place,http://dbpedia.org/ontology/startPoint,221
+startYear,start year,owl:Thing,xsd:gYear,,
+statName,stat name,owl:Thing,xsd:string,,
+statValue,stat value,owl:Thing,xsd:double,,
+state,state,owl:Thing,PopulatedPlace,http://dbpedia.org/ontology/state,43597
+stateDelegate,state delegate,owl:Thing,Person,,
+status,status,owl:Thing,xsd:string,http://dbpedia.org/ontology/status,47976
+statusYear,status year,Place,xsd:string,,
+subPrefecture,subprefecture,Place,xsd:string,,
+subdivision,subdivision,owl:Thing,owl:Thing,,
+subdivisionLink,subdivision link,Place,xsd:string,,
+subdivisions,subdivisions,owl:Thing,xsd:nonNegativeInteger,http://dbpedia.org/ontology/subdivisions,5
+sublimationPoint,sublimation point,owl:Thing,Temperature,,
+subregion,subregion,Place,Place,http://dbpedia.org/ontology/subregion,438
+subsystem,subsystem,Place,xsd:string,,
+subsystemLink,subsystem link,Place,xsd:string,,
+subtitle,subtitle,owl:Thing,xsd:string,http://dbpedia.org/ontology/subtitle,248
+successfulLaunches,successful launches,owl:Thing,xsd:nonNegativeInteger,http://dbpedia.org/ontology/successfulLaunches,267
+successor,successor,owl:Thing,owl:Thing,http://dbpedia.org/ontology/successor,114130
+sudocId,SUDOC id,owl:Thing,xsd:string,http://dbpedia.org/ontology/sudocId,58
+supply,supply,Place,Place,,
+surfaceFormOccurrenceOffset,position in which a surface occurs in a text,owl:Thing,xsd:string,,
+surfaceType,type of surface,owl:Thing,xsd:string,,
+synonym,synonym,owl:Thing,xsd:string,http://dbpedia.org/ontology/synonym,253511
+systemRequirements,minimum system requirements,owl:Thing,xsd:string,,
+tag,tag,owl:Thing,xsd:date,,
+taoiseach,taoiseach,owl:Thing,Person,http://dbpedia.org/ontology/taoiseach,160
+team,team,owl:Thing,SportsTeam,http://dbpedia.org/ontology/team,2007122
+teamSize,team size,owl:Thing,xsd:nonNegativeInteger,http://dbpedia.org/ontology/teamSize,93
+televisionSeries,television series,owl:Thing,TelevisionShow,http://dbpedia.org/ontology/televisionSeries,2291
+temperature,temperature,owl:Thing,Temperature,http://dbpedia.org/ontology/temperature,405
+tennisSurfaceType,type of tennis surface,owl:Thing,xsd:string,http://dbpedia.org/ontology/tennisSurfaceType,933
+termPeriod,term period,owl:Thing,TimePeriod,http://dbpedia.org/ontology/termPeriod,148574
+thirdPlace,third place,owl:Thing,xsd:string,,
+thumbnail,thumbnail,owl:Thing,Image,http://dbpedia.org/ontology/thumbnail,1695460
+thumbnailCaption,thumbnail caption,owl:Thing,xsd:string,,
+time,time,owl:Thing,xsd:string,http://dbpedia.org/ontology/time,36444
+timeInSpace,total time person has spent in space,owl:Thing,Time,http://dbpedia.org/ontology/timeInSpace,120
+timeZone,time zone,Place,owl:Thing,http://dbpedia.org/ontology/timeZone,377227
+title,title,owl:Thing,rdf:langString,http://dbpedia.org/ontology/title,247497
+topSpeed,top speed,owl:Thing,Speed,http://dbpedia.org/ontology/topSpeed,18114
+totalLaunches,total launches,owl:Thing,xsd:nonNegativeInteger,http://dbpedia.org/ontology/totalLaunches,362
+tradeMark,TradeMark,owl:Thing,owl:Thing,,
+translatedMotto,translated motto,owl:Thing,xsd:string,,
+tree,tree,Place,Species,,
+type,type,owl:Thing,owl:Thing,http://dbpedia.org/ontology/type,403198
+typeCoordinate,type coordinate,Place,xsd:string,,
+ulanId,ULAN id,owl:Thing,xsd:string,http://dbpedia.org/ontology/ulanId,11
+unesco,unesco,Place,PopulatedPlace,,
+university,university,owl:Thing,EducationalInstitution,http://dbpedia.org/ontology/university,2795
+unloCode,UN/LOCODE,Place,xsd:string,,
+updated,updated,owl:Thing,xsd:date,,
+uses,uses,owl:Thing,owl:Thing,,
+usk,approved rating of the Entertainment Software Self-Regulation Body in Germany,owl:Thing,xsd:integer,,
+utcOffset,UTC offset,Place,xsd:string,http://dbpedia.org/ontology/utcOffset,445717
+value,value,owl:Thing,xsd:nonNegativeInteger,,
+variantOf,variant or variation,owl:Thing,owl:Thing,http://dbpedia.org/ontology/variantOf,4180
+vehicle,vehicle,owl:Thing,Automobile,http://dbpedia.org/ontology/vehicle,185
+vehicleCode,vehicle code,Place,xsd:string,,
+viafId,VIAF Id,owl:Thing,xsd:string,http://dbpedia.org/ontology/viafId,1599
+viceChancellor,vice chancellor,owl:Thing,Person,http://dbpedia.org/ontology/viceChancellor,423
+vicePresident,vice president,owl:Thing,Person,http://dbpedia.org/ontology/vicePresident,1005
+vicePrimeMinister,vice prime minister,owl:Thing,Person,http://dbpedia.org/ontology/vicePrimeMinister,29
+victim,victim (resource),owl:Thing,owl:Thing,http://dbpedia.org/ontology/victim,154
+victims,victims (string),owl:Thing,xsd:string,http://dbpedia.org/ontology/victims,95
+voice,voice,owl:Thing,Person,http://dbpedia.org/ontology/voice,11182
+volume,volume,owl:Thing,Volume,http://dbpedia.org/ontology/volume,4082
+volumeQuote,volume quote,Place,xsd:string,http://dbpedia.org/ontology/volumeQuote,1
+water,water,Place,xsd:string,,
+waterArea,area of water,Place,Area,,
+waterPercentage,water percentage of a place,Place,xsd:float,,
+webcast,webcast,owl:Thing,owl:Thing,http://dbpedia.org/ontology/webcast,9065
+websiteLabel,label of a website,owl:Thing,rdf:langString,,
+weight,weight,owl:Thing,Mass,http://dbpedia.org/ontology/weight,80374
+westPlace,west place,Place,Place,,
+wholeArea,whole area,Place,Area,,
+width,width,owl:Thing,Length,http://dbpedia.org/ontology/width,13316
+widthQuote,width quote,Place,xsd:string,http://dbpedia.org/ontology/widthQuote,2
+wikiPageCharacterSize,Character size of wiki page,owl:Thing,xsd:nonNegativeInteger,,
+wikiPageDisambiguates,Wikipage disambiguates,owl:Thing,owl:Thing,http://dbpedia.org/ontology/wikiPageDisambiguates,1537180
+wikiPageEditLink,Link to the Wikipage edit URL,owl:Thing,owl:Thing,,
+wikiPageExternalLink,Link from a Wikipage to an external page,owl:Thing,owl:Thing,http://dbpedia.org/ontology/wikiPageExternalLink,7772279
+wikiPageExtracted,extraction datetime,owl:Thing,xsd:dateTime,,
+wikiPageHistoryLink,Link to the Wikipage history URL,owl:Thing,owl:Thing,,
+wikiPageID,Wikipage page ID,owl:Thing,xsd:integer,http://dbpedia.org/ontology/wikiPageID,15797811
+wikiPageInDegree,Wiki page in degree,owl:Thing,xsd:nonNegativeInteger,,
+wikiPageInterLanguageLink,Link from a Wikipage to a Wikipage in a different language about the same or a related subject.,owl:Thing,owl:Thing,,
+wikiPageLength,page length (characters) of wiki page,owl:Thing,xsd:nonNegativeInteger,,
+wikiPageModified,Wikipage modification datetime,owl:Thing,xsd:dateTime,,
+wikiPageOutDegree,Wiki page out degree,owl:Thing,xsd:nonNegativeInteger,,
+wikiPageRedirects,Wikipage redirect,owl:Thing,owl:Thing,http://dbpedia.org/ontology/wikiPageRedirects,7632358
+wikiPageRevisionID,Wikipage revision ID,owl:Thing,xsd:integer,http://dbpedia.org/ontology/wikiPageRevisionID,15797811
+wikiPageRevisionLink,Link to the Wikipage revision URL,owl:Thing,owl:Thing,,
+wikiPageUsesTemplate,wiki page uses template,owl:Thing,WikimediaTemplate,,
+wikiPageWikiLink,Link from a Wikipage to another Wikipage,owl:Thing,owl:Thing,,
+wikiPageWikiLinkText,Text used to link from a Wikipage to another Wikipage,owl:Thing,owl:Thing,,
+wikidataSplitIri,Wikidata IRI slit,owl:Thing,owl:Thing,,
+wins,wins,owl:Thing,xsd:nonNegativeInteger,http://dbpedia.org/ontology/wins,1190
+year,year,owl:Thing,xsd:gYear,http://dbpedia.org/ontology/year,40047
+yearOfConstruction,year of construction,Place,xsd:gYear,http://dbpedia.org/ontology/yearOfConstruction,49389
+zodiacSign,zodiac sign,owl:Thing,owl:Thing,,
