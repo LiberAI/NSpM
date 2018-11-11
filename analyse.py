@@ -1,3 +1,15 @@
+#!/usr/bin/env python
+"""
+
+Neural SPARQL Machines - Analysis and validation of translated questions into queries.
+
+'SPARQL as a Foreign Language' by Tommaso Soru and Edgard Marx et al., SEMANTiCS 2017
+https://w3id.org/neural-sparql-machines/soru-marx-semantics2017.html
+https://arxiv.org/abs/1708.07624
+
+Version 0.1.0-akaha
+
+"""
 import argparse
 import collections
 import json

@@ -1,3 +1,15 @@
+#!/usr/bin/env python
+"""
+
+Neural SPARQL Machines - Split into train, dev, and test sets.
+
+'SPARQL as a Foreign Language' by Tommaso Soru and Edgard Marx et al., SEMANTiCS 2017
+https://w3id.org/neural-sparql-machines/soru-marx-semantics2017.html
+https://arxiv.org/abs/1708.07624
+
+Version 0.0.4
+
+"""
 import argparse
 import random
 import os

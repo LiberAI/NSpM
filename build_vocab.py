@@ -1,5 +1,14 @@
 #!/usr/bin/env python
 """
+
+Neural SPARQL Machines - Build the vocabulary.
+
+'SPARQL as a Foreign Language' by Tommaso Soru and Edgard Marx et al., SEMANTiCS 2017
+https://w3id.org/neural-sparql-machines/soru-marx-semantics2017.html
+https://arxiv.org/abs/1708.07624
+
+Version 0.0.4
+
 Usage: python build_vocab.py data.en > vocab.en
 """
 import numpy as np
