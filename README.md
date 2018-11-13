@@ -1,9 +1,9 @@
 # 🤖 Neural SPARQL Machines
 A LSTM-based Machine Translation Approach for Question Answering.
 
-![alt text](http://www.liberai.org/img/flag-uk-160px.png "English")
-![alt text](http://www.liberai.org/img/seq2seq-webexport-160px.png "seq2seq")
-![alt text](http://www.liberai.org/img/flag-sparql-160px.png "SPARQL")
+![British flag.](http://www.liberai.org/img/flag-uk-160px.png "English")
+![Seq2Seq neural network.](http://www.liberai.org/img/seq2seq-webexport-160px.png "seq2seq")
+![Semantic triple flag.](http://www.liberai.org/img/flag-sparql-160px.png "SPARQL")
 
 ## Code
 
@@ -103,6 +103,6 @@ sh ask.sh data/monument_300 "where is edward vii monument located in?"
 
 ## Contact
 
-* Primary contact: [Tommaso Soru](http://tommaso-soru.it).
+* Primary contacts: [Tommaso Soru](http://tommaso-soru.it) and [Edgard Marx](http://emarx.org).
 * Neural SPARQL Machines [mailing list](https://groups.google.com/forum/#!forum/neural-sparql-machines).
 * Follow the [project on ResearchGate](https://www.researchgate.net/project/Neural-SPARQL-Machines).
