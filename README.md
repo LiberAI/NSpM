@@ -23,7 +23,9 @@ Install TensorFlow (e.g., `pip install tensorflow`).
 
 The template used in the paper can be found in a file such as `annotations_monument.tsv`. To generate the training data, launch the following command.
 
+<!-- Made monument_300 directory in data directory due to absence of monument_300 folder in data directory  -->
 ```bash
+mkdir data/monument_300
 python generator.py --templates data/annotations_monument.csv  --output data/monument_300
 ```
 
@@ -35,16 +37,19 @@ python build_vocab.py data/monument_300/data_300.sparql > data/monument_300/voca
 ```
 
 Count lines in `data_.*`
+<!-- Fixing the bash related error pertaining to assigning value to NUMLINES here -->
 ```bash
-NUMLINES= $(echo awk '{ print $1}' | cat data/monument_300/data_300.sparql |  wc -l)
+NUMLINES=$(echo awk '{ print $1}' | cat data/monument_300/data_300.sparql |  wc -l)
 echo $NUMLINES
 # 7097
 ```
 
 Split the `data_.*` files into `train_.*`, `dev_.*`, and `test_.*` (usually 80-10-10%).
+
+<!-- Making this instruction consistent with the previous instructions by changing data.sparql to data_300.sparql -->
 ```bash
 cd data/monument_300/
-python ../../split_in_train_dev_test.py --lines $NUMLINES  --dataset data.sparql
+python ../../split_in_train_dev_test.py --lines $NUMLINES  --dataset data_300.sparql
 ```
 
 #### Pre-generated data
@@ -53,7 +58,8 @@ Alternatively, you can extract pre-generated data from `data/monument_300.zip` a
 
 ### Training
 
-Launch `train.sh` to train the model. The first parameter is the prefix of the data directory. The second parameter is the number of training epochs.
+<!-- Just a simple note to go back to the initial directory.-->
+Now go back to the initail directory and launch `train.sh` to train the model. The first parameter is the prefix of the data directory and the second parameter is the number of training epochs.
 
 ```bash
 sh train.sh data/monument_300 120000
