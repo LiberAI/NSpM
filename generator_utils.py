@@ -1,3 +1,15 @@
+#!/usr/bin/env python
+"""
+
+Neural SPARQL Machines - Generator utils.
+
+'SPARQL as a Foreign Language' by Tommaso Soru and Edgard Marx et al., SEMANTiCS 2017
+https://w3id.org/neural-sparql-machines/soru-marx-semantics2017.html
+https://arxiv.org/abs/1708.07624
+
+Version 0.0.4
+
+"""
 import collections
 import httplib
 import json
@@ -32,12 +44,6 @@ def save_cache ( file, cache ):
     ordered = collections.OrderedDict(cache.most_common())
     with open(file, 'w') as outfile:
         json.dump(ordered, outfile)
-
-# proxies = {'http': 'http://proxy.iiit.ac.in:8080/', 'https': 'http://proxy.iiit.ac.in:8080/'}
-# proxy_handler = urllib2.ProxyHandler(proxies)
-# opener = urllib2.build_opener(proxy_handler)
-# urllib2.install_opener(opener)
-
 
 def query_dbpedia( query ):
     param = dict()
