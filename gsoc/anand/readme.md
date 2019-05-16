@@ -1,5 +1,5 @@
 # A Neural QA Model for DBpedia
-## Abstrsct
+## Abstract
 With booming amount of information being continuously added to the internet, organising the facts becomes a very difficult task. Currently DBpedia hosts billions of such data points and corresponding relations in the RDF format.
 
 RDF is a directed, labeled graph data format for representing information in the Web. SPARQL is a query language for RDF. SPARQL can be used to express queries across diverse data sources, whether the data is stored natively as RDF or viewed as RDF via middleware. The results of SPARQL queries can be results sets or RDF graphs. (Source : https://www.w3.org/TR/rdf-sparql-query/​) Extracting data from such data sources requires a query to be made in SPARQL and the response to the query is a link that contains the information pertaining to the answer or the answer itself.
