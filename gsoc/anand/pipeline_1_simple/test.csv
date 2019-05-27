@@ -1,0 +1,723 @@
+dbo:Place;;;what is the access date of <X>;what is the access date of <X>;what is the access date of <X>
+dbo:Place;;;what is the active years end date of <X>;select ?x where { <X> <84148> ?x };select ?a where { ?a <84148> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the active years end year of <X>;select ?x where { <X> <151754> ?x };select ?a where { ?a <151754> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the active years start date of <X>;select ?x where { <X> <103132> ?x };select ?a where { ?a <103132> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the active years start year of <X>;select ?x where { <X> <254812> ?x };select ?a where { ?a <254812> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the address of <X>;select ?x where { <X> <56143> ?x };select ?a where { ?a <56143> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the administrative status of <X>;what is the administrative status of <X>;what is the administrative status of <X>
+dbo:Place;;;what is the affiliation of <X>;select ?x where { <X> <24846> ?x };select ?a where { ?a <24846> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the age range of <X>;select ?x where { <X> <830> ?x };select ?a where { ?a <830> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the agglomeration population total of <X>;what is the agglomeration population total of <X>;what is the agglomeration population total of <X>
+dbo:Place;;;what is the aita code of <X>;what is the aita code of <X>;what is the aita code of <X>
+dbo:Place;;;what is the album of <X>;select ?x where { <X> <48245> ?x };select ?a where { ?a <48245> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the alias of <X>;select ?x where { <X> <55278> ?x };select ?a where { ?a <55278> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the alongside of <X>;what is the alongside of <X>;what is the alongside of <X>
+dbo:Place;;;what is the alternative name of <X>;select ?x where { <X> <31> ?x };select ?a where { ?a <31> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the altitude of <X>;what is the altitude of <X>;what is the altitude of <X>
+dbo:Place;;;what is the animal of <X>;select ?x where { <X> <279> ?x };select ?a where { ?a <279> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the annual temperature of <X>;what is the annual temperature of <X>;what is the annual temperature of <X>
+dbo:Place;;;what is the anthem of <X>;select ?x where { <X> <783> ?x };select ?a where { ?a <783> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the apc president of <X>;what is the apc president of <X>;what is the apc president of <X>
+dbo:Place;;;what is the appearance of <X>;what is the appearance of <X>;what is the appearance of <X>
+dbo:Place;;;what is the appointer of <X>;select ?x where { <X> <1618> ?x };select ?a where { ?a <1618> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the area of <X>;select ?x where { <X> <70572> ?x };select ?a where { ?a <70572> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the area code of <X>;select ?x where { <X> <129943> ?x };select ?a where { ?a <129943> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the area date of <X>;what is the area date of <X>;what is the area date of <X>
+dbo:Place;;;what is the area land of <X>;select ?x where { <X> <72766> ?x };select ?a where { ?a <72766> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the area metro of <X>;select ?x where { <X> <779> ?x };select ?a where { ?a <779> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the area of catchment quote of <X>;select ?x where { <X> <1> ?x };select ?a where { ?a <1> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the area quote of <X>;select ?x where { <X> <1> ?x };select ?a where { ?a <1> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the area rank of <X>;what is the area rank of <X>;what is the area rank of <X>
+dbo:Place;;;what is the area total of <X>;select ?x where { <X> <179581> ?x };select ?a where { ?a <179581> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the area water of <X>;select ?x where { <X> <55568> ?x };select ?a where { ?a <55568> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the artificial snow area of <X>;what is the artificial snow area of <X>;what is the artificial snow area of <X>
+dbo:Place;;;what is the contains a wikitext representation of this thing of <X>;what is the contains a wikitext representation of this thing of <X>;what is the contains a wikitext representation of this thing of <X>
+dbo:Place;;;what is the ascent of <X>;what is the ascent of <X>;what is the ascent of <X>
+dbo:Place;;;what is the associate of <X>;select ?x where { <X> <3528> ?x };select ?a where { ?a <3528> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the associatestar of <X>;what is the associatestar of <X>;what is the associatestar of <X>
+dbo:Place;;;what is the associated band of <X>;select ?x where { <X> <131347> ?x };select ?a where { ?a <131347> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the associated musical artist of <X>;select ?x where { <X> <131338> ?x };select ?a where { ?a <131338> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the atc code of <X>;what is the atc code of <X>;what is the atc code of <X>
+dbo:Place;;;what is the atc prefix of <X>;select ?x where { <X> <4699> ?x };select ?a where { ?a <4699> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the atc suffix of <X>;select ?x where { <X> <2700> ?x };select ?a where { ?a <2700> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the authority of <X>;select ?x where { <X> <374> ?x };select ?a where { ?a <374> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the authority mandate of <X>;what is the authority mandate of <X>;what is the authority mandate of <X>
+dbo:Place;;;what is the autonomy of <X>;what is the autonomy of <X>;what is the autonomy of <X>
+dbo:Place;;;what is the average of <X>;what is the average of <X>;what is the average of <X>
+dbo:Place;;;what is the average depth of <X>;select ?x where { <X> <2500> ?x };select ?a where { ?a <2500> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the average depth quote of <X>;select ?x where { <X> <1> ?x };select ?a where { ?a <1> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the average speed of <X>;select ?x where { <X> <735> ?x };select ?a where { ?a <735> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the avifauna population of <X>;what is the avifauna population of <X>;what is the avifauna population of <X>
+dbo:Place;;;what is the award of <X>;select ?x where { <X> <90933> ?x };select ?a where { ?a <90933> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the colour hex code of away jersey or its parts of <X>;what is the colour hex code of away jersey or its parts of <X>;what is the colour hex code of away jersey or its parts of <X>
+dbo:Place;;;what is the background of <X>;select ?x where { <X> <83192> ?x };select ?a where { ?a <83192> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the battery of <X>;what is the battery of <X>;what is the battery of <X>
+dbo:Place;;;what is the battle of <X>;select ?x where { <X> <117539> ?x };select ?a where { ?a <117539> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the bibsys id of <X>;select ?x where { <X> <3> ?x };select ?a where { ?a <3> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the biggest city of <X>;what is the biggest city of <X>;what is the biggest city of <X>
+dbo:Place;;;what is the bioclimate of <X>;what is the bioclimate of <X>;what is the bioclimate of <X>
+dbo:Place;;;what is the biome of <X>;select ?x where { <X> <259> ?x };select ?a where { ?a <259> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the bird of <X>;what is the bird of <X>;what is the bird of <X>
+dbo:Place;;;what is the long distance piste number of <X>;what is the long distance piste number of <X>;what is the long distance piste number of <X>
+dbo:Place;;;what is the black ski piste number of <X>;what is the black ski piste number of <X>;what is the black ski piste number of <X>
+dbo:Place;;;what is the blazon of <X>;what is the blazon of <X>;what is the blazon of <X>
+dbo:Place;;;what is the blazon link of <X>;what is the blazon link of <X>;what is the blazon link of <X>
+dbo:Place;;;what is the blazon ratio of <X>;what is the blazon ratio of <X>;what is the blazon ratio of <X>
+dbo:Place;;;what is the blue long distance piste number of <X>;what is the blue long distance piste number of <X>;what is the blue long distance piste number of <X>
+dbo:Place;;;what is the blue ski piste number of <X>;what is the blue ski piste number of <X>;what is the blue ski piste number of <X>
+dbo:Place;;;what is the bnf id of <X>;select ?x where { <X> <97> ?x };select ?a where { ?a <97> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the name of <X>;what is the name of <X>;what is the name of <X>
+dbo:Place;;;what is the border of <X>;select ?x where { <X> <486> ?x };select ?a where { ?a <486> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the bpn id of <X>;select ?x where { <X> <1> ?x };select ?a where { ?a <1> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the budget of <X>;select ?x where { <X> <18222> ?x };select ?a where { ?a <18222> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the budget year of <X>;what is the budget year of <X>;what is the budget year of <X>
+dbo:Place;;;what is the builder of <X>;select ?x where { <X> <39938> ?x };select ?a where { ?a <39938> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the building end date of <X>;select ?x where { <X> <16636> ?x };select ?a where { ?a <16636> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the building start date of <X>;select ?x where { <X> <11634> ?x };select ?a where { ?a <11634> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the cable car of <X>;what is the cable car of <X>;what is the cable car of <X>
+dbo:Place;;;what is the its calculation needs of <X>;what is the its calculation needs of <X>;what is the its calculation needs of <X>
+dbo:Place;;;what is the call sign of <X>;select ?x where { <X> <3742> ?x };select ?a where { ?a <3742> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the cannon number of <X>;what is the cannon number of <X>;what is the cannon number of <X>
+dbo:Place;;;what is the capacity of <X>;select ?x where { <X> <15227> ?x };select ?a where { ?a <15227> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the capital coordinates of <X>;what is the capital coordinates of <X>;what is the capital coordinates of <X>
+dbo:Place;;;what is the cas number of <X>;select ?x where { <X> <5548> ?x };select ?a where { ?a <5548> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the cas supplemental of <X>;select ?x where { <X> <309> ?x };select ?a where { ?a <309> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the category of <X>;select ?x where { <X> <781> ?x };select ?a where { ?a <781> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the chain of <X>;select ?x where { <X> <143> ?x };select ?a where { ?a <143> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the chair label of <X>;select ?x where { <X> <5> ?x };select ?a where { ?a <5> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the chairman of <X>;select ?x where { <X> <6994> ?x };select ?a where { ?a <6994> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the chancellor of <X>;select ?x where { <X> <1512> ?x };select ?a where { ?a <1512> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the channel of <X>;select ?x where { <X> <15282> ?x };select ?a where { ?a <15282> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the chief place of <X>;what is the chief place of <X>;what is the chief place of <X>
+dbo:Place;;;what is the city of <X>;select ?x where { <X> <112483> ?x };select ?a where { ?a <112483> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the city link of <X>;what is the city link of <X>;what is the city link of <X>
+dbo:Place;;;what is the class of <X>;select ?x where { <X> <323249> ?x };select ?a where { ?a <323249> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the classification of <X>;what is the classification of <X>;what is the classification of <X>
+dbo:Place;;;what is the climate of <X>;what is the climate of <X>;what is the climate of <X>
+dbo:Place;;;what is the clip up number of <X>;what is the clip up number of <X>;what is the clip up number of <X>
+dbo:Place;;;what is the is close to of <X>;what is the is close to of <X>;what is the is close to of <X>
+dbo:Place;;;what is the closing date of <X>;select ?x where { <X> <1887> ?x };select ?a where { ?a <1887> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the closing year of <X>;select ?x where { <X> <4084> ?x };select ?a where { ?a <4084> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the coach of <X>;select ?x where { <X> <24026> ?x };select ?a where { ?a <24026> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the coached team of <X>;select ?x where { <X> <200> ?x };select ?a where { ?a <200> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the length of a coast of <X>;what is the length of a coast of <X>;what is the length of a coast of <X>
+dbo:Place;;;what is the coat of arms image of <X>;what is the coat of arms image of <X>;what is the coat of arms image of <X>
+dbo:Place;;;what is the code of <X>;select ?x where { <X> <1564> ?x };select ?a where { ?a <1564> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the monument code of <X>;what is the monument code (municipal) of <X>;what is the monument code (municipal) of <X>
+dbo:Place;;;what is the monument code of <X>;what is the monument code (national) of <X>;what is the monument code (national) of <X>
+dbo:Place;;;what is the monument code of <X>;what is the monument code (provinciall) of <X>;what is the monument code (provinciall) of <X>
+dbo:Place;;;what is the country of <X>;what is the country of <X>;what is the country of <X>
+dbo:Place;;;what is the colour of <X>;select ?x where { <X> <7638> ?x };select ?a where { ?a <7638> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the colour hex code of <X>;select ?x where { <X> <1105> ?x };select ?a where { ?a <1105> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the colour name of <X>;select ?x where { <X> <8796> ?x };select ?a where { ?a <8796> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the commandant of <X>;what is the commandant of <X>;what is the commandant of <X>
+dbo:Place;;;what is the commander of <X>;select ?x where { <X> <48960> ?x };select ?a where { ?a <48960> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the comment of <X>;what is the comment of <X>;what is the comment of <X>
+dbo:Place;;;what is the committee of <X>;select ?x where { <X> <837> ?x };select ?a where { ?a <837> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the common name of <X>;select ?x where { <X> <8> ?x };select ?a where { ?a <8> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the company of <X>;select ?x where { <X> <18783> ?x };select ?a where { ?a <18783> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the conflict of <X>;what is the conflict of <X>;what is the conflict of <X>
+dbo:Place;;;what is the connotation of <X>;select ?x where { <X> <34> ?x };select ?a where { ?a <34> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the constituency district of <X>;what is the constituency district of <X>;what is the constituency district of <X>
+dbo:Place;;;what is the cospar id of <X>;select ?x where { <X> <1908> ?x };select ?a where { ?a <1908> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the cost of <X>;select ?x where { <X> <4338> ?x };select ?a where { ?a <4338> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the country of <X>;select ?x where { <X> <769223> ?x };select ?a where { ?a <769223> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the country code of <X>;what is the country code of <X>;what is the country code of <X>
+dbo:Place;;;what is the county of <X>;select ?x where { <X> <9337> ?x };select ?a where { ?a <9337> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the course area of <X>;what is the course area of <X>;what is the course area of <X>
+dbo:Place;;;what is the cpu of <X>;select ?x where { <X> <1680> ?x };select ?a where { ?a <1680> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the year of creation of <X>;what is the year of creation of <X>;what is the year of creation of <X>
+dbo:Place;;;what is the creator of <X>;select ?x where { <X> <27165> ?x };select ?a where { ?a <27165> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the crest of <X>;what is the crest of <X>;what is the crest of <X>
+dbo:Place;;;what is the criteria of <X>;what is the criteria of <X>;what is the criteria of <X>
+dbo:Place;;;what is the cuisine of <X>;select ?x where { <X> <817> ?x };select ?a where { ?a <817> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the currency of <X>;select ?x where { <X> <1792> ?x };select ?a where { ?a <1792> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the currency code of <X>;what is the currency code of <X>;what is the currency code of <X>
+dbo:Place;;;what is the current city of <X>;what is the current city of <X>;what is the current city of <X>
+dbo:Place;;;what is the current status of <X>;select ?x where { <X> <731> ?x };select ?a where { ?a <731> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the date of <X>;select ?x where { <X> <17586> ?x };select ?a where { ?a <17586> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the date of an agreement of <X>;what is the date of an agreement of <X>;what is the date of an agreement of <X>
+dbo:Place;;;what is the date budget of <X>;what is the date budget of <X>;what is the date budget of <X>
+dbo:Place;;;what is the date of abandonment of <X>;select ?x where { <X> <200> ?x };select ?a where { ?a <200> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the daylight saving time zone of <X>;select ?x where { <X> <4677> ?x };select ?a where { ?a <4677> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the creator of <X>;what is the creator (literal) of <X>;what is the creator (literal) of <X>
+dbo:Place;;;what is the identifier of <X>;what is the identifier of <X>;what is the identifier of <X>
+dbo:Place;;;what is the language of <X>;what is the language (literal) of <X>;what is the language (literal) of <X>
+dbo:Place;;;what is the rights of <X>;what is the rights of <X>;what is the rights of <X>
+dbo:Place;;;what is the subject of <X>;what is the subject of <X>;what is the subject of <X>
+dbo:Place;;;what is the title of <X>;what is the title of <X>;what is the title of <X>
+dbo:Place;;;what is the type of <X>;what is the type (literal) of <X>;what is the type (literal) of <X>
+dbo:Place;;;what is the date or range when this object was created of <X>;what is the date or range when this object was created of <X>;what is the date or range when this object was created of <X>
+dbo:Place;;;what is the date submitted of <X>;what is the date submitted of <X>;what is the date submitted of <X>
+dbo:Place;;;what is the description of <X>;what is the description of <X>;what is the description of <X>
+dbo:Place;;;what is the medium of <X>;what is the medium of <X>;what is the medium of <X>
+dbo:Place;;;what is the format of <X>;what is the format (literal) of <X>;what is the format (literal) of <X>
+dbo:Place;;;what is the medium of <X>;what is the medium of <X>;what is the medium of <X>
+dbo:Place;;;what is the modified of <X>;what is the modified of <X>;what is the modified of <X>
+dbo:Place;;;what is the spatial of <X>;what is the spatial of <X>;what is the spatial of <X>
+dbo:Place;;;what is the subject of <X>;what is the subject of <X>;what is the subject of <X>
+dbo:Place;;;what is the temporal of <X>;what is the temporal of <X>;what is the temporal of <X>
+dbo:Place;;;what is the type of <X>;what is the type of <X>;what is the type of <X>
+dbo:Place;;;what is the de facto language of <X>;what is the de facto language of <X>;what is the de facto language of <X>
+dbo:Place;;;what is the delivery date of <X>;select ?x where { <X> <34> ?x };select ?a where { ?a <34> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the demonym of <X>;select ?x where { <X> <685> ?x };select ?a where { ?a <685> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the density of <X>;select ?x where { <X> <123> ?x };select ?a where { ?a <123> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the depiction description of <X>;select ?x where { <X> <2710> ?x };select ?a where { ?a <2710> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the depth of <X>;select ?x where { <X> <649> ?x };select ?a where { ?a <649> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the depth quote of <X>;what is the depth quote of <X>;what is the depth quote of <X>
+dbo:Place;;;what is the depths of <X>;what is the depths of <X>;what is the depths of <X>
+dbo:Place;;;what is the deputy of <X>;select ?x where { <X> <2550> ?x };select ?a where { ?a <2550> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the description of <X>;select ?x where { <X> <13291> ?x };select ?a where { ?a <13291> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the designer company of <X>;select ?x where { <X> <1528> ?x };select ?a where { ?a <1528> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the designer of <X>;select ?x where { <X> <10597> ?x };select ?a where { ?a <10597> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the destruction date of <X>;select ?x where { <X> <42> ?x };select ?a where { ?a <42> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the developer of <X>;select ?x where { <X> <28834> ?x };select ?a where { ?a <28834> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the diameter of <X>;select ?x where { <X> <1325> ?x };select ?a where { ?a <1325> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the diocese of <X>;what is the diocese of <X>;what is the diocese of <X>
+dbo:Place;;;what is the discoverer of <X>;select ?x where { <X> <3756> ?x };select ?a where { ?a <3756> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the disease of <X>;what is the disease of <X>;what is the disease of <X>
+dbo:Place;;;what is the distance of <X>;select ?x where { <X> <2670> ?x };select ?a where { ?a <2670> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the distributor of <X>;select ?x where { <X> <68036> ?x };select ?a where { ?a <68036> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the district of <X>;select ?x where { <X> <47332> ?x };select ?a where { ?a <47332> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the division of <X>;select ?x where { <X> <68235> ?x };select ?a where { ?a <68235> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the string designation of the writtenwork describing the resource of <X>;what is the string designation of the writtenwork describing the resource of <X>;what is the string designation of the writtenwork describing the resource of <X>
+dbo:Place;;;what is the draft of <X>;select ?x where { <X> <10063> ?x };select ?a where { ?a <10063> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the draft year of <X>;select ?x where { <X> <24521> ?x };select ?a where { ?a <24521> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the drugbank of <X>;select ?x where { <X> <1637> ?x };select ?a where { ?a <1637> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the duration of <X>;select ?x where { <X> <57> ?x };select ?a where { ?a <57> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the dynasty of <X>;what is the dynasty of <X>;what is the dynasty of <X>
+dbo:Place;;;what is the east place of <X>;what is the east place of <X>;what is the east place of <X>
+dbo:Place;;;what is the editor of <X>;select ?x where { <X> <5557> ?x };select ?a where { ?a <5557> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the einecs number of <X>;what is the einecs number of <X>;what is the einecs number of <X>
+dbo:Place;;;what is the election majority of <X>;select ?x where { <X> <2055> ?x };select ?a where { ?a <2055> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the element above of <X>;what is the element above of <X>;what is the element above of <X>
+dbo:Place;;;what is the elevation of <X>;select ?x where { <X> <247824> ?x };select ?a where { ?a <247824> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the elevation quote of <X>;select ?x where { <X> <2> ?x };select ?a where { ?a <2> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the end occupation of <X>;what is the end occupation of <X>;what is the end occupation of <X>
+dbo:Place;;;what is the end point of <X>;select ?x where { <X> <217> ?x };select ?a where { ?a <217> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the end year of <X>;what is the end year of <X>;what is the end year of <X>
+dbo:Place;;;what is the endangered since of <X>;what is the endangered since of <X>;what is the endangered since of <X>
+dbo:Place;;;what is the engineer of <X>;select ?x where { <X> <152> ?x };select ?a where { ?a <152> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the era of <X>;select ?x where { <X> <1323> ?x };select ?a where { ?a <1323> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the ethnic groups in year of <X>;select ?x where { <X> <120> ?x };select ?a where { ?a <120> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the event of <X>;select ?x where { <X> <861> ?x };select ?a where { ?a <861> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the event date of <X>;what is the event date of <X>;what is the event date of <X>
+dbo:Place;;;what is the executive producer of <X>;select ?x where { <X> <12377> ?x };select ?a where { ?a <12377> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the exhibition of <X>;what is the exhibition of <X>;what is the exhibition of <X>
+dbo:Place;;;what is the existence of <X>;what is the existence of <X>;what is the existence of <X>
+dbo:Place;;;what is the extinction date of <X>;select ?x where { <X> <2183> ?x };select ?a where { ?a <2183> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the failed launches of <X>;select ?x where { <X> <200> ?x };select ?a where { ?a <200> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the fauna of <X>;what is the fauna of <X>;what is the fauna of <X>
+dbo:Place;;;what is the fda unii code of <X>;select ?x where { <X> <3925> ?x };select ?a where { ?a <3925> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the feast day of <X>;select ?x where { <X> <http://dbpedia.org/ontology/feastDay> ?x };select ?a where { ?a <http://dbpedia.org/ontology/feastDay> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the fighter of <X>;what is the fighter of <X>;what is the fighter of <X>
+dbo:Place;;;what is the filmpolski.pl id of <X>;what is the filmpolski.pl id of <X>;what is the filmpolski.pl id of <X>
+dbo:Place;;;what is the firstleader of <X>;select ?x where { <X> <3299> ?x };select ?a where { ?a <3299> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the first owner of <X>;what is the first owner of <X>;what is the first owner of <X>
+dbo:Place;;;what is the first place of <X>;what is the first place of <X>;what is the first place of <X>
+dbo:Place;;;what is the firstpopularvote of <X>;select ?x where { <X> <21> ?x };select ?a where { ?a <21> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the flag of <X>;select ?x where { <X> <411> ?x };select ?a where { ?a <411> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the flag border of <X>;what is the flag border of <X>;what is the flag border of <X>
+dbo:Place;;;what is the flag link of <X>;what is the flag link of <X>;what is the flag link of <X>
+dbo:Place;;;what is the flooding date of <X>;select ?x where { <X> <16> ?x };select ?a where { ?a <16> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the flora of <X>;what is the flora of <X>;what is the flora of <X>
+dbo:Place;;;what is the flower of <X>;what is the flower of <X>;what is the flower of <X>
+dbo:Place;;;what is the based near of <X>;what is the based near of <X>;what is the based near of <X>
+dbo:Place;;;what is the depiction from http://xmlns.com/foaf/spec/#term_depiction of <X>;what is the depiction from http://xmlns.com/foaf/spec/#term_depiction of <X>;what is the depiction from http://xmlns.com/foaf/spec/#term_depiction of <X>
+dbo:Place;;;what is the family name of <X>;what is the family name of <X>;what is the family name of <X>
+dbo:Place;;;what is the gender of <X>;what is the gender of <X>;what is the gender of <X>
+dbo:Place;;;what is the given name of <X>;what is the given name of <X>;what is the given name of <X>
+dbo:Place;;;what is the image of <X>;what is the image of <X>;what is the image of <X>
+dbo:Place;;;what is the a document that this thing is the primary topic of. of <X>;what is the a document that this thing is the primary topic of. of <X>;what is the a document that this thing is the primary topic of. of <X>
+dbo:Place;;;what is the logo of <X>;what is the logo of <X>;what is the logo of <X>
+dbo:Place;;;what is the email address of <X>;what is the email address (mbox) of <X>;what is the email address (mbox) of <X>
+dbo:Place;;;what is the name of <X>;what is the name of <X>;what is the name of <X>
+dbo:Place;;;what is the nickname of <X>;what is the nickname of <X>;what is the nickname of <X>
+dbo:Place;;;what is the a page or document about this thing. of <X>;what is the a page or document about this thing. of <X>;what is the a page or document about this thing. of <X>
+dbo:Place;;;what is the telephone number of <X>;what is the telephone (phone) number of <X>;what is the telephone (phone) number of <X>
+dbo:Place;;;what is the surname of <X>;what is the surname of <X>;what is the surname of <X>
+dbo:Place;;;what is the thumbnail of <X>;what is the thumbnail of <X>;what is the thumbnail of <X>
+dbo:Place;;;what is the a topic of some page or document. of <X>;what is the a topic of some page or document. of <X>;what is the a topic of some page or document. of <X>
+dbo:Place;;;what is the focus of <X>;what is the focus of <X>;what is the focus of <X>
+dbo:Place;;;what is the followed by of <X>;what is the followed by of <X>;what is the followed by of <X>
+dbo:Place;;;what is the follows of <X>;what is the follows of <X>;what is the follows of <X>
+dbo:Place;;;what is the forces of <X>;what is the forces of <X>;what is the forces of <X>
+dbo:Place;;;what is the foresterdistrict of <X>;what is the foresterdistrict of <X>;what is the foresterdistrict of <X>
+dbo:Place;;;what is the format of <X>;select ?x where { <X> <81482> ?x };select ?a where { ?a <81482> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the former name of <X>;select ?x where { <X> <16479> ?x };select ?a where { ?a <16479> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the founded by of <X>;select ?x where { <X> <12895> ?x };select ?a where { ?a <12895> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the founder of <X>;select ?x where { <X> <1574> ?x };select ?a where { ?a <1574> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the founding date of <X>;select ?x where { <X> <23926> ?x };select ?a where { ?a <23926> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the founding year of <X>;select ?x where { <X> <90919> ?x };select ?a where { ?a <90919> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the frequency of <X>;select ?x where { <X> <16350> ?x };select ?a where { ?a <16350> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the length of a frontier of <X>;what is the length of a frontier of <X>;what is the length of a frontier of <X>
+dbo:Place;;;what is the fuel of <X>;what is the fuel of <X>;what is the fuel of <X>
+dbo:Place;;;what is the fuel type of <X>;select ?x where { <X> <464> ?x };select ?a where { ?a <464> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the modus the game can be played in of <X>;what is the modus the game can be played in of <X>;what is the modus the game can be played in of <X>
+dbo:Place;;;what is the gender of <X>;select ?x where { <X> <4834> ?x };select ?a where { ?a <4834> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the genre of <X>;select ?x where { <X> <576001> ?x };select ?a where { ?a <576001> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the geolocdual of <X>;what is the geolocdual of <X>;what is the geolocdual of <X>
+dbo:Place;;;what is the geologic period of <X>;select ?x where { <X> <99> ?x };select ?a where { ?a <99> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the geology of <X>;select ?x where { <X> <406> ?x };select ?a where { ?a <406> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the governing body of <X>;select ?x where { <X> <6181> ?x };select ?a where { ?a <6181> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the government type of <X>;select ?x where { <X> <11767> ?x };select ?a where { ?a <11767> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the governor of <X>;select ?x where { <X> <4473> ?x };select ?a where { ?a <4473> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the governor general of <X>;select ?x where { <X> <239> ?x };select ?a where { ?a <239> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the name in ancient greek of <X>;what is the name in ancient greek of <X>;what is the name in ancient greek of <X>
+dbo:Place;;;what is the green long distance piste number of <X>;what is the green long distance piste number of <X>;what is the green long distance piste number of <X>
+dbo:Place;;;what is the green ski piste number of <X>;what is the green ski piste number of <X>;what is the green ski piste number of <X>
+dbo:Place;;;what is the grid reference of <X>;select ?x where { <X> <23925> ?x };select ?a where { ?a <23925> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the gross domestic product per people of <X>;what is the gross domestic product per people of <X>;what is the gross domestic product per people of <X>
+dbo:Place;;;what is the gross domestic product rank of <X>;what is the gross domestic product rank of <X>;what is the gross domestic product rank of <X>
+dbo:Place;;;what is the has channel of <X>;what is the has channel of <X>;what is the has channel of <X>
+dbo:Place;;;what is the has input of <X>;what is the has input of <X>;what is the has input of <X>
+dbo:Place;;;what is the has inside place of <X>;what is the has inside place of <X>;what is the has inside place of <X>
+dbo:Place;;;what is the has outside place of <X>;what is the has outside place of <X>;what is the has outside place of <X>
+dbo:Place;;;what is the undefined of <X>;what is the undefined of <X>;what is the undefined of <X>
+dbo:Place;;;what is the variant or variation of <X>;select ?x where { <X> <653> ?x };select ?a where { ?a <653> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the height of <X>;select ?x where { <X> <202143> ?x };select ?a where { ?a <202143> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the heritage register of <X>;what is the heritage register of <X>;what is the heritage register of <X>
+dbo:Place;;;what is the highest altitude of <X>;what is the highest altitude of <X>;what is the highest altitude of <X>
+dbo:Place;;;what is the highest mountain of <X>;select ?x where { <X> <79> ?x };select ?a where { ?a <79> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the highest place of <X>;select ?x where { <X> <250> ?x };select ?a where { ?a <250> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the highest position of <X>;select ?x where { <X> <374> ?x };select ?a where { ?a <374> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the highschool of <X>;select ?x where { <X> <6491> ?x };select ?a where { ?a <6491> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the historical map of <X>;what is the historical map of <X>;what is the historical map of <X>
+dbo:Place;;;what is the historical name of <X>;what is the historical name of <X>;what is the historical name of <X>
+dbo:Place;;;what is the home arena of <X>;select ?x where { <X> <1072> ?x };select ?a where { ?a <1072> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the colour hex code of home jersey or its parts of <X>;what is the colour hex code of home jersey or its parts of <X>;what is the colour hex code of home jersey or its parts of <X>
+dbo:Place;;;what is the home stadium of <X>;select ?x where { <X> <7403> ?x };select ?a where { ?a <7403> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the honours of <X>;select ?x where { <X> <1551> ?x };select ?a where { ?a <1551> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the human development index rank of <X>;what is the human development index rank of <X>;what is the human development index rank of <X>
+dbo:Place;;;what is the image size of <X>;select ?x where { <X> <1675> ?x };select ?a where { ?a <1675> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the imdb id of <X>;select ?x where { <X> <72380> ?x };select ?a where { ?a <72380> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the incumbent of <X>;select ?x where { <X> <96> ?x };select ?a where { ?a <96> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the individualised gnd number of <X>;select ?x where { <X> <229> ?x };select ?a where { ?a <229> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the influenced of <X>;select ?x where { <X> <10966> ?x };select ?a where { ?a <10966> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the influenced by of <X>;select ?x where { <X> <23422> ?x };select ?a where { ?a <23422> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the information of <X>;what is the information of <X>;what is the information of <X>
+dbo:Place;;;what is the information name of <X>;what is the information name of <X>;what is the information name of <X>
+dbo:Place;;;what is the inscription of <X>;what is the inscription of <X>;what is the inscription of <X>
+dbo:Place;;;what is the institution of <X>;select ?x where { <X> <2264> ?x };select ?a where { ?a <2264> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the intercommunality of <X>;select ?x where { <X> <7847> ?x };select ?a where { ?a <7847> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the introduced of <X>;select ?x where { <X> <15> ?x };select ?a where { ?a <15> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the is part of of <X>;select ?x where { <X> <912054> ?x };select ?a where { ?a <912054> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the is part of of <X>;select ?x where { <X> <1614> ?x };select ?a where { ?a <1614> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the is route stop of <X>;what is the is route stop of <X>;what is the is route stop of <X>
+dbo:Place;;;what is the isni id of <X>;select ?x where { <X> <50> ?x };select ?a where { ?a <50> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the iso 3166-1 code of <X>;what is the iso 3166-1 code of <X>;what is the iso 3166-1 code of <X>
+dbo:Place;;;what is the iso code of a place of <X>;what is the iso code of a place of <X>;what is the iso code of a place of <X>
+dbo:Place;;;what is the jure language of <X>;what is the jure language of <X>;what is the jure language of <X>
+dbo:Place;;;what is the jurisdiction of <X>;select ?x where { <X> <6457> ?x };select ?a where { ?a <6457> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the key person of <X>;select ?x where { <X> <32206> ?x };select ?a where { ?a <32206> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the kindoflanguage of <X>;what is the kindoflanguage of <X>;what is the kindoflanguage of <X>
+dbo:Place;;;what is the kind of coordinate of <X>;what is the kind of coordinate of <X>;what is the kind of coordinate of <X>
+dbo:Place;;;what is the kind of rock of <X>;what is the kind of rock of <X>;what is the kind of rock of <X>
+dbo:Place;;;what is the known for of <X>;select ?x where { <X> <46996> ?x };select ?a where { ?a <46996> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the vastest lake of <X>;select ?x where { <X> <2406> ?x };select ?a where { ?a <2406> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the land of <X>;what is the land of <X>;what is the land of <X>
+dbo:Place;;;what is the area of a land of <X>;what is the area of a land of <X>;what is the area of a land of <X>
+dbo:Place;;;what is the land percentage of a place of <X>;what is the land percentage of a place of <X>;what is the land percentage of a place of <X>
+dbo:Place;;;what is the language of <X>;select ?x where { <X> <108092> ?x };select ?a where { ?a <108092> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the language regulator or academy of <X>;select ?x where { <X> <233> ?x };select ?a where { ?a <233> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the name in latin of <X>;what is the name in latin of <X>;what is the name in latin of <X>
+dbo:Place;;;what is the law country of <X>;what is the law country of <X>;what is the law country of <X>
+dbo:Place;;;what is the lccn id of <X>;select ?x where { <X> <457> ?x };select ?a where { ?a <457> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the leader of <X>;select ?x where { <X> <8870> ?x };select ?a where { ?a <8870> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the league of <X>;select ?x where { <X> <45411> ?x };select ?a where { ?a <45411> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the length of <X>;select ?x where { <X> <75987> ?x };select ?a where { ?a <75987> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the length quote of <X>;select ?x where { <X> <1> ?x };select ?a where { ?a <1> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the licensee of <X>;select ?x where { <X> <9403> ?x };select ?a where { ?a <9403> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the lieutenant of <X>;select ?x where { <X> <1859> ?x };select ?a where { ?a <1859> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the limit of <X>;what is the limit of <X>;what is the limit of <X>
+dbo:Place;;;what is the linked space of <X>;what is the linked space of <X>;what is the linked space of <X>
+dbo:Place;;;what is the list item of <X>;what is the list item of <X>;what is the list item of <X>
+dbo:Place;;;what is the local authority of <X>;select ?x where { <X> <2396> ?x };select ?a where { ?a <2396> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the located in area of <X>;select ?x where { <X> <48899> ?x };select ?a where { ?a <48899> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the location of <X>;select ?x where { <X> <413893> ?x };select ?a where { ?a <413893> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the państwo of <X>;select ?x where { <X> <21851> ?x };select ?a where { ?a <21851> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the locationname of <X>;what is the locationname of <X>;what is the locationname of <X>
+dbo:Place;;;what is the logo of <X>;select ?x where { <X> <1317> ?x };select ?a where { ?a <1317> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the long distance piste kilometre of <X>;what is the long distance piste kilometre of <X>;what is the long distance piste kilometre of <X>
+dbo:Place;;;what is the long distance piste number of <X>;what is the long distance piste number of <X>;what is the long distance piste number of <X>
+dbo:Place;;;what is the longname of <X>;select ?x where { <X> <476> ?x };select ?a where { ?a <476> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the lowest of <X>;select ?x where { <X> <358> ?x };select ?a where { ?a <358> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the lowest altitude of <X>;what is the lowest altitude of <X>;what is the lowest altitude of <X>
+dbo:Place;;;what is the lowest mountain of <X>;select ?x where { <X> <133> ?x };select ?a where { ?a <133> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the lowest place of <X>;select ?x where { <X> <166> ?x };select ?a where { ?a <166> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the lowest position of <X>;select ?x where { <X> <101> ?x };select ?a where { ?a <101> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the main interest of <X>;select ?x where { <X> <4301> ?x };select ?a where { ?a <4301> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the main island of <X>;what is the main island of <X>;what is the main island of <X>
+dbo:Place;;;what is the majority floor leader of <X>;what is the majority floor leader of <X>;what is the majority floor leader of <X>
+dbo:Place;;;what is the majority leader of <X>;what is the majority leader of <X>;what is the majority leader of <X>
+dbo:Place;;;what is the management of <X>;select ?x where { <X> <597> ?x };select ?a where { ?a <597> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the management elevation of <X>;select ?x where { <X> <17> ?x };select ?a where { ?a <17> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the management mountain of <X>;select ?x where { <X> <46> ?x };select ?a where { ?a <46> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the management place of <X>;select ?x where { <X> <46> ?x };select ?a where { ?a <46> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the management position of <X>;select ?x where { <X> <34> ?x };select ?a where { ?a <34> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the manager years end year of <X>;what is the manager years end year of <X>;what is the manager years end year of <X>
+dbo:Place;;;what is the manager years start year of <X>;what is the manager years start year of <X>;what is the manager years start year of <X>
+dbo:Place;;;what is the political mandate of <X>;what is the political mandate of <X>;what is the political mandate of <X>
+dbo:Place;;;what is the manufactory of <X>;what is the manufactory of <X>;what is the manufactory of <X>
+dbo:Place;;;what is the manufacturer of <X>;select ?x where { <X> <35962> ?x };select ?a where { ?a <35962> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the map of <X>;select ?x where { <X> <177> ?x };select ?a where { ?a <177> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the map caption of <X>;select ?x where { <X> <41> ?x };select ?a where { ?a <41> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the map description of <X>;what is the map description of <X>;what is the map description of <X>
+dbo:Place;;;what is the mascot of <X>;select ?x where { <X> <14752> ?x };select ?a where { ?a <14752> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the mass of <X>;select ?x where { <X> <409> ?x };select ?a where { ?a <409> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the material of <X>;select ?x where { <X> <576> ?x };select ?a where { ?a <576> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the max of <X>;what is the max of <X>;what is the max of <X>
+dbo:Place;;;what is the maximum area of <X>;what is the maximum area of <X>;what is the maximum area of <X>
+dbo:Place;;;what is the maximum area quote of <X>;what is the maximum area quote of <X>;what is the maximum area quote of <X>
+dbo:Place;;;what is the maximum depth of <X>;select ?x where { <X> <4069> ?x };select ?a where { ?a <4069> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the maximum depth quote of <X>;select ?x where { <X> <1> ?x };select ?a where { ?a <1> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the maximum discharge of <X>;select ?x where { <X> <995> ?x };select ?a where { ?a <995> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the maximum elevation of <X>;select ?x where { <X> <38564> ?x };select ?a where { ?a <38564> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the mayor of <X>;select ?x where { <X> <943> ?x };select ?a where { ?a <943> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the mayor article of <X>;what is the mayor article of <X>;what is the mayor article of <X>
+dbo:Place;;;what is the mayor councillor of <X>;what is the mayor councillor of <X>;what is the mayor councillor of <X>
+dbo:Place;;;what is the mba id of <X>;select ?x where { <X> <19> ?x };select ?a where { ?a <19> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the meaning of <X>;select ?x where { <X> <3479> ?x };select ?a where { ?a <3479> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the media item of <X>;what is the media item of <X>;what is the media item of <X>
+dbo:Place;;;what is the medlineplus of <X>;what is the medlineplus of <X>;what is the medlineplus of <X>
+dbo:Place;;;what is the melting point of <X>;what is the melting point of <X>;what is the melting point of <X>
+dbo:Place;;;what is the member of parliament of <X>;what is the member of parliament of <X>;what is the member of parliament of <X>
+dbo:Place;;;what is the merger date of <X>;what is the merger date of <X>;what is the merger date of <X>
+dbo:Place;;;what is the military government of <X>;what is the military government of <X>;what is the military government of <X>
+dbo:Place;;;what is the military unit size of <X>;select ?x where { <X> <7887> ?x };select ?a where { ?a <7887> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the min of <X>;what is the min of <X>;what is the min of <X>
+dbo:Place;;;what is the minimum area of <X>;what is the minimum area of <X>;what is the minimum area of <X>
+dbo:Place;;;what is the minimum area quote of <X>;what is the minimum area quote of <X>;what is the minimum area quote of <X>
+dbo:Place;;;what is the minimum discharge of <X>;select ?x where { <X> <934> ?x };select ?a where { ?a <934> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the minimum elevation of <X>;select ?x where { <X> <37766> ?x };select ?a where { ?a <37766> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the minister of <X>;what is the minister of <X>;what is the minister of <X>
+dbo:Place;;;what is the minority floor leader of <X>;what is the minority floor leader of <X>;what is the minority floor leader of <X>
+dbo:Place;;;what is the minority leader of <X>;what is the minority leader of <X>;what is the minority leader of <X>
+dbo:Place;;;what is the mission of <X>;select ?x where { <X> <1501> ?x };select ?a where { ?a <1501> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the monarch of <X>;select ?x where { <X> <6433> ?x };select ?a where { ?a <6433> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the month of <X>;select ?x where { <X> <88> ?x };select ?a where { ?a <88> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the motto of <X>;select ?x where { <X> <42633> ?x };select ?a where { ?a <42633> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the mouth elevation of <X>;select ?x where { <X> <7664> ?x };select ?a where { ?a <7664> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the municipality of <X>;select ?x where { <X> <3233> ?x };select ?a where { ?a <3233> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the municipality code of <X>;select ?x where { <X> <2767> ?x };select ?a where { ?a <2767> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the name of <X>;select ?x where { <X> <1228> ?x };select ?a where { ?a <1228> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the so named since of <X>;what is the so named since of <X>;what is the so named since of <X>
+dbo:Place;;;what is the name in yue chinese of <X>;what is the name in yue chinese of <X>;what is the name in yue chinese of <X>
+dbo:Place;;;what is the name in hangul-written korean of <X>;what is the name in hangul-written korean of <X>;what is the name in hangul-written korean of <X>
+dbo:Place;;;what is the name in hanja-written korean of <X>;what is the name in hanja-written (traditional) korean of <X>;what is the name in hanja-written (traditional) korean of <X>
+dbo:Place;;;what is the name in japanese of <X>;what is the name in japanese of <X>;what is the name in japanese of <X>
+dbo:Place;;;what is the name in mindongyu chinese of <X>;what is the name in mindongyu chinese of <X>;what is the name in mindongyu chinese of <X>
+dbo:Place;;;what is the name in minnanyu chinese of <X>;what is the name in minnanyu chinese of <X>;what is the name in minnanyu chinese of <X>
+dbo:Place;;;what is the name in pinyin chinese of <X>;what is the name in pinyin chinese of <X>;what is the name in pinyin chinese of <X>
+dbo:Place;;;what is the name in simplified chinese of <X>;what is the name in simplified chinese of <X>;what is the name in simplified chinese of <X>
+dbo:Place;;;what is the name in traditional chinese of <X>;what is the name in traditional chinese of <X>;what is the name in traditional chinese of <X>
+dbo:Place;;;what is the name in the wade-giles transscription of chinese of <X>;what is the name in the wade-giles transscription of chinese of <X>;what is the name in the wade-giles transscription of chinese of <X>
+dbo:Place;;;what is the named after of <X>;select ?x where { <X> <40> ?x };select ?a where { ?a <40> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the named by language of <X>;what is the named by language of <X>;what is the named by language of <X>
+dbo:Place;;;what is the national topographic system map number of <X>;select ?x where { <X> <5419> ?x };select ?a where { ?a <5419> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the ndl id of <X>;select ?x where { <X> <23> ?x };select ?a where { ?a <23> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the nearest city of <X>;select ?x where { <X> <18582> ?x };select ?a where { ?a <18582> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the neighbour region of <X>;what is the neighbour region of <X>;what is the neighbour region of <X>
+dbo:Place;;;what is the newspaper of <X>;what is the newspaper of <X>;what is the newspaper of <X>
+dbo:Place;;;what is the next entity of <X>;what is the next entity of <X>;what is the next entity of <X>
+dbo:Place;;;what is the nla id of <X>;select ?x where { <X> <27> ?x };select ?a where { ?a <27> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the nominee of <X>;select ?x where { <X> <31> ?x };select ?a where { ?a <31> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the north-east place of <X>;what is the north-east place of <X>;what is the north-east place of <X>
+dbo:Place;;;what is the north place of <X>;what is the north place of <X>;what is the north place of <X>
+dbo:Place;;;what is the north-west place of <X>;what is the north-west place of <X>;what is the north-west place of <X>
+dbo:Place;;;what is the notable work of <X>;select ?x where { <X> <6833> ?x };select ?a where { ?a <6833> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the notes of <X>;select ?x where { <X> <756> ?x };select ?a where { ?a <756> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the numberofclasses of <X>;what is the numberofclasses of <X>;what is the numberofclasses of <X>
+dbo:Place;;;what is the numberofclasseswithresource of <X>;what is the numberofclasseswithresource of <X>;what is the numberofclasseswithresource of <X>
+dbo:Place;;;what is the numberofdisambiguates of <X>;what is the numberofdisambiguates of <X>;what is the numberofdisambiguates of <X>
+dbo:Place;;;what is the number of all indegrees in dbpedia ourdegrees are counting of <X>;what is the number of all indegrees in dbpedia (same ourdegrees are counting repeatedly) of <X>;what is the number of all indegrees in dbpedia (same ourdegrees are counting repeatedly) of <X>
+dbo:Place;;;what is the number of islands of <X>;what is the number of islands of <X>;what is the number of islands of <X>
+dbo:Place;;;what is the numberofoutdegree of <X>;what is the numberofoutdegree of <X>;what is the numberofoutdegree of <X>
+dbo:Place;;;what is the number of entities of person class born in the place of <X>;what is the number of entities of person class born in the place of <X>;what is the number of entities of person class born in the place of <X>
+dbo:Place;;;what is the number of pixels of <X>;what is the number of pixels (millions) of <X>;what is the number of pixels (millions) of <X>
+dbo:Place;;;what is the numberofpredicates of <X>;what is the numberofpredicates of <X>;what is the numberofpredicates of <X>
+dbo:Place;;;what is the numberofproperties of <X>;what is the numberofproperties of <X>;what is the numberofproperties of <X>
+dbo:Place;;;what is the numberofpropertiesused of <X>;what is the numberofpropertiesused of <X>;what is the numberofpropertiesused of <X>
+dbo:Place;;;what is the numberofredirectedresource of <X>;what is the numberofredirectedresource of <X>;what is the numberofredirectedresource of <X>
+dbo:Place;;;what is the numberofresource of <X>;what is the numberofresource of <X>;what is the numberofresource of <X>
+dbo:Place;;;what is the number of all resource / entities of a class of <X>;what is the number of all resource / entities of a class of <X>;what is the number of all resource / entities of a class of <X>
+dbo:Place;;;what is the number of resource / entities for concrete type of subject of <X>;what is the number of resource / entities for concrete type of subject of <X>;what is the number of resource / entities for concrete type of subject of <X>
+dbo:Place;;;what is the nmberofresourcewithtype of <X>;what is the nmberofresourcewithtype of <X>;what is the nmberofresourcewithtype of <X>
+dbo:Place;;;what is the number of soccerplayers born in place of <X>;what is the number of soccerplayers born in place of <X>;what is the number of soccerplayers born in place of <X>
+dbo:Place;;;what is the number of sports of <X>;select ?x where { <X> <723> ?x };select ?a where { ?a <723> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the number of sports events of <X>;what is the number of sports events of <X>;what is the number of sports events of <X>
+dbo:Place;;;what is the numberoftriples of <X>;what is the numberoftriples of <X>;what is the numberoftriples of <X>
+dbo:Place;;;what is the numberofuniqeresources of <X>;what is the numberofuniqeresources of <X>;what is the numberofuniqeresources of <X>
+dbo:Place;;;what is the number of use of a property of <X>;what is the number of use of a property of <X>;what is the number of use of a property of <X>
+dbo:Place;;;what is the number of visitors of <X>;select ?x where { <X> <1532> ?x };select ?a where { ?a <1532> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the nuts code of <X>;select ?x where { <X> <20> ?x };select ?a where { ?a <20> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the occupation of <X>;select ?x where { <X> <335407> ?x };select ?a where { ?a <335407> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the odor of <X>;what is the odor of <X>;what is the odor of <X>
+dbo:Place;;;what is the office of <X>;select ?x where { <X> <177682> ?x };select ?a where { ?a <177682> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the opening date of <X>;select ?x where { <X> <20352> ?x };select ?a where { ?a <20352> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the opening year of <X>;select ?x where { <X> <43756> ?x };select ?a where { ?a <43756> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the operator of <X>;select ?x where { <X> <20061> ?x };select ?a where { ?a <20061> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the orbits of <X>;select ?x where { <X> <6> ?x };select ?a where { ?a <6> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the orcid id of <X>;select ?x where { <X> <1> ?x };select ?a where { ?a <1> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the order in office of <X>;select ?x where { <X> <46824> ?x };select ?a where { ?a <46824> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the organisation of <X>;select ?x where { <X> <393> ?x };select ?a where { ?a <393> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the origin of <X>;select ?x where { <X> <11211> ?x };select ?a where { ?a <11211> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the original name of <X>;what is the original name of <X>;what is the original name of <X>
+dbo:Place;;;what is the originally used for of <X>;select ?x where { <X> <38> ?x };select ?a where { ?a <38> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the orogeny of <X>;select ?x where { <X> <13> ?x };select ?a where { ?a <13> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the output of <X>;what is the output of <X>;what is the output of <X>
+dbo:Place;;;what is the an owl:differentfrom statement indicates that two uri references refer to different individuals of <X>;what is the an owl:differentfrom statement indicates that two uri references refer to different individuals of <X>;what is the an owl:differentfrom statement indicates that two uri references refer to different individuals of <X>
+dbo:Place;;;what is the same as of <X>;what is the same as of <X>;what is the same as of <X>
+dbo:Place;;;what is the owner of <X>;select ?x where { <X> <60352> ?x };select ?a where { ?a <60352> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the owning company of <X>;select ?x where { <X> <13345> ?x };select ?a where { ?a <13345> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the owning organisation of <X>;select ?x where { <X> <13186> ?x };select ?a where { ?a <13186> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the parent company of <X>;select ?x where { <X> <12213> ?x };select ?a where { ?a <12213> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the parliament of <X>;what is the parliament of <X>;what is the parliament of <X>
+dbo:Place;;;what is the parliament type of <X>;what is the parliament type of <X>;what is the parliament type of <X>
+dbo:Place;;;what is the part of <X>;select ?x where { <X> <16892> ?x };select ?a where { ?a <16892> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the partial failed launches of <X>;select ?x where { <X> <76> ?x };select ?a where { ?a <76> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the party of <X>;select ?x where { <X> <88099> ?x };select ?a where { ?a <88099> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the party number of <X>;what is the party number of <X>;what is the party number of <X>
+dbo:Place;;;what is the past member of <X>;select ?x where { <X> <46> ?x };select ?a where { ?a <46> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the patron saint of <X>;what is the patron saint of <X>;what is the patron saint of <X>
+dbo:Place;;;what is the pcc secretary of <X>;what is the pcc secretary of <X>;what is the pcc secretary of <X>
+dbo:Place;;;what is the percentage of <X>;what is the percentage of <X>;what is the percentage of <X>
+dbo:Place;;;what is the percentage of area water of <X>;select ?x where { <X> <10169> ?x };select ?a where { ?a <10169> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the perimeter of <X>;what is the perimeter of <X>;what is the perimeter of <X>
+dbo:Place;;;what is the event period of <X>;what is the event period of <X>;what is the event period of <X>
+dbo:Place;;;what is the picture of <X>;select ?x where { <X> <3669> ?x };select ?a where { ?a <3669> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the picture description of <X>;what is the picture description of <X>;what is the picture description of <X>
+dbo:Place;;;what is the pictures commons category of <X>;what is the pictures commons category of <X>;what is the pictures commons category of <X>
+dbo:Place;;;what is the piscicultural population of <X>;what is the piscicultural population of <X>;what is the piscicultural population of <X>
+dbo:Place;;;what is the plant of <X>;select ?x where { <X> <228> ?x };select ?a where { ?a <228> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the play role of <X>;what is the play role of <X>;what is the play role of <X>
+dbo:Place;;;what is the playing time of <X>;what is the playing time of <X>;what is the playing time of <X>
+dbo:Place;;;what is the pole of <X>;what is the pole of <X>;what is the pole of <X>
+dbo:Place;;;what is the political leader of <X>;what is the political leader of <X>;what is the political leader of <X>
+dbo:Place;;;what is the population quote of <X>;what is the population quote of <X>;what is the population quote of <X>
+dbo:Place;;;what is the population total of <X>;select ?x where { <X> <327277> ?x };select ?a where { ?a <327277> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the portfolio of <X>;select ?x where { <X> <343> ?x };select ?a where { ?a <343> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the position of <X>;select ?x where { <X> <240407> ?x };select ?a where { ?a <240407> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the postal code of <X>;select ?x where { <X> <188395> ?x };select ?a where { ?a <188395> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the predecessor of <X>;select ?x where { <X> <89375> ?x };select ?a where { ?a <89375> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the prefix of <X>;what is the prefix of <X>;what is the prefix of <X>
+dbo:Place;;;what is the president of <X>;select ?x where { <X> <16042> ?x };select ?a where { ?a <16042> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the mandate of the president of the general council of <X>;what is the mandate of the president of the general council of <X>;what is the mandate of the president of the general council of <X>
+dbo:Place;;;what is the mandate of the president council of the regional council of <X>;what is the mandate of the president council of the regional council of <X>;what is the mandate of the president council of the regional council of <X>
+dbo:Place;;;what is the previous entity of <X>;what is the previous entity of <X>;what is the previous entity of <X>
+dbo:Place;;;what is the price of <X>;what is the price of <X>;what is the price of <X>
+dbo:Place;;;what is the prime minister of <X>;select ?x where { <X> <14012> ?x };select ?a where { ?a <14012> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the produces of <X>;what is the produces of <X>;what is the produces of <X>
+dbo:Place;;;what is the production end date of <X>;select ?x where { <X> <15> ?x };select ?a where { ?a <15> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the production end year of <X>;select ?x where { <X> <8072> ?x };select ?a where { ?a <8072> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the production start date of <X>;select ?x where { <X> <40> ?x };select ?a where { ?a <40> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the production start year of <X>;select ?x where { <X> <10087> ?x };select ?a where { ?a <10087> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the prominence of <X>;select ?x where { <X> <7499> ?x };select ?a where { ?a <7499> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the pronunciation of <X>;what is the pronunciation of <X>;what is the pronunciation of <X>
+dbo:Place;;;what is the monument protection status of <X>;what is the monument protection status of <X>;what is the monument protection status of <X>
+dbo:Place;;;what is the provides of <X>;what is the provides of <X>;what is the provides of <X>
+dbo:Place;;;what is the province of <X>;select ?x where { <X> <11254> ?x };select ?a where { ?a <11254> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the province link of <X>;what is the province link of <X>;what is the province link of <X>
+dbo:Place;;;what is the publication date of <X>;select ?x where { <X> <3603> ?x };select ?a where { ?a <3603> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the publicly accessible of <X>;select ?x where { <X> <478> ?x };select ?a where { ?a <478> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the purpose of <X>;select ?x where { <X> <6176> ?x };select ?a where { ?a <6176> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the quotation of <X>;what is the quotation of <X>;what is the quotation of <X>
+dbo:Place;;;what is the quote of <X>;select ?x where { <X> <635> ?x };select ?a where { ?a <635> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the race of <X>;select ?x where { <X> <31133> ?x };select ?a where { ?a <31133> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the race horse of <X>;select ?x where { <X> <3964> ?x };select ?a where { ?a <3964> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the rank of <X>;what is the rank of <X>;what is the rank of <X>
+dbo:Place;;;what is the rank of an agreement of <X>;what is the rank of an agreement of <X>;what is the rank of an agreement of <X>
+dbo:Place;;;what is the rating of <X>;select ?x where { <X> <224> ?x };select ?a where { ?a <224> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the undefined of <X>;what is the undefined of <X>;what is the undefined of <X>
+dbo:Place;;;what is the undefined of <X>;what is the undefined of <X>;what is the undefined of <X>
+dbo:Place;;;what is the undefined of <X>;what is the undefined of <X>;what is the undefined of <X>
+dbo:Place;;;what is the is used to indicate a resource that might provide additional information about the subject resource of <X>;what is the is used to indicate a resource that might provide additional information about the subject resource of <X>;what is the is used to indicate a resource that might provide additional information about the subject resource of <X>
+dbo:Place;;;what is the subclass of of <X>;what is the subclass of of <X>;what is the subclass of of <X>
+dbo:Place;;;what is the rebuild date of <X>;select ?x where { <X> <2> ?x };select ?a where { ?a <2> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the record label of <X>;select ?x where { <X> <282756> ?x };select ?a where { ?a <282756> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the red long distance piste number of <X>;what is the red long distance piste number of <X>;what is the red long distance piste number of <X>
+dbo:Place;;;what is the red ski piste number of <X>;what is the red ski piste number of <X>;what is the red ski piste number of <X>
+dbo:Place;;;what is the reference for cultural data of <X>;what is the reference for cultural data of <X>;what is the reference for cultural data of <X>
+dbo:Place;;;what is the reference for general data of <X>;what is the reference for general data of <X>;what is the reference for general data of <X>
+dbo:Place;;;what is the reference for geographic data of <X>;what is the reference for geographic data of <X>;what is the reference for geographic data of <X>
+dbo:Place;;;what is the reference for politic data of <X>;what is the reference for politic data of <X>;what is the reference for politic data of <X>
+dbo:Place;;;what is the regency of <X>;what is the regency of <X>;what is the regency of <X>
+dbo:Place;;;what is the region of <X>;select ?x where { <X> <76716> ?x };select ?a where { ?a <76716> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the region link of <X>;what is the region link of <X>;what is the region link of <X>
+dbo:Place;;;what is the region type of <X>;what is the region type of <X>;what is the region type of <X>
+dbo:Place;;;what is the regional prefecture of <X>;what is the regional prefecture of <X>;what is the regional prefecture of <X>
+dbo:Place;;;what is the registry of <X>;what is the registry of <X>;what is the registry of <X>
+dbo:Place;;;what is the related of <X>;select ?x where { <X> <17148> ?x };select ?a where { ?a <17148> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the related places of <X>;what is the related places of <X>;what is the related places of <X>
+dbo:Place;;;what is the release date of <X>;select ?x where { <X> <212290> ?x };select ?a where { ?a <212290> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the relief of <X>;what is the relief of <X>;what is the relief of <X>
+dbo:Place;;;what is the religion of <X>;select ?x where { <X> <50735> ?x };select ?a where { ?a <50735> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the religious head of <X>;select ?x where { <X> <22> ?x };select ?a where { ?a <22> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the reopened of <X>;what is the reopened of <X>;what is the reopened of <X>
+dbo:Place;;;what is the number of representatives of <X>;what is the number of representatives of <X>;what is the number of representatives of <X>
+dbo:Place;;;what is the requirement of <X>;what is the requirement of <X>;what is the requirement of <X>
+dbo:Place;;;what is the restore date of <X>;select ?x where { <X> <14> ?x };select ?a where { ?a <14> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the restriction of <X>;what is the restriction of <X>;what is the restriction of <X>
+dbo:Place;;;what is the relation time of <X>;what is the relation time of <X>;what is the relation time of <X>
+dbo:Place;;;what is the retired of <X>;select ?x where { <X> <182> ?x };select ?a where { ?a <182> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the rid id of <X>;what is the rid id of <X>;what is the rid id of <X>
+dbo:Place;;;what is the river of <X>;select ?x where { <X> <2650> ?x };select ?a where { ?a <2650> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the rkdartists id of <X>;select ?x where { <X> <1> ?x };select ?a where { ?a <1> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the role of <X>;select ?x where { <X> <9160> ?x };select ?a where { ?a <9160> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the route of <X>;what is the route of <X>;what is the route of <X>
+dbo:Place;;;what is the royal anthem of <X>;select ?x where { <X> <16> ?x };select ?a where { ?a <16> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the running mate of <X>;select ?x where { <X> <17> ?x };select ?a where { ?a <17> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the sales of <X>;select ?x where { <X> <1983> ?x };select ?a where { ?a <1983> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the scale of <X>;what is the scale of <X>;what is the scale of <X>
+dbo:Place;;;what is the score of <X>;what is the score of <X>;what is the score of <X>
+dbo:Place;;;what is the sea of <X>;what is the sea of <X>;what is the sea of <X>
+dbo:Place;;;what is the secondleader of <X>;select ?x where { <X> <3056> ?x };select ?a where { ?a <3056> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the second place of <X>;what is the second place of <X>;what is the second place of <X>
+dbo:Place;;;what is the secondpopularvote of <X>;select ?x where { <X> <31> ?x };select ?a where { ?a <31> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the selibr id of <X>;select ?x where { <X> <5> ?x };select ?a where { ?a <5> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the senator of <X>;what is the senator of <X>;what is the senator of <X>
+dbo:Place;;;what is the seniority of <X>;select ?x where { <X> <729> ?x };select ?a where { ?a <729> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the series of <X>;select ?x where { <X> <27450> ?x };select ?a where { ?a <27450> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the session number of <X>;what is the session number of <X>;what is the session number of <X>
+dbo:Place;;;what is the settlement of <X>;what is the settlement of <X>;what is the settlement of <X>
+dbo:Place;;;what is the setup time of <X>;what is the setup time of <X>;what is the setup time of <X>
+dbo:Place;;;what is the show of <X>;select ?x where { <X> <2> ?x };select ?a where { ?a <2> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the similar of <X>;select ?x where { <X> <971> ?x };select ?a where { ?a <971> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the siren number of <X>;what is the siren number of <X>;what is the siren number of <X>
+dbo:Place;;;what is the size blazon of <X>;what is the size blazon of <X>;what is the size blazon of <X>
+dbo:Place;;;what is the size logo of <X>;what is the size logo of <X>;what is the size logo of <X>
+dbo:Place;;;what is the size map of <X>;what is the size map of <X>;what is the size map of <X>
+dbo:Place;;;what is the size thumbnail of <X>;what is the size thumbnail of <X>;what is the size thumbnail of <X>
+dbo:Place;;;what is the ski lift of <X>;what is the ski lift of <X>;what is the ski lift of <X>
+dbo:Place;;;what is the ski piste kilometre of <X>;what is the ski piste kilometre of <X>;what is the ski piste kilometre of <X>
+dbo:Place;;;what is the ski piste number of <X>;what is the ski piste number of <X>;what is the ski piste number of <X>
+dbo:Place;;;what is the ski tow of <X>;what is the ski tow of <X>;what is the ski tow of <X>
+dbo:Place;;;what is the skills of <X>;what is the skills of <X>;what is the skills of <X>
+dbo:Place;;;what is the broader of <X>;what is the broader of <X>;what is the broader of <X>
+dbo:Place;;;what is the preflabel of <X>;what is the preflabel of <X>;what is the preflabel of <X>
+dbo:Place;;;what is the related of <X>;what is the related of <X>;what is the related of <X>
+dbo:Place;;;what is the slogan of <X>;select ?x where { <X> <18098> ?x };select ?a where { ?a <18098> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the snow park number of <X>;what is the snow park number of <X>;what is the snow park number of <X>
+dbo:Place;;;what is the sound recording of <X>;select ?x where { <X> <10943> ?x };select ?a where { ?a <10943> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the source of <X>;select ?x where { <X> <2960> ?x };select ?a where { ?a <2960> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the source confluence elevation of <X>;select ?x where { <X> <208> ?x };select ?a where { ?a <208> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the source district of <X>;what is the source district of <X>;what is the source district of <X>
+dbo:Place;;;what is the source elevation of <X>;select ?x where { <X> <4541> ?x };select ?a where { ?a <4541> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the source mountain of <X>;select ?x where { <X> <6147> ?x };select ?a where { ?a <6147> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the source place of <X>;select ?x where { <X> <6147> ?x };select ?a where { ?a <6147> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the source position of <X>;select ?x where { <X> <4649> ?x };select ?a where { ?a <4649> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the source region of <X>;select ?x where { <X> <1252> ?x };select ?a where { ?a <1252> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the source state of <X>;what is the source state of <X>;what is the source state of <X>
+dbo:Place;;;what is the sourcetext of <X>;what is the sourcetext of <X>;what is the sourcetext of <X>
+dbo:Place;;;what is the south-east place of <X>;what is the south-east place of <X>;what is the south-east place of <X>
+dbo:Place;;;what is the south place of <X>;what is the south place of <X>;what is the south place of <X>
+dbo:Place;;;what is the south-west place of <X>;what is the south-west place of <X>;what is the south-west place of <X>
+dbo:Place;;;what is the sovereign country of <X>;what is the sovereign country of <X>;what is the sovereign country of <X>
+dbo:Place;;;what is the speaker of <X>;select ?x where { <X> <46> ?x };select ?a where { ?a <46> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the specialist of <X>;select ?x where { <X> <721> ?x };select ?a where { ?a <721> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the specialization of <X>;what is the specialization of <X>;what is the specialization of <X>
+dbo:Place;;;what is the sport of <X>;select ?x where { <X> <5873> ?x };select ?a where { ?a <5873> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the sport governing body of <X>;select ?x where { <X> <173> ?x };select ?a where { ?a <173> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the stadium of <X>;select ?x where { <X> <2503> ?x };select ?a where { ?a <2503> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the start occupation of <X>;what is the start occupation of <X>;what is the start occupation of <X>
+dbo:Place;;;what is the start point of <X>;select ?x where { <X> <221> ?x };select ?a where { ?a <221> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the start year of <X>;what is the start year of <X>;what is the start year of <X>
+dbo:Place;;;what is the stat name of <X>;what is the stat name of <X>;what is the stat name of <X>
+dbo:Place;;;what is the stat value of <X>;what is the stat value of <X>;what is the stat value of <X>
+dbo:Place;;;what is the state of <X>;select ?x where { <X> <43597> ?x };select ?a where { ?a <43597> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the state delegate of <X>;what is the state delegate of <X>;what is the state delegate of <X>
+dbo:Place;;;what is the status of <X>;select ?x where { <X> <47976> ?x };select ?a where { ?a <47976> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the status year of <X>;what is the status year of <X>;what is the status year of <X>
+dbo:Place;;;what is the subprefecture of <X>;what is the subprefecture of <X>;what is the subprefecture of <X>
+dbo:Place;;;what is the subdivision of <X>;what is the subdivision of <X>;what is the subdivision of <X>
+dbo:Place;;;what is the subdivision link of <X>;what is the subdivision link of <X>;what is the subdivision link of <X>
+dbo:Place;;;what is the subdivisions of <X>;select ?x where { <X> <5> ?x };select ?a where { ?a <5> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the sublimation point of <X>;what is the sublimation point of <X>;what is the sublimation point of <X>
+dbo:Place;;;what is the subregion of <X>;select ?x where { <X> <438> ?x };select ?a where { ?a <438> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the subsystem of <X>;what is the subsystem of <X>;what is the subsystem of <X>
+dbo:Place;;;what is the subsystem link of <X>;what is the subsystem link of <X>;what is the subsystem link of <X>
+dbo:Place;;;what is the subtitle of <X>;select ?x where { <X> <248> ?x };select ?a where { ?a <248> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the successful launches of <X>;select ?x where { <X> <267> ?x };select ?a where { ?a <267> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the successor of <X>;select ?x where { <X> <114130> ?x };select ?a where { ?a <114130> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the sudoc id of <X>;select ?x where { <X> <58> ?x };select ?a where { ?a <58> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the supply of <X>;what is the supply of <X>;what is the supply of <X>
+dbo:Place;;;what is the position in which a surface occurs in a text of <X>;what is the position in which a surface occurs in a text of <X>;what is the position in which a surface occurs in a text of <X>
+dbo:Place;;;what is the type of surface of <X>;what is the type of surface of <X>;what is the type of surface of <X>
+dbo:Place;;;what is the synonym of <X>;select ?x where { <X> <253511> ?x };select ?a where { ?a <253511> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the minimum system requirements of <X>;what is the minimum system requirements of <X>;what is the minimum system requirements of <X>
+dbo:Place;;;what is the tag of <X>;what is the tag of <X>;what is the tag of <X>
+dbo:Place;;;what is the taoiseach of <X>;select ?x where { <X> <160> ?x };select ?a where { ?a <160> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the team of <X>;select ?x where { <X> <2007122> ?x };select ?a where { ?a <2007122> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the team size of <X>;select ?x where { <X> <93> ?x };select ?a where { ?a <93> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the television series of <X>;select ?x where { <X> <2291> ?x };select ?a where { ?a <2291> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the temperature of <X>;select ?x where { <X> <405> ?x };select ?a where { ?a <405> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the type of tennis surface of <X>;select ?x where { <X> <933> ?x };select ?a where { ?a <933> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the term period of <X>;select ?x where { <X> <148574> ?x };select ?a where { ?a <148574> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the third place of <X>;what is the third place of <X>;what is the third place of <X>
+dbo:Place;;;what is the thumbnail of <X>;select ?x where { <X> <1695460> ?x };select ?a where { ?a <1695460> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the thumbnail caption of <X>;what is the thumbnail caption of <X>;what is the thumbnail caption of <X>
+dbo:Place;;;what is the time of <X>;select ?x where { <X> <36444> ?x };select ?a where { ?a <36444> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the total time person has spent in space of <X>;select ?x where { <X> <120> ?x };select ?a where { ?a <120> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the time zone of <X>;select ?x where { <X> <377227> ?x };select ?a where { ?a <377227> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the title of <X>;select ?x where { <X> <247497> ?x };select ?a where { ?a <247497> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the top speed of <X>;select ?x where { <X> <18114> ?x };select ?a where { ?a <18114> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the total launches of <X>;select ?x where { <X> <362> ?x };select ?a where { ?a <362> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the trademark of <X>;what is the trademark of <X>;what is the trademark of <X>
+dbo:Place;;;what is the translated motto of <X>;what is the translated motto of <X>;what is the translated motto of <X>
+dbo:Place;;;what is the tree of <X>;what is the tree of <X>;what is the tree of <X>
+dbo:Place;;;what is the type of <X>;select ?x where { <X> <403198> ?x };select ?a where { ?a <403198> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the type coordinate of <X>;what is the type coordinate of <X>;what is the type coordinate of <X>
+dbo:Place;;;what is the ulan id of <X>;select ?x where { <X> <11> ?x };select ?a where { ?a <11> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the unesco of <X>;what is the unesco of <X>;what is the unesco of <X>
+dbo:Place;;;what is the university of <X>;select ?x where { <X> <2795> ?x };select ?a where { ?a <2795> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the un/locode of <X>;what is the un/locode of <X>;what is the un/locode of <X>
+dbo:Place;;;what is the updated of <X>;what is the updated of <X>;what is the updated of <X>
+dbo:Place;;;what is the uses of <X>;what is the uses of <X>;what is the uses of <X>
+dbo:Place;;;what is the approved rating of the entertainment software self-regulation body in germany of <X>;what is the approved rating of the entertainment software self-regulation body in germany of <X>;what is the approved rating of the entertainment software self-regulation body in germany of <X>
+dbo:Place;;;what is the utc offset of <X>;select ?x where { <X> <445717> ?x };select ?a where { ?a <445717> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the value of <X>;what is the value of <X>;what is the value of <X>
+dbo:Place;;;what is the variant or variation of <X>;select ?x where { <X> <4180> ?x };select ?a where { ?a <4180> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the vehicle of <X>;select ?x where { <X> <185> ?x };select ?a where { ?a <185> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the vehicle code of <X>;what is the vehicle code of <X>;what is the vehicle code of <X>
+dbo:Place;;;what is the viaf id of <X>;select ?x where { <X> <1599> ?x };select ?a where { ?a <1599> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the vice chancellor of <X>;select ?x where { <X> <423> ?x };select ?a where { ?a <423> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the vice president of <X>;select ?x where { <X> <1005> ?x };select ?a where { ?a <1005> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the vice prime minister of <X>;select ?x where { <X> <29> ?x };select ?a where { ?a <29> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the victim of <X>;select ?x where { <X> <154> ?x };select ?a where { ?a <154> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the victims of <X>;select ?x where { <X> <95> ?x };select ?a where { ?a <95> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the voice of <X>;select ?x where { <X> <11182> ?x };select ?a where { ?a <11182> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the volume of <X>;select ?x where { <X> <4082> ?x };select ?a where { ?a <4082> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the volume quote of <X>;select ?x where { <X> <1> ?x };select ?a where { ?a <1> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the water of <X>;what is the water of <X>;what is the water of <X>
+dbo:Place;;;what is the area of water of <X>;what is the area of water of <X>;what is the area of water of <X>
+dbo:Place;;;what is the water percentage of a place of <X>;what is the water percentage of a place of <X>;what is the water percentage of a place of <X>
+dbo:Place;;;what is the webcast of <X>;select ?x where { <X> <9065> ?x };select ?a where { ?a <9065> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the label of a website of <X>;what is the label of a website of <X>;what is the label of a website of <X>
+dbo:Place;;;what is the weight of <X>;select ?x where { <X> <80374> ?x };select ?a where { ?a <80374> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the west place of <X>;what is the west place of <X>;what is the west place of <X>
+dbo:Place;;;what is the whole area of <X>;what is the whole area of <X>;what is the whole area of <X>
+dbo:Place;;;what is the width of <X>;select ?x where { <X> <13316> ?x };select ?a where { ?a <13316> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the width quote of <X>;select ?x where { <X> <2> ?x };select ?a where { ?a <2> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the character size of wiki page of <X>;what is the character size of wiki page of <X>;what is the character size of wiki page of <X>
+dbo:Place;;;what is the wikipage disambiguates of <X>;select ?x where { <X> <1537180> ?x };select ?a where { ?a <1537180> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the link to the wikipage edit url of <X>;what is the link to the wikipage edit url of <X>;what is the link to the wikipage edit url of <X>
+dbo:Place;;;what is the link from a wikipage to an external page of <X>;select ?x where { <X> <7772279> ?x };select ?a where { ?a <7772279> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the extraction datetime of <X>;what is the extraction datetime of <X>;what is the extraction datetime of <X>
+dbo:Place;;;what is the link to the wikipage history url of <X>;what is the link to the wikipage history url of <X>;what is the link to the wikipage history url of <X>
+dbo:Place;;;what is the wikipage page id of <X>;select ?x where { <X> <15797811> ?x };select ?a where { ?a <15797811> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the wiki page in degree of <X>;what is the wiki page in degree of <X>;what is the wiki page in degree of <X>
+dbo:Place;;;what is the link from a wikipage to a wikipage in a different language about the same or a related subject. of <X>;what is the link from a wikipage to a wikipage in a different language about the same or a related subject. of <X>;what is the link from a wikipage to a wikipage in a different language about the same or a related subject. of <X>
+dbo:Place;;;what is the page length of wiki page of <X>;what is the page length (characters) of wiki page of <X>;what is the page length (characters) of wiki page of <X>
+dbo:Place;;;what is the wikipage modification datetime of <X>;what is the wikipage modification datetime of <X>;what is the wikipage modification datetime of <X>
+dbo:Place;;;what is the wiki page out degree of <X>;what is the wiki page out degree of <X>;what is the wiki page out degree of <X>
+dbo:Place;;;what is the wikipage redirect of <X>;select ?x where { <X> <7632358> ?x };select ?a where { ?a <7632358> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the wikipage revision id of <X>;select ?x where { <X> <15797811> ?x };select ?a where { ?a <15797811> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the link to the wikipage revision url of <X>;what is the link to the wikipage revision url of <X>;what is the link to the wikipage revision url of <X>
+dbo:Place;;;what is the wiki page uses template of <X>;what is the wiki page uses template of <X>;what is the wiki page uses template of <X>
+dbo:Place;;;what is the link from a wikipage to another wikipage of <X>;what is the link from a wikipage to another wikipage of <X>;what is the link from a wikipage to another wikipage of <X>
+dbo:Place;;;what is the text used to link from a wikipage to another wikipage of <X>;what is the text used to link from a wikipage to another wikipage of <X>;what is the text used to link from a wikipage to another wikipage of <X>
+dbo:Place;;;what is the wikidata iri slit of <X>;what is the wikidata iri slit of <X>;what is the wikidata iri slit of <X>
+dbo:Place;;;what is the wins of <X>;select ?x where { <X> <1190> ?x };select ?a where { ?a <1190> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the year of <X>;select ?x where { <X> <40047> ?x };select ?a where { ?a <40047> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the year of construction of <X>;select ?x where { <X> <49389> ?x };select ?a where { ?a <49389> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Place;;;what is the zodiac sign of <X>;what is the zodiac sign of <X>;what is the zodiac sign of <X>
