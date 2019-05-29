@@ -1,6 +1,11 @@
 import sys
 
 """
+The code was changed at 41 and 42 to maintain the 
+the structure of the intended output. 
+
+The SPARQL needed 
+to be saved for further purposes, which it wasn't initially
 Section to parse the command line arguments.
 """
 
@@ -32,13 +37,17 @@ for line in lines:
 		continue
 	line = line.strip().split(',')
 	# print lines
-	if line[5]!='':
+	tem = 5
+	if(len(line)==8):
+		tem = 4
+	print tem
+	if line[tem]!='':
 		# print line[5]
-		# It was found the the MVE and OE was also required hence:
-		#line[-2] = 'SELECT ?x WHERE { <X> <' + line[5] + '> ?x }'
-		#line[-1] = 'SELECT ?a WHERE { ?a <' + line[5] + '> [] . ?a a <http://dbpedia.org/ontology/Place> }'
-		line.append('SELECT ?x WHERE { <X> <' + line[5] + '> ?x }')
-		line.append('SELECT ?a WHERE { ?a <' + line[5] + '> [] . ?a a <http://dbpedia.org/ontology/Place> }')
+		# It was found the the MVE and OE was also required in output hence:
+		#line[-2] = 'SELECT ?x WHERE { <X> <' + line[tem] + '> ?x }'
+		#line[-1] = 'SELECT ?a WHERE { ?a <' + line[tem] + '> [] . ?a a <http://dbpedia.org/ontology/Place> }'
+		line.append('SELECT ?x WHERE { <X> <' + line[tem] + '> ?x }')
+		line.append('SELECT ?a WHERE { ?a <' + line[tem] + '> [] . ?a a <http://dbpedia.org/ontology/Place> }')
 
 
 	final += ",".join(line)

@@ -1,6 +1,8 @@
 import sys, re
 
 """
+Was updated at line 61 and 62, could not take the intput from
+the previous step as input. 
 Section to parse the command line arguments.
 """
 
@@ -11,6 +13,7 @@ final_lines = []
 lineno = 1
 
 
+
 """ 
 print lines[0].split(',') 
 ['Property', 'Label ', 'Range', 'Fuzzy Score', 'Comment about expr', 'URI', 'Number of Occurrences', 
@@ -19,7 +22,7 @@ print lines[0].split(',')
 
 """
 - 	The lines from the file generated in the previous steps
-	is read and a for loop iterates through ecery row of 
+	is read and a for loop iterates through every row.
 -	First we create a list of all elements seperated by commas.
 - 	If the range has the substring person, the we put as 
 	question who else what.

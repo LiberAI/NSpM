@@ -20,9 +20,8 @@ output = ""
 
 """
 - 	We iterate over the lines of the document.
--	Convet the line into a list containig elements o the 
+-	Convert the line into a list containig elements o the 
 	string delimited by commas.
--	
 """
 for line in lines:
 	
