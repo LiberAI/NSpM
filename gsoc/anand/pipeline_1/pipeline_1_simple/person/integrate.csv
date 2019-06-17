@@ -1,0 +1,257 @@
+achievement,achievement,Person,owl:Thing,,
+activeYears,active years,Person,xsd:string,http://dbpedia.org/ontology/activeYears,328
+activeYearsEndDateMgr,active years end date manager,Person,xsd:string,,
+activeYearsEndYearMgr,active years end year manager,Person,xsd:gYear,,
+activeYearsStartDateMgr,active years start date manager,Person,xsd:date,,
+activeYearsStartYearMgr,active years start year manager,Person,xsd:gYear,,
+activity,activity,Person,owl:Thing,,
+affair,affair,Person,xsd:string,,
+age,age,Agent,xsd:integer,,
+agency,agency,Person,owl:Thing,http://dbpedia.org/ontology/agency,750
+allegiance,allegiance,Person,xsd:string,http://dbpedia.org/ontology/allegiance,21032
+almaMater,alma mater,Person,EducationalInstitution,http://dbpedia.org/ontology/almaMater,131512
+announcedFrom,announcedFrom,Person,Place,,
+approach,approach,Person,owl:Thing,,
+arrestDate,arrest date,Person,xsd:date,,
+artPatron,patron (art),Agent,Artist,,
+artisticFunction,artistic function,Person,xsd:string,,
+astrologicalSign,astrological sign,Person,owl:Thing,,
+awardName,awardName,Person,xsd:string,,
+badGuy,bad guy,Person,xsd:string,,
+bestLap,best lap,Person,xsd:string,,
+bigPoolRecord,big pool record,Person,xsd:string,,
+birthDate,birth date,Person,xsd:date,http://dbpedia.org/ontology/birthDate,1740614
+birthName,birth name,Person,rdf:langString,http://dbpedia.org/ontology/birthName,79134
+birthPlace,birth place,Person,Place,http://dbpedia.org/ontology/birthPlace,1330297
+birthSign,birth sign,Person,owl:Thing,,
+birthYear,birth year,Person,xsd:gYear,http://dbpedia.org/ontology/birthYear,160048
+bloodGroup,blood group,Person,xsd:string,,
+bloodType,blood type,Person,owl:Thing,,
+board,board,Person,owl:Thing,http://dbpedia.org/ontology/board,1936
+bodyDiscovered,body discovered,Person,Place,http://dbpedia.org/ontology/bodyDiscovered,233
+britishWins,british wins,Person,skos:Concept,,
+bustSize,bust size,Person,Length,http://dbpedia.org/ontology/bustSize,316
+bustWaistHipSize,bust-waist-hip Size,Person,xsd:string,,
+careerStation,career station,Person,CareerStation,http://dbpedia.org/ontology/careerStation,977021
+case,case,Person,xsd:string,,
+catch,catch,Person,xsd:string,,
+causeOfDeath,cause of death,Person,xsd:string,,
+championships,championships,Agent,xsd:nonNegativeInteger,http://dbpedia.org/ontology/championships,777
+child,child,Person,Person,http://dbpedia.org/ontology/child,15760
+circumcised,circumcised,Person,xsd:string,,
+citizenship,citizenship,Person,owl:Thing,http://dbpedia.org/ontology/citizenship,6435
+clothSize,cloth size,Person,xsd:string,,
+clothingSize,clothing size,Person,xsd:string,,
+coalition,coalition,Person,xsd:string,,
+collaboration,collaboration,Person,Person,,
+colleague,colleague,Person,Person,,
+college,college,Person,EducationalInstitution,http://dbpedia.org/ontology/college,13759
+competitionTitle,competition title,Person,SportsEvent,,
+complexion,complexion,Person,owl:Thing,,
+contest,contest,Person,Contest,,
+continentalTournament,continental tournament,Person,Tournament,,
+continentalTournamentBronze,continental tournament bronze,Person,xsd:nonNegativeInteger,,
+continentalTournamentGold,continental tournament gold,Person,xsd:nonNegativeInteger,,
+continentalTournamentSilver,continental tournament silver,Person,xsd:nonNegativeInteger,,
+convictionDate,conviction date,Person,xsd:date,,
+copilote,copilote,Person,Person,,
+cousurper,cousurper,Person,Person,,
+created,created,Person,Work,,
+currentTeamManager,current team manager,Person,SportsTeam,,
+danseCompetition,danse competition,Person,xsd:string,,
+danseScore,danse score,Person,xsd:string,,
+dateOfBurial,date of burial,Person,xsd:date,http://dbpedia.org/ontology/dateOfBurial,11
+deadInFightDate,dead in fight date,Person,xsd:string,,
+deadInFightPlace,dead in fight place,Person,xsd:string,,
+deathAge,death age,Person,xsd:nonNegativeInteger,,
+deathCause,death cause,Person,owl:Thing,http://dbpedia.org/ontology/deathCause,5424
+deathDate,death date,Person,xsd:date,http://dbpedia.org/ontology/deathDate,721196
+deathPlace,death place,Person,Place,http://dbpedia.org/ontology/deathPlace,406619
+deathYear,death year,Person,xsd:gYear,http://dbpedia.org/ontology/deathYear,74740
+debutWork,debutWork,Person,Work,,
+decoration,decoration,Person,owl:Thing,,
+denomination,denomination,Agent,owl:Thing,http://dbpedia.org/ontology/denomination,926
+derivedWord,derived word,Person,xsd:string,,
+detractor,detractor,Person,Person,,
+diploma,diploma,Person,Diploma,,
+discipline,discipline,Agent,owl:Thing,http://dbpedia.org/ontology/discipline,1664
+dubber,dubber,Person,Person,,
+education,education,Person,owl:Thing,http://dbpedia.org/ontology/education,25656
+educationPlace,education place,Person,Place,,
+electionDate,election date,Person,xsd:date,http://dbpedia.org/ontology/electionDate,115
+employer,employer,Person,Organisation,http://dbpedia.org/ontology/employer,7409
+endCareer,end career,Person,xsd:string,,
+endReign,end reign,Person,skos:Concept,,
+escalafon,escalafon,Person,xsd:string,,
+ethnicity,ethnicity,Person,EthnicGroup,http://dbpedia.org/ontology/ethnicity,8322
+expedition,expedition,Person,xsd:string,,
+externalOrnament,external ornament,Person,xsd:string,,
+eyeColor,eye color,Person,xsd:string,http://dbpedia.org/ontology/eyeColor,3164
+eyeColour,eye colour,Person,xsd:string,,
+father,father,Person,Person,,
+feat,feat,Person,xsd:string,,
+federation,federation,Person,Organisation,,
+filmNumber,film number,Person,xsd:nonNegativeInteger,,
+foot,foot,Person,xsd:string,,
+freeDanseScore,free danse score,Person,xsd:string,,
+freeProgCompetition,free prog competition,Person,xsd:string,,
+freeProgScore,free prog score,Person,xsd:string,,
+freeScoreCompetition,free score competition,Person,xsd:string,,
+friend,friend,Person,Person,,
+fullCompetition,full competition,Person,xsd:string,,
+fullScore,full score,Person,xsd:string,,
+generalCouncil,general council,Agent,TermOfOffice,,
+grave,grave,Person,xsd:string,,
+gymApparatus,gym apparatus,Person,owl:Thing,,
+hairColor,hair color,Person,xsd:string,http://dbpedia.org/ontology/hairColor,3302
+hairColour,hair colour,Person,xsd:string,,
+hand,hand,Person,owl:Thing,,
+handedness,handedness,Person,owl:Thing,,
+handisport,handisport,Person,xsd:string,,
+hasNaturalBust,has natural bust,Person,xsd:string,,
+hipSize,hip size,Person,Length,http://dbpedia.org/ontology/hipSize,384
+homage,homage,Person,xsd:string,,
+hometown,home town,Agent,Settlement,http://dbpedia.org/ontology/hometown,93101
+idNumber,id number,Person,xsd:nonNegativeInteger,,
+ideology,ideology,Agent,Ideology,http://dbpedia.org/ontology/ideology,15038
+iihfHof,lihf hof,Person,xsd:string,,
+imposedDanseCompetition,imposed danse competition,Person,xsd:string,,
+imposedDanseScore,imposed danse score,Person,xsd:string,,
+individualisedPnd,individualised PND number,Person,xsd:nonNegativeInteger,,
+juniorSeason,junior season,Agent,owl:Thing,,
+juniorYearsEndYear,junior years end year,Person,xsd:gYear,,
+juniorYearsStartYear,junior years start year,Person,xsd:gYear,,
+jutsu,jutsu,Person,xsd:string,,
+killedBy,killed by,Person,xsd:string,,
+lahHof,lah hof,Person,xsd:string,,
+leadership,leadership,Person,xsd:string,,
+leagueManager,league manager,Person,SportsLeague,,
+linguisticsTradition,linguistics tradition,Person,owl:Thing,,
+littlePoolRecord,little pool record,Person,xsd:string,,
+livingPlace,livingPlace,Person,Place,,
+mainDomain,main domain,Person,owl:Thing,,
+managerSeason,manager season,Agent,owl:Thing,,
+mastersWins,masters wins,Person,skos:Concept,,
+matchPoint,match point,Person,xsd:string,,
+measurements,measurements,Person,xsd:string,,
+media,media,Person,owl:Thing,,
+member,member,Person,xsd:string,,
+militaryService,military service,Person,MilitaryService,,
+mood,mood,Person,xsd:string,,
+mother,mother,Person,Person,,
+mount,mount,Person,xsd:string,,
+movie,movie,Person,Film,,
+nationalSelection,national selection,Agent,owl:Thing,,
+nationalTeamMatchPoint,national team match point,Person,xsd:string,,
+nationalTeamYear,national team year,Person,xsd:string,,
+nationalTournament,National tournament,Person,Tournament,,
+nationalTournamentBronze,national tournament bronze,Person,xsd:nonNegativeInteger,,
+nationalTournamentGold,national tournament gold,Person,xsd:nonNegativeInteger,,
+nationalTournamentSilver,national tournament silver,Person,xsd:nonNegativeInteger,,
+nationality,nationality,Person,Country,http://dbpedia.org/ontology/nationality,130523
+networth,networth,Person,Currency,http://dbpedia.org/ontology/networth,2090
+nndbId,NNDB id,Person,xsd:string,,
+nonProfessionalCareer,non professional career,Person,xsd:string,,
+notableIdea,notableIdea,Person,owl:Thing,http://dbpedia.org/ontology/notableIdea,1284
+noteOnRestingPlace,note on resting place,Person,xsd:string,,
+numberOfRun,number of run,Person,xsd:nonNegativeInteger,,
+olympicGames,olympic games,Person,Tournament,,
+olympicGamesBronze,olympic games bronze,Person,xsd:nonNegativeInteger,,
+olympicGamesGold,olympic games gold,Person,xsd:nonNegativeInteger,,
+olympicGamesSilver,olympic games silver,Person,xsd:nonNegativeInteger,,
+olympicGamesWins,olympic games wins,Person,xsd:string,,
+opponent,opponent,Person,Person,http://dbpedia.org/ontology/opponent,263
+orientation,orientation,Person,xsd:string,,
+originalDanseCompetition,original danse competititon,Person,xsd:string,,
+originalDanseScore,original danse score,Person,xsd:string,,
+otherActivity,other activity,Person,xsd:string,,
+otherFunction,other function,Person,owl:Thing,,
+otherMedia,other media,Person,PeriodicalLiterature,,
+otherOccupation,other occupation,Person,PersonFunction,,
+owns,owns,Agent,Thing,,
+parent,parent,Person,Person,http://dbpedia.org/ontology/parent,29694
+parliamentaryGroup,parliamentary group,Person,xsd:string,,
+particularSign,particular sign,Person,xsd:string,,
+partner,partner,Person,Person,http://dbpedia.org/ontology/partner,1668
+patent,patent,Person,owl:Thing,,
+penisLength,penis length,Person,xsd:string,,
+personFunction,person function,Person,PersonFunction,http://dbpedia.org/ontology/personFunction,4473
+pgaWins,pga wins,Person,skos:Concept,,
+philosophicalSchool,philosophicalSchool,Person,owl:Thing,http://dbpedia.org/ontology/philosophicalSchool,2092
+piercing,piercing,Person,xsd:string,,
+placeOfBurial,place of burial,Person,Place,http://dbpedia.org/ontology/placeOfBurial,1402
+playerSeason,player season,Agent,owl:Thing,,
+playerStatus,player status,Person,xsd:string,,
+podium,podium,Person,xsd:nonNegativeInteger,,
+polePosition,pole position,Person,xsd:nonNegativeInteger,,
+politicalFunction,political function,Person,xsd:string,,
+profession,profession,Person,owl:Thing,http://dbpedia.org/ontology/profession,15598
+project,project,Person,Project,,
+pseudonym,pseudonym,Person,rdf:langString,http://dbpedia.org/ontology/pseudonym,3364
+publication,publication,Person,xsd:string,,
+raceWins,race wins,Person,xsd:nonNegativeInteger,,
+radio,radio,Person,RadioStation,,
+regionalCouncil,regional council,Agent,TermOfOffice,,
+reign,reign,Person,xsd:string,,
+reignName,reign name,Person,xsd:string,,
+relatedFunctions,related functions,Person,List,,
+relation,relation,Person,Person,http://dbpedia.org/ontology/relation,9368
+relative,relative,Person,Person,http://dbpedia.org/ontology/relative,15834
+residence,residence,Person,Place,http://dbpedia.org/ontology/residence,69284
+restingDate,resting date,Person,xsd:date,,
+restingPlace,resting place,Person,Place,http://dbpedia.org/ontology/restingPlace,24384
+restingPlacePosition,resting place position,Person,geo:SpatialThing,http://dbpedia.org/ontology/restingPlacePosition,538
+retirementDate,retirement date,Person,xsd:date,,
+roleInEvent,A Person's role in an event,Agent,Event,,
+salary,salary,Person,Currency,http://dbpedia.org/ontology/salary,406
+scene,scene,Person,xsd:string,,
+school,school,Person,EducationalInstitution,http://dbpedia.org/ontology/school,5614
+season,season,Agent,owl:Thing,http://dbpedia.org/ontology/season,10915
+seasonManager,season manager,Person,xsd:string,,
+second,second,Person,xsd:nonNegativeInteger,,
+seiyu,seiyu,Person,Person,,
+sentence,sentence,Person,xsd:string,,
+sex,sex,Person,xsd:string,http://dbpedia.org/ontology/sex,4036
+sexualOrientation,sexual orientation,Person,owl:Thing,,
+shoeNumber,shoe number,Person,xsd:positiveInteger,http://dbpedia.org/ontology/shoeNumber,25
+shoeSize,shoe size,Person,xsd:string,http://dbpedia.org/ontology/shoeSize,376
+shoot,shoot,Person,xsd:string,,
+shortProgCompetition,short prog competition,Person,xsd:string,,
+shortProgScore,short prog score,Person,xsd:string,,
+sibling,sibling,Person,Person,,
+signature,signature,Person,xsd:string,http://dbpedia.org/ontology/signature,1912
+significantProject,significant project,Person,owl:Thing,http://dbpedia.org/ontology/significantProject,1382
+skinColor,skin color,Person,xsd:string,,
+specialTrial,special trial,Person,xsd:nonNegativeInteger,,
+speciality,speciality,Person,xsd:string,,
+sportDiscipline,sport discipline,Person,Sport,,
+sportsFunction,sports function,Person,xsd:string,,
+spouse,spouse,Person,Person,http://dbpedia.org/ontology/spouse,37781
+spouseName,spouse name,Person,xsd:string,,
+startCareer,start career,Person,xsd:string,,
+startReign,start reign,Person,skos:Concept,,
+startWct,start xct,Person,xsd:string,,
+startWqs,start wqs,Person,xsd:string,,
+stateOfOrigin,state of origin,Person,Country,http://dbpedia.org/ontology/stateOfOrigin,38461
+statusManager,status manager,Person,xsd:string,,
+student,student,Person,Person,,
+tattoo,tattoo,Person,xsd:string,,
+teamManager,team manager,Person,SportsTeam,,
+temple,temple,Person,xsd:string,,
+templeYear,temple year,Person,xsd:string,,
+tessitura,tessitura,Person,xsd:string,,
+third,third,Person,xsd:nonNegativeInteger,,
+titleDate,title date,Person,xsd:date,,
+tvShow,tvShow,Person,TelevisionShow,,
+usopenWins,usopen wins,Person,skos:Concept,,
+usurper,usurper,Person,Person,,
+victory,victory,Person,xsd:nonNegativeInteger,,
+victoryAsMgr,victory as manager,Person,xsd:nonNegativeInteger,,
+victoryPercentageAsMgr,victory percentage as manager,Person,xsd:double,,
+waistSize,waist size,Person,Length,http://dbpedia.org/ontology/waistSize,394
+weddingParentsDate,Parents Wedding Date,Person,xsd:date,,
+world,world,Person,skos:Concept,,
+worldTournament,world tournament,Person,Tournament,,
+worldTournamentBronze,world tournament bronze,Person,xsd:nonNegativeInteger,,
+worldTournamentGold,world tournament gold,Person,xsd:nonNegativeInteger,,
+worldTournamentSilver,world tournament silver,Person,xsd:nonNegativeInteger,,
