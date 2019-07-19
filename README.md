@@ -73,7 +73,12 @@ Predict the SPARQL sentence for a given question with a given model.
 
 ```bash
 sh ask.sh data/monument_300 "where is edward vii monument located in?"
+ 
 ```
+
+### Chatbots, Integration & Cia
+
+- Telegram: The [Telegram](https://github.com/AKSW/NSpM/wiki/NSpM-Telegram-Bot) NSpM chat bot offers an integration of NSpM with Telegram message platform.
 
 ## Papers
 
