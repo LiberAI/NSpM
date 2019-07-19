@@ -78,7 +78,7 @@ sh ask.sh data/monument_300 "where is edward vii monument located in?"
 
 ### Chatbots, Integration & Cia
 
-- Telegram: The [Telegram](https://github.com/AKSW/NSpM/wiki/NSpM-Telegram-Bot) NSpM chatbot offers an integration of NSpM with the Telegram message platform.
+- Telegram: The [Telegram NSpM chatbot](https://github.com/AKSW/NSpM/wiki/NSpM-Telegram-Bot) offers an integration of NSpM with the Telegram message platform.
 
 ## Papers
 
