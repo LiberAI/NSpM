@@ -23,6 +23,7 @@ import sys
 import traceback
 
 from generator_utils import log_statistics, save_cache, query_dbpedia, strip_brackets, encode, read_template_file
+import imp
 
 CELEBRITY_LIST = [
     'dbo:Royalty',
@@ -78,11 +79,11 @@ def extract_bindings( data, template ):
 
 def sort_matches( matches, template ):
     variables = getattr(template, 'variables')
-    get_usages = lambda match : map(lambda variable : used_resources[match[variable]["value"]], variables)
+    get_usages = lambda match : [used_resources[match[variable]["value"]] for variable in variables]
 
-    matches_with_usages = map(lambda match : {'usages': get_usages(match), 'match': match}, matches)
+    matches_with_usages = [{'usages': get_usages(match), 'match': match} for match in matches]
     sorted_matches_with_usages = sorted(matches_with_usages, key=prioritize_usage)
-    sorted_matches = map(operator.itemgetter('match'), sorted_matches_with_usages)
+    sorted_matches = list(map(operator.itemgetter('match'), sorted_matches_with_usages))
 
     return sorted_matches
 
@@ -133,7 +134,7 @@ def prioritize_couple_match( usages ):
 def prioritize_triple_match( usages ):
     between_zero_and_upper_limit = lambda value : 0 < value < 30
     highest_priority = all(map(between_zero_and_upper_limit, usages))
-    second_highest_priority = filter(between_zero_and_upper_limit, usages) >= 2
+    second_highest_priority = list(filter(between_zero_and_upper_limit, usages)) >= 2
     third_highest_priority = any(map(between_zero_and_upper_limit, usages))
 
     if highest_priority:
@@ -171,7 +172,7 @@ def generate_dataset(templates, output_dir, file_mode):
     with open(output_dir + '/data_300.en', file_mode) as english_questions, open(output_dir + '/data_300.sparql', file_mode) as sparql_queries:
         for template in templates:
             it = it + 1
-            print "for {}th template".format(it)
+            print("for {}th template".format(it))
             try:
                 results = get_results_of_generator_query(cache, template)
                 bindings = extract_bindings(results["results"]["bindings"], template)
@@ -262,7 +263,7 @@ def prepare_generator_query( template, add_type_requirements=True, do_special_cl
                 generator_query = add_requirement(generator_query, SUBCLASS_REPLACEMENT.format(variable=variable, ontology_class=normalized_target_class))
             else:
                 if normalized_target_class in SPECIAL_CLASSES and do_special_class_replacement:
-                    classes = ' '.join(map(lambda c : '({})'.format(c), SPECIAL_CLASSES[normalized_target_class]))
+                    classes = ' '.join(['({})'.format(c) for c in SPECIAL_CLASSES[normalized_target_class]])
                     generator_query = add_requirement(generator_query, CLASSES_REPLACEMENT.format(variable=variable,classes=classes))
                 else:
                     ontology_class = normalized_target_class
@@ -302,24 +303,24 @@ if __name__ == '__main__':
     if (resource_dump_exists and not use_resources_dump):
         warning_message = 'Warning: The file {} exists which indicates an error. Remove file or continue generation after fixing with --continue'.format(
             resource_dump_file)
-        print warning_message
+        print(warning_message)
         sys.exit(1)
 
     # reload(sys) to set default encoding
 
-    reload(sys)
-    sys.setdefaultencoding("utf-8")
+    imp.reload(sys)
+    # sys.setdefaultencoding("utf-8")
 
     not_instanced_templates = collections.Counter()
     used_resources = collections.Counter(json.loads(open(resource_dump_file).read())) if use_resources_dump else collections.Counter()
     file_mode = 'a' if use_resources_dump else 'w'
     templates = read_template_file(template_file)
-    print len(templates)
+    print(len(templates))
     try:
         generate_dataset(templates, output_dir, file_mode)
         # print "lol"
     except:
-        print 'exception occured, look for error in log file'
+        print('exception occured, look for error in log file')
         save_cache(resource_dump_file, used_resources)
     else:
         save_cache('{}/used_resources_{:%Y-%m-%d-%H-%M}.json'.format(output_dir, time), used_resources)

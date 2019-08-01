@@ -14,8 +14,8 @@ import argparse
 import random
 import os
 
-TRAINING_PERCENTAGE = 90
-TEST_PERCENTAGE = 0
+TRAINING_PERCENTAGE = 80
+TEST_PERCENTAGE = 10
 DEV_PERCENTAGE = 10
 
 if __name__ == '__main__':
@@ -36,7 +36,7 @@ if __name__ == '__main__':
     number_of_test_and_dev_examples = int(lines * test_and_dev_percentage / 100)
     number_of_dev_examples = int(number_of_test_and_dev_examples * DEV_PERCENTAGE / test_and_dev_percentage)
 
-    dev_and_test = random.sample(xrange(lines), number_of_test_and_dev_examples)
+    dev_and_test = random.sample(range(lines), number_of_test_and_dev_examples)
     dev = random.sample(dev_and_test, number_of_dev_examples)
 
     with open(sparql_file) as original_sparql, open(en_file) as original_en:

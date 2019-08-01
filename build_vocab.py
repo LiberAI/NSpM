@@ -14,14 +14,15 @@ Usage: python build_vocab.py data.en > vocab.en
 import numpy as np
 from tensorflow.contrib import learn
 import sys
+import imp
 
-reload(sys)
-sys.setdefaultencoding("utf-8")
+imp.reload(sys)
+# sys.setdefaultencoding("utf-8")
 
 x_text = list()
 with open(sys.argv[1]) as f:
     for line in f:
-        x_text.append(unicode(line[:-1]))
+        x_text.append(str(line[:-1]))
 
 vocabulary = set()
 
@@ -51,7 +52,7 @@ else: # any other language
     ## Sort the vocabulary dictionary on the basis of values(id).
     ## Both statements perform same task.
     #sorted_vocab = sorted(vocab_dict.items(), key=operator.itemgetter(1))
-    sorted_vocab = sorted(vocab_dict.items(), key = lambda x : x[1])
+    sorted_vocab = sorted(list(vocab_dict.items()), key = lambda x : x[1])
 
     ## Treat the id's as index into list and create a list of words in the ascending order of id's
     ## word with id i goes at index i of the list.
@@ -74,4 +75,4 @@ else: # any other language
 # print terms
 for v in vocabulary:
     if v != "":
-        print v
+        print(v)
