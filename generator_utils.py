@@ -17,7 +17,7 @@ import logging
 import re
 import sys
 import urllib.request, urllib.parse, urllib.error
-import urllib.request, urllib.error, urllib.parse
+import urllib.request, urllib.error
 from functools import reduce
 
 ENDPOINT = "http://dbpedia.org/sparql"
