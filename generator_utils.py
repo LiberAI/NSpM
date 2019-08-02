@@ -17,7 +17,6 @@ import logging
 import re
 import sys
 import urllib.request, urllib.parse, urllib.error
-import urllib.request, urllib.error
 from functools import reduce
 
 ENDPOINT = "http://dbpedia.org/sparql"
@@ -56,8 +55,9 @@ def query_dbpedia( query ):
     param["timeout"] = "600" 
     param["debug"] = "on"
     try:
-        resp = urllib.request.urlopen(ENDPOINT + "?" + urllib.parse.urlencode(param))
-        j = resp.read()
+        req = urllib.request.Request(ENDPOINT + "?" + urllib.parse.urlencode(param))
+        with urllib.request.urlopen(req) as resp:
+            j = resp.read()
         resp.close()
     except (urllib.error.HTTPError, http.client.BadStatusLine):
         logging.debug("*** Query error. Empty result set. ***")
