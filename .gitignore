@@ -106,3 +106,10 @@ ENV/
 .idea/
 
 data/*/*
+
+gsoc/anand/utility/test.py
+gsoc/anand/utility/part-r-00000
+gsoc/anand/pipeline_3/utility/part-r-00000
+data/pipeline_3*
+gsoc/anand/pipeline_3/utility/part-r-00000
+data/*/*

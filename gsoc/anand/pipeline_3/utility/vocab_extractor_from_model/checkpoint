@@ -1,0 +1,6 @@
+model_checkpoint_path: "translate.ckpt-36000"
+all_model_checkpoint_paths: "translate.ckpt-32000"
+all_model_checkpoint_paths: "../best_accuracy/translate.ckpt-32000"
+all_model_checkpoint_paths: "translate.ckpt-34000"
+all_model_checkpoint_paths: "../best_accuracy/translate.ckpt-34000"
+all_model_checkpoint_paths: "translate.ckpt-36000"

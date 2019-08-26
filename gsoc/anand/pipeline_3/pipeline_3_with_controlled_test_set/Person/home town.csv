@@ -1,0 +1,205 @@
+adjacentSettlement,adjacent settlement of a switzerland settlement,Settlement,Settlement
+administrativeCollectivity,administrative collectivity,Settlement,PopulatedPlace
+administrativeDistrict,administrative district,Settlement,PopulatedPlace
+administrativeHeadCity,head city,PopulatedPlace,City
+agglomeration,agglomeration,PopulatedPlace,Agglomeration
+agglomerationArea,agglomeration area,PopulatedPlace,Area
+agglomerationDemographics,agglomeration demographics,PopulatedPlace,Demographics
+agglomerationPopulation,agglomeration population,Settlement,Population
+agglomerationPopulationYear,agglomerationPopulationYear,Settlement,xsd:string
+apskritis,apskritis,PopulatedPlace,xsd:string
+areaRural,area rural,PopulatedPlace,Area
+areaTotalRanking,total area ranking,PopulatedPlace,xsd:positiveInteger
+areaUrban,area urban,PopulatedPlace,Area
+arrondissement,arrondissement,PopulatedPlace,PopulatedPlace
+associationOfLocalGovernment,association of local government,Settlement,PopulatedPlace
+barangays,barangays,PopulatedPlace,xsd:string
+borough,borough,PopulatedPlace,PopulatedPlace
+bourgmestre,bourgmestre,Settlement,Person
+canton,canton,Settlement,Settlement
+capital,capital,PopulatedPlace,City
+catholicPercentage,catholic percentage,PopulatedPlace,xsd:string
+ccaState,cca state,PopulatedPlace,xsd:string
+censusYear,census year,PopulatedPlace,xsd:gYear
+ceremonialCounty,Ceremonial County,PopulatedPlace,PopulatedPlace
+circle,region,PopulatedPlace,xsd:string
+citySince,city since,PopulatedPlace,xsd:string
+cityType,city type,PopulatedPlace,xsd:string
+coastLine,coast line,Settlement,Length
+codeSettlement,settlement code,Settlement,xsd:string
+collectivityMinority,collectivity minority,Settlement,owl:Thing
+colonialName,colonial name,PopulatedPlace,xsd:string
+commissionerDate,commissioner date,PopulatedPlace,xsd:string
+commune,commune,Settlement,Settlement
+communityIsoCode,iso code of a community,PopulatedPlace,xsd:string
+councilArea,Council area,PopulatedPlace,PopulatedPlace
+countySeat,county seat,PopulatedPlace,owl:Thing
+daira,daira,Settlement,Place
+day,day,Settlement,xsd:date
+delegateMayor,delegate mayor,PopulatedPlace,Person
+delegation,delegation,PopulatedPlace,xsd:string
+deme,deme,PopulatedPlace,xsd:string
+demographics,demographics,PopulatedPlace,Demographics
+demographicsAsOf,demographics as of,PopulatedPlace,xsd:date
+department,department,PopulatedPlace,Department
+departmentPosition,geolocDepartment,PopulatedPlace,xsd:string
+disappearanceDate,date disappearance of a populated place,PopulatedPlace,xsd:date
+distanceToBelfast,distance to Belfast,Settlement,Length
+distanceToCapital,distance to capital,Settlement,Length
+distanceToCardiff,distance to Cardiff,Settlement,Length
+distanceToCharingCross,distance to Charing Cross,Settlement,Length
+distanceToDouglas,distance to Douglas,Settlement,Length
+distanceToDublin,distance to Dublin,Settlement,Length
+distanceToEdinburgh,distance to Edinburgh,Settlement,Length
+distanceToLondon,distance to London,Settlement,Length
+distanceToNearestCity,distance to nearest city,Settlement,Length
+ekatteCode,EKATTE code,PopulatedPlace,xsd:string
+emblem,emblem,PopulatedPlace,xsd:string
+employersCelebration,employer's celebration,Settlement,xsd:string
+ethnicGroup,ethnic group,PopulatedPlace,EthnicGroup
+federalState,federal state,Settlement,PopulatedPlace
+fipsCode,fips code,PopulatedPlace,xsd:string
+firstMention,first mention,PopulatedPlace,xsd:string
+foundation,foundation,PopulatedPlace,xsd:string
+frazioni,frazioni,Settlement,PopulatedPlace
+gdpPerCapita,gross domestic product (GDP) per capita,PopulatedPlace,xsd:float
+geolocDepartment,geolocDepartment,Settlement,PopulatedPlace
+giniCoefficient,gini coefficient,PopulatedPlace,xsd:float
+giniCoefficientAsOf,gini coefficient as of,PopulatedPlace,xsd:date
+giniCoefficientCategory,gini coefficient category,PopulatedPlace,owl:Thing
+giniCoefficientRanking,gini coefficient ranking,PopulatedPlace,xsd:positiveInteger
+gnisCode,gnis code,PopulatedPlace,xsd:string
+gnl,gnl,PopulatedPlace,xsd:string
+governorate,governorate,PopulatedPlace,xsd:string
+grossDomesticProduct,gross domestic product (GDP),PopulatedPlace,xsd:float
+grossDomesticProductAsOf,gross domestic product as of,PopulatedPlace,xsd:date
+grossDomesticProductNominalPerCapita,gross domestic product nominal per capita,PopulatedPlace,GrossDomesticProductPerCapita
+grossDomesticProductPurchasingPowerParityPerCapita,gross domestic product purchasing power parity per capita,PopulatedPlace,GrossDomesticProductPerCapita
+highestPoint,highest point,Settlement,Place
+historicalRegion,historical region,PopulatedPlace,xsd:string
+hraState,hra state,PopulatedPlace,xsd:string
+humanDevelopmentIndex,Human Development Index (HDI),PopulatedPlace,xsd:float
+humanDevelopmentIndexAsOf,human development index as of,PopulatedPlace,xsd:date
+humanDevelopmentIndexRankingCategory,human development index (HDI) category,PopulatedPlace,owl:Thing
+illiteracy,illiteracy,PopulatedPlace,xsd:float
+income,income,PopulatedPlace,xsd:string
+infantMortality,infant mortality,PopulatedPlace,xsd:float
+inseeCode,INSEE code,Settlement,xsd:string
+internationalPhonePrefix,international phone prefix,PopulatedPlace,xsd:string
+internationalPhonePrefixLabel,international phone prefix label,PopulatedPlace,xsd:string
+isCityState,is a city state,Settlement,xsd:string
+isoCodeRegion,ISO region code,Settlement,xsd:string
+ist,ist,PopulatedPlace,xsd:string
+istat,code istat,PopulatedPlace,xsd:string
+jointCommunity,joint community,Settlement,PopulatedPlace
+landRegistryCode,land registry code,Settlement,xsd:string
+largestCity,largest city,PopulatedPlace,PopulatedPlace
+largestMetro,largest metro,Settlement,PopulatedPlace
+largestSettlement,largest settlement,PopulatedPlace,PopulatedPlace
+latestElection,date of latest election,PopulatedPlace,xsd:date
+leaderName,leader name,PopulatedPlace,Person
+leaderParty,leader party,PopulatedPlace,owl:Thing
+leaderTitle,leader title,PopulatedPlace,rdf:langString
+legislature,legislature,PopulatedPlace,Legislature
+licenceNumber,licence number,PopulatedPlace,xsd:string
+licenceNumberLabel,licence number label,PopulatedPlace,xsd:string
+lieutenancy,lieutenancy,PopulatedPlace,xsd:string
+lieutenancyArea,Lieutenancy area,PopulatedPlace,PopulatedPlace
+lifeExpectancy,life expectancy,PopulatedPlace,xsd:string
+localPhonePrefix,local phone prefix,PopulatedPlace,xsd:nonNegativeInteger
+locality,locality of a switzerland settlement,Settlement,xsd:string
+localizationThumbnail,thumbnail localization,PopulatedPlace,owl:Thing
+localizationThumbnailCaption,legend thumbnail localization,PopulatedPlace,xsd:string
+lowestPoint,lowest point,Settlement,Place
+mergedSettlement,merged settlement,Settlement,Settlement
+metropolitanBorough,metropolitan borough,PopulatedPlace,PopulatedPlace
+minority,minority,Settlement,Group
+nation,nation,PopulatedPlace,xsd:string
+neighboringMunicipality,neighboring municipality,PopulatedPlace,PopulatedPlace
+nisCode,NIS code,PopulatedPlace,xsd:string
+numberOfCantons,Number Of Cantons,PopulatedPlace,xsd:nonNegativeInteger
+numberOfCapitalDeputies,Number Of Capital Deputies,PopulatedPlace,xsd:nonNegativeInteger
+numberOfCounties,number of counties,PopulatedPlace,xsd:nonNegativeInteger
+numberOfFederalDeputies,Number Of Federal Deputies,PopulatedPlace,xsd:nonNegativeInteger
+numberOfMunicipalities,Number Of Municipalities,PopulatedPlace,xsd:nonNegativeInteger
+numberOfStateDeputies,Number Of State Deputies,PopulatedPlace,xsd:nonNegativeInteger
+officialLanguage,official language,PopulatedPlace,Language
+officialName,official name,Settlement,rdf:langString
+ofsCode,ofs code of a settlement,Settlement,xsd:string
+okatoCode,okato code,PopulatedPlace,xsd:string
+oldDistrict,old district,PopulatedPlace,PopulatedPlace
+oldName,old name,PopulatedPlace,xsd:string
+oldProvince,old province,PopulatedPlace,PopulatedPlace
+ons,ONS ID (Office national des statistiques) Algeria,Settlement,xsd:nonNegativeInteger
+otherInformation,other information of a settlement,Settlement,xsd:string
+otherLanguage,other language of a settlement,Settlement,xsd:string
+otherName,other name,PopulatedPlace,rdf:langString
+outskirts,outskirts,PopulatedPlace,xsd:string
+parish,parish,PopulatedPlace,PopulatedPlace
+peopleName,peopleName,PopulatedPlace,rdf:langString
+perCapitaIncome,per capita income,PopulatedPlace,Currency
+perCapitaIncomeAsOf,per capita income as of,PopulatedPlace,xsd:date
+perCapitaIncomeRank,per capital income rank,PopulatedPlace,xsd:string
+percentageLiteracyMen,percentage of a place's male population that is literate, degree of analphabetism,PopulatedPlace,xsd:float
+percentageLiteracyWomen,percentage of a place's female population that is literate, degree of analphabetism,PopulatedPlace,xsd:float
+percentageLiterate,percentage of a place's population that is literate, degree of analphabetism,PopulatedPlace,xsd:float
+phonePrefix,phone prefix,PopulatedPlace,xsd:nonNegativeInteger
+phonePrefixLabel,phone prefix label of a settlement,Settlement,rdf:langString
+pluviometry,pluviometry,PopulatedPlace,xsd:string
+policeName,police name,PopulatedPlace,xsd:string
+politicGovernmentDepartment,politic government department,PopulatedPlace,owl:Thing
+politicalMajority,political majority,Settlement,PoliticalParty
+politicalSeats,political seats,Settlement,xsd:nonNegativeInteger
+population,population,PopulatedPlace,Population
+populationAsOf,population as of,PopulatedPlace,xsd:date
+populationDensity,population density,PopulatedPlace,PopulationDensity
+populationMetro,population metro,PopulatedPlace,xsd:nonNegativeInteger
+populationMetroDensity,population metro density,PopulatedPlace,PopulationDensity
+populationPctChildren,population percentage under 12 years,PopulatedPlace,xsd:nonNegativeInteger
+populationPctMen,population percentage male,PopulatedPlace,xsd:nonNegativeInteger
+populationPctWomen,population percentage female,PopulatedPlace,xsd:nonNegativeInteger
+populationRural,population rural,PopulatedPlace,xsd:nonNegativeInteger
+populationRuralDensity,population density rural,PopulatedPlace,PopulationDensity
+populationTotalRanking,total population ranking,PopulatedPlace,xsd:positiveInteger
+populationTotalReference,total population reference,Settlement,owl:Thing
+populationUrban,population urban,PopulatedPlace,xsd:nonNegativeInteger
+populationUrbanDensity,population urban density,PopulatedPlace,PopulationDensity
+populationYear,population year,PopulatedPlace,xsd:string
+previousDemographics,previous demographics,PopulatedPlace,Demographics
+previousName,previous name,PopulatedPlace,xsd:string
+previousPopulation,previous population,PopulatedPlace,Population
+previousPopulationTotal,previous population total,PopulatedPlace,xsd:nonNegativeInteger
+principalArea,principal area,PopulatedPlace,PopulatedPlace
+protestantPercentage,protestant percentage,PopulatedPlace,xsd:string
+provCode,prove code,Settlement,xsd:string
+provinceIsoCode,iso code of a province,PopulatedPlace,xsd:string
+purchasingPowerParity,purchasing power parity,PopulatedPlace,xsd:string
+purchasingPowerParityRank,purchasing power parity rank,PopulatedPlace,xsd:string
+purchasingPowerParityYear,purchasing power parity year,PopulatedPlace,xsd:string
+rankArea,rank of an area,PopulatedPlace,xsd:nonNegativeInteger
+rankPopulation,rank of a population,PopulatedPlace,xsd:nonNegativeInteger
+reffBourgmestre,referent bourgmestre,Settlement,Person
+regionalLanguage,regional language,PopulatedPlace,Language
+saint,saint,PopulatedPlace,Saint
+sameName,same name,Settlement,rdf:langString
+senior,senior,PopulatedPlace,xsd:string
+seniunija,seniunija,PopulatedPlace,xsd:string
+settlementAttached,settlement attached,Settlement,Place
+sharingOutPopulation,sharing out population,PopulatedPlace,xsd:nonNegativeInteger
+sharingOutPopulationYear,sharing out year,PopulatedPlace,xsd:string
+sheading,sheading,PopulatedPlace,PopulatedPlace
+simcCode,SIMC code,PopulatedPlace,owl:Thing
+summerTemperature,summer temperature,Settlement,Temperature
+termOfOffice,term of office,PopulatedPlace,xsd:string
+terytCode,TERYT code,PopulatedPlace,owl:Thing
+topic,topic,PopulatedPlace,xsd:string
+touristicSite,touristic site,PopulatedPlace,Place
+twinTown,twin city,Settlement,Settlement
+unitaryAuthority,unitary authority,PopulatedPlace,PopulatedPlace
+urbanArea,urban area,Settlement,xsd:string
+viceLeader,vice leader,PopulatedPlace,Person
+viceLeaderParty,vice leader party,PopulatedPlace,PoliticalParty
+watercourse,watercourse,PopulatedPlace,xsd:string
+wilaya,wilaya,Settlement,Place
+winterTemperature,winter temperature,Settlement,Temperature
+zipCode,zip code,PopulatedPlace,xsd:string
