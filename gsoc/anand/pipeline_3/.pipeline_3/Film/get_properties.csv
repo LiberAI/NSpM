@@ -1,0 +1,59 @@
+afdbId,afdb id,Film,xsd:string
+allcinemaId,allcinema id,Film,xsd:string
+alternativeTitle,alternative title,Work,rdf:langString
+amgid,amgId,Film,xsd:string
+author,author,Work,Person
+basedOn,based on,Work,Work
+bgafdId,bgafd id,Film,xsd:string
+bibo:pages,pages,Work,xsd:string
+chiefEditor,chief editor,Work,Person
+cinematography,cinematography,Film,Person
+cites,cites,Work,xsd:string
+commissioner,commissioner,Work,xsd:string
+completionDate,completion date,Work,xsd:date
+composer,composer,Work,Person
+costumeDesigner,costume designer,Film,Person
+coverArtist,cover artist,Work,Person
+dc:description,description,Work,xsd:string
+dc:publisher,publisher,Work,xsd:string
+dcc,Dewey Decimal Classification,Work,xsd:string
+dct:references,references,Work,owl:Thing
+dct:source,source,Work,owl:Thing
+director,film director,Film,Person
+eTeatrId,e-teatr.pl id,Film,xsd:string
+editing,editing,Film,Person
+egafdId,egafd id,Film,xsd:string
+eurobabeIndexId,eurobabe index id,Film,xsd:string
+fileSize,size,Work,InformationUnit
+filename,filename,Work,xsd:string
+filmAudioType,film audio type,Film,xsd:string
+filmColourType,film colour type,Film,xsd:string
+filmRuntime,film runtime,Film,Time
+firstBroadcast,first broadcast,Film,xsd:string
+gross,gross,Film,Currency
+iafdId,iafd id,Film,xsd:string
+idAllocine,Allocine ID,Film,xsd:string
+license,license,Work,owl:Thing
+mainCharacter,main character,Work,Person
+makeupArtist,makeup artist,Film,Person
+musicComposer,music composer,Work,MusicalArtist
+narrator,narrator,Work,Person
+originalLanguage,original language,Work,Language
+originalTitle,original title,Work,rdf:langString
+previousWork,previous work,Work,Work
+producedBy,produced by,Film,Company
+producer,producer,Work,Agent
+productionCompany,production company,Work,Company
+publisher,publisher,Work,Agent
+quebecerTitle,quebecer title,Film,xsd:string
+releaseLocation,release location,Work,Place
+runtime,runtime,Work,Time
+setDesigner,set designer,Film,Person
+skos:notation,notation,Work,xsd:string
+specialEffects,special effects,Film,Person
+starring,starring,Work,Actor
+subjectTerm,subject term,Work,xsd:string
+subsequentWork,subsequent work,Work,Work
+titleLanguage,title language,Film,xsd:string
+translator,translator,Work,Person
+writer,writer,Work,Person
