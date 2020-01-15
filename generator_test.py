@@ -31,7 +31,7 @@ def test_single_resource_sort():
 
     result = sorted(matches, key=generator.prioritize_usage)
 
-    assert map(operator.itemgetter(0), map(operator.itemgetter('usages'), result)) == [17, 3, 2, 1, 0 ]
+    assert list(map(operator.itemgetter(0), list(map(operator.itemgetter('usages'), result)))) == [17, 3, 2, 1, 0 ]
 
 
 def test_couple_resource_sort():
@@ -39,7 +39,7 @@ def test_couple_resource_sort():
 
     result = sorted(matches, key=generator.prioritize_usage)
 
-    assert map(operator.itemgetter('usages'), result) == [[17, 2], [3, 2], [2, 2], [1, 2], [0, 0]]
+    assert list(map(operator.itemgetter('usages'), result)) == [[17, 2], [3, 2], [2, 2], [1, 2], [0, 0]]
 
 
 def test_encoding():

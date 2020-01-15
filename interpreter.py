@@ -14,11 +14,12 @@ import sys
 import re
 
 from generator_utils import decode,fix_URI
+import importlib
 
 if __name__ == '__main__':
-    reload(sys)
+    importlib.reload(sys)
     sys.setdefaultencoding("utf-8")
     encoded_sparql = sys.argv[1]
     decoded_sparql = decode(encoded_sparql)
     decoded_sparql = fix_URI(decoded_sparql)
-    print decoded_sparql
+    print(decoded_sparql)
