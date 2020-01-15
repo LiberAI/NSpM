@@ -5,6 +5,8 @@ A LSTM-based Machine Translation Approach for Question Answering.
 ![Seq2Seq neural network.](http://www.liberai.org/img/seq2seq-webexport-160px.png "seq2seq")
 ![Semantic triple flag.](http://www.liberai.org/img/flag-sparql-160px.png "SPARQL")
 
+This is a fork of the original repo which i updated to work with python3 and tensorflow 1.14.0
+
 ## Code
 
 Install `git-lfs` in your machine, then fetch all files and submodules.
@@ -15,7 +17,7 @@ git lfs checkout
 git submodule update --init
 ```
 
-Install TensorFlow (e.g., `pip install tensorflow`).
+Install Python3.7 and TensorFlow (e.g., `sudo apt install python3 & pip install tensorflow==1.14.0`).
 
 ### Data preparation
 
