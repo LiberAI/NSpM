@@ -21,6 +21,7 @@ import random
 import re
 import sys
 import traceback
+from tqdm import tqdm
 
 from generator_utils import log_statistics, save_cache, query_dbpedia, strip_brackets, encode, read_template_file
 
@@ -169,9 +170,9 @@ def generate_dataset(templates, output_dir, file_mode):
         os.makedirs(output_dir)
     it = 0
     with open(output_dir + '/data_300.en', file_mode) as english_questions, open(output_dir + '/data_300.sparql', file_mode) as sparql_queries:
-        for template in templates:
+        for template in tqdm(templates):
             it = it + 1
-            print "for {}th template".format(it)
+            #print "for {}th template".format(it)
             try:
                 results = get_results_of_generator_query(cache, template)
                 bindings = extract_bindings(results["results"]["bindings"], template)
@@ -314,7 +315,7 @@ if __name__ == '__main__':
     used_resources = collections.Counter(json.loads(open(resource_dump_file).read())) if use_resources_dump else collections.Counter()
     file_mode = 'a' if use_resources_dump else 'w'
     templates = read_template_file(template_file)
-    print len(templates)
+    #print len(templates)
     try:
         generate_dataset(templates, output_dir, file_mode)
         # print "lol"

@@ -1,0 +1,726 @@
+abbreviation,abbreviation,owl:Thing,xsd:string
+abstract,has abstract,owl:Thing,rdf:langString
+access,access,owl:Thing,xsd:string
+accessDate,access date,owl:Thing,xsd:date
+activeYearsEndDate,active years end date,owl:Thing,xsd:date
+activeYearsEndYear,active years end year,owl:Thing,xsd:gYear
+activeYearsStartDate,active years start date,owl:Thing,xsd:date
+activeYearsStartYear,active years start year,owl:Thing,xsd:gYear
+address,address,Place,rdf:langString
+administrativeStatus,administrative status,owl:Thing,xsd:string
+affiliation,affiliation,owl:Thing,Organisation
+ageRange,age range,owl:Thing,xsd:nonNegativeInteger
+agglomerationPopulationTotal,agglomeration population total,owl:Thing,xsd:nonNegativeInteger
+aitaCode,aita code,owl:Thing,xsd:string
+album,album,owl:Thing,Album
+alias,alias,owl:Thing,rdf:langString
+alongside,alongside,owl:Thing,Person
+alternativeName,alternative name,owl:Thing,rdf:langString
+altitude,altitude,Place,Altitude
+animal,animal,owl:Thing,Animal
+annualTemperature,annual temperature,Place,Temperature
+anthem,anthem,owl:Thing,Work
+apcPresident,apc president,owl:Thing,Person
+appearance,appearance,owl:Thing,xsd:string
+appointer,appointer,owl:Thing,Person
+area,area,owl:Thing,Area
+areaCode,area code,Place,xsd:string
+areaDate,area date,Place,xsd:date
+areaLand,area land,Place,Area
+areaMetro,area metro,owl:Thing,Area
+areaOfCatchmentQuote,area of catchment quote,Place,xsd:string
+areaQuote,area quote,Place,xsd:string
+areaRank,area rank,Place,xsd:string
+areaTotal,area total,Place,Area
+areaWater,area water,Place,Area
+artificialSnowArea,artificial snow area,Place,xsd:float
+asWikiText,Contains a WikiText representation of this thing,owl:Thing,xsd:string
+ascent,ascent,owl:Thing,xsd:string
+associate,associate,owl:Thing,Person
+associateStar,associateStar,owl:Thing,Constellation
+associatedBand,associated band,owl:Thing,Band
+associatedMusicalArtist,associated musical artist,owl:Thing,MusicalArtist
+atcCode,ATC code,owl:Thing,xsd:string
+atcPrefix,ATC prefix,owl:Thing,xsd:string
+atcSuffix,ATC suffix,owl:Thing,xsd:string
+authority,authority,owl:Thing,owl:Thing
+authorityMandate,authority mandate,Place,xsd:string
+autonomy,autonomy,owl:Thing,owl:Thing
+average,average,owl:Thing,xsd:double
+averageDepth,average depth,Place,Length
+averageDepthQuote,average depth quote,Place,xsd:string
+averageSpeed,average speed,owl:Thing,Speed
+avifaunaPopulation,avifauna population,Place,xsd:string
+award,award,owl:Thing,Award
+awayColourHexCode,colour hex code of away jersey or its parts,owl:Thing,xsd:string
+background,background,owl:Thing,xsd:string
+battery,battery,owl:Thing,Battery
+battle,battle,owl:Thing,MilitaryConflict
+bibsysId,BIBSYS Id,owl:Thing,xsd:string
+biggestCity,biggest city,Place,PopulatedPlace
+bioclimate,bioclimate,Place,xsd:string
+biome,biome,owl:Thing,owl:Thing
+bird,bird,Place,Species
+blackLongDistancePisteNumber,long distance piste number,Place,xsd:nonNegativeInteger
+blackSkiPisteNumber,black ski piste number,Place,xsd:nonNegativeInteger
+blazon,blazon,owl:Thing,xsd:string
+blazonLink,blazon link,owl:Thing,xsd:string
+blazonRatio,blazon ratio,owl:Thing,xsd:double
+blueLongDistancePisteNumber,blue long distance piste number,Place,xsd:nonNegativeInteger
+blueSkiPisteNumber,blue ski piste number,Place,xsd:nonNegativeInteger
+bnfId,BNF Id,owl:Thing,xsd:string
+book,name,owl:Thing,xsd:string
+border,border,owl:Thing,Area
+bpnId,BPN Id,owl:Thing,xsd:string
+budget,budget,owl:Thing,Currency
+budgetYear,budget year,Place,xsd:string
+builder,builder,owl:Thing,owl:Thing
+buildingEndDate,building end date,owl:Thing,xsd:string
+buildingStartDate,building start date,owl:Thing,xsd:string
+cableCar,cable car,Place,xsd:nonNegativeInteger
+calculationNeeds,its calculation needs,owl:Thing,owl:Thing
+callSign,call sign,owl:Thing,xsd:string
+cannonNumber,cannon number,Place,xsd:nonNegativeInteger
+capacity,capacity,owl:Thing,xsd:nonNegativeInteger
+capitalCoordinates,capital coordinates,Place,xsd:string
+casNumber,CAS number,owl:Thing,xsd:string
+casSupplemental,CAS supplemental,owl:Thing,xsd:string
+category,category,owl:Thing,owl:Thing
+chain,chain,owl:Thing,Company
+chairLabel,chair label,owl:Thing,owl:Thing
+chairman,chairman,owl:Thing,Person
+chancellor,chancellor,owl:Thing,Person
+channel,channel,owl:Thing,Broadcaster
+chiefPlace,chief place,owl:Thing,PopulatedPlace
+city,city,owl:Thing,City
+cityLink,city link,Place,xsd:string
+class,class,owl:Thing,owl:Thing
+classification,classification,owl:Thing,xsd:string
+climate,climate,Place,owl:Thing
+climbUpNumber,clip up number,Place,xsd:nonNegativeInteger
+closeTo,is close to,Place,Place
+closingDate,closing date,owl:Thing,xsd:date
+closingYear,closing year,owl:Thing,xsd:gYear
+coach,coach,owl:Thing,Person
+coachedTeam,coached team,owl:Thing,SportsTeam
+coastLength,length of a coast,Place,xsd:float
+coatOfArms,coat of arms image,owl:Thing,owl:Thing
+code,code,owl:Thing,xsd:string
+codeMunicipalMonument,monument code (municipal),Place,xsd:string
+codeNationalMonument,monument code (national),Place,xsd:string
+codeProvincialMonument,monument code (provinciall),Place,xsd:string
+collectionSize,country,owl:Thing,owl:Thing
+colour,colour,owl:Thing,Colour
+colourHexCode,colour hex code,owl:Thing,xsd:string
+colourName,colour name,owl:Thing,rdf:langString
+commandant,commandant,owl:Thing,Person
+commander,commander,owl:Thing,Person
+comment,comment,owl:Thing,xsd:string
+committee,committee,owl:Thing,xsd:string
+commonName,common name,owl:Thing,rdf:langString
+company,company,owl:Thing,Organisation
+conflict,conflict,owl:Thing,MilitaryConflict
+connotation,connotation,owl:Thing,owl:Thing
+constituencyDistrict,constituency district,owl:Thing,PopulatedPlace
+cosparId,COSPAR id,owl:Thing,xsd:string
+cost,cost,owl:Thing,Currency
+country,country,owl:Thing,Country
+countryCode,country code,Place,xsd:string
+county,county,owl:Thing,PopulatedPlace
+courseArea,course area,owl:Thing,Area
+cpu,CPU,owl:Thing,owl:Thing
+creationYear,year of creation,owl:Thing,xsd:gYear
+creator,creator (agent),owl:Thing,Agent
+crest,crest,owl:Thing,owl:Thing
+criteria,criteria,owl:Thing,xsd:string
+cuisine,cuisine,owl:Thing,xsd:string
+currency,currency,owl:Thing,Currency
+currencyCode,currency code,Place,xsd:string
+currentCity,current city,owl:Thing,City
+currentStatus,current status,owl:Thing,xsd:string
+date,date,owl:Thing,xsd:date
+dateAgreement,date of an agreement,Place,xsd:date
+dateBudget,date budget,owl:Thing,xsd:date
+dateOfAbandonment,date of abandonment,owl:Thing,xsd:date
+daylightSavingTimeZone,daylight saving time zone,Place,owl:Thing
+dc:creator,creator (literal),owl:Thing,xsd:string
+dc:identifier,identifier,owl:Thing,xsd:string
+dc:language,language (literal),owl:Thing,xsd:string
+dc:rights,rights,owl:Thing,owl:Thing
+dc:subject,subject,owl:Thing,owl:Thing
+dc:title,title,owl:Thing,xsd:string
+dc:type,type (literal),owl:Thing,xsd:string
+dct:created,Date or range when this object was created,owl:Thing,xsd:string
+dct:dateSubmitted,date submitted,owl:Thing,xsd:date
+dct:description,Description,owl:Thing,rdf:langString
+dct:extent,medium,owl:Thing,xsd:string
+dct:format,format (literal),owl:Thing,xsd:string
+dct:medium,medium,owl:Thing,xsd:string
+dct:modified,modified,owl:Thing,xsd:date
+dct:spatial,spatial,owl:Thing,owl:Thing
+dct:subject,subject,owl:Thing,owl:Thing
+dct:temporal,temporal,owl:Thing,owl:Thing
+dct:type,type,owl:Thing,owl:Thing
+deFactoLanguage,de facto language,owl:Thing,Language
+deliveryDate,delivery date,owl:Thing,xsd:date
+demonym,demonym,owl:Thing,rdf:langString
+density,density,owl:Thing,Density
+depictionDescription,depiction description (caption),owl:Thing,rdf:langString
+depth,depth,Place,Length
+depthQuote,depth quote,Place,xsd:string
+depths,depths,Place,Depth
+deputy,deputy,owl:Thing,Person
+description,description,owl:Thing,rdf:langString
+designCompany,designer company,owl:Thing,Company
+designer,designer,owl:Thing,Person
+destructionDate,destruction date,owl:Thing,xsd:date
+developer,developer,owl:Thing,Agent
+diameter,diameter,owl:Thing,Length
+diocese,diocese,owl:Thing,Diocese
+discoverer,discoverer,owl:Thing,Person
+disease,disease,owl:Thing,Disease
+distance,distance,owl:Thing,Length
+distributor,distributor,owl:Thing,Organisation
+district,district,Place,PopulatedPlace
+division,division,owl:Thing,owl:Thing
+documentDesignation,String designation of the WrittenWork describing the resource,owl:Thing,xsd:string
+draft,draft,owl:Thing,xsd:string
+draftYear,draft year,owl:Thing,xsd:gYear
+drugbank,DrugBank,owl:Thing,xsd:string
+duration,duration,owl:Thing,Time
+dynasty,dynasty,owl:Thing,owl:Thing
+eastPlace,east place,Place,Place
+editor,editor,owl:Thing,Agent
+einecsNumber,EINECS number,owl:Thing,xsd:string
+electionMajority,election majority,owl:Thing,xsd:nonNegativeInteger
+elementAbove,element above,owl:Thing,ChemicalSubstance
+elevation,elevation,Place,Length
+elevationQuote,elevation quote,Place,xsd:string
+endOccupation,end occupation,owl:Thing,xsd:string
+endPoint,end point,Place,Place
+endYear,end year,owl:Thing,xsd:gYear
+endangeredSince,endangered since,Place,xsd:date
+engineer,engineer,owl:Thing,Person
+era,era,owl:Thing,owl:Thing
+ethnicGroupsInYear,ethnic groups in year,owl:Thing,xsd:gYear
+event,event,owl:Thing,Event
+eventDate,event date,Place,xsd:date
+executiveProducer,executive producer,owl:Thing,Person
+exhibition,exhibition,owl:Thing,xsd:string
+existence,existence,owl:Thing,owl:Thing
+extinctionDate,extinction date,owl:Thing,xsd:date
+failedLaunches,failed launches,owl:Thing,xsd:nonNegativeInteger
+fauna,fauna,Place,xsd:string
+fdaUniiCode,FDA UNII code,owl:Thing,xsd:string
+feastDay,feast day, holiday,owl:Thing,xsd:date
+fighter,fighter,owl:Thing,xsd:string
+filmPolskiId,FilmPolski.pl id,owl:Thing,xsd:string
+firstLeader,firstLeader,owl:Thing,Person
+firstOwner,first owner,owl:Thing,Agent
+firstPlace,first place,owl:Thing,xsd:string
+firstPopularVote,firstPopularVote,owl:Thing,Person
+flag,flag (image),owl:Thing,xsd:string
+flagBorder,flag border,owl:Thing,xsd:string
+flagLink,flag Link,owl:Thing,xsd:string
+floodingDate,flooding date,owl:Thing,xsd:date
+flora,flora,Place,xsd:string
+flower,flower,Place,Species
+foaf:based_near,based near,owl:Thing,owl:Thing
+foaf:depiction,depiction from http://xmlns.com/foaf/spec/#term_depiction,owl:Thing,Image
+foaf:familyName,family name,owl:Thing,rdf:langString
+foaf:gender,gender,owl:Thing,xsd:string
+foaf:givenName,given name,owl:Thing,rdf:langString
+foaf:img,image,owl:Thing,owl:Thing
+foaf:isPrimaryTopicOf,A document that this thing is the primary topic of.,owl:Thing,foaf:Document
+foaf:logo,logo,owl:Thing,owl:Thing
+foaf:mbox,Email address (mbox),owl:Thing,xsd:string
+foaf:name,name,owl:Thing,rdf:langString
+foaf:nick,nickname,owl:Thing,rdf:langString
+foaf:page,A page or document about this thing.,owl:Thing,foaf:Document
+foaf:phone,Telephone (phone) number,owl:Thing,xsd:string
+foaf:surname,surname,owl:Thing,rdf:langString
+foaf:thumbnail,thumbnail,owl:Thing,Image
+foaf:topic,A topic of some page or document.,owl:Thing,owl:Thing
+focus,focus,owl:Thing,owl:Thing
+followedBy,followed by,owl:Thing,owl:Thing
+follows,follows,owl:Thing,owl:Thing
+forces,forces,owl:Thing,xsd:string
+foresterDistrict,foresterDistrict,Place,owl:Thing
+format,format (object),owl:Thing,owl:Thing
+formerName,former name,owl:Thing,rdf:langString
+foundedBy,founded by,owl:Thing,Agent
+founder,founder,owl:Thing,Person
+foundingDate,founding date,owl:Thing,xsd:date
+foundingYear,founding year,owl:Thing,xsd:gYear
+frequency,frequency,owl:Thing,Frequency
+frontierLength,length of a frontier,Place,xsd:float
+fuel,fuel,owl:Thing,owl:Thing
+fuelType,fuel type,owl:Thing,owl:Thing
+gameModus,Modus the game can be played in,owl:Thing,xsd:string
+gender,gender,owl:Thing,owl:Thing
+genre,genre,owl:Thing,Genre
+geolocDual,geolocdual,Place,xsd:string
+geologicPeriod,geologic period,Place,xsd:string
+geology,geology,owl:Thing,xsd:string
+governingBody,governing body,Place,Organisation
+governmentType,government type,owl:Thing,GovernmentType
+governor,governor,owl:Thing,Person
+governorGeneral,governor general,owl:Thing,Person
+greekName,name in ancient Greek,owl:Thing,xsd:string
+greenLongDistancePisteNumber,green long distance piste number,Place,xsd:nonNegativeInteger
+greenSkiPisteNumber,green ski piste number,Place,xsd:nonNegativeInteger
+gridReference,grid reference,Place,xsd:string
+grossDomesticProductPerPeople,gross domestic product per people,Place,xsd:string
+grossDomesticProductRank,gross domestic product rank,Place,xsd:string
+hasChannel,has channel,owl:Thing,owl:Thing
+hasInput,has input,owl:Thing,owl:Thing
+hasInsidePlace,has inside place,Place,Place
+hasOutsidePlace,has outside place,Place,Place
+hasSurfaceForm,undefined,owl:Thing,xsd:string
+hasVariant,variant or variation,owl:Thing,owl:Thing
+height,height,owl:Thing,Length
+heritageRegister,heritage register,Place,owl:Thing
+highestAltitude,highest altitude,Place,Altitude
+highestMountain,highest mountain,owl:Thing,Mountain
+highestPlace,highest place,owl:Thing,PopulatedPlace
+highestPosition,highest position,owl:Thing,geo:SpatialThing
+highschool,highschool,owl:Thing,School
+historicalMap,historical map,Place,xsd:string
+historicalName,historical name,Place,rdf:langString
+homeArena,home arena,owl:Thing,Arena
+homeColourHexCode,colour hex code of home jersey or its parts,owl:Thing,xsd:string
+homeStadium,home stadium,owl:Thing,Stadium
+honours,honours,owl:Thing,owl:Thing
+humanDevelopmentIndexRank,human development index rank,Place,xsd:string
+imageSize,image size (px),owl:Thing,xsd:integer
+imdbId,IMDB id,owl:Thing,xsd:string
+incumbent,incumbent,owl:Thing,Person
+individualisedGnd,individualised GND number,owl:Thing,xsd:string
+influenced,influenced,owl:Thing,owl:Thing
+influencedBy,influenced by,owl:Thing,owl:Thing
+information,information,Place,xsd:string
+informationName,information name,Place,xsd:string
+inscription,inscription,owl:Thing,xsd:string
+institution,institution,owl:Thing,Organisation
+intercommunality,intercommunality,owl:Thing,PopulatedPlace
+introduced,introduced,owl:Thing,xsd:date
+isPartOf,is part of,owl:Thing,owl:Thing
+isPartOfName,is part of (literal),owl:Thing,xsd:string
+isRouteStop,is route stop,Place,RouteStop
+isniId,ISNI Id,owl:Thing,xsd:string
+iso31661Code,ISO 3166-1 code,Place,xsd:string
+isoCode,iso code of a place,Place,xsd:string
+jureLanguage,jure language,owl:Thing,Language
+jurisdiction,jurisdiction,owl:Thing,owl:Thing
+keyPerson,key person,owl:Thing,Person
+kinOfLanguage,kindOfLanguage,owl:Thing,xsd:string
+kindOfCoordinate,kind of coordinate,Place,xsd:string
+kindOfRock,kind of rock,Place,xsd:string
+knownFor,known for,owl:Thing,owl:Thing
+lake,vastest lake,Place,BodyOfWater
+land,land,Place,Place
+landArea,area of a land,Place,Area
+landPercentage,land percentage of a place,Place,xsd:float
+language,language,owl:Thing,Language
+languageRegulator,language regulator or academy,owl:Thing,Language
+latinName,name in latin,owl:Thing,xsd:string
+lawCountry,law country,Place,xsd:string
+lccnId,LCCN Id,owl:Thing,xsd:string
+leader,leader,owl:Thing,Person
+league,league,owl:Thing,SportsLeague
+length,length,owl:Thing,Length
+lengthQuote,length quote,Place,xsd:string
+licensee,licensee,owl:Thing,xsd:string
+lieutenant,lieutenant,owl:Thing,Person
+limit,limit,Place,xsd:string
+linkedSpace,linked space,Place,xsd:string
+listItemOf,list item,owl:Thing,owl:Thing
+localAuthority,local authority,owl:Thing,owl:Thing
+locatedInArea,located in area,Place,Place
+location,location,owl:Thing,Place
+locationCountry,państwo,owl:Thing,Country
+locationName,locationName,owl:Thing,xsd:string
+logo,logo,owl:Thing,xsd:string
+longDistancePisteKilometre,long distance piste kilometre,Place,Length
+longDistancePisteNumber,long distance piste number,Place,xsd:nonNegativeInteger
+longName,longName,owl:Thing,rdf:langString
+lowest,lowest,Place,xsd:string
+lowestAltitude,lowest altitude,Place,Altitude
+lowestMountain,lowest mountain,Place,Mountain
+lowestPlace,lowest place,Place,PopulatedPlace
+lowestPosition,lowest position,Place,geo:SpatialThing
+mainInterest,main interest,owl:Thing,owl:Thing
+mainIsland,main island,Place,Place
+majorityFloorLeader,majority floor leader,owl:Thing,xsd:integer
+majorityLeader,majority leader,owl:Thing,xsd:integer
+management,management,owl:Thing,owl:Thing
+managementElevation,management elevation,owl:Thing,Length
+managementMountain,management mountain,owl:Thing,Mountain
+managementPlace,management place,owl:Thing,PopulatedPlace
+managementPosition,management position,owl:Thing,geo:SpatialThing
+managerYearsEndYear,manager years end year,owl:Thing,xsd:gYear
+managerYearsStartYear,manager years start year,owl:Thing,xsd:gYear
+mandate,political mandate,owl:Thing,xsd:string
+manufactory,manufactory,owl:Thing,Factory
+manufacturer,manufacturer,owl:Thing,Organisation
+map,map,Place,owl:Thing
+mapCaption,map caption,Place,xsd:string
+mapDescription,map description,Place,xsd:string
+mascot,mascot,owl:Thing,xsd:string
+mass,mass,owl:Thing,Mass
+material,material,owl:Thing,owl:Thing
+max,max,owl:Thing,xsd:nonNegativeInteger
+maximumArea,maximum area,Place,xsd:string
+maximumAreaQuote,maximum area quote,Place,xsd:string
+maximumDepth,maximum depth,Place,Length
+maximumDepthQuote,maximum depth quote,Place,xsd:string
+maximumDischarge,maximum discharge,owl:Thing,FlowRate
+maximumElevation,maximum elevation,Place,Length
+mayor,mayor,owl:Thing,Mayor
+mayorArticle,mayor article,Place,xsd:string
+mayorCouncillor,mayor councillor,owl:Thing,xsd:string
+mbaId,MBA Id,owl:Thing,xsd:string
+meaning,meaning,owl:Thing,xsd:string
+mediaItem,media item,owl:Thing,File
+medlinePlus,MedlinePlus,owl:Thing,xsd:string
+meltingPoint,melting point,owl:Thing,Temperature
+memberOfParliament,Member of Parliament,owl:Thing,Person
+mergerDate,merger date,Place,xsd:date
+militaryGovernment,military government,owl:Thing,xsd:string
+militaryUnitSize,military unit size,owl:Thing,xsd:string
+min,min,owl:Thing,xsd:nonNegativeInteger
+minimumArea,minimum area,Place,xsd:string
+minimumAreaQuote,minimum area quote,Place,xsd:string
+minimumDischarge,minimum discharge,owl:Thing,FlowRate
+minimumElevation,minimum elevation,Place,Length
+minister,minister,owl:Thing,Politician
+minorityFloorLeader,minority floor leader,owl:Thing,xsd:integer
+minorityLeader,minority leader,owl:Thing,xsd:integer
+mission,mission,owl:Thing,SpaceMission
+monarch,monarch,owl:Thing,Person
+month,month,owl:Thing,xsd:string
+motto,motto,owl:Thing,xsd:string
+mouthElevation,mouth elevation,owl:Thing,Length
+municipality,municipality,owl:Thing,PopulatedPlace
+municipalityCode,municipality code,Place,xsd:string
+name,name,owl:Thing,rdf:langString
+nameAsOf,so named since,owl:Thing,xsd:gYear
+nameInCantoneseChinese,name in Yue Chinese,owl:Thing,rdf:langString
+nameInHangulKorean,name in Hangul-written Korean,owl:Thing,rdf:langString
+nameInHanjaKorean,name in Hanja-written (traditional) Korean,owl:Thing,rdf:langString
+nameInJapanese,name in Japanese,owl:Thing,rdf:langString
+nameInMindongyuChinese,name in Mindongyu Chinese,owl:Thing,rdf:langString
+nameInMinnanyuChinese,name in Minnanyu Chinese,owl:Thing,rdf:langString
+nameInPinyinChinese,name in Pinyin Chinese,owl:Thing,rdf:langString
+nameInSimplifiedChinese,name in Simplified Chinese,owl:Thing,rdf:langString
+nameInTraditionalChinese,name in Traditional Chinese,owl:Thing,rdf:langString
+nameInWadeGilesChinese,name in the Wade-Giles transscription of Chinese,owl:Thing,rdf:langString
+namedAfter,named after,owl:Thing,owl:Thing
+namedByLanguage,named by language,Place,Place
+nationalTopographicSystemMapNumber,National Topographic System map number,Place,xsd:string
+ndlId,NDL id,owl:Thing,xsd:string
+nearestCity,nearest city,Place,PopulatedPlace
+neighbourRegion,neighbour region,Place,xsd:string
+newspaper,newspaper,owl:Thing,PeriodicalLiterature
+nextEntity,next entity,Place,Place
+nlaId,NLA Id,owl:Thing,xsd:string
+nominee,nominee,owl:Thing,Person
+northEastPlace,north-east place,Place,Place
+northPlace,north place,Place,Place
+northWestPlace,north-west place,Place,Place
+notableWork,notable work,owl:Thing,Work
+notes,notes,owl:Thing,xsd:string
+numberOfClasses,numberOfClasses,owl:Thing,xsd:nonNegativeInteger
+numberOfClassesWithResource,numberOfClassesWithResource,owl:Thing,xsd:nonNegativeInteger
+numberOfDisambiguates,numberOfDisambiguates,owl:Thing,xsd:nonNegativeInteger
+numberOfIndegree,number of all indegrees in dbpedia (same ourdegrees are counting repeatedly),owl:Thing,xsd:nonNegativeInteger
+numberOfIsland,number of islands,Place,xsd:string
+numberOfOutdegree,numberOfOutdegree,owl:Thing,xsd:nonNegativeInteger
+numberOfPersonBornInPlace,number of entities of Person class born in the place,Place,xsd:nonNegativeInteger
+numberOfPixels,number of pixels (millions),owl:Thing,xsd:nonNegativeInteger
+numberOfPredicates,numberOfPredicates,owl:Thing,xsd:nonNegativeInteger
+numberOfProperties,numberOfProperties,owl:Thing,xsd:nonNegativeInteger
+numberOfPropertiesUsed,numberOfPropertiesUsed,owl:Thing,xsd:nonNegativeInteger
+numberOfRedirectedResource,numberOfRedirectedResource,owl:Thing,xsd:nonNegativeInteger
+numberOfResource,numberOfResource,owl:Thing,xsd:nonNegativeInteger
+numberOfResourceOfClass,number of all resource / entities of a class,owl:Thing,xsd:nonNegativeInteger
+numberOfResourceOfType,number of resource / entities for concrete type of subject,owl:Thing,xsd:nonNegativeInteger
+numberOfResourceWithType,nmberOfResourceWithType,owl:Thing,xsd:nonNegativeInteger
+numberOfSoccerPlayersBornInPlace,number of SoccerPlayers born in Place,Place,xsd:nonNegativeInteger
+numberOfSports,number of sports,owl:Thing,xsd:nonNegativeInteger
+numberOfSportsEvents,number of sports events,owl:Thing,xsd:nonNegativeInteger
+numberOfTriples,numberOfTriples,owl:Thing,xsd:nonNegativeInteger
+numberOfUniqeResources,numberOfUniqeResources,owl:Thing,xsd:nonNegativeInteger
+numberOfUseOfProperty,number of use of a property,owl:Thing,xsd:nonNegativeInteger
+numberOfVisitors,number of visitors,owl:Thing,xsd:nonNegativeInteger
+nutsCode,NUTS code,Place,xsd:string
+occupation,occupation,owl:Thing,PersonFunction
+odor,Odor,owl:Thing,xsd:string
+office,(political) office,owl:Thing,xsd:string
+openingDate,opening date,owl:Thing,xsd:date
+openingYear,opening year,owl:Thing,xsd:gYear
+operator,operator,owl:Thing,owl:Thing
+orbits,orbits,owl:Thing,xsd:integer
+orcidId,ORCID Id,owl:Thing,xsd:string
+orderInOffice,order in office,owl:Thing,xsd:string
+organisation,organisation,owl:Thing,Organisation
+origin,origin,owl:Thing,PopulatedPlace
+originalName,original name,owl:Thing,rdf:langString
+originallyUsedFor,originally used for,owl:Thing,xsd:string
+orogeny,orogeny,owl:Thing,owl:Thing
+output,output,Place,xsd:float
+owl:differentFrom,An owl:differentFrom statement indicates that two URI references refer to different individuals,owl:Thing,owl:Thing
+owl:sameAs,same as,owl:Thing,owl:Thing
+owner,owner,owl:Thing,Agent
+owningCompany,owning company,owl:Thing,Company
+owningOrganisation,owning organisation,owl:Thing,Organisation
+parentCompany,parent company,owl:Thing,Company
+parliament,parliament,owl:Thing,Parliament
+parliamentType,parliament type,Place,xsd:string
+part,part,owl:Thing,owl:Thing
+partialFailedLaunches,partial failed launches,owl:Thing,xsd:nonNegativeInteger
+party,party,owl:Thing,PoliticalParty
+partyNumber,party number,owl:Thing,xsd:integer
+pastMember,past member,owl:Thing,Person
+patronSaint,patron saint,owl:Thing,Person
+pccSecretary,pcc secretary,owl:Thing,xsd:string
+percentage,percentage,owl:Thing,owl:Thing
+percentageOfAreaWater,percentage of area water,owl:Thing,xsd:float
+perimeter,perimeter,Place,Length
+period,event period,owl:Thing,owl:Thing
+picture,picture,owl:Thing,owl:Thing
+pictureDescription,picture description,owl:Thing,owl:Thing
+picturesCommonsCategory,pictures Commons category,owl:Thing,xsd:string
+pisciculturalPopulation,piscicultural population,Place,xsd:string
+plant,plant,Place,Plant
+playRole,play role,owl:Thing,owl:Thing
+playingTime,playing time,owl:Thing,Time
+pole,pole,owl:Thing,xsd:string
+politicalLeader,political leader,Place,PersonFunction
+populationQuote,population quote,Place,xsd:string
+populationTotal,population total,owl:Thing,xsd:nonNegativeInteger
+portfolio,portfolio,owl:Thing,xsd:string
+position,position,owl:Thing,owl:Thing
+postalCode,postal code,owl:Thing,xsd:string
+predecessor,predecessor,owl:Thing,owl:Thing
+prefix,prefix,owl:Thing,xsd:string
+president,president,owl:Thing,Person
+presidentGeneralCouncilMandate,mandate of the president of the general council,Place,xsd:string
+presidentRegionalCouncilMandate,mandate of the president council of the regional council,Place,xsd:string
+previousEntity,previous entity,Place,Place
+price,price,owl:Thing,Currency
+primeMinister,prime minister,owl:Thing,Person
+produces,produces,owl:Thing,owl:Thing
+productionEndDate,production end date,owl:Thing,xsd:date
+productionEndYear,production end year,owl:Thing,xsd:gYear
+productionStartDate,production start date,owl:Thing,xsd:date
+productionStartYear,production start year,owl:Thing,xsd:gYear
+prominence,prominence,owl:Thing,Length
+pronunciation,pronunciation,owl:Thing,xsd:string
+protectionStatus,monument protection status,Place,xsd:string
+provides,provides,owl:Thing,owl:Thing
+province,province,Place,Province
+provinceLink,province link,Place,Province
+publicationDate,publication date,owl:Thing,xsd:date
+publiclyAccessible,publicly accessible,owl:Thing,xsd:string
+purpose,purpose,owl:Thing,xsd:string
+quotation,quotation,owl:Thing,xsd:string
+quote,quote,Place,xsd:string
+race,race,owl:Thing,Race
+raceHorse,race horse,owl:Thing,Horse
+rank,rank,owl:Thing,xsd:string
+rankAgreement,rank of an agreement,Place,xsd:nonNegativeInteger
+rating,rating,owl:Thing,xsd:float
+rdf:type,undefined,owl:Thing,owl:Thing
+rdfs:comment,undefined,owl:Thing,rdf:langString
+rdfs:label,undefined,owl:Thing,rdf:langString
+rdfs:seeAlso,is used to indicate a resource that might provide additional information about the subject resource,owl:Thing,owl:Thing
+rdfs:subClassOf,subclass of,owl:Thing,owl:Thing
+rebuildDate,rebuild date,owl:Thing,xsd:date
+recordLabel,record label,owl:Thing,RecordLabel
+redLongDistancePisteNumber,red long distance piste number,Place,xsd:nonNegativeInteger
+redSkiPisteNumber,red ski piste number,Place,xsd:nonNegativeInteger
+refcul,reference for cultural data,Place,xsd:string
+refgen,reference for general data,Place,xsd:string
+refgeo,reference for geographic data,Place,xsd:string
+refpol,reference for politic data,Place,xsd:string
+regency,regency,Place,PopulatedPlace
+region,region,owl:Thing,Place
+regionLink,region link,Place,xsd:string
+regionType,region type,Place,xsd:string
+regionalPrefecture,regional prefecture,Place,xsd:string
+registry,registry,owl:Thing,xsd:string
+related,related,owl:Thing,owl:Thing
+relatedPlaces,related places,Place,List
+releaseDate,release date,owl:Thing,xsd:date
+relief,relief,Place,xsd:string
+religion,religion,owl:Thing,owl:Thing
+religiousHead,religious head,owl:Thing,Person
+reopened,reopened,owl:Thing,xsd:date
+representative,number of representatives,Place,xsd:nonNegativeInteger
+requirement,requirement,owl:Thing,xsd:string
+restoreDate,restore date,owl:Thing,xsd:date
+restriction,restriction,owl:Thing,xsd:string
+retentionTime,relation time,Place,xsd:string
+retired,retired,owl:Thing,xsd:date
+ridId,RID Id,owl:Thing,xsd:string
+river,river,Place,River
+rkdArtistsId,RKDartists id,owl:Thing,xsd:string
+role,role,owl:Thing,xsd:string
+route,route,Place,xsd:string
+royalAnthem,royal anthem,owl:Thing,owl:Thing
+runningMate,running mate,owl:Thing,Person
+sales,sales,owl:Thing,Sales
+scale,scale,Place,xsd:string
+score,score,owl:Thing,xsd:double
+sea,sea,Place,Sea
+secondLeader,secondLeader,owl:Thing,Person
+secondPlace,second place,owl:Thing,xsd:string
+secondPopularVote,secondPopularVote,owl:Thing,Person
+selibrId,SELIBR Id,owl:Thing,xsd:string
+senator,senator,owl:Thing,Person
+seniority,seniority,owl:Thing,xsd:string
+series,series,owl:Thing,owl:Thing
+sessionNumber,session number,owl:Thing,xsd:integer
+settlement,settlement,Place,PopulatedPlace
+setupTime,setup time,owl:Thing,Time
+show,show,owl:Thing,TelevisionShow
+similar,similar,owl:Thing,owl:Thing
+siren,siren number,owl:Thing,xsd:nonNegativeInteger
+sizeBlazon,size blazon,owl:Thing,xsd:string
+sizeLogo,size logo,owl:Thing,xsd:nonNegativeInteger
+sizeMap,size map,owl:Thing,xsd:string
+sizeThumbnail,size thumbnail,owl:Thing,xsd:string
+skiLift,ski lift,Place,xsd:nonNegativeInteger
+skiPisteKilometre,ski piste kilometre,Place,Length
+skiPisteNumber,ski piste number,Place,xsd:nonNegativeInteger
+skiTow,ski tow,Place,xsd:nonNegativeInteger
+skills,skills,owl:Thing,owl:Thing
+skos:broader,broader,owl:Thing,owl:Thing
+skos:prefLabel,prefLabel,owl:Thing,rdf:langString
+skos:related,related,owl:Thing,owl:Thing
+slogan,slogan,owl:Thing,rdf:langString
+snowParkNumber,snow park number,Place,xsd:nonNegativeInteger
+soundRecording,sound recording,owl:Thing,Sound
+source,source,owl:Thing,owl:Thing
+sourceConfluenceElevation,source confluence elevation,owl:Thing,Length
+sourceDistrict,source district,owl:Thing,PopulatedPlace
+sourceElevation,source elevation,owl:Thing,Length
+sourceMountain,source mountain,owl:Thing,Mountain
+sourcePlace,source place,owl:Thing,PopulatedPlace
+sourcePosition,source position,owl:Thing,geo:SpatialThing
+sourceRegion,source region,owl:Thing,PopulatedPlace
+sourceState,source state,owl:Thing,PopulatedPlace
+sourceText,sourceText,owl:Thing,rdf:langString
+southEastPlace,south-east place,Place,Place
+southPlace,south place,Place,Place
+southWestPlace,south-west place,Place,Place
+sovereignCountry,sovereign country,Place,PopulatedPlace
+speaker,speaker,owl:Thing,xsd:integer
+specialist,specialist,owl:Thing,PersonFunction
+specialization,specialization,owl:Thing,owl:Thing
+sport,sport,owl:Thing,Sport
+sportGoverningBody,sport governing body,owl:Thing,owl:Thing
+stadium,Stadium,owl:Thing,Stadium
+startOccupation,start occupation,owl:Thing,xsd:string
+startPoint,start point,Place,Place
+startYear,start year,owl:Thing,xsd:gYear
+statName,stat name,owl:Thing,xsd:string
+statValue,stat value,owl:Thing,xsd:double
+state,state,owl:Thing,PopulatedPlace
+stateDelegate,state delegate,owl:Thing,Person
+status,status,owl:Thing,xsd:string
+statusYear,status year,Place,xsd:string
+subPrefecture,subprefecture,Place,xsd:string
+subdivision,subdivision,owl:Thing,owl:Thing
+subdivisionLink,subdivision link,Place,xsd:string
+subdivisions,subdivisions,owl:Thing,xsd:nonNegativeInteger
+sublimationPoint,sublimation point,owl:Thing,Temperature
+subregion,subregion,Place,Place
+subsystem,subsystem,Place,xsd:string
+subsystemLink,subsystem link,Place,xsd:string
+subtitle,subtitle,owl:Thing,xsd:string
+successfulLaunches,successful launches,owl:Thing,xsd:nonNegativeInteger
+successor,successor,owl:Thing,owl:Thing
+sudocId,SUDOC id,owl:Thing,xsd:string
+supply,supply,Place,Place
+surfaceFormOccurrenceOffset,position in which a surface occurs in a text,owl:Thing,xsd:string
+surfaceType,type of surface,owl:Thing,xsd:string
+synonym,synonym,owl:Thing,xsd:string
+systemRequirements,minimum system requirements,owl:Thing,xsd:string
+tag,tag,owl:Thing,xsd:date
+taoiseach,taoiseach,owl:Thing,Person
+team,team,owl:Thing,SportsTeam
+teamSize,team size,owl:Thing,xsd:nonNegativeInteger
+televisionSeries,television series,owl:Thing,TelevisionShow
+temperature,temperature,owl:Thing,Temperature
+tennisSurfaceType,type of tennis surface,owl:Thing,xsd:string
+termPeriod,term period,owl:Thing,TimePeriod
+thirdPlace,third place,owl:Thing,xsd:string
+thumbnail,thumbnail,owl:Thing,Image
+thumbnailCaption,thumbnail caption,owl:Thing,xsd:string
+time,time,owl:Thing,xsd:string
+timeInSpace,total time person has spent in space,owl:Thing,Time
+timeZone,time zone,Place,owl:Thing
+title,title,owl:Thing,rdf:langString
+topSpeed,top speed,owl:Thing,Speed
+totalLaunches,total launches,owl:Thing,xsd:nonNegativeInteger
+tradeMark,TradeMark,owl:Thing,owl:Thing
+translatedMotto,translated motto,owl:Thing,xsd:string
+tree,tree,Place,Species
+type,type,owl:Thing,owl:Thing
+typeCoordinate,type coordinate,Place,xsd:string
+ulanId,ULAN id,owl:Thing,xsd:string
+unesco,unesco,Place,PopulatedPlace
+university,university,owl:Thing,EducationalInstitution
+unloCode,UN/LOCODE,Place,xsd:string
+updated,updated,owl:Thing,xsd:date
+uses,uses,owl:Thing,owl:Thing
+usk,approved rating of the Entertainment Software Self-Regulation Body in Germany,owl:Thing,xsd:integer
+utcOffset,UTC offset,Place,xsd:string
+value,value,owl:Thing,xsd:nonNegativeInteger
+variantOf,variant or variation,owl:Thing,owl:Thing
+vehicle,vehicle,owl:Thing,Automobile
+vehicleCode,vehicle code,Place,xsd:string
+viafId,VIAF Id,owl:Thing,xsd:string
+viceChancellor,vice chancellor,owl:Thing,Person
+vicePresident,vice president,owl:Thing,Person
+vicePrimeMinister,vice prime minister,owl:Thing,Person
+victim,victim (resource),owl:Thing,owl:Thing
+victims,victims (string),owl:Thing,xsd:string
+voice,voice,owl:Thing,Person
+volume,volume,owl:Thing,Volume
+volumeQuote,volume quote,Place,xsd:string
+water,water,Place,xsd:string
+waterArea,area of water,Place,Area
+waterPercentage,water percentage of a place,Place,xsd:float
+webcast,webcast,owl:Thing,owl:Thing
+websiteLabel,label of a website,owl:Thing,rdf:langString
+weight,weight,owl:Thing,Mass
+westPlace,west place,Place,Place
+wholeArea,whole area,Place,Area
+width,width,owl:Thing,Length
+widthQuote,width quote,Place,xsd:string
+wikiPageCharacterSize,Character size of wiki page,owl:Thing,xsd:nonNegativeInteger
+wikiPageDisambiguates,Wikipage disambiguates,owl:Thing,owl:Thing
+wikiPageEditLink,Link to the Wikipage edit URL,owl:Thing,owl:Thing
+wikiPageExternalLink,Link from a Wikipage to an external page,owl:Thing,owl:Thing
+wikiPageExtracted,extraction datetime,owl:Thing,xsd:dateTime
+wikiPageHistoryLink,Link to the Wikipage history URL,owl:Thing,owl:Thing
+wikiPageID,Wikipage page ID,owl:Thing,xsd:integer
+wikiPageInDegree,Wiki page in degree,owl:Thing,xsd:nonNegativeInteger
+wikiPageInterLanguageLink,Link from a Wikipage to a Wikipage in a different language about the same or a related subject.,owl:Thing,owl:Thing
+wikiPageLength,page length (characters) of wiki page,owl:Thing,xsd:nonNegativeInteger
+wikiPageModified,Wikipage modification datetime,owl:Thing,xsd:dateTime
+wikiPageOutDegree,Wiki page out degree,owl:Thing,xsd:nonNegativeInteger
+wikiPageRedirects,Wikipage redirect,owl:Thing,owl:Thing
+wikiPageRevisionID,Wikipage revision ID,owl:Thing,xsd:integer
+wikiPageRevisionLink,Link to the Wikipage revision URL,owl:Thing,owl:Thing
+wikiPageUsesTemplate,wiki page uses template,owl:Thing,WikimediaTemplate
+wikiPageWikiLink,Link from a Wikipage to another Wikipage,owl:Thing,owl:Thing
+wikiPageWikiLinkText,Text used to link from a Wikipage to another Wikipage,owl:Thing,owl:Thing
+wikidataSplitIri,Wikidata IRI slit,owl:Thing,owl:Thing
+wins,wins,owl:Thing,xsd:nonNegativeInteger
+year,year,owl:Thing,xsd:gYear
+yearOfConstruction,year of construction,Place,xsd:gYear
+zodiacSign,zodiac sign,owl:Thing,owl:Thing
