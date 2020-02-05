@@ -15,8 +15,8 @@ git lfs checkout
 git submodule update --init
 ```
 
-Install TensorFlow (e.g., `pip install tensorflow`).
-
+Install TensorFlow (e.g., `pip install tensorflow`).  
+Note: Tensorflow version must >= 1.2.1
 ### Data preparation
 
 #### Generation 

@@ -1,0 +1,47 @@
+administrator,administrator,Organisation,Person
+age,age,Agent,xsd:integer
+artPatron,patron (art),Agent,Artist
+ceo,chief executive officer,Organisation,Person
+chairperson,chairperson,Organisation,Person
+championships,championships,Agent,xsd:nonNegativeInteger
+chaplain,chaplain,Organisation,Person
+childOrganisation,child organisation,Organisation,Organisation
+denomination,denomination,Agent,owl:Thing
+discipline,discipline,Agent,owl:Thing
+endowment,endowment,Organisation,Currency
+formationDate,formation date,Organisation,xsd:date
+formationYear,formation year,Organisation,xsd:gYear
+foundationPlace,foundation place,Organisation,City
+generalCouncil,general council,Agent,TermOfOffice
+headquarter,headquarter,Organisation,PopulatedPlace
+hometown,home town,Agent,Settlement
+ideology,ideology,Agent,Ideology
+juniorSeason,junior season,Agent,owl:Thing
+leaderFunction,leaderFunction,Organisation,PersonFunction
+legalForm,legal form,Organisation,owl:Thing
+locationCity,location city,Organisation,City
+mainOrgan,main organ,Organisation,owl:Thing
+managerSeason,manager season,Agent,owl:Thing
+membership,membership,Organisation,rdf:langString
+mergedWith,merged with,Organisation,Organisation
+nationalSelection,national selection,Agent,owl:Thing
+numberOfEmployees,number of employees,Organisation,xsd:nonNegativeInteger
+numberOfLocations,number of locations,Organisation,xsd:nonNegativeInteger
+numberOfStaff,number of staff,Organisation,xsd:nonNegativeInteger
+numberOfVolunteers,number of volunteers,Organisation,xsd:nonNegativeInteger
+organisationMember,organisation member,Organisation,OrganisationMember
+owns,owns,Agent,Thing
+parentOrganisation,parent organisation,Organisation,Organisation
+playerSeason,player season,Agent,owl:Thing
+product,product,Organisation,owl:Thing
+ranking,ranking,Organisation,xsd:positiveInteger
+regionServed,region served,Organisation,Place
+regionalCouncil,regional council,Agent,TermOfOffice
+revenue,revenue,Organisation,Currency
+roleInEvent,A Person's role in an event,Agent,Event
+season,season,Agent,owl:Thing
+secretaryGeneral,secretary,Organisation,Person
+service,service,Organisation,owl:Thing
+staff,staff,Organisation,xsd:nonNegativeInteger
+superintendent,superintendent,Organisation,Person
+trustee,trustee,Organisation,Person

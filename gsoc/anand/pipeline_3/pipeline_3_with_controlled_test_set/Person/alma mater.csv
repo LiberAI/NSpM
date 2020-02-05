@@ -1,0 +1,51 @@
+actingHeadteacher,acting headteacher,EducationalInstitution,Person
+administrator,administrator,Organisation,Person
+alumni,alumni,EducationalInstitution,Person
+assistantPrincipal,assistant principal,EducationalInstitution,owl:Thing
+brinCode,BRIN code,EducationalInstitution,xsd:string
+campusType,campus type,EducationalInstitution,rdf:langString
+ceo,chief executive officer,Organisation,Person
+chairperson,chairperson,Organisation,Person
+chaplain,chaplain,Organisation,Person
+childOrganisation,child organisation,Organisation,Organisation
+closed,closed,EducationalInstitution,xsd:date
+custodian,custodian,EducationalInstitution,Person
+dean,dean,EducationalInstitution,Person
+educationSystem,education system,EducationalInstitution,owl:Thing
+endowment,endowment,Organisation,Currency
+facultySize,faculty size,EducationalInstitution,xsd:nonNegativeInteger
+formationDate,formation date,Organisation,xsd:date
+formationYear,formation year,Organisation,xsd:gYear
+foundationPlace,foundation place,Organisation,City
+head,head,EducationalInstitution,Person
+headquarter,headquarter,Organisation,PopulatedPlace
+leaderFunction,leaderFunction,Organisation,PersonFunction
+legalForm,legal form,Organisation,owl:Thing
+locationCity,location city,Organisation,City
+mainOrgan,main organ,Organisation,owl:Thing
+membership,membership,Organisation,rdf:langString
+mergedWith,merged with,Organisation,Organisation
+nationalRanking,national ranking,EducationalInstitution,xsd:positiveInteger
+numberOfAcademicStaff,number of academic staff,EducationalInstitution,xsd:nonNegativeInteger
+numberOfEmployees,number of employees,Organisation,xsd:nonNegativeInteger
+numberOfGraduateStudents,number of graduate students,EducationalInstitution,xsd:nonNegativeInteger
+numberOfLocations,number of locations,Organisation,xsd:nonNegativeInteger
+numberOfStaff,number of staff,Organisation,xsd:nonNegativeInteger
+numberOfStudents,number of students,EducationalInstitution,xsd:nonNegativeInteger
+numberOfUndergraduateStudents,number of undergraduate students,EducationalInstitution,xsd:nonNegativeInteger
+numberOfVolunteers,number of volunteers,Organisation,xsd:nonNegativeInteger
+offeredClasses,offered classes,EducationalInstitution,xsd:string
+officialSchoolColour,official school colour,EducationalInstitution,xsd:string
+organisationMember,organisation member,Organisation,OrganisationMember
+parentOrganisation,parent organisation,Organisation,Organisation
+principal,principal,EducationalInstitution,Person
+product,product,Organisation,owl:Thing
+ranking,ranking,Organisation,xsd:positiveInteger
+rector,rector,EducationalInstitution,Person
+regionServed,region served,Organisation,Place
+revenue,revenue,Organisation,Currency
+secretaryGeneral,secretary,Organisation,Person
+service,service,Organisation,owl:Thing
+staff,staff,Organisation,xsd:nonNegativeInteger
+superintendent,superintendent,Organisation,Person
+trustee,trustee,Organisation,Person

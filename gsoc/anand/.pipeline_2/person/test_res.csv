@@ -1,0 +1,254 @@
+dbo:Person;;;when is the active years end year manager of <X>;when is the active years end year manager of <X>;when is the active years end year manager of <X>
+dbo:Person;;;when is the active years start date manager of <X>;when is the active years start date manager of <X>;when is the active years start date manager of <X>
+dbo:Person;;;when is the active years start year manager of <X>;when is the active years start year manager of <X>;when is the active years start year manager of <X>
+dbo:Person;;;what is the activity of <X>;what is the activity of <X>;what is the activity of <X>
+dbo:Person;;;what is the affair of <X>;what is the affair of <X>;what is the affair of <X>
+dbo:Person;;;what is the age of <X>;what is the age of <X>;what is the age of <X>
+dbo:Person;;;what is the agency of <X>;select ?x where { <X> <http://dbpedia.org/ontology/agency> ?x };select ?a where { ?a <http://dbpedia.org/ontology/agency> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Person;;;what is the allegiance of <X>;select ?x where { <X> <http://dbpedia.org/ontology/allegiance> ?x };select ?a where { ?a <http://dbpedia.org/ontology/allegiance> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Person;;;what is the alma mater of <X>;select ?x where { <X> <http://dbpedia.org/ontology/almaMater> ?x };select ?a where { ?a <http://dbpedia.org/ontology/almaMater> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Person;;;where is the announcedfrom of <X>;where is the announcedfrom of <X>;where is the announcedfrom of <X>
+dbo:Person;;;what is the approach of <X>;what is the approach of <X>;what is the approach of <X>
+dbo:Person;;;when is the arrest date of <X>;when is the arrest date of <X>;when is the arrest date of <X>
+dbo:Person;;;what is the patron of <X>;what is the patron (art) of <X>;what is the patron (art) of <X>
+dbo:Person;;;what is the artistic function of <X>;what is the artistic function of <X>;what is the artistic function of <X>
+dbo:Person;;;what is the astrological sign of <X>;what is the astrological sign of <X>;what is the astrological sign of <X>
+dbo:Person;;;what is the awardname of <X>;what is the awardname of <X>;what is the awardname of <X>
+dbo:Person;;;what is the bad guy of <X>;what is the bad guy of <X>;what is the bad guy of <X>
+dbo:Person;;;what is the best lap of <X>;what is the best lap of <X>;what is the best lap of <X>
+dbo:Person;;;what is the big pool record of <X>;what is the big pool record of <X>;what is the big pool record of <X>
+dbo:Person;;;when is the birth date of <X>;select ?x where { <X> <http://dbpedia.org/ontology/birthDate> ?x };select ?a where { ?a <http://dbpedia.org/ontology/birthDate> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Person;;;what is the birth name of <X>;select ?x where { <X> <http://dbpedia.org/ontology/birthName> ?x };select ?a where { ?a <http://dbpedia.org/ontology/birthName> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Person;;;where is the birth place of <X>;select ?x where { <X> <http://dbpedia.org/ontology/birthPlace> ?x };select ?a where { ?a <http://dbpedia.org/ontology/birthPlace> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Person;;;what is the birth sign of <X>;what is the birth sign of <X>;what is the birth sign of <X>
+dbo:Person;;;when is the birth year of <X>;select ?x where { <X> <http://dbpedia.org/ontology/birthYear> ?x };select ?a where { ?a <http://dbpedia.org/ontology/birthYear> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Person;;;what is the blood group of <X>;what is the blood group of <X>;what is the blood group of <X>
+dbo:Person;;;what is the blood type of <X>;what is the blood type of <X>;what is the blood type of <X>
+dbo:Person;;;what is the board of <X>;select ?x where { <X> <http://dbpedia.org/ontology/board> ?x };select ?a where { ?a <http://dbpedia.org/ontology/board> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Person;;;where is the body discovered of <X>;select ?x where { <X> <http://dbpedia.org/ontology/bodyDiscovered> ?x };select ?a where { ?a <http://dbpedia.org/ontology/bodyDiscovered> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Person;;;what is the british wins of <X>;what is the british wins of <X>;what is the british wins of <X>
+dbo:Person;;;what is the bust size of <X>;select ?x where { <X> <http://dbpedia.org/ontology/bustSize> ?x };select ?a where { ?a <http://dbpedia.org/ontology/bustSize> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Person;;;what is the bust-waist-hip size of <X>;what is the bust-waist-hip size of <X>;what is the bust-waist-hip size of <X>
+dbo:Person;;;what is the career station of <X>;select ?x where { <X> <http://dbpedia.org/ontology/careerStation> ?x };select ?a where { ?a <http://dbpedia.org/ontology/careerStation> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Person;;;what is the case of <X>;what is the case of <X>;what is the case of <X>
+dbo:Person;;;what is the catch of <X>;what is the catch of <X>;what is the catch of <X>
+dbo:Person;;;what is the cause of death of <X>;what is the cause of death of <X>;what is the cause of death of <X>
+dbo:Person;;;what is the championships of <X>;select ?x where { <X> <http://dbpedia.org/ontology/championships> ?x };select ?a where { ?a <http://dbpedia.org/ontology/championships> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Person;;;who is the child of <X>;select ?x where { <X> <http://dbpedia.org/ontology/child> ?x };select ?a where { ?a <http://dbpedia.org/ontology/child> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Person;;;what is the circumcised of <X>;what is the circumcised of <X>;what is the circumcised of <X>
+dbo:Person;;;what is the citizenship of <X>;select ?x where { <X> <http://dbpedia.org/ontology/citizenship> ?x };select ?a where { ?a <http://dbpedia.org/ontology/citizenship> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Person;;;what is the cloth size of <X>;what is the cloth size of <X>;what is the cloth size of <X>
+dbo:Person;;;what is the clothing size of <X>;what is the clothing size of <X>;what is the clothing size of <X>
+dbo:Person;;;what is the coalition of <X>;what is the coalition of <X>;what is the coalition of <X>
+dbo:Person;;;who is the collaboration of <X>;who is the collaboration of <X>;who is the collaboration of <X>
+dbo:Person;;;who is the colleague of <X>;who is the colleague of <X>;who is the colleague of <X>
+dbo:Person;;;what is the college of <X>;select ?x where { <X> <http://dbpedia.org/ontology/college> ?x };select ?a where { ?a <http://dbpedia.org/ontology/college> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Person;;;what is the competition title of <X>;what is the competition title of <X>;what is the competition title of <X>
+dbo:Person;;;what is the complexion of <X>;what is the complexion of <X>;what is the complexion of <X>
+dbo:Person;;;what is the contest of <X>;what is the contest of <X>;what is the contest of <X>
+dbo:Person;;;what is the continental tournament of <X>;what is the continental tournament of <X>;what is the continental tournament of <X>
+dbo:Person;;;what is the continental tournament bronze of <X>;what is the continental tournament bronze of <X>;what is the continental tournament bronze of <X>
+dbo:Person;;;what is the continental tournament gold of <X>;what is the continental tournament gold of <X>;what is the continental tournament gold of <X>
+dbo:Person;;;what is the continental tournament silver of <X>;what is the continental tournament silver of <X>;what is the continental tournament silver of <X>
+dbo:Person;;;when is the conviction date of <X>;when is the conviction date of <X>;when is the conviction date of <X>
+dbo:Person;;;who is the copilote of <X>;who is the copilote of <X>;who is the copilote of <X>
+dbo:Person;;;who is the cousurper of <X>;who is the cousurper of <X>;who is the cousurper of <X>
+dbo:Person;;;what is the created of <X>;what is the created of <X>;what is the created of <X>
+dbo:Person;;;what is the current team manager of <X>;what is the current team manager of <X>;what is the current team manager of <X>
+dbo:Person;;;what is the danse competition of <X>;what is the danse competition of <X>;what is the danse competition of <X>
+dbo:Person;;;what is the danse score of <X>;what is the danse score of <X>;what is the danse score of <X>
+dbo:Person;;;when is the date of burial of <X>;select ?x where { <X> <http://dbpedia.org/ontology/dateOfBurial> ?x };select ?a where { ?a <http://dbpedia.org/ontology/dateOfBurial> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Person;;;what is the dead in fight date of <X>;what is the dead in fight date of <X>;what is the dead in fight date of <X>
+dbo:Person;;;what is the dead in fight place of <X>;what is the dead in fight place of <X>;what is the dead in fight place of <X>
+dbo:Person;;;what is the death age of <X>;what is the death age of <X>;what is the death age of <X>
+dbo:Person;;;what is the death cause of <X>;select ?x where { <X> <http://dbpedia.org/ontology/deathCause> ?x };select ?a where { ?a <http://dbpedia.org/ontology/deathCause> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Person;;;when is the death date of <X>;select ?x where { <X> <http://dbpedia.org/ontology/deathDate> ?x };select ?a where { ?a <http://dbpedia.org/ontology/deathDate> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Person;;;where is the death place of <X>;select ?x where { <X> <http://dbpedia.org/ontology/deathPlace> ?x };select ?a where { ?a <http://dbpedia.org/ontology/deathPlace> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Person;;;when is the death year of <X>;select ?x where { <X> <http://dbpedia.org/ontology/deathYear> ?x };select ?a where { ?a <http://dbpedia.org/ontology/deathYear> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Person;;;what is the debutwork of <X>;what is the debutwork of <X>;what is the debutwork of <X>
+dbo:Person;;;what is the decoration of <X>;what is the decoration of <X>;what is the decoration of <X>
+dbo:Person;;;what is the denomination of <X>;select ?x where { <X> <http://dbpedia.org/ontology/denomination> ?x };select ?a where { ?a <http://dbpedia.org/ontology/denomination> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Person;;;what is the derived word of <X>;what is the derived word of <X>;what is the derived word of <X>
+dbo:Person;;;who is the detractor of <X>;who is the detractor of <X>;who is the detractor of <X>
+dbo:Person;;;what is the diploma of <X>;what is the diploma of <X>;what is the diploma of <X>
+dbo:Person;;;what is the discipline of <X>;select ?x where { <X> <http://dbpedia.org/ontology/discipline> ?x };select ?a where { ?a <http://dbpedia.org/ontology/discipline> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Person;;;who is the dubber of <X>;who is the dubber of <X>;who is the dubber of <X>
+dbo:Person;;;what is the education of <X>;select ?x where { <X> <http://dbpedia.org/ontology/education> ?x };select ?a where { ?a <http://dbpedia.org/ontology/education> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Person;;;where is the education place of <X>;where is the education place of <X>;where is the education place of <X>
+dbo:Person;;;when is the election date of <X>;select ?x where { <X> <http://dbpedia.org/ontology/electionDate> ?x };select ?a where { ?a <http://dbpedia.org/ontology/electionDate> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Person;;;what is the employer of <X>;select ?x where { <X> <http://dbpedia.org/ontology/employer> ?x };select ?a where { ?a <http://dbpedia.org/ontology/employer> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Person;;;what is the end career of <X>;what is the end career of <X>;what is the end career of <X>
+dbo:Person;;;what is the end reign of <X>;what is the end reign of <X>;what is the end reign of <X>
+dbo:Person;;;what is the escalafon of <X>;what is the escalafon of <X>;what is the escalafon of <X>
+dbo:Person;;;what is the ethnicity of <X>;select ?x where { <X> <http://dbpedia.org/ontology/ethnicity> ?x };select ?a where { ?a <http://dbpedia.org/ontology/ethnicity> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Person;;;what is the expedition of <X>;what is the expedition of <X>;what is the expedition of <X>
+dbo:Person;;;what is the external ornament of <X>;what is the external ornament of <X>;what is the external ornament of <X>
+dbo:Person;;;what is the eye color of <X>;select ?x where { <X> <http://dbpedia.org/ontology/eyeColor> ?x };select ?a where { ?a <http://dbpedia.org/ontology/eyeColor> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Person;;;what is the eye colour of <X>;what is the eye colour of <X>;what is the eye colour of <X>
+dbo:Person;;;who is the father of <X>;who is the father of <X>;who is the father of <X>
+dbo:Person;;;what is the feat of <X>;what is the feat of <X>;what is the feat of <X>
+dbo:Person;;;what is the federation of <X>;what is the federation of <X>;what is the federation of <X>
+dbo:Person;;;what is the film number of <X>;what is the film number of <X>;what is the film number of <X>
+dbo:Person;;;what is the foot of <X>;what is the foot of <X>;what is the foot of <X>
+dbo:Person;;;what is the free danse score of <X>;what is the free danse score of <X>;what is the free danse score of <X>
+dbo:Person;;;what is the free prog competition of <X>;what is the free prog competition of <X>;what is the free prog competition of <X>
+dbo:Person;;;what is the free prog score of <X>;what is the free prog score of <X>;what is the free prog score of <X>
+dbo:Person;;;what is the free score competition of <X>;what is the free score competition of <X>;what is the free score competition of <X>
+dbo:Person;;;who is the friend of <X>;who is the friend of <X>;who is the friend of <X>
+dbo:Person;;;what is the full competition of <X>;what is the full competition of <X>;what is the full competition of <X>
+dbo:Person;;;what is the full score of <X>;what is the full score of <X>;what is the full score of <X>
+dbo:Person;;;what is the general council of <X>;what is the general council of <X>;what is the general council of <X>
+dbo:Person;;;what is the grave of <X>;what is the grave of <X>;what is the grave of <X>
+dbo:Person;;;what is the gym apparatus of <X>;what is the gym apparatus of <X>;what is the gym apparatus of <X>
+dbo:Person;;;what is the hair color of <X>;select ?x where { <X> <http://dbpedia.org/ontology/hairColor> ?x };select ?a where { ?a <http://dbpedia.org/ontology/hairColor> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Person;;;what is the hair colour of <X>;what is the hair colour of <X>;what is the hair colour of <X>
+dbo:Person;;;what is the hand of <X>;what is the hand of <X>;what is the hand of <X>
+dbo:Person;;;what is the handedness of <X>;what is the handedness of <X>;what is the handedness of <X>
+dbo:Person;;;what is the handisport of <X>;what is the handisport of <X>;what is the handisport of <X>
+dbo:Person;;;what is the has natural bust of <X>;what is the has natural bust of <X>;what is the has natural bust of <X>
+dbo:Person;;;what is the hip size of <X>;select ?x where { <X> <http://dbpedia.org/ontology/hipSize> ?x };select ?a where { ?a <http://dbpedia.org/ontology/hipSize> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Person;;;what is the homage of <X>;what is the homage of <X>;what is the homage of <X>
+dbo:Person;;;what is the home town of <X>;select ?x where { <X> <http://dbpedia.org/ontology/hometown> ?x };select ?a where { ?a <http://dbpedia.org/ontology/hometown> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Person;;;what is the id number of <X>;what is the id number of <X>;what is the id number of <X>
+dbo:Person;;;what is the ideology of <X>;select ?x where { <X> <http://dbpedia.org/ontology/ideology> ?x };select ?a where { ?a <http://dbpedia.org/ontology/ideology> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Person;;;what is the lihf hof of <X>;what is the lihf hof of <X>;what is the lihf hof of <X>
+dbo:Person;;;what is the imposed danse competition of <X>;what is the imposed danse competition of <X>;what is the imposed danse competition of <X>
+dbo:Person;;;what is the imposed danse score of <X>;what is the imposed danse score of <X>;what is the imposed danse score of <X>
+dbo:Person;;;what is the individualised pnd number of <X>;what is the individualised pnd number of <X>;what is the individualised pnd number of <X>
+dbo:Person;;;what is the junior season of <X>;what is the junior season of <X>;what is the junior season of <X>
+dbo:Person;;;when is the junior years end year of <X>;when is the junior years end year of <X>;when is the junior years end year of <X>
+dbo:Person;;;when is the junior years start year of <X>;when is the junior years start year of <X>;when is the junior years start year of <X>
+dbo:Person;;;what is the jutsu of <X>;what is the jutsu of <X>;what is the jutsu of <X>
+dbo:Person;;;what is the killed by of <X>;what is the killed by of <X>;what is the killed by of <X>
+dbo:Person;;;what is the lah hof of <X>;what is the lah hof of <X>;what is the lah hof of <X>
+dbo:Person;;;what is the leadership of <X>;what is the leadership of <X>;what is the leadership of <X>
+dbo:Person;;;what is the league manager of <X>;what is the league manager of <X>;what is the league manager of <X>
+dbo:Person;;;what is the linguistics tradition of <X>;what is the linguistics tradition of <X>;what is the linguistics tradition of <X>
+dbo:Person;;;what is the little pool record of <X>;what is the little pool record of <X>;what is the little pool record of <X>
+dbo:Person;;;where is the livingplace of <X>;where is the livingplace of <X>;where is the livingplace of <X>
+dbo:Person;;;what is the main domain of <X>;what is the main domain of <X>;what is the main domain of <X>
+dbo:Person;;;what is the manager season of <X>;what is the manager season of <X>;what is the manager season of <X>
+dbo:Person;;;what is the masters wins of <X>;what is the masters wins of <X>;what is the masters wins of <X>
+dbo:Person;;;what is the match point of <X>;what is the match point of <X>;what is the match point of <X>
+dbo:Person;;;what is the measurements of <X>;what is the measurements of <X>;what is the measurements of <X>
+dbo:Person;;;what is the media of <X>;what is the media of <X>;what is the media of <X>
+dbo:Person;;;what is the member of <X>;what is the member of <X>;what is the member of <X>
+dbo:Person;;;what is the military service of <X>;what is the military service of <X>;what is the military service of <X>
+dbo:Person;;;what is the mood of <X>;what is the mood of <X>;what is the mood of <X>
+dbo:Person;;;who is the mother of <X>;who is the mother of <X>;who is the mother of <X>
+dbo:Person;;;what is the mount of <X>;what is the mount of <X>;what is the mount of <X>
+dbo:Person;;;what is the movie of <X>;what is the movie of <X>;what is the movie of <X>
+dbo:Person;;;what is the national selection of <X>;what is the national selection of <X>;what is the national selection of <X>
+dbo:Person;;;what is the national team match point of <X>;what is the national team match point of <X>;what is the national team match point of <X>
+dbo:Person;;;what is the national team year of <X>;what is the national team year of <X>;what is the national team year of <X>
+dbo:Person;;;what is the national tournament of <X>;what is the national tournament of <X>;what is the national tournament of <X>
+dbo:Person;;;what is the national tournament bronze of <X>;what is the national tournament bronze of <X>;what is the national tournament bronze of <X>
+dbo:Person;;;what is the national tournament gold of <X>;what is the national tournament gold of <X>;what is the national tournament gold of <X>
+dbo:Person;;;what is the national tournament silver of <X>;what is the national tournament silver of <X>;what is the national tournament silver of <X>
+dbo:Person;;;what is the nationality of <X>;select ?x where { <X> <http://dbpedia.org/ontology/nationality> ?x };select ?a where { ?a <http://dbpedia.org/ontology/nationality> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Person;;;what is the networth of <X>;select ?x where { <X> <http://dbpedia.org/ontology/networth> ?x };select ?a where { ?a <http://dbpedia.org/ontology/networth> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Person;;;what is the nndb id of <X>;what is the nndb id of <X>;what is the nndb id of <X>
+dbo:Person;;;what is the non professional career of <X>;what is the non professional career of <X>;what is the non professional career of <X>
+dbo:Person;;;what is the notableidea of <X>;select ?x where { <X> <http://dbpedia.org/ontology/notableIdea> ?x };select ?a where { ?a <http://dbpedia.org/ontology/notableIdea> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Person;;;what is the note on resting place of <X>;what is the note on resting place of <X>;what is the note on resting place of <X>
+dbo:Person;;;what is the number of run of <X>;what is the number of run of <X>;what is the number of run of <X>
+dbo:Person;;;what is the olympic games of <X>;what is the olympic games of <X>;what is the olympic games of <X>
+dbo:Person;;;what is the olympic games bronze of <X>;what is the olympic games bronze of <X>;what is the olympic games bronze of <X>
+dbo:Person;;;what is the olympic games gold of <X>;what is the olympic games gold of <X>;what is the olympic games gold of <X>
+dbo:Person;;;what is the olympic games silver of <X>;what is the olympic games silver of <X>;what is the olympic games silver of <X>
+dbo:Person;;;what is the olympic games wins of <X>;what is the olympic games wins of <X>;what is the olympic games wins of <X>
+dbo:Person;;;who is the opponent of <X>;select ?x where { <X> <http://dbpedia.org/ontology/opponent> ?x };select ?a where { ?a <http://dbpedia.org/ontology/opponent> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Person;;;what is the orientation of <X>;what is the orientation of <X>;what is the orientation of <X>
+dbo:Person;;;what is the original danse competititon of <X>;what is the original danse competititon of <X>;what is the original danse competititon of <X>
+dbo:Person;;;what is the original danse score of <X>;what is the original danse score of <X>;what is the original danse score of <X>
+dbo:Person;;;what is the other activity of <X>;what is the other activity of <X>;what is the other activity of <X>
+dbo:Person;;;what is the other function of <X>;what is the other function of <X>;what is the other function of <X>
+dbo:Person;;;what is the other media of <X>;what is the other media of <X>;what is the other media of <X>
+dbo:Person;;;who is the other occupation of <X>;who is the other occupation of <X>;who is the other occupation of <X>
+dbo:Person;;;what is the owns of <X>;what is the owns of <X>;what is the owns of <X>
+dbo:Person;;;who is the parent of <X>;select ?x where { <X> <http://dbpedia.org/ontology/parent> ?x };select ?a where { ?a <http://dbpedia.org/ontology/parent> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Person;;;what is the parliamentary group of <X>;what is the parliamentary group of <X>;what is the parliamentary group of <X>
+dbo:Person;;;what is the particular sign of <X>;what is the particular sign of <X>;what is the particular sign of <X>
+dbo:Person;;;who is the partner of <X>;select ?x where { <X> <http://dbpedia.org/ontology/partner> ?x };select ?a where { ?a <http://dbpedia.org/ontology/partner> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Person;;;what is the patent of <X>;what is the patent of <X>;what is the patent of <X>
+dbo:Person;;;what is the penis length of <X>;what is the penis length of <X>;what is the penis length of <X>
+dbo:Person;;;who is the person function of <X>;select ?x where { <X> <http://dbpedia.org/ontology/personFunction> ?x };select ?a where { ?a <http://dbpedia.org/ontology/personFunction> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Person;;;what is the pga wins of <X>;what is the pga wins of <X>;what is the pga wins of <X>
+dbo:Person;;;what is the philosophicalschool of <X>;select ?x where { <X> <http://dbpedia.org/ontology/philosophicalSchool> ?x };select ?a where { ?a <http://dbpedia.org/ontology/philosophicalSchool> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Person;;;what is the piercing of <X>;what is the piercing of <X>;what is the piercing of <X>
+dbo:Person;;;where is the place of burial of <X>;select ?x where { <X> <http://dbpedia.org/ontology/placeOfBurial> ?x };select ?a where { ?a <http://dbpedia.org/ontology/placeOfBurial> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Person;;;what is the player season of <X>;what is the player season of <X>;what is the player season of <X>
+dbo:Person;;;what is the player status of <X>;what is the player status of <X>;what is the player status of <X>
+dbo:Person;;;what is the podium of <X>;what is the podium of <X>;what is the podium of <X>
+dbo:Person;;;what is the pole position of <X>;what is the pole position of <X>;what is the pole position of <X>
+dbo:Person;;;what is the political function of <X>;what is the political function of <X>;what is the political function of <X>
+dbo:Person;;;what is the profession of <X>;select ?x where { <X> <http://dbpedia.org/ontology/profession> ?x };select ?a where { ?a <http://dbpedia.org/ontology/profession> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Person;;;what is the project of <X>;what is the project of <X>;what is the project of <X>
+dbo:Person;;;what is the pseudonym of <X>;select ?x where { <X> <http://dbpedia.org/ontology/pseudonym> ?x };select ?a where { ?a <http://dbpedia.org/ontology/pseudonym> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Person;;;what is the publication of <X>;what is the publication of <X>;what is the publication of <X>
+dbo:Person;;;what is the race wins of <X>;what is the race wins of <X>;what is the race wins of <X>
+dbo:Person;;;what is the radio of <X>;what is the radio of <X>;what is the radio of <X>
+dbo:Person;;;what is the regional council of <X>;what is the regional council of <X>;what is the regional council of <X>
+dbo:Person;;;what is the reign of <X>;what is the reign of <X>;what is the reign of <X>
+dbo:Person;;;what is the reign name of <X>;what is the reign name of <X>;what is the reign name of <X>
+dbo:Person;;;what is the related functions of <X>;what is the related functions of <X>;what is the related functions of <X>
+dbo:Person;;;who is the relation of <X>;select ?x where { <X> <http://dbpedia.org/ontology/relation> ?x };select ?a where { ?a <http://dbpedia.org/ontology/relation> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Person;;;who is the relative of <X>;select ?x where { <X> <http://dbpedia.org/ontology/relative> ?x };select ?a where { ?a <http://dbpedia.org/ontology/relative> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Person;;;where is the residence of <X>;select ?x where { <X> <http://dbpedia.org/ontology/residence> ?x };select ?a where { ?a <http://dbpedia.org/ontology/residence> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Person;;;when is the resting date of <X>;when is the resting date of <X>;when is the resting date of <X>
+dbo:Person;;;where is the resting place of <X>;select ?x where { <X> <http://dbpedia.org/ontology/restingPlace> ?x };select ?a where { ?a <http://dbpedia.org/ontology/restingPlace> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Person;;;what is the resting place position of <X>;select ?x where { <X> <http://dbpedia.org/ontology/restingPlacePosition> ?x };select ?a where { ?a <http://dbpedia.org/ontology/restingPlacePosition> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Person;;;when is the retirement date of <X>;when is the retirement date of <X>;when is the retirement date of <X>
+dbo:Person;;;what is the a person's role in an event of <X>;what is the a person's role in an event of <X>;what is the a person's role in an event of <X>
+dbo:Person;;;what is the salary of <X>;select ?x where { <X> <http://dbpedia.org/ontology/salary> ?x };select ?a where { ?a <http://dbpedia.org/ontology/salary> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Person;;;what is the scene of <X>;what is the scene of <X>;what is the scene of <X>
+dbo:Person;;;what is the school of <X>;select ?x where { <X> <http://dbpedia.org/ontology/school> ?x };select ?a where { ?a <http://dbpedia.org/ontology/school> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Person;;;what is the season of <X>;select ?x where { <X> <http://dbpedia.org/ontology/season> ?x };select ?a where { ?a <http://dbpedia.org/ontology/season> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Person;;;what is the season manager of <X>;what is the season manager of <X>;what is the season manager of <X>
+dbo:Person;;;what is the second of <X>;what is the second of <X>;what is the second of <X>
+dbo:Person;;;who is the seiyu of <X>;who is the seiyu of <X>;who is the seiyu of <X>
+dbo:Person;;;what is the sentence of <X>;what is the sentence of <X>;what is the sentence of <X>
+dbo:Person;;;what is the sex of <X>;select ?x where { <X> <http://dbpedia.org/ontology/sex> ?x };select ?a where { ?a <http://dbpedia.org/ontology/sex> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Person;;;what is the sexual orientation of <X>;what is the sexual orientation of <X>;what is the sexual orientation of <X>
+dbo:Person;;;what is the shoe number of <X>;select ?x where { <X> <http://dbpedia.org/ontology/shoeNumber> ?x };select ?a where { ?a <http://dbpedia.org/ontology/shoeNumber> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Person;;;what is the shoe size of <X>;select ?x where { <X> <http://dbpedia.org/ontology/shoeSize> ?x };select ?a where { ?a <http://dbpedia.org/ontology/shoeSize> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Person;;;what is the shoot of <X>;what is the shoot of <X>;what is the shoot of <X>
+dbo:Person;;;what is the short prog competition of <X>;what is the short prog competition of <X>;what is the short prog competition of <X>
+dbo:Person;;;what is the short prog score of <X>;what is the short prog score of <X>;what is the short prog score of <X>
+dbo:Person;;;who is the sibling of <X>;who is the sibling of <X>;who is the sibling of <X>
+dbo:Person;;;what is the signature of <X>;select ?x where { <X> <http://dbpedia.org/ontology/signature> ?x };select ?a where { ?a <http://dbpedia.org/ontology/signature> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Person;;;what is the significant project of <X>;select ?x where { <X> <http://dbpedia.org/ontology/significantProject> ?x };select ?a where { ?a <http://dbpedia.org/ontology/significantProject> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Person;;;what is the skin color of <X>;what is the skin color of <X>;what is the skin color of <X>
+dbo:Person;;;what is the special trial of <X>;what is the special trial of <X>;what is the special trial of <X>
+dbo:Person;;;what is the speciality of <X>;what is the speciality of <X>;what is the speciality of <X>
+dbo:Person;;;what is the sport discipline of <X>;what is the sport discipline of <X>;what is the sport discipline of <X>
+dbo:Person;;;what is the sports function of <X>;what is the sports function of <X>;what is the sports function of <X>
+dbo:Person;;;who is the spouse of <X>;select ?x where { <X> <http://dbpedia.org/ontology/spouse> ?x };select ?a where { ?a <http://dbpedia.org/ontology/spouse> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Person;;;what is the spouse name of <X>;what is the spouse name of <X>;what is the spouse name of <X>
+dbo:Person;;;what is the start career of <X>;what is the start career of <X>;what is the start career of <X>
+dbo:Person;;;what is the start reign of <X>;what is the start reign of <X>;what is the start reign of <X>
+dbo:Person;;;what is the start xct of <X>;what is the start xct of <X>;what is the start xct of <X>
+dbo:Person;;;what is the start wqs of <X>;what is the start wqs of <X>;what is the start wqs of <X>
+dbo:Person;;;what is the state of origin of <X>;select ?x where { <X> <http://dbpedia.org/ontology/stateOfOrigin> ?x };select ?a where { ?a <http://dbpedia.org/ontology/stateOfOrigin> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Person;;;what is the status manager of <X>;what is the status manager of <X>;what is the status manager of <X>
+dbo:Person;;;who is the student of <X>;who is the student of <X>;who is the student of <X>
+dbo:Person;;;what is the tattoo of <X>;what is the tattoo of <X>;what is the tattoo of <X>
+dbo:Person;;;what is the team manager of <X>;what is the team manager of <X>;what is the team manager of <X>
+dbo:Person;;;what is the temple of <X>;what is the temple of <X>;what is the temple of <X>
+dbo:Person;;;what is the temple year of <X>;what is the temple year of <X>;what is the temple year of <X>
+dbo:Person;;;what is the tessitura of <X>;what is the tessitura of <X>;what is the tessitura of <X>
+dbo:Person;;;what is the third of <X>;what is the third of <X>;what is the third of <X>
+dbo:Person;;;when is the title date of <X>;when is the title date of <X>;when is the title date of <X>
+dbo:Person;;;what is the tvshow of <X>;what is the tvshow of <X>;what is the tvshow of <X>
+dbo:Person;;;what is the usopen wins of <X>;what is the usopen wins of <X>;what is the usopen wins of <X>
+dbo:Person;;;who is the usurper of <X>;who is the usurper of <X>;who is the usurper of <X>
+dbo:Person;;;what is the victory of <X>;what is the victory of <X>;what is the victory of <X>
+dbo:Person;;;what is the victory as manager of <X>;what is the victory as manager of <X>;what is the victory as manager of <X>
+dbo:Person;;;what is the victory percentage as manager of <X>;what is the victory percentage as manager of <X>;what is the victory percentage as manager of <X>
+dbo:Person;;;what is the waist size of <X>;select ?x where { <X> <http://dbpedia.org/ontology/waistSize> ?x };select ?a where { ?a <http://dbpedia.org/ontology/waistSize> [] . ?a a <http://dbpedia.org/ontology/Place> }
+dbo:Person;;;when is the parents wedding date of <X>;when is the parents wedding date of <X>;when is the parents wedding date of <X>
+dbo:Person;;;what is the world of <X>;what is the world of <X>;what is the world of <X>
+dbo:Person;;;what is the world tournament of <X>;what is the world tournament of <X>;what is the world tournament of <X>
+dbo:Person;;;what is the world tournament bronze of <X>;what is the world tournament bronze of <X>;what is the world tournament bronze of <X>
+dbo:Person;;;what is the world tournament gold of <X>;what is the world tournament gold of <X>;what is the world tournament gold of <X>
+dbo:Person;;;what is the world tournament silver of <X>;what is the world tournament silver of <X>;what is the world tournament silver of <X>

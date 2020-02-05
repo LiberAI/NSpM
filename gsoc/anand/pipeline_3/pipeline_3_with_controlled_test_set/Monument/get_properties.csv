@@ -1,0 +1,25 @@
+architect,architect,ArchitecturalStructure,Architect
+architectualBureau,architectual bureau,ArchitecturalStructure,Company
+architecturalStyle,architectural style,ArchitecturalStructure,owl:Thing
+buildingEndYear,building end year,ArchitecturalStructure,xsd:gYear
+buildingStartYear,building start year,ArchitecturalStructure,xsd:gYear
+construction,construction,ArchitecturalStructure,owl:Thing
+constructionMaterial,construction material,ArchitecturalStructure,owl:Thing
+currentlyUsedFor,currently used for,ArchitecturalStructure,xsd:string
+dateUnveiled,date unveiled,Monument,xsd:date
+demolitionDate,demolition date,ArchitecturalStructure,xsd:date
+demolitionYear,demolition year,ArchitecturalStructure,xsd:gYear
+features,features,ArchitecturalStructure,Work
+groupCommemorated,group commemorated,Monument,xsd:string
+initiallyUsedFor,initally used for,ArchitecturalStructure,xsd:string
+maintainedBy,maintained by,ArchitecturalStructure,owl:Thing
+rebuildingDate,rebuilding date,ArchitecturalStructure,xsd:date
+rebuildingYear,rebuilding year,ArchitecturalStructure,xsd:gYear
+reopeningDate,reopening date,ArchitecturalStructure,xsd:date
+reopeningYear,reopening year,ArchitecturalStructure,xsd:gYear
+tenant,tenant,ArchitecturalStructure,Organisation
+visitorStatisticsAsOf,visitor statistics as of,ArchitecturalStructure,xsd:gYear
+visitorsPerDay,visitors per day,ArchitecturalStructure,xsd:nonNegativeInteger
+visitorsPerYear,visitors per year,ArchitecturalStructure,xsd:nonNegativeInteger
+visitorsPercentageChange,visitor percentage change,ArchitecturalStructure,xsd:double
+visitorsTotal,visitors total,ArchitecturalStructure,xsd:nonNegativeInteger

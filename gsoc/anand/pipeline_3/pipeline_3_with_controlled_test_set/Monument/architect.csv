@@ -1,0 +1,244 @@
+achievement,achievement,Person,owl:Thing
+activeYears,active years,Person,xsd:string
+activeYearsEndDateMgr,active years end date manager,Person,xsd:string
+activeYearsEndYearMgr,active years end year manager,Person,xsd:gYear
+activeYearsStartDateMgr,active years start date manager,Person,xsd:date
+activeYearsStartYearMgr,active years start year manager,Person,xsd:gYear
+activity,activity,Person,owl:Thing
+affair,affair,Person,xsd:string
+agency,agency,Person,owl:Thing
+allegiance,allegiance,Person,xsd:string
+almaMater,alma mater,Person,EducationalInstitution
+announcedFrom,announcedFrom,Person,Place
+approach,approach,Person,owl:Thing
+architecturalMovement,architectural movement,Architect,xsd:string
+arrestDate,arrest date,Person,xsd:date
+artisticFunction,artistic function,Person,xsd:string
+astrologicalSign,astrological sign,Person,owl:Thing
+awardName,awardName,Person,xsd:string
+badGuy,bad guy,Person,xsd:string
+bestLap,best lap,Person,xsd:string
+bigPoolRecord,big pool record,Person,xsd:string
+birthDate,birth date,Person,xsd:date
+birthName,birth name,Person,rdf:langString
+birthPlace,birth place,Person,Place
+birthSign,birth sign,Person,owl:Thing
+birthYear,birth year,Person,xsd:gYear
+bloodGroup,blood group,Person,xsd:string
+bloodType,blood type,Person,owl:Thing
+board,board,Person,owl:Thing
+bodyDiscovered,body discovered,Person,Place
+britishWins,british wins,Person,skos:Concept
+bustSize,bust size,Person,Length
+bustWaistHipSize,bust-waist-hip Size,Person,xsd:string
+careerStation,career station,Person,CareerStation
+case,case,Person,xsd:string
+catch,catch,Person,xsd:string
+causeOfDeath,cause of death,Person,xsd:string
+child,child,Person,Person
+circumcised,circumcised,Person,xsd:string
+citizenship,citizenship,Person,owl:Thing
+clothSize,cloth size,Person,xsd:string
+clothingSize,clothing size,Person,xsd:string
+coalition,coalition,Person,xsd:string
+collaboration,collaboration,Person,Person
+colleague,colleague,Person,Person
+college,college,Person,EducationalInstitution
+competitionTitle,competition title,Person,SportsEvent
+complexion,complexion,Person,owl:Thing
+contest,contest,Person,Contest
+continentalTournament,continental tournament,Person,Tournament
+continentalTournamentBronze,continental tournament bronze,Person,xsd:nonNegativeInteger
+continentalTournamentGold,continental tournament gold,Person,xsd:nonNegativeInteger
+continentalTournamentSilver,continental tournament silver,Person,xsd:nonNegativeInteger
+convictionDate,conviction date,Person,xsd:date
+copilote,copilote,Person,Person
+cousurper,cousurper,Person,Person
+created,created,Person,Work
+currentTeamManager,current team manager,Person,SportsTeam
+danseCompetition,danse competition,Person,xsd:string
+danseScore,danse score,Person,xsd:string
+dateOfBurial,date of burial,Person,xsd:date
+deadInFightDate,dead in fight date,Person,xsd:string
+deadInFightPlace,dead in fight place,Person,xsd:string
+deathAge,death age,Person,xsd:nonNegativeInteger
+deathCause,death cause,Person,owl:Thing
+deathDate,death date,Person,xsd:date
+deathPlace,death place,Person,Place
+deathYear,death year,Person,xsd:gYear
+debutWork,debutWork,Person,Work
+decoration,decoration,Person,owl:Thing
+derivedWord,derived word,Person,xsd:string
+detractor,detractor,Person,Person
+diploma,diploma,Person,Diploma
+dubber,dubber,Person,Person
+education,education,Person,owl:Thing
+educationPlace,education place,Person,Place
+electionDate,election date,Person,xsd:date
+employer,employer,Person,Organisation
+endCareer,end career,Person,xsd:string
+endReign,end reign,Person,skos:Concept
+escalafon,escalafon,Person,xsd:string
+ethnicity,ethnicity,Person,EthnicGroup
+expedition,expedition,Person,xsd:string
+externalOrnament,external ornament,Person,xsd:string
+eyeColor,eye color,Person,xsd:string
+eyeColour,eye colour,Person,xsd:string
+father,father,Person,Person
+feat,feat,Person,xsd:string
+federation,federation,Person,Organisation
+filmNumber,film number,Person,xsd:nonNegativeInteger
+foot,foot,Person,xsd:string
+freeDanseScore,free danse score,Person,xsd:string
+freeProgCompetition,free prog competition,Person,xsd:string
+freeProgScore,free prog score,Person,xsd:string
+freeScoreCompetition,free score competition,Person,xsd:string
+friend,friend,Person,Person
+fullCompetition,full competition,Person,xsd:string
+fullScore,full score,Person,xsd:string
+grave,grave,Person,xsd:string
+gymApparatus,gym apparatus,Person,owl:Thing
+hairColor,hair color,Person,xsd:string
+hairColour,hair colour,Person,xsd:string
+hand,hand,Person,owl:Thing
+handedness,handedness,Person,owl:Thing
+handisport,handisport,Person,xsd:string
+hasNaturalBust,has natural bust,Person,xsd:string
+hipSize,hip size,Person,Length
+homage,homage,Person,xsd:string
+idNumber,id number,Person,xsd:nonNegativeInteger
+iihfHof,lihf hof,Person,xsd:string
+imposedDanseCompetition,imposed danse competition,Person,xsd:string
+imposedDanseScore,imposed danse score,Person,xsd:string
+individualisedPnd,individualised PND number,Person,xsd:nonNegativeInteger
+juniorYearsEndYear,junior years end year,Person,xsd:gYear
+juniorYearsStartYear,junior years start year,Person,xsd:gYear
+jutsu,jutsu,Person,xsd:string
+killedBy,killed by,Person,xsd:string
+lahHof,lah hof,Person,xsd:string
+leadership,leadership,Person,xsd:string
+leagueManager,league manager,Person,SportsLeague
+linguisticsTradition,linguistics tradition,Person,owl:Thing
+littlePoolRecord,little pool record,Person,xsd:string
+livingPlace,livingPlace,Person,Place
+mainDomain,main domain,Person,owl:Thing
+mastersWins,masters wins,Person,skos:Concept
+matchPoint,match point,Person,xsd:string
+measurements,measurements,Person,xsd:string
+media,media,Person,owl:Thing
+member,member,Person,xsd:string
+militaryService,military service,Person,MilitaryService
+mood,mood,Person,xsd:string
+mother,mother,Person,Person
+mount,mount,Person,xsd:string
+movie,movie,Person,Film
+nationalTeamMatchPoint,national team match point,Person,xsd:string
+nationalTeamYear,national team year,Person,xsd:string
+nationalTournament,National tournament,Person,Tournament
+nationalTournamentBronze,national tournament bronze,Person,xsd:nonNegativeInteger
+nationalTournamentGold,national tournament gold,Person,xsd:nonNegativeInteger
+nationalTournamentSilver,national tournament silver,Person,xsd:nonNegativeInteger
+nationality,nationality,Person,Country
+networth,networth,Person,Currency
+nndbId,NNDB id,Person,xsd:string
+nonProfessionalCareer,non professional career,Person,xsd:string
+notableIdea,notableIdea,Person,owl:Thing
+noteOnRestingPlace,note on resting place,Person,xsd:string
+numberOfRun,number of run,Person,xsd:nonNegativeInteger
+olympicGames,olympic games,Person,Tournament
+olympicGamesBronze,olympic games bronze,Person,xsd:nonNegativeInteger
+olympicGamesGold,olympic games gold,Person,xsd:nonNegativeInteger
+olympicGamesSilver,olympic games silver,Person,xsd:nonNegativeInteger
+olympicGamesWins,olympic games wins,Person,xsd:string
+opponent,opponent,Person,Person
+orientation,orientation,Person,xsd:string
+originalDanseCompetition,original danse competititon,Person,xsd:string
+originalDanseScore,original danse score,Person,xsd:string
+otherActivity,other activity,Person,xsd:string
+otherFunction,other function,Person,owl:Thing
+otherMedia,other media,Person,PeriodicalLiterature
+otherOccupation,other occupation,Person,PersonFunction
+parent,parent,Person,Person
+parliamentaryGroup,parliamentary group,Person,xsd:string
+particularSign,particular sign,Person,xsd:string
+partner,partner,Person,Person
+patent,patent,Person,owl:Thing
+penisLength,penis length,Person,xsd:string
+personFunction,person function,Person,PersonFunction
+pgaWins,pga wins,Person,skos:Concept
+philosophicalSchool,philosophicalSchool,Person,owl:Thing
+piercing,piercing,Person,xsd:string
+placeOfBurial,place of burial,Person,Place
+playerStatus,player status,Person,xsd:string
+podium,podium,Person,xsd:nonNegativeInteger
+polePosition,pole position,Person,xsd:nonNegativeInteger
+politicalFunction,political function,Person,xsd:string
+profession,profession,Person,owl:Thing
+project,project,Person,Project
+pseudonym,pseudonym,Person,rdf:langString
+publication,publication,Person,xsd:string
+raceWins,race wins,Person,xsd:nonNegativeInteger
+radio,radio,Person,RadioStation
+reign,reign,Person,xsd:string
+reignName,reign name,Person,xsd:string
+relatedFunctions,related functions,Person,List
+relation,relation,Person,Person
+relative,relative,Person,Person
+residence,residence,Person,Place
+restingDate,resting date,Person,xsd:date
+restingPlace,resting place,Person,Place
+restingPlacePosition,resting place position,Person,geo:SpatialThing
+retirementDate,retirement date,Person,xsd:date
+salary,salary,Person,Currency
+scene,scene,Person,xsd:string
+school,school,Person,EducationalInstitution
+seasonManager,season manager,Person,xsd:string
+second,second,Person,xsd:nonNegativeInteger
+seiyu,seiyu,Person,Person
+sentence,sentence,Person,xsd:string
+sex,sex,Person,xsd:string
+sexualOrientation,sexual orientation,Person,owl:Thing
+shoeNumber,shoe number,Person,xsd:positiveInteger
+shoeSize,shoe size,Person,xsd:string
+shoot,shoot,Person,xsd:string
+shortProgCompetition,short prog competition,Person,xsd:string
+shortProgScore,short prog score,Person,xsd:string
+sibling,sibling,Person,Person
+signature,signature,Person,xsd:string
+significantBuilding,significant building,Architect,Building
+significantDesign,significant design,Architect,owl:Thing
+significantProject,significant project,Person,owl:Thing
+skinColor,skin color,Person,xsd:string
+specialTrial,special trial,Person,xsd:nonNegativeInteger
+speciality,speciality,Person,xsd:string
+sportDiscipline,sport discipline,Person,Sport
+sportsFunction,sports function,Person,xsd:string
+spouse,spouse,Person,Person
+spouseName,spouse name,Person,xsd:string
+startCareer,start career,Person,xsd:string
+startReign,start reign,Person,skos:Concept
+startWct,start xct,Person,xsd:string
+startWqs,start wqs,Person,xsd:string
+stateOfOrigin,state of origin,Person,Country
+statusManager,status manager,Person,xsd:string
+student,student,Person,Person
+tattoo,tattoo,Person,xsd:string
+teamManager,team manager,Person,SportsTeam
+temple,temple,Person,xsd:string
+templeYear,temple year,Person,xsd:string
+tessitura,tessitura,Person,xsd:string
+third,third,Person,xsd:nonNegativeInteger
+titleDate,title date,Person,xsd:date
+tvShow,tvShow,Person,TelevisionShow
+usopenWins,usopen wins,Person,skos:Concept
+usurper,usurper,Person,Person
+victory,victory,Person,xsd:nonNegativeInteger
+victoryAsMgr,victory as manager,Person,xsd:nonNegativeInteger
+victoryPercentageAsMgr,victory percentage as manager,Person,xsd:double
+waistSize,waist size,Person,Length
+weddingParentsDate,Parents Wedding Date,Person,xsd:date
+world,world,Person,skos:Concept
+worldTournament,world tournament,Person,Tournament
+worldTournamentBronze,world tournament bronze,Person,xsd:nonNegativeInteger
+worldTournamentGold,world tournament gold,Person,xsd:nonNegativeInteger
+worldTournamentSilver,world tournament silver,Person,xsd:nonNegativeInteger

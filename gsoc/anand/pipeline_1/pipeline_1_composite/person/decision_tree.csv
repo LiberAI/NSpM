@@ -1,0 +1,256 @@
+activeYears,active years,Person,xsd:string,http://dbpedia.org/ontology/activeYears,328,who is the active years of <X>,who is the active years of <X>
+activeYearsEndDateMgr,active years end date manager,Person,xsd:string,,,who is the active years end date manager of <X>,who is the active years end date manager of <X>
+activeYearsEndYearMgr,active years end year manager,Person,xsd:gYear,,,who is the active years end year manager of <X>,who is the active years end year manager of <X>
+activeYearsStartDateMgr,active years start date manager,Person,xsd:date,,,who is the active years start date manager of <X>,who is the active years start date manager of <X>
+activeYearsStartYearMgr,active years start year manager,Person,xsd:gYear,,,who is the active years start year manager of <X>,who is the active years start year manager of <X>
+activity,activity,Person,owl:Thing,,,who is the activity of <X>,who is the activity of <X>
+affair,affair,Person,xsd:string,,,who is the affair of <X>,who is the affair of <X>
+age,age,Agent,xsd:integer,,,what is the age of <X>,what is the age of <X>
+agency,agency,Person,owl:Thing,http://dbpedia.org/ontology/agency,750,who is the agency of <X>,who is the agency of <X>
+allegiance,allegiance,Person,xsd:string,http://dbpedia.org/ontology/allegiance,21032,who is the allegiance of <X>,who is the allegiance of <X>
+almaMater,alma mater,Person,EducationalInstitution,http://dbpedia.org/ontology/almaMater,131512,who is the alma mater of <X>,who is the alma mater of <X>
+announcedFrom,announcedFrom,Person,Place,,,who is the announcedFrom of <X>,who is the announcedFrom of <X>
+approach,approach,Person,owl:Thing,,,who is the approach of <X>,who is the approach of <X>
+arrestDate,arrest date,Person,xsd:date,,,who is the arrest date of <X>,who is the arrest date of <X>
+artPatron,patron (art),Agent,Artist,,,what is the patron (art) of <X>,what is the patron (art) of <X>
+artisticFunction,artistic function,Person,xsd:string,,,who is the artistic function of <X>,who is the artistic function of <X>
+astrologicalSign,astrological sign,Person,owl:Thing,,,who is the astrological sign of <X>,who is the astrological sign of <X>
+awardName,awardName,Person,xsd:string,,,who is the awardName of <X>,who is the awardName of <X>
+badGuy,bad guy,Person,xsd:string,,,who is the bad guy of <X>,who is the bad guy of <X>
+bestLap,best lap,Person,xsd:string,,,who is the best lap of <X>,who is the best lap of <X>
+bigPoolRecord,big pool record,Person,xsd:string,,,who is the big pool record of <X>,who is the big pool record of <X>
+birthDate,birth date,Person,xsd:date,http://dbpedia.org/ontology/birthDate,1740614,who is the birth date of <X>,who is the birth date of <X>
+birthName,birth name,Person,rdf:langString,http://dbpedia.org/ontology/birthName,79134,who is the birth name of <X>,who is the birth name of <X>
+birthPlace,birth place,Person,Place,http://dbpedia.org/ontology/birthPlace,1330297,who is the birth place of <X>,who is the birth place of <X>
+birthSign,birth sign,Person,owl:Thing,,,who is the birth sign of <X>,who is the birth sign of <X>
+birthYear,birth year,Person,xsd:gYear,http://dbpedia.org/ontology/birthYear,160048,who is the birth year of <X>,who is the birth year of <X>
+bloodGroup,blood group,Person,xsd:string,,,who is the blood group of <X>,who is the blood group of <X>
+bloodType,blood type,Person,owl:Thing,,,who is the blood type of <X>,who is the blood type of <X>
+board,board,Person,owl:Thing,http://dbpedia.org/ontology/board,1936,who is the board of <X>,who is the board of <X>
+bodyDiscovered,body discovered,Person,Place,http://dbpedia.org/ontology/bodyDiscovered,233,who is the body discovered of <X>,who is the body discovered of <X>
+britishWins,british wins,Person,skos:Concept,,,who is the british wins of <X>,who is the british wins of <X>
+bustSize,bust size,Person,Length,http://dbpedia.org/ontology/bustSize,316,who is the bust size of <X>,who is the bust size of <X>
+bustWaistHipSize,bust-waist-hip Size,Person,xsd:string,,,who is the bust-waist-hip Size of <X>,who is the bust-waist-hip Size of <X>
+careerStation,career station,Person,CareerStation,http://dbpedia.org/ontology/careerStation,977021,who is the career station of <X>,who is the career station of <X>
+case,case,Person,xsd:string,,,who is the case of <X>,who is the case of <X>
+catch,catch,Person,xsd:string,,,who is the catch of <X>,who is the catch of <X>
+causeOfDeath,cause of death,Person,xsd:string,,,who is the cause of death of <X>,who is the cause of death of <X>
+championships,championships,Agent,xsd:nonNegativeInteger,http://dbpedia.org/ontology/championships,777,what is the championships of <X>,what is the championships of <X>
+child,child,Person,Person,http://dbpedia.org/ontology/child,15760,who is the child of <X>,who is the child of <X>
+circumcised,circumcised,Person,xsd:string,,,who is the circumcised of <X>,who is the circumcised of <X>
+citizenship,citizenship,Person,owl:Thing,http://dbpedia.org/ontology/citizenship,6435,who is the citizenship of <X>,who is the citizenship of <X>
+clothSize,cloth size,Person,xsd:string,,,who is the cloth size of <X>,who is the cloth size of <X>
+clothingSize,clothing size,Person,xsd:string,,,who is the clothing size of <X>,who is the clothing size of <X>
+coalition,coalition,Person,xsd:string,,,who is the coalition of <X>,who is the coalition of <X>
+collaboration,collaboration,Person,Person,,,who is the collaboration of <X>,who is the collaboration of <X>
+colleague,colleague,Person,Person,,,who is the colleague of <X>,who is the colleague of <X>
+college,college,Person,EducationalInstitution,http://dbpedia.org/ontology/college,13759,who is the college of <X>,who is the college of <X>
+competitionTitle,competition title,Person,SportsEvent,,,who is the competition title of <X>,who is the competition title of <X>
+complexion,complexion,Person,owl:Thing,,,who is the complexion of <X>,who is the complexion of <X>
+contest,contest,Person,Contest,,,who is the contest of <X>,who is the contest of <X>
+continentalTournament,continental tournament,Person,Tournament,,,who is the continental tournament of <X>,who is the continental tournament of <X>
+continentalTournamentBronze,continental tournament bronze,Person,xsd:nonNegativeInteger,,,who is the continental tournament bronze of <X>,who is the continental tournament bronze of <X>
+continentalTournamentGold,continental tournament gold,Person,xsd:nonNegativeInteger,,,who is the continental tournament gold of <X>,who is the continental tournament gold of <X>
+continentalTournamentSilver,continental tournament silver,Person,xsd:nonNegativeInteger,,,who is the continental tournament silver of <X>,who is the continental tournament silver of <X>
+convictionDate,conviction date,Person,xsd:date,,,who is the conviction date of <X>,who is the conviction date of <X>
+copilote,copilote,Person,Person,,,who is the copilote of <X>,who is the copilote of <X>
+cousurper,cousurper,Person,Person,,,who is the cousurper of <X>,who is the cousurper of <X>
+created,created,Person,Work,,,who is the created of <X>,who is the created of <X>
+currentTeamManager,current team manager,Person,SportsTeam,,,who is the current team manager of <X>,who is the current team manager of <X>
+danseCompetition,danse competition,Person,xsd:string,,,who is the danse competition of <X>,who is the danse competition of <X>
+danseScore,danse score,Person,xsd:string,,,who is the danse score of <X>,who is the danse score of <X>
+dateOfBurial,date of burial,Person,xsd:date,http://dbpedia.org/ontology/dateOfBurial,11,who is the date of burial of <X>,who is the date of burial of <X>
+deadInFightDate,dead in fight date,Person,xsd:string,,,who is the dead in fight date of <X>,who is the dead in fight date of <X>
+deadInFightPlace,dead in fight place,Person,xsd:string,,,who is the dead in fight place of <X>,who is the dead in fight place of <X>
+deathAge,death age,Person,xsd:nonNegativeInteger,,,who is the death age of <X>,who is the death age of <X>
+deathCause,death cause,Person,owl:Thing,http://dbpedia.org/ontology/deathCause,5424,who is the death cause of <X>,who is the death cause of <X>
+deathDate,death date,Person,xsd:date,http://dbpedia.org/ontology/deathDate,721196,who is the death date of <X>,who is the death date of <X>
+deathPlace,death place,Person,Place,http://dbpedia.org/ontology/deathPlace,406619,who is the death place of <X>,who is the death place of <X>
+deathYear,death year,Person,xsd:gYear,http://dbpedia.org/ontology/deathYear,74740,who is the death year of <X>,who is the death year of <X>
+debutWork,debutWork,Person,Work,,,who is the debutWork of <X>,who is the debutWork of <X>
+decoration,decoration,Person,owl:Thing,,,who is the decoration of <X>,who is the decoration of <X>
+denomination,denomination,Agent,owl:Thing,http://dbpedia.org/ontology/denomination,926,what is the denomination of <X>,what is the denomination of <X>
+derivedWord,derived word,Person,xsd:string,,,who is the derived word of <X>,who is the derived word of <X>
+detractor,detractor,Person,Person,,,who is the detractor of <X>,who is the detractor of <X>
+diploma,diploma,Person,Diploma,,,who is the diploma of <X>,who is the diploma of <X>
+discipline,discipline,Agent,owl:Thing,http://dbpedia.org/ontology/discipline,1664,what is the discipline of <X>,what is the discipline of <X>
+dubber,dubber,Person,Person,,,who is the dubber of <X>,who is the dubber of <X>
+education,education,Person,owl:Thing,http://dbpedia.org/ontology/education,25656,who is the education of <X>,who is the education of <X>
+educationPlace,education place,Person,Place,,,who is the education place of <X>,who is the education place of <X>
+electionDate,election date,Person,xsd:date,http://dbpedia.org/ontology/electionDate,115,who is the election date of <X>,who is the election date of <X>
+employer,employer,Person,Organisation,http://dbpedia.org/ontology/employer,7409,who is the employer of <X>,who is the employer of <X>
+endCareer,end career,Person,xsd:string,,,who is the end career of <X>,who is the end career of <X>
+endReign,end reign,Person,skos:Concept,,,who is the end reign of <X>,who is the end reign of <X>
+escalafon,escalafon,Person,xsd:string,,,who is the escalafon of <X>,who is the escalafon of <X>
+ethnicity,ethnicity,Person,EthnicGroup,http://dbpedia.org/ontology/ethnicity,8322,who is the ethnicity of <X>,who is the ethnicity of <X>
+expedition,expedition,Person,xsd:string,,,who is the expedition of <X>,who is the expedition of <X>
+externalOrnament,external ornament,Person,xsd:string,,,who is the external ornament of <X>,who is the external ornament of <X>
+eyeColor,eye color,Person,xsd:string,http://dbpedia.org/ontology/eyeColor,3164,who is the eye color of <X>,who is the eye color of <X>
+eyeColour,eye colour,Person,xsd:string,,,who is the eye colour of <X>,who is the eye colour of <X>
+father,father,Person,Person,,,who is the father of <X>,who is the father of <X>
+feat,feat,Person,xsd:string,,,who is the feat of <X>,who is the feat of <X>
+federation,federation,Person,Organisation,,,who is the federation of <X>,who is the federation of <X>
+filmNumber,film number,Person,xsd:nonNegativeInteger,,,who is the film number of <X>,who is the film number of <X>
+foot,foot,Person,xsd:string,,,who is the foot of <X>,who is the foot of <X>
+freeDanseScore,free danse score,Person,xsd:string,,,who is the free danse score of <X>,who is the free danse score of <X>
+freeProgCompetition,free prog competition,Person,xsd:string,,,who is the free prog competition of <X>,who is the free prog competition of <X>
+freeProgScore,free prog score,Person,xsd:string,,,who is the free prog score of <X>,who is the free prog score of <X>
+freeScoreCompetition,free score competition,Person,xsd:string,,,who is the free score competition of <X>,who is the free score competition of <X>
+friend,friend,Person,Person,,,who is the friend of <X>,who is the friend of <X>
+fullCompetition,full competition,Person,xsd:string,,,who is the full competition of <X>,who is the full competition of <X>
+fullScore,full score,Person,xsd:string,,,who is the full score of <X>,who is the full score of <X>
+generalCouncil,general council,Agent,TermOfOffice,,,what is the general council of <X>,what is the general council of <X>
+grave,grave,Person,xsd:string,,,who is the grave of <X>,who is the grave of <X>
+gymApparatus,gym apparatus,Person,owl:Thing,,,who is the gym apparatus of <X>,who is the gym apparatus of <X>
+hairColor,hair color,Person,xsd:string,http://dbpedia.org/ontology/hairColor,3302,who is the hair color of <X>,who is the hair color of <X>
+hairColour,hair colour,Person,xsd:string,,,who is the hair colour of <X>,who is the hair colour of <X>
+hand,hand,Person,owl:Thing,,,who is the hand of <X>,who is the hand of <X>
+handedness,handedness,Person,owl:Thing,,,who is the handedness of <X>,who is the handedness of <X>
+handisport,handisport,Person,xsd:string,,,who is the handisport of <X>,who is the handisport of <X>
+hasNaturalBust,has natural bust,Person,xsd:string,,,who is the has natural bust of <X>,who is the has natural bust of <X>
+hipSize,hip size,Person,Length,http://dbpedia.org/ontology/hipSize,384,who is the hip size of <X>,who is the hip size of <X>
+homage,homage,Person,xsd:string,,,who is the homage of <X>,who is the homage of <X>
+hometown,home town,Agent,Settlement,http://dbpedia.org/ontology/hometown,93101,what is the home town of <X>,what is the home town of <X>
+idNumber,id number,Person,xsd:nonNegativeInteger,,,who is the id number of <X>,who is the id number of <X>
+ideology,ideology,Agent,Ideology,http://dbpedia.org/ontology/ideology,15038,what is the ideology of <X>,what is the ideology of <X>
+iihfHof,lihf hof,Person,xsd:string,,,who is the lihf hof of <X>,who is the lihf hof of <X>
+imposedDanseCompetition,imposed danse competition,Person,xsd:string,,,who is the imposed danse competition of <X>,who is the imposed danse competition of <X>
+imposedDanseScore,imposed danse score,Person,xsd:string,,,who is the imposed danse score of <X>,who is the imposed danse score of <X>
+individualisedPnd,individualised PND number,Person,xsd:nonNegativeInteger,,,who is the individualised PND number of <X>,who is the individualised PND number of <X>
+juniorSeason,junior season,Agent,owl:Thing,,,what is the junior season of <X>,what is the junior season of <X>
+juniorYearsEndYear,junior years end year,Person,xsd:gYear,,,who is the junior years end year of <X>,who is the junior years end year of <X>
+juniorYearsStartYear,junior years start year,Person,xsd:gYear,,,who is the junior years start year of <X>,who is the junior years start year of <X>
+jutsu,jutsu,Person,xsd:string,,,who is the jutsu of <X>,who is the jutsu of <X>
+killedBy,killed by,Person,xsd:string,,,who is the killed by of <X>,who is the killed by of <X>
+lahHof,lah hof,Person,xsd:string,,,who is the lah hof of <X>,who is the lah hof of <X>
+leadership,leadership,Person,xsd:string,,,who is the leadership of <X>,who is the leadership of <X>
+leagueManager,league manager,Person,SportsLeague,,,who is the league manager of <X>,who is the league manager of <X>
+linguisticsTradition,linguistics tradition,Person,owl:Thing,,,who is the linguistics tradition of <X>,who is the linguistics tradition of <X>
+littlePoolRecord,little pool record,Person,xsd:string,,,who is the little pool record of <X>,who is the little pool record of <X>
+livingPlace,livingPlace,Person,Place,,,who is the livingPlace of <X>,who is the livingPlace of <X>
+mainDomain,main domain,Person,owl:Thing,,,who is the main domain of <X>,who is the main domain of <X>
+managerSeason,manager season,Agent,owl:Thing,,,what is the manager season of <X>,what is the manager season of <X>
+mastersWins,masters wins,Person,skos:Concept,,,who is the masters wins of <X>,who is the masters wins of <X>
+matchPoint,match point,Person,xsd:string,,,who is the match point of <X>,who is the match point of <X>
+measurements,measurements,Person,xsd:string,,,who is the measurements of <X>,who is the measurements of <X>
+media,media,Person,owl:Thing,,,who is the media of <X>,who is the media of <X>
+member,member,Person,xsd:string,,,who is the member of <X>,who is the member of <X>
+militaryService,military service,Person,MilitaryService,,,who is the military service of <X>,who is the military service of <X>
+mood,mood,Person,xsd:string,,,who is the mood of <X>,who is the mood of <X>
+mother,mother,Person,Person,,,who is the mother of <X>,who is the mother of <X>
+mount,mount,Person,xsd:string,,,who is the mount of <X>,who is the mount of <X>
+movie,movie,Person,Film,,,who is the movie of <X>,who is the movie of <X>
+nationalSelection,national selection,Agent,owl:Thing,,,what is the national selection of <X>,what is the national selection of <X>
+nationalTeamMatchPoint,national team match point,Person,xsd:string,,,who is the national team match point of <X>,who is the national team match point of <X>
+nationalTeamYear,national team year,Person,xsd:string,,,who is the national team year of <X>,who is the national team year of <X>
+nationalTournament,National tournament,Person,Tournament,,,who is the National tournament of <X>,who is the National tournament of <X>
+nationalTournamentBronze,national tournament bronze,Person,xsd:nonNegativeInteger,,,who is the national tournament bronze of <X>,who is the national tournament bronze of <X>
+nationalTournamentGold,national tournament gold,Person,xsd:nonNegativeInteger,,,who is the national tournament gold of <X>,who is the national tournament gold of <X>
+nationalTournamentSilver,national tournament silver,Person,xsd:nonNegativeInteger,,,who is the national tournament silver of <X>,who is the national tournament silver of <X>
+nationality,nationality,Person,Country,http://dbpedia.org/ontology/nationality,130523,who is the nationality of <X>,who is the nationality of <X>
+networth,networth,Person,Currency,http://dbpedia.org/ontology/networth,2090,who is the networth of <X>,who is the networth of <X>
+nndbId,NNDB id,Person,xsd:string,,,who is the NNDB id of <X>,who is the NNDB id of <X>
+nonProfessionalCareer,non professional career,Person,xsd:string,,,who is the non professional career of <X>,who is the non professional career of <X>
+notableIdea,notableIdea,Person,owl:Thing,http://dbpedia.org/ontology/notableIdea,1284,who is the notableIdea of <X>,who is the notableIdea of <X>
+noteOnRestingPlace,note on resting place,Person,xsd:string,,,who is the note on resting place of <X>,who is the note on resting place of <X>
+numberOfRun,number of run,Person,xsd:nonNegativeInteger,,,who is the number of run of <X>,who is the number of run of <X>
+olympicGames,olympic games,Person,Tournament,,,who is the olympic games of <X>,who is the olympic games of <X>
+olympicGamesBronze,olympic games bronze,Person,xsd:nonNegativeInteger,,,who is the olympic games bronze of <X>,who is the olympic games bronze of <X>
+olympicGamesGold,olympic games gold,Person,xsd:nonNegativeInteger,,,who is the olympic games gold of <X>,who is the olympic games gold of <X>
+olympicGamesSilver,olympic games silver,Person,xsd:nonNegativeInteger,,,who is the olympic games silver of <X>,who is the olympic games silver of <X>
+olympicGamesWins,olympic games wins,Person,xsd:string,,,who is the olympic games wins of <X>,who is the olympic games wins of <X>
+opponent,opponent,Person,Person,http://dbpedia.org/ontology/opponent,263,who is the opponent of <X>,who is the opponent of <X>
+orientation,orientation,Person,xsd:string,,,who is the orientation of <X>,who is the orientation of <X>
+originalDanseCompetition,original danse competititon,Person,xsd:string,,,who is the original danse competititon of <X>,who is the original danse competititon of <X>
+originalDanseScore,original danse score,Person,xsd:string,,,who is the original danse score of <X>,who is the original danse score of <X>
+otherActivity,other activity,Person,xsd:string,,,who is the other activity of <X>,who is the other activity of <X>
+otherFunction,other function,Person,owl:Thing,,,who is the other function of <X>,who is the other function of <X>
+otherMedia,other media,Person,PeriodicalLiterature,,,who is the other media of <X>,who is the other media of <X>
+otherOccupation,other occupation,Person,PersonFunction,,,who is the other occupation of <X>,who is the other occupation of <X>
+owns,owns,Agent,Thing,,,what is the owns of <X>,what is the owns of <X>
+parent,parent,Person,Person,http://dbpedia.org/ontology/parent,29694,who is the parent of <X>,who is the parent of <X>
+parliamentaryGroup,parliamentary group,Person,xsd:string,,,who is the parliamentary group of <X>,who is the parliamentary group of <X>
+particularSign,particular sign,Person,xsd:string,,,who is the particular sign of <X>,who is the particular sign of <X>
+partner,partner,Person,Person,http://dbpedia.org/ontology/partner,1668,who is the partner of <X>,who is the partner of <X>
+patent,patent,Person,owl:Thing,,,who is the patent of <X>,who is the patent of <X>
+penisLength,penis length,Person,xsd:string,,,who is the penis length of <X>,who is the penis length of <X>
+personFunction,person function,Person,PersonFunction,http://dbpedia.org/ontology/personFunction,4473,who is the person function of <X>,who is the person function of <X>
+pgaWins,pga wins,Person,skos:Concept,,,who is the pga wins of <X>,who is the pga wins of <X>
+philosophicalSchool,philosophicalSchool,Person,owl:Thing,http://dbpedia.org/ontology/philosophicalSchool,2092,who is the philosophicalSchool of <X>,who is the philosophicalSchool of <X>
+piercing,piercing,Person,xsd:string,,,who is the piercing of <X>,who is the piercing of <X>
+placeOfBurial,place of burial,Person,Place,http://dbpedia.org/ontology/placeOfBurial,1402,who is the place of burial of <X>,who is the place of burial of <X>
+playerSeason,player season,Agent,owl:Thing,,,what is the player season of <X>,what is the player season of <X>
+playerStatus,player status,Person,xsd:string,,,who is the player status of <X>,who is the player status of <X>
+podium,podium,Person,xsd:nonNegativeInteger,,,who is the podium of <X>,who is the podium of <X>
+polePosition,pole position,Person,xsd:nonNegativeInteger,,,who is the pole position of <X>,who is the pole position of <X>
+politicalFunction,political function,Person,xsd:string,,,who is the political function of <X>,who is the political function of <X>
+profession,profession,Person,owl:Thing,http://dbpedia.org/ontology/profession,15598,who is the profession of <X>,who is the profession of <X>
+project,project,Person,Project,,,who is the project of <X>,who is the project of <X>
+pseudonym,pseudonym,Person,rdf:langString,http://dbpedia.org/ontology/pseudonym,3364,who is the pseudonym of <X>,who is the pseudonym of <X>
+publication,publication,Person,xsd:string,,,who is the publication of <X>,who is the publication of <X>
+raceWins,race wins,Person,xsd:nonNegativeInteger,,,who is the race wins of <X>,who is the race wins of <X>
+radio,radio,Person,RadioStation,,,who is the radio of <X>,who is the radio of <X>
+regionalCouncil,regional council,Agent,TermOfOffice,,,what is the regional council of <X>,what is the regional council of <X>
+reign,reign,Person,xsd:string,,,who is the reign of <X>,who is the reign of <X>
+reignName,reign name,Person,xsd:string,,,who is the reign name of <X>,who is the reign name of <X>
+relatedFunctions,related functions,Person,List,,,who is the related functions of <X>,who is the related functions of <X>
+relation,relation,Person,Person,http://dbpedia.org/ontology/relation,9368,who is the relation of <X>,who is the relation of <X>
+relative,relative,Person,Person,http://dbpedia.org/ontology/relative,15834,who is the relative of <X>,who is the relative of <X>
+residence,residence,Person,Place,http://dbpedia.org/ontology/residence,69284,who is the residence of <X>,who is the residence of <X>
+restingDate,resting date,Person,xsd:date,,,who is the resting date of <X>,who is the resting date of <X>
+restingPlace,resting place,Person,Place,http://dbpedia.org/ontology/restingPlace,24384,who is the resting place of <X>,who is the resting place of <X>
+restingPlacePosition,resting place position,Person,geo:SpatialThing,http://dbpedia.org/ontology/restingPlacePosition,538,who is the resting place position of <X>,who is the resting place position of <X>
+retirementDate,retirement date,Person,xsd:date,,,who is the retirement date of <X>,who is the retirement date of <X>
+roleInEvent,A Person's role in an event,Agent,Event,,,what is the A Person's role in an event of <X>,what is the A Person's role in an event of <X>
+salary,salary,Person,Currency,http://dbpedia.org/ontology/salary,406,who is the salary of <X>,who is the salary of <X>
+scene,scene,Person,xsd:string,,,who is the scene of <X>,who is the scene of <X>
+school,school,Person,EducationalInstitution,http://dbpedia.org/ontology/school,5614,who is the school of <X>,who is the school of <X>
+season,season,Agent,owl:Thing,http://dbpedia.org/ontology/season,10915,what is the season of <X>,what is the season of <X>
+seasonManager,season manager,Person,xsd:string,,,who is the season manager of <X>,who is the season manager of <X>
+second,second,Person,xsd:nonNegativeInteger,,,who is the second of <X>,who is the second of <X>
+seiyu,seiyu,Person,Person,,,who is the seiyu of <X>,who is the seiyu of <X>
+sentence,sentence,Person,xsd:string,,,who is the sentence of <X>,who is the sentence of <X>
+sex,sex,Person,xsd:string,http://dbpedia.org/ontology/sex,4036,who is the sex of <X>,who is the sex of <X>
+sexualOrientation,sexual orientation,Person,owl:Thing,,,who is the sexual orientation of <X>,who is the sexual orientation of <X>
+shoeNumber,shoe number,Person,xsd:positiveInteger,http://dbpedia.org/ontology/shoeNumber,25,who is the shoe number of <X>,who is the shoe number of <X>
+shoeSize,shoe size,Person,xsd:string,http://dbpedia.org/ontology/shoeSize,376,who is the shoe size of <X>,who is the shoe size of <X>
+shoot,shoot,Person,xsd:string,,,who is the shoot of <X>,who is the shoot of <X>
+shortProgCompetition,short prog competition,Person,xsd:string,,,who is the short prog competition of <X>,who is the short prog competition of <X>
+shortProgScore,short prog score,Person,xsd:string,,,who is the short prog score of <X>,who is the short prog score of <X>
+sibling,sibling,Person,Person,,,who is the sibling of <X>,who is the sibling of <X>
+signature,signature,Person,xsd:string,http://dbpedia.org/ontology/signature,1912,who is the signature of <X>,who is the signature of <X>
+significantProject,significant project,Person,owl:Thing,http://dbpedia.org/ontology/significantProject,1382,who is the significant project of <X>,who is the significant project of <X>
+skinColor,skin color,Person,xsd:string,,,who is the skin color of <X>,who is the skin color of <X>
+specialTrial,special trial,Person,xsd:nonNegativeInteger,,,who is the special trial of <X>,who is the special trial of <X>
+speciality,speciality,Person,xsd:string,,,who is the speciality of <X>,who is the speciality of <X>
+sportDiscipline,sport discipline,Person,Sport,,,who is the sport discipline of <X>,who is the sport discipline of <X>
+sportsFunction,sports function,Person,xsd:string,,,who is the sports function of <X>,who is the sports function of <X>
+spouse,spouse,Person,Person,http://dbpedia.org/ontology/spouse,37781,who is the spouse of <X>,who is the spouse of <X>
+spouseName,spouse name,Person,xsd:string,,,who is the spouse name of <X>,who is the spouse name of <X>
+startCareer,start career,Person,xsd:string,,,who is the start career of <X>,who is the start career of <X>
+startReign,start reign,Person,skos:Concept,,,who is the start reign of <X>,who is the start reign of <X>
+startWct,start xct,Person,xsd:string,,,who is the start xct of <X>,who is the start xct of <X>
+startWqs,start wqs,Person,xsd:string,,,who is the start wqs of <X>,who is the start wqs of <X>
+stateOfOrigin,state of origin,Person,Country,http://dbpedia.org/ontology/stateOfOrigin,38461,who is the state of origin of <X>,who is the state of origin of <X>
+statusManager,status manager,Person,xsd:string,,,who is the status manager of <X>,who is the status manager of <X>
+student,student,Person,Person,,,who is the student of <X>,who is the student of <X>
+tattoo,tattoo,Person,xsd:string,,,who is the tattoo of <X>,who is the tattoo of <X>
+teamManager,team manager,Person,SportsTeam,,,who is the team manager of <X>,who is the team manager of <X>
+temple,temple,Person,xsd:string,,,who is the temple of <X>,who is the temple of <X>
+templeYear,temple year,Person,xsd:string,,,who is the temple year of <X>,who is the temple year of <X>
+tessitura,tessitura,Person,xsd:string,,,who is the tessitura of <X>,who is the tessitura of <X>
+third,third,Person,xsd:nonNegativeInteger,,,who is the third of <X>,who is the third of <X>
+titleDate,title date,Person,xsd:date,,,who is the title date of <X>,who is the title date of <X>
+tvShow,tvShow,Person,TelevisionShow,,,who is the tvShow of <X>,who is the tvShow of <X>
+usopenWins,usopen wins,Person,skos:Concept,,,who is the usopen wins of <X>,who is the usopen wins of <X>
+usurper,usurper,Person,Person,,,who is the usurper of <X>,who is the usurper of <X>
+victory,victory,Person,xsd:nonNegativeInteger,,,who is the victory of <X>,who is the victory of <X>
+victoryAsMgr,victory as manager,Person,xsd:nonNegativeInteger,,,who is the victory as manager of <X>,who is the victory as manager of <X>
+victoryPercentageAsMgr,victory percentage as manager,Person,xsd:double,,,who is the victory percentage as manager of <X>,who is the victory percentage as manager of <X>
+waistSize,waist size,Person,Length,http://dbpedia.org/ontology/waistSize,394,who is the waist size of <X>,who is the waist size of <X>
+weddingParentsDate,Parents Wedding Date,Person,xsd:date,,,who is the Parents Wedding Date of <X>,who is the Parents Wedding Date of <X>
+world,world,Person,skos:Concept,,,who is the world of <X>,who is the world of <X>
+worldTournament,world tournament,Person,Tournament,,,who is the world tournament of <X>,who is the world tournament of <X>
+worldTournamentBronze,world tournament bronze,Person,xsd:nonNegativeInteger,,,who is the world tournament bronze of <X>,who is the world tournament bronze of <X>
+worldTournamentGold,world tournament gold,Person,xsd:nonNegativeInteger,,,who is the world tournament gold of <X>,who is the world tournament gold of <X>
+worldTournamentSilver,world tournament silver,Person,xsd:nonNegativeInteger,,,who is the world tournament silver of <X>,who is the world tournament silver of <X>
