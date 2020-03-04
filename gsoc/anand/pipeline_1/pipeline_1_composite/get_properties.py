@@ -1,4 +1,4 @@
-import urllib
+from urllib.request import urlopen
 import json
 import sys
 import csv
@@ -13,7 +13,7 @@ def get_properties(url,  project_name="test_project", output_file = "get_propert
     This function extracts the information regarding : [Name, Label, Domain, Range] from a page like this :
     http://mappings.dbpedia.org/server/ontology/classes/Place and saves it in a file in CSV format.
     """
-    page = urllib.request.urlopen(url)
+    page = urlopen(url)
     soup = BeautifulSoup(page, "html.parser")
     if(not os.path.isdir(project_name)):
         os.makedirs(project_name)
