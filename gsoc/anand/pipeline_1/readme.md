@@ -7,15 +7,16 @@ Follow the below given steps
 ### One - liner (For Steps 1-6)
 
 Here is the skeleton of the command:
+#### Make sure to use python3.7
 
 ``` bash
-python3 final_formatting.py --rs <0 IF TO RUN THE WHOLE CODE | 1 TO RUN THE FUNTION OF THIS PYHTON SOURCE ONLY> --uri_file <URI FREQUENCY FILE TSV> --url <WEBPAGE URL> --output_file <OUTPUT FILE NAME > --project_name <PROJECT NAME> --namespace <NAMESPACE>
+python final_formatting.py --rs <0 IF TO RUN THE WHOLE CODE | 1 TO RUN THE FUNTION OF THIS PYHTON SOURCE ONLY> --uri_file <URI FREQUENCY FILE TSV> --url <WEBPAGE URL> --output_file <OUTPUT FILE NAME > --project_name <PROJECT NAME> --namespace <NAMESPACE>
 ```
 
 Example:
 
 ```bash
-python3 final_formatting.py --rs 0 --uri_file ../uri_file_dbpedia-201610-properties.tsv --url http://mappings.dbpedia.org/server/ontology/classes/Place --output_file test_res.csv --project_name test --namespace ontology
+python final_formatting.py --rs 0 --uri_file ../uri_file_dbpedia-201610-properties.tsv --url http://mappings.dbpedia.org/server/ontology/classes/Place --output_file test_res.csv --project_name test --namespace ontology
 
 ```
 
@@ -25,7 +26,7 @@ python3 final_formatting.py --rs 0 --uri_file ../uri_file_dbpedia-201610-propert
 Command:
 
 ```bash
-python3 get_properties.py --url <WEBPAGE URL> --output_file <OUTPUT FILE NAME > --project_name <PROJECT NAME>
+python get_properties.py --url <WEBPAGE URL> --output_file <OUTPUT FILE NAME > --project_name <PROJECT NAME>
 ```
 
 - `--url <WEBPAGE URL>`: --url argument is the webpage from where property metadata is to scraped example: http://mappings.dbpedia.org/server/ontology/classes/Place
@@ -41,7 +42,7 @@ Store only the rows of required namespace properties
 Command:
 
 ``` bash
-python3 integrate.py --uri_file <URI FREQUENCY FILE TSV> --input_file <OUTPUT FROM PREVIOUS STEP> --output_file <OUTPUT FILE> --project_name <PROJECT NAME> --namespace <NAMESPACE>
+python integrate.py --uri_file <URI FREQUENCY FILE TSV> --input_file <OUTPUT FROM PREVIOUS STEP> --output_file <OUTPUT FILE> --project_name <PROJECT NAME> --namespace <NAMESPACE>
 ```
 
 - `--uri_file <URI FREQUENCY FILE TSV>`: Files with frequency information
@@ -55,7 +56,7 @@ python3 integrate.py --uri_file <URI FREQUENCY FILE TSV> --input_file <OUTPUT FR
 Command:
 
 ```bash
-python3 decision_tree.py -input_file <OUTPUT FROM PREVIOUS STEP> --output_file <OUTPUT FILE> --project_name <PROJECT NAME>
+python decision_tree.py -input_file <OUTPUT FROM PREVIOUS STEP> --output_file <OUTPUT FILE> --project_name <PROJECT NAME>
 ```
 
 - `--input_file <OUTPUT FROM PREVIOUS STEP>`: Output file from previous step  
@@ -67,7 +68,7 @@ python3 decision_tree.py -input_file <OUTPUT FROM PREVIOUS STEP> --output_file <
 Command:
 
 ```bash
-python3 sparql_generator.py -input_file <OUTPUT FROM PREVIOUS STEP> --output_file <OUTPUT FILE> --project_name <PROJECT NAME>
+python sparql_generator.py -input_file <OUTPUT FROM PREVIOUS STEP> --output_file <OUTPUT FILE> --project_name <PROJECT NAME>
 ```
 
 - `--input_file <OUTPUT FROM PREVIOUS STEP>`: Output file from previous step  
@@ -81,13 +82,13 @@ Command:
 Only run processes in this file and not the whole code:
 
 ```bash
-python3 final_formatting.py --input_file <OUTPUT FROM PREVIOUS STEP> --rs <0 IF TO RUN THE WHOLE CODE | 1 TO RUN THE FUNTION OF THIS PYHTON SOURCE ONLY> --project_name <PROJECT NAME> --output_file <OUTPUT FILE>
+python final_formatting.py --input_file <OUTPUT FROM PREVIOUS STEP> --rs <0 IF TO RUN THE WHOLE CODE | 1 TO RUN THE FUNTION OF THIS PYHTON SOURCE ONLY> --project_name <PROJECT NAME> --output_file <OUTPUT FILE>
 ```
 
 Run the whole flow
 
 ```bash
-python3 final_formatting.py --rs <0 IF TO RUN THE WHOLE CODE | 1 TO RUN THE FUNTION OF THIS PYHTON SOURCE ONLY> --uri_file <URI FREQUENCY FILE TSV> --url <WEBPAGE URL> --output_file <OUTPUT FILE NAME > --project_name <PROJECT NAME> --namespace <NAMESPACE>
+python final_formatting.py --rs <0 IF TO RUN THE WHOLE CODE | 1 TO RUN THE FUNTION OF THIS PYHTON SOURCE ONLY> --uri_file <URI FREQUENCY FILE TSV> --url <WEBPAGE URL> --output_file <OUTPUT FILE NAME > --project_name <PROJECT NAME> --namespace <NAMESPACE>
 ```
 
 - `--input_file <OUTPUT FROM PREVIOUS STEP>`: Output file from previous step  
@@ -109,13 +110,13 @@ Steps from the previous folder using the `test_res.csv` file for generator's tem
 Here is the skeleton of the command:
 
 ``` bash
-python3 composite_template.py --rs <0 IF TO RUN THE WHOLE CODE | 1 TO RUN THE FUNTION OF THIS PYHTON SOURCE ONLY> --uri_file <URI FREQUENCY FILE TSV> --url <WEBPAGE URL> --output_file <OUTPUT FILE NAME > --project_name <PROJECT NAME> --namespace <NAMESPACE>
+python composite_template.py --rs <0 IF TO RUN THE WHOLE CODE | 1 TO RUN THE FUNTION OF THIS PYHTON SOURCE ONLY> --uri_file <URI FREQUENCY FILE TSV> --url <WEBPAGE URL> --output_file <OUTPUT FILE NAME > --project_name <PROJECT NAME> --namespace <NAMESPACE>
 ```
 
 Example:
 
 ```bash
-python3 composite_template.py --rs 0 --uri_file ../uri_file_dbpedia-201610-properties.tsv --url http://mappings.dbpedia.org/server/ontology/classes/Place --output_file test_res.csv --project_name test --namespace ontology
+python composite_template.py --rs 0 --uri_file ../uri_file_dbpedia-201610-properties.tsv --url http://mappings.dbpedia.org/server/ontology/classes/Place --output_file test_res.csv --project_name test --namespace ontology
 
 ```
 
@@ -125,7 +126,7 @@ python3 composite_template.py --rs 0 --uri_file ../uri_file_dbpedia-201610-prope
 Command:
 
 ```bash
-python3 range_place.py -input_file <OUTPUT FROM PREVIOUS STEP> --output_file <OUTPUT FILE> --project_name <PROJECT NAME>
+python range_place.py -input_file <OUTPUT FROM PREVIOUS STEP> --output_file <OUTPUT FILE> --project_name <PROJECT NAME>
 ```
 
 - `--input_file <OUTPUT FROM PREVIOUS STEP>`: Output file from previous step  
@@ -139,13 +140,13 @@ Command:
 Only run processes in this file and not the whole code:
 
 ```bash
-python3 composite_template.py --input_file <OUTPUT FROM PREVIOUS STEP> --rs <0 IF TO RUN THE WHOLE CODE | 1 TO RUN THE FUNTION OF THIS PYHTON SOURCE ONLY> --project_name <PROJECT NAME> --output_file <OUTPUT FILE>
+python composite_template.py --input_file <OUTPUT FROM PREVIOUS STEP> --rs <0 IF TO RUN THE WHOLE CODE | 1 TO RUN THE FUNTION OF THIS PYHTON SOURCE ONLY> --project_name <PROJECT NAME> --output_file <OUTPUT FILE>
 ```
 
 Run the whole flow
 
 ```bash
-python3 composite_template.py --rs <0 IF TO RUN THE WHOLE CODE | 1 TO RUN THE FUNTION OF THIS PYHTON SOURCE ONLY> --uri_file <URI FREQUENCY FILE TSV> --url <WEBPAGE URL> --output_file <OUTPUT FILE NAME > --project_name <PROJECT NAME> --namespace <NAMESPACE>
+python composite_template.py --rs <0 IF TO RUN THE WHOLE CODE | 1 TO RUN THE FUNTION OF THIS PYHTON SOURCE ONLY> --uri_file <URI FREQUENCY FILE TSV> --url <WEBPAGE URL> --output_file <OUTPUT FILE NAME > --project_name <PROJECT NAME> --namespace <NAMESPACE>
 ```
 
 - `--input_file <OUTPUT FROM PREVIOUS STEP>`: Output file from previous step  
