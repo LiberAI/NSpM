@@ -15,11 +15,20 @@ git lfs checkout
 git submodule update --init
 ```
 
-Install TensorFlow (e.g., `pip install tensorflow`).  
+### Python Setup
+```bash
+pip install -r requirements.txt
+```
 Note: Tensorflow version must >= 1.2.1
-### Data preparation
 
-#### Generation 
+#### Make sure to use python2.7 for these steps to avoid errors
+
+### Data preparation
+#### Pre-generated data
+
+You can extract pre-generated data from `data/monument_300.zip` and `data/monument_600.zip` in folders having the respective names.
+
+#### Manual Generation (Alternative to using pre-generated data)
 
 The template used in the paper can be found in a file such as `annotations_monument.tsv`. To generate the training data, launch the following command.
 
@@ -41,7 +50,7 @@ Count lines in `data_.*`
 ```bash
 NUMLINES=$(echo awk '{ print $1}' | cat data/monument_300/data_300.sparql |  wc -l)
 echo $NUMLINES
-# 7097
+# 7097 (Don't worry if it varies)
 ```
 
 Split the `data_.*` files into `train_.*`, `dev_.*`, and `test_.*` (usually 80-10-10%).
@@ -52,17 +61,13 @@ cd data/monument_300/
 python ../../split_in_train_dev_test.py --lines $NUMLINES  --dataset data_300.sparql
 ```
 
-#### Pre-generated data
-
-Alternatively, you can extract pre-generated data from `data/monument_300.zip` and `data/monument_600.zip` in folders having the respective names.
-
 ### Training
 
 <!-- Just a simple note to go back to the initial directory.-->
-Now go back to the initail directory and launch `train.sh` to train the model. The first parameter is the prefix of the data directory and the second parameter is the number of training epochs.
+Now go back to the initial directory and launch `train.sh` to train the model. The first parameter is the prefix of the data directory and the second parameter is the number of training epochs.
 
 ```bash
-sh train.sh data/monument_300 120000
+sh train.sh data/monument_300 12000
 ```
 
 This command will create a model directory called `data/monument_300_model`.
