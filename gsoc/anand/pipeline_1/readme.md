@@ -4,9 +4,10 @@ Follow the below given steps
 
 ## Steps to follow
 
-### One - liner
+### One - liner (For Steps 1-6)
 
 Here is the skeleton of the command:
+#### Make sure to use python3.7
 
 ``` bash
 python final_formatting.py --rs <0 IF TO RUN THE WHOLE CODE | 1 TO RUN THE FUNTION OF THIS PYHTON SOURCE ONLY> --uri_file <URI FREQUENCY FILE TSV> --url <WEBPAGE URL> --output_file <OUTPUT FILE NAME > --project_name <PROJECT NAME> --namespace <NAMESPACE>
@@ -100,7 +101,7 @@ python final_formatting.py --rs <0 IF TO RUN THE WHOLE CODE | 1 TO RUN THE FUNTI
 
 ### STEP 7 - Follow the original data generation and training steps (readme of master branch)
 
-Steps from the previous folder.
+Steps from the previous folder using the `test_res.csv` file for generator's template
 
 ## COMPOSITIONALITY EXPERIMENT
 
