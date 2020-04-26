@@ -1,0 +1,4 @@
+end,end,TimePeriod,xsd:date
+numberOfGoals,number of goals scored,CareerStation,xsd:integer
+numberOfMatches,number of matches or caps,CareerStation,xsd:integer
+start,start,TimePeriod,xsd:date
