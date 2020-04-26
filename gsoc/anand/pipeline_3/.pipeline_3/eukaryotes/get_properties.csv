@@ -1,0 +1,29 @@
+binomial,binomial,Species,owl:Thing
+binomialAuthority,binomial authority,Species,owl:Thing
+clade,clade,Species,owl:Thing
+classis,classis,Species,owl:Thing
+conservationStatus,conservation status,Species,xsd:string
+conservationStatusSystem,conservation status system,Species,xsd:string
+domain,domain,Species,owl:Thing
+extinctionYear,extinction year,Species,xsd:gYear
+family,family,Species,Species
+fossil,fossil,Species,Species
+genus,genus,Species,owl:Thing
+kingdom,kingdom,Species,owl:Thing
+order,order (taxonomy),Species,owl:Thing
+parentheses,parentheses,Species,owl:Thing
+phylum,phylum,Species,owl:Thing
+redListIdNL,red list ID NL,Species,xsd:integer
+scientificName,scientific name,Species,xsd:string
+species,species,Species,Species
+subClassis,sub-classis,Species,owl:Thing
+subFamily,sub-family,Species,Taxon
+subGenus,subgenus,Species,owl:Thing
+subOrder,sub-order,Species,owl:Thing
+subTribus,subtribus,Species,Species
+superFamily,super-family,Species,Taxon
+superOrder,super-order,Species,owl:Thing
+superTribus,supertribus,Species,Species
+taxon,has taxon,Species,Taxon
+tribus,tribus,Species,Species
+woRMS,WoRMS,Species,owl:Thing

@@ -1,0 +1,44 @@
+select var_x where brack_open dbr_University_of_Maryland_Arboretum_&_Botanical_Garden dbo_species var_x1 sep_dot var_x1 dbo_binomialAuthority var_x brack_close
+select var_x where brack_open dbr_Cyclura_cychlura_figginsi dbo_species var_x1 sep_dot var_x1 dbo_binomialAuthority var_x brack_close
+select count attr_open wildcard attr_close as var_x where brack_open dbr_Cyclura_cychlura_figginsi dbo_species var_x1 sep_dot var_x1 dbo_binomialAuthority var_x brack_close
+select count attr_open wildcard attr_close as var_x where brack_open dbr_University_of_Maryland_Arboretum_&_Botanical_Garden dbo_species var_x1 sep_dot var_x1 dbo_binomialAuthority var_x brack_close
+select var_x where brack_open dbr_Crotalus_mitchellii_muertensis dbo_species var_x1 sep_dot var_x1 dbo_conservationStatus var_x brack_close
+select var_x where brack_open dbr_Cyclura_cychlura_figginsi dbo_species var_x1 sep_dot var_x1 dbo_conservationStatus var_x brack_close
+select count attr_open wildcard attr_close as var_x where brack_open dbr_Crotalus_mitchellii_muertensis dbo_species var_x1 sep_dot var_x1 dbo_conservationStatus var_x brack_close
+select count attr_open wildcard attr_close as var_x where brack_open dbr_Cyclura_cychlura_figginsi dbo_species var_x1 sep_dot var_x1 dbo_conservationStatus var_x brack_close
+select var_x where brack_open dbr_Cyclura_cychlura_figginsi dbo_species var_x1 sep_dot var_x1 dbo_conservationStatusSystem var_x brack_close
+select var_x where brack_open dbr_Crotalus_mitchellii_muertensis dbo_species var_x1 sep_dot var_x1 dbo_conservationStatusSystem var_x brack_close
+select count attr_open wildcard attr_close as var_x where brack_open dbr_Cyclura_cychlura_figginsi dbo_species var_x1 sep_dot var_x1 dbo_conservationStatusSystem var_x brack_close
+select count attr_open wildcard attr_close as var_x where brack_open dbr_Crotalus_mitchellii_muertensis dbo_species var_x1 sep_dot var_x1 dbo_conservationStatusSystem var_x brack_close
+select var_x where brack_open dbr_University_of_Maryland_Arboretum_&_Botanical_Garden dbo_species var_x1 sep_dot var_x1 dbo_division var_x brack_close
+select count attr_open wildcard attr_close as var_x where brack_open dbr_University_of_Maryland_Arboretum_&_Botanical_Garden dbo_species var_x1 sep_dot var_x1 dbo_division var_x brack_close
+select var_x where brack_open dbr_Crotalus_mitchellii_muertensis dbo_species var_x1 sep_dot var_x1 dbo_family var_x brack_close
+select var_x where brack_open dbr_University_of_Maryland_Arboretum_&_Botanical_Garden dbo_species var_x1 sep_dot var_x1 dbo_family var_x brack_close
+select var_x where brack_open dbr_Cyclura_cychlura_figginsi dbo_species var_x1 sep_dot var_x1 dbo_family var_x brack_close
+select var_x where brack_open dbr_University_of_Maryland_Arboretum_&_Botanical_Garden dbo_species var_x1 sep_dot var_x1 dbo_genus var_x brack_close
+select count attr_open wildcard attr_close as var_x where brack_open dbr_University_of_Maryland_Arboretum_&_Botanical_Garden dbo_species var_x1 sep_dot var_x1 dbo_genus var_x brack_close
+select var_x where brack_open dbr_Cyclura_cychlura_figginsi dbo_species var_x1 sep_dot var_x1 dbo_kingdom var_x brack_close
+select var_x where brack_open dbr_University_of_Maryland_Arboretum_&_Botanical_Garden dbo_species var_x1 sep_dot var_x1 dbo_kingdom var_x brack_close
+select var_x where brack_open dbr_Crotalus_mitchellii_muertensis dbo_species var_x1 sep_dot var_x1 dbo_kingdom var_x brack_close
+select count attr_open wildcard attr_close as var_x where brack_open dbr_Cyclura_cychlura_figginsi dbo_species var_x1 sep_dot var_x1 dbo_kingdom var_x brack_close
+select count attr_open wildcard attr_close as var_x where brack_open dbr_University_of_Maryland_Arboretum_&_Botanical_Garden dbo_species var_x1 sep_dot var_x1 dbo_kingdom var_x brack_close
+select var_x where brack_open dbr_Cyclura_cychlura_figginsi dbo_species var_x1 sep_dot var_x1 dbo_order var_x brack_close
+select var_x where brack_open dbr_University_of_Maryland_Arboretum_&_Botanical_Garden dbo_species var_x1 sep_dot var_x1 dbo_order var_x brack_close
+select count attr_open wildcard attr_close as var_x where brack_open dbr_University_of_Maryland_Arboretum_&_Botanical_Garden dbo_species var_x1 sep_dot var_x1 dbo_order var_x brack_close
+select count attr_open wildcard attr_close as var_x where brack_open dbr_Cyclura_cychlura_figginsi dbo_species var_x1 sep_dot var_x1 dbo_order var_x brack_close
+select var_x where brack_open dbr_Cyclura_cychlura_figginsi dbo_species var_x1 sep_dot var_x1 dbo_phylum var_x brack_close
+select var_x where brack_open dbr_Crotalus_mitchellii_muertensis dbo_species var_x1 sep_dot var_x1 dbo_phylum var_x brack_close
+select count attr_open wildcard attr_close as var_x where brack_open dbr_Cyclura_cychlura_figginsi dbo_species var_x1 sep_dot var_x1 dbo_phylum var_x brack_close
+select count attr_open wildcard attr_close as var_x where brack_open dbr_Crotalus_mitchellii_muertensis dbo_species var_x1 sep_dot var_x1 dbo_phylum var_x brack_close
+select var_x where brack_open dbr_Crotalus_mitchellii_muertensis dbo_species var_x1 sep_dot var_x1 dbo_synonym var_x brack_close
+select count attr_open wildcard attr_close as var_x where brack_open dbr_Crotalus_mitchellii_muertensis dbo_species var_x1 sep_dot var_x1 dbo_synonym var_x brack_close
+select var_x where brack_open dbr_Crotalus_mitchellii_muertensis dbo_species var_x1 sep_dot var_x1 dbo_wikiPageExternalLink var_x brack_close
+select count attr_open wildcard attr_close as var_x where brack_open dbr_Crotalus_mitchellii_muertensis dbo_species var_x1 sep_dot var_x1 dbo_wikiPageExternalLink var_x brack_close
+select var_x where brack_open dbr_University_of_Maryland_Arboretum_&_Botanical_Garden dbo_species var_x1 sep_dot var_x1 dbo_wikiPageID var_x brack_close
+select var_x where brack_open dbr_Crotalus_mitchellii_muertensis dbo_species var_x1 sep_dot var_x1 dbo_wikiPageID var_x brack_close
+select var_x where brack_open dbr_Cyclura_cychlura_figginsi dbo_species var_x1 sep_dot var_x1 dbo_wikiPageID var_x brack_close
+select var_x where brack_open dbr_Black-chinned_emperor_tamarin dbo_species var_x1 sep_dot var_x1 dbo_wikiPageRedirects var_x brack_close
+select count attr_open wildcard attr_close as var_x where brack_open dbr_Black-chinned_emperor_tamarin dbo_species var_x1 sep_dot var_x1 dbo_wikiPageRedirects var_x brack_close
+select var_x where brack_open dbr_Cyclura_cychlura_figginsi dbo_species var_x1 sep_dot var_x1 dbo_wikiPageRevisionID var_x brack_close
+select var_x where brack_open dbr_Crotalus_mitchellii_muertensis dbo_species var_x1 sep_dot var_x1 dbo_wikiPageRevisionID var_x brack_close
+select var_x where brack_open dbr_University_of_Maryland_Arboretum_&_Botanical_Garden dbo_species var_x1 sep_dot var_x1 dbo_wikiPageRevisionID var_x brack_close
