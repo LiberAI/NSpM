@@ -1,10 +1,9 @@
 #!/usr/bin/env python
 """
 
-Neural SPARQL Machines - Generator module
+Neural SPARQL Machines - Generator module.
 
 'SPARQL as a Foreign Language' by Tommaso Soru and Edgard Marx et al., SEMANTiCS 2017
-https://w3id.org/neural-sparql-machines/soru-marx-semantics2017.html
 https://arxiv.org/abs/1708.07624
 
 Version 1.0.0
@@ -206,7 +205,7 @@ def generate_dataset(templates, output_dir, file_mode):
                         english_questions.write(
                             "{}\n".format(dataset_pair['english']))
                         dataset_pair['sparql'] = re.sub(
-                            "\s\s+", " ", dataset_pair['sparql'])
+                            r"\s\s+", " ", dataset_pair['sparql'])
                         a = re.search('(.*)brack_open', dataset_pair['sparql'])
                         b = re.search('brack_open(.*)brack_close',
                                       dataset_pair['sparql'])
@@ -222,9 +221,6 @@ def generate_dataset(templates, output_dir, file_mode):
                             ' brack_open ' + b + ' brack_close ' + c
                         dataset_pair['sparql'] = " ".join(
                             dataset_pair['sparql'].split())
-                        # print
-
-                        # print "lol", dataset_pair['sparql']
 
                         sparql_queries.write(
                             "{}\n".format(dataset_pair['sparql']))
@@ -342,8 +338,6 @@ if __name__ == '__main__':
         print(warning_message)
         sys.exit(1)
 
-    # reload(sys) to set default encoding
-
     importlib.reload(sys)
 
     not_instanced_templates = collections.Counter()
@@ -351,10 +345,9 @@ if __name__ == '__main__':
         resource_dump_file).read())) if use_resources_dump else collections.Counter()
     file_mode = 'a' if use_resources_dump else 'w'
     templates = read_template_file(template_file)
-    #print len(templates)
+
     try:
         generate_dataset(templates, output_dir, file_mode)
-        # print "lol"
     except:
         print('exception occured, look for error in log file')
         save_cache(resource_dump_file, used_resources)
