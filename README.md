@@ -1,9 +1,12 @@
 # 🤖 Neural SPARQL Machines
+
 A LSTM-based Machine Translation Approach for Question Answering.
 
 ![British flag.](http://www.liberai.org/img/flag-uk-160px.png "English")
 ![Seq2Seq neural network.](http://www.liberai.org/img/seq2seq-webexport-160px.png "seq2seq")
 ![Semantic triple flag.](http://www.liberai.org/img/flag-sparql-160px.png "SPARQL")
+
+This is a fork of the original repo which i updated to work with python3 and tensorflow 1.14.0
 
 ## Code
 
@@ -16,12 +19,12 @@ git submodule update --init
 ```
 
 ### Python Setup
+
+Codebase: Python 3.7+
+
 ```bash
 pip install -r requirements.txt
 ```
-Note: Tensorflow version must >= 1.2.1
-
-#### Make sure to use python2.7 for these steps to avoid errors
 
 ### Data preparation
 #### Pre-generated data
@@ -89,7 +92,6 @@ sh ask.sh data/monument_300 "where is edward vii monument located in?"
 
 ### Soru and Marx et al., 2017
 
-* Permanent URI: http://w3id.org/neural-sparql-machines/soru-marx-semantics2017.html
 * arXiv: https://arxiv.org/abs/1708.07624
 
 ```
@@ -98,13 +100,13 @@ sh ask.sh data/monument_300 "where is edward vii monument located in?"
     title = "{SPARQL} as a Foreign Language",
     year = "2017",
     journal = "13th International Conference on Semantic Systems (SEMANTiCS 2017) - Posters and Demos",
-    url = "http://w3id.org/neural-sparql-machines/soru-marx-semantics2017.html",
+    url = "https://arxiv.org/abs/1708.07624",
 }
 ```
 
 ### Soru et al., 2018
 
-* NAMPI Website: https://uclmr.github.io/nampi/
+* NAMPI Website: https://uclnlp.github.io/nampi/
 * arXiv: https://arxiv.org/abs/1806.10478
 
 ```

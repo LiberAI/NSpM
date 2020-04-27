@@ -11,13 +11,14 @@ Version 0.0.4
 
 """
 import collections
-import httplib
+import http.client
 import json
 import logging
 import re
 import sys
-import urllib
-import urllib2
+import urllib.request, urllib.parse, urllib.error
+import urllib.request, urllib.error, urllib.parse
+from functools import reduce
 
 ENDPOINT = "http://dbpedia.org/sparql"
 GRAPH = "http://dbpedia.org"
@@ -55,10 +56,10 @@ def query_dbpedia( query ):
     param["timeout"] = "600" 
     param["debug"] = "on"
     try:
-        resp = urllib2.urlopen(ENDPOINT + "?" + urllib.urlencode(param))
+        resp = urllib.request.urlopen(ENDPOINT + "?" + urllib.parse.urlencode(param))
         j = resp.read()
         resp.close()
-    except (urllib2.HTTPError, httplib.BadStatusLine):
+    except (urllib.error.HTTPError, http.client.BadStatusLine):
         logging.debug("*** Query error. Empty result set. ***")
         j = '{ "results": { "bindings": [] } }'
     sys.stdout.flush()
@@ -209,7 +210,7 @@ def extract_variables(query):
 def extract_encoded_entities( encoded_sparql ):
     sparql = decode(encoded_sparql)
     entities = extract_entities(sparql)
-    encoded_entities = map(encode, entities)
+    encoded_entities = list(map(encode, entities))
     return encoded_entities
 
 
@@ -218,8 +219,8 @@ def extract_entities( sparql ):
     entities = set()
     for triple in triples:
         possible_entities = [triple['subject'], triple['object']]
-        sorted_out = filter(lambda e : not e.startswith('?') and ':' in e, possible_entities)
-        entities = entities.union(map(lambda e : re.sub(r'^optional{', '', e, flags=re.IGNORECASE), sorted_out))
+        sorted_out = [e for e in possible_entities if not e.startswith('?') and ':' in e]
+        entities = entities.union([re.sub(r'^optional{', '', e, flags=re.IGNORECASE) for e in sorted_out])
     return entities
 
 
@@ -244,7 +245,7 @@ def extractTriples (sparqlQuery):
 
 def splitIntoTriples (whereStatement):
     tripleAndSeparators = re.split('(\.[\s\?\<$])', whereStatement)
-    trimmed = map(lambda str : str.strip(), tripleAndSeparators)
+    trimmed = [str.strip() for str in tripleAndSeparators]
 
     def repair (list, element):
         if element not in ['.', '.?', '.<']:
@@ -261,8 +262,8 @@ def splitIntoTriples (whereStatement):
         return list
 
     tripleStatements = reduce(repair, trimmed, [''])
-    triplesWithNones = map(splitIntoTripleParts, tripleStatements)
-    triples = filter(lambda triple : triple != None, triplesWithNones)
+    triplesWithNones = list(map(splitIntoTripleParts, tripleStatements))
+    triples = [triple for triple in triplesWithNones if triple != None]
     return triples
 
 
