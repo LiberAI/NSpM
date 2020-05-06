@@ -6,7 +6,6 @@ beautifulsoup4==4.8.2
 bleach==3.1.4
 enum34==1.1.9
 funcsigs==1.0.2
-futures==3.3.0
 gast==0.3.3
 grpcio==1.27.2
 h5py==2.10.0
@@ -19,8 +18,8 @@ numpy==1.16.6
 protobuf==3.11.3
 six==1.14.0
 soupsieve==1.9.5
-tensorboard==1.12.2
-tensorflow==1.15.2
+tensorboard==1.13.1
+tensorflow==1.13.1
 termcolor==1.1.0
 tqdm==4.43.0
 Werkzeug==1.0.0
