@@ -108,4 +108,4 @@ Predict the SPARQL sentence for a given question with a given model.
 * Follow the [project on ResearchGate](https://www.researchgate.net/project/Neural-SPARQL-Machines).
 * Follow [Liber AI Research](http://liberai.org) on [Twitter](https://twitter.com/theLiberAI).
 
-![Liber AI logo.](http://www.liberai.org/img/Liber-AI-logo-name-200px.png "Liber AI")
+![Liber AI logo.](http://www.liberai.org/img/Liber-AI-logo-name-200.png "Liber AI")
