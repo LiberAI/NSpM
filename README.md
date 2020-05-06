@@ -66,6 +66,14 @@ Predict the SPARQL sentence for a given question with a given model.
 ./ask.sh data/monument_300 "where is edward vii monument located in?"
 ```
 
+### Unit tests
+
+Tests can be run, but exclusively within the root directory.
+
+```bash
+py.test *.py
+```
+
 ## Use cases & Integrations
 
 * The [Telegram NSpM chatbot](https://github.com/AKSW/NSpM/wiki/NSpM-Telegram-Bot) offers an integration of NSpM with the Telegram messaging platform.
