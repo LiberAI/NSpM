@@ -180,7 +180,7 @@ def generate_dataset(templates, output_dir, file_mode):
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
     it = 0
-    with io.open(output_dir + '/data_300.en', file_mode, encoding="utf-8") as english_questions, io.open(output_dir + '/data_300.sparql', file_mode, encoding="utf-8") as sparql_queries:
+    with io.open(output_dir + '/data.en', file_mode, encoding="utf-8") as english_questions, io.open(output_dir + '/data.sparql', file_mode, encoding="utf-8") as sparql_queries:
         for template in tqdm(templates):
             it = it + 1
             print("for {}th template".format(it))
