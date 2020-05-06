@@ -42,8 +42,8 @@ def validate( translation ):
     match = re.search(entity_with_attribute, query)
     if match:
         entity = match.group(0)
-        entity_encoded = re.sub(r'\(<?', '\(', entity)
-        entity_encoded = re.sub(r'>?\)', '\)', entity_encoded)
+        entity_encoded = re.sub(r'\(<?', r'\(', entity)
+        entity_encoded = re.sub(r'>?\)', r'\)', entity_encoded)
         query = query.replace(entity, entity_encoded)
     try:
         parser.parseQuery(query)

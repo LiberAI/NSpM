@@ -243,7 +243,7 @@ def extractTriples (sparqlQuery):
 
 
 def splitIntoTriples (whereStatement):
-    tripleAndSeparators = re.split('(\.[\s\?\<$])', whereStatement)
+    tripleAndSeparators = re.split(r'(\.[\s\?\<$])', whereStatement)
     trimmed = [str.strip() for str in tripleAndSeparators]
 
     def repair (list, element):
