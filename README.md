@@ -1,11 +1,10 @@
 # 🤖 Neural SPARQL Machines
 
+[![Python 3.7](https://img.shields.io/badge/python-3.7-blue.svg)](https://www.python.org/downloads/release/python-370/)
+
 A LSTM-based Machine Translation Approach for Question Answering over Knowledge Graphs.
 
-![British flag.](http://www.liberai.org/img/flag-uk-160px.png "English")
-![Seq2Seq neural network.](http://www.liberai.org/img/seq2seq-webexport-160px.png "seq2seq")
-![Semantic triple flag.](http://www.liberai.org/img/flag-sparql-160px.png "SPARQL")
-
+![What does a NSpM do?](http://www.liberai.org/img/NSpM-image.png "What does a NSpM do?")
 
 ## Code
 
@@ -18,8 +17,6 @@ git submodule update --init
 ```
 
 ### Python setup
-
-Codebase: Python 3.7+
 
 ```bash
 pip install -r requirements.txt
@@ -60,7 +57,7 @@ This command will create a model directory called `data/monument_300_model`.
 
 ### The Interpreter module
 
-Predict the SPARQL sentence for a given question with a given model.
+Predict the SPARQL query for a given question with a given model.
 
 ```bash
 ./ask.sh data/monument_300 "where is edward vii monument located in?"
@@ -74,7 +71,7 @@ Tests can be run, but exclusively within the root directory.
 py.test *.py
 ```
 
-## Use cases & Integrations
+## Use cases & integrations
 
 * The [Telegram NSpM chatbot](https://github.com/AKSW/NSpM/wiki/NSpM-Telegram-Bot) offers an integration of NSpM with the Telegram messaging platform.
 * A [neural question answering model for DBpedia](https://github.com/dbpedia/neural-qa) is a project supported by the [Google Summer of Code](https://summerofcode.withgoogle.com/) program that relies on NSpM.
@@ -118,4 +115,4 @@ py.test *.py
 * Follow the [project on ResearchGate](https://www.researchgate.net/project/Neural-SPARQL-Machines).
 * Follow [Liber AI Research](http://liberai.org) on [Twitter](https://twitter.com/theLiberAI).
 
-![Liber AI logo.](http://www.liberai.org/img/Liber-AI-logo-name-200.png "Liber AI")
+    ![Liber AI logo.](http://www.liberai.org/img/Liber-AI-logo-name-200px.png "Liber AI")
