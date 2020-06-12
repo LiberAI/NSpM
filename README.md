@@ -1,9 +1,10 @@
 # 🤖 Neural SPARQL Machines
-A LSTM-based Machine Translation Approach for Question Answering.
 
-![British flag.](http://www.liberai.org/img/flag-uk-160px.png "English")
-![Seq2Seq neural network.](http://www.liberai.org/img/seq2seq-webexport-160px.png "seq2seq")
-![Semantic triple flag.](http://www.liberai.org/img/flag-sparql-160px.png "SPARQL")
+[![Python 3.7](https://img.shields.io/badge/python-3.7-blue.svg)](https://www.python.org/downloads/release/python-370/)
+
+A LSTM-based Machine Translation Approach for Question Answering over Knowledge Graphs.
+
+![What does a NSpM do?](http://www.liberai.org/img/NSpM-image.png "What does a NSpM do?")
 
 ## Code
 
@@ -15,76 +16,71 @@ git lfs checkout
 git submodule update --init
 ```
 
-### Python Setup
+### Python setup
+
 ```bash
 pip install -r requirements.txt
 ```
-Note: Tensorflow version must >= 1.2.1
 
-#### Make sure to use python2.7 for these steps to avoid errors
+### The Generator module
 
-### Data preparation
 #### Pre-generated data
 
 You can extract pre-generated data from `data/monument_300.zip` and `data/monument_600.zip` in folders having the respective names.
 
 #### Manual Generation (Alternative to using pre-generated data)
 
-The template used in the paper can be found in a file such as `annotations_monument.tsv`. To generate the training data, launch the following command.
+The template used in the paper can be found in a file such as `annotations_monument.tsv`. `data/monument_300` will be the ID of the working dataset used throughout the tutorial. To generate the training data, launch the following command.
 
 <!-- Made monument_300 directory in data directory due to absence of monument_300 folder in data directory  -->
 ```bash
 mkdir data/monument_300
-python generator.py --templates data/annotations_monument.csv  --output data/monument_300
+python generator.py --templates data/annotations_monument.csv --output data/monument_300
 ```
 
-Build the vocabularies for the two languages (i.e., English and SPARQL) with:
+Launch the command to build the vocabularies for the two languages (i.e., English and SPARQL) and split into train, dev, and test sets.
 
 ```bash
-python build_vocab.py data/monument_300/data_300.en > data/monument_300/vocab.en
-python build_vocab.py data/monument_300/data_300.sparql > data/monument_300/vocab.sparql
+./generate.sh data/monument_300
 ```
 
-Count lines in `data_.*`
-<!-- Fixing the bash related error pertaining to assigning value to NUMLINES here -->
-```bash
-NUMLINES=$(echo awk '{ print $1}' | cat data/monument_300/data_300.sparql |  wc -l)
-echo $NUMLINES
-# 7097 (Don't worry if it varies)
-```
-
-Split the `data_.*` files into `train_.*`, `dev_.*`, and `test_.*` (usually 80-10-10%).
-
-<!-- Making this instruction consistent with the previous instructions by changing data.sparql to data_300.sparql -->
-```bash
-cd data/monument_300/
-python ../../split_in_train_dev_test.py --lines $NUMLINES  --dataset data_300.sparql
-```
-
-### Training
+### The Learner module
 
 <!-- Just a simple note to go back to the initial directory.-->
 Now go back to the initial directory and launch `train.sh` to train the model. The first parameter is the prefix of the data directory and the second parameter is the number of training epochs.
 
 ```bash
-sh train.sh data/monument_300 12000
+./train.sh data/monument_300 12000
 ```
 
 This command will create a model directory called `data/monument_300_model`.
 
-### Inference
+### The Interpreter module
 
-Predict the SPARQL sentence for a given question with a given model.
+Predict the SPARQL query for a given question with a given model.
 
 ```bash
-sh ask.sh data/monument_300 "where is edward vii monument located in?"
+./ask.sh data/monument_300 "where is edward vii monument located in?"
 ```
+
+### Unit tests
+
+Tests can be run, but exclusively within the root directory.
+
+```bash
+py.test *.py
+```
+
+## Use cases & integrations
+
+* The [Telegram NSpM chatbot](https://github.com/AKSW/NSpM/wiki/NSpM-Telegram-Bot) offers an integration of NSpM with the Telegram messaging platform.
+* A [neural question answering model for DBpedia](https://github.com/dbpedia/neural-qa) is a project supported by the [Google Summer of Code](https://summerofcode.withgoogle.com/) program that relies on NSpM.
+* A [question answering system](https://github.com/qasim9872/question-answering-system) was implemented on top of NSpM by [Muhammad Qasim](https://github.com/qasim9872).
 
 ## Papers
 
 ### Soru and Marx et al., 2017
 
-* Permanent URI: http://w3id.org/neural-sparql-machines/soru-marx-semantics2017.html
 * arXiv: https://arxiv.org/abs/1708.07624
 
 ```
@@ -93,13 +89,13 @@ sh ask.sh data/monument_300 "where is edward vii monument located in?"
     title = "{SPARQL} as a Foreign Language",
     year = "2017",
     journal = "13th International Conference on Semantic Systems (SEMANTiCS 2017) - Posters and Demos",
-    url = "http://w3id.org/neural-sparql-machines/soru-marx-semantics2017.html",
+    url = "https://arxiv.org/abs/1708.07624",
 }
 ```
 
 ### Soru et al., 2018
 
-* NAMPI Website: https://uclmr.github.io/nampi/
+* NAMPI Website: https://uclnlp.github.io/nampi/
 * arXiv: https://arxiv.org/abs/1806.10478
 
 ```
@@ -117,3 +113,6 @@ sh ask.sh data/monument_300 "where is edward vii monument located in?"
 * Primary contacts: [Tommaso Soru](http://tommaso-soru.it) and [Edgard Marx](http://emarx.org).
 * Neural SPARQL Machines [mailing list](https://groups.google.com/forum/#!forum/neural-sparql-machines).
 * Follow the [project on ResearchGate](https://www.researchgate.net/project/Neural-SPARQL-Machines).
+* Follow [Liber AI Research](http://liberai.org) on [Twitter](https://twitter.com/theLiberAI).
+
+    ![Liber AI logo.](http://www.liberai.org/img/Liber-AI-logo-name-200px.png "Liber AI")

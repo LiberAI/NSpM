@@ -4,10 +4,9 @@
 Neural SPARQL Machines - Generator test unit.
 
 'SPARQL as a Foreign Language' by Tommaso Soru and Edgard Marx et al., SEMANTiCS 2017
-https://w3id.org/neural-sparql-machines/soru-marx-semantics2017.html
 https://arxiv.org/abs/1708.07624
 
-Version 0.1.0-akaha
+Version 1.0.0
 
 """
 import generator
@@ -31,7 +30,7 @@ def test_single_resource_sort():
 
     result = sorted(matches, key=generator.prioritize_usage)
 
-    assert map(operator.itemgetter(0), map(operator.itemgetter('usages'), result)) == [17, 3, 2, 1, 0 ]
+    assert list(map(operator.itemgetter(0), list(map(operator.itemgetter('usages'), result)))) == [17, 3, 2, 1, 0 ]
 
 
 def test_couple_resource_sort():
@@ -39,12 +38,12 @@ def test_couple_resource_sort():
 
     result = sorted(matches, key=generator.prioritize_usage)
 
-    assert map(operator.itemgetter('usages'), result) == [[17, 2], [3, 2], [2, 2], [1, 2], [0, 0]]
+    assert list(map(operator.itemgetter('usages'), result)) == [[17, 2], [3, 2], [2, 2], [1, 2], [0, 0]]
 
 
 def test_encoding():
     original = 'SELECT ?city WHERE { ?m skos:broader dbc:Cities_in_Germany . ?city dct:subject ?m . ?city dbo:areaTotal ?area . ?b dbo:artist dbr:John_Halsey_(musician) } order by asc (?area)'
-    expected_encoding = 'SELECT var_city WHERE brack_open var_m skos_broader dbc_Cities_in_Germany sep_dot var_city dct_subject var_m sep_dot var_city dbo_areaTotal var_area sep_dot var_b dbo_artist dbr_John_Halsey_ attr_open musician attr_close  brack_close _oba_ var_area '
+    expected_encoding = 'SELECT var_city WHERE  brack_open  var_m skos_broader dbc_Cities_in_Germany sep_dot var_city dct_subject var_m sep_dot var_city dbo_areaTotal var_area sep_dot var_b dbo_artist dbr_John_Halsey_ attr_open musician attr_close  brack_close  _oba_ var_area '
 
     result = generator_utils.encode(original)
 
