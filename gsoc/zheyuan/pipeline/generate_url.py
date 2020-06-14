@@ -45,7 +45,7 @@ def generate_url(given_label):
                                         #print("Sub-class of: "+val['rdfs:subClassOf']['@rdf:resource'])
                                         pass
                         url = val['prov:wasDerivedFrom']['@rdf:resource']
-                        #print("URL:" + url)
+                        # print("URL:" + get_url(url))
                         if(given_label == val['@rdf:about'].split('http://dbpedia.org/ontology/')[-1]):
                                 return [get_url(url),about]
         return ["None","None"]

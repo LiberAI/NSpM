@@ -1,10 +1,16 @@
 import argparse
+from paraphrase_questions import get_pretrained_model,prepare_model,set_seed
 from get_properties import get_properties
 from generate_url import generate_url
 from sentence_and_template_generator import sentence_and_template_generator
 import os
 from fetch_ranks_sub import fetch_ranks
 import logging
+from constant import Constant
+
+const = Constant()
+
+const.URL = "https://datascience-models-ramsri.s3.amazonaws.com/t5_paraphraser.zip"
 
 def generate_templates(label,project_name,depth=1,output_file="sentence_and_template_generator"):
     """
@@ -32,21 +38,24 @@ def generate_templates(label,project_name,depth=1,output_file="sentence_and_temp
     logging.basicConfig(filename=project_name+"/logfile.log", format='%(filename)s: %(message)s', filemode='w')
 
     # Setting threshold level
-    logger.setLevel(logging.DEBUG)
+    logger.setLevel(logging.WARNING)
 
     # Use the logging methods
     #logger.debug("This is a debug message")  
     logger.info("This is a log file.")  
     #logger.warning("This is a warning message")  
     #logger.error("This is an error message")  
-    #logger.critical("This is a critical message")   
+    #logger.critical("This is a critical message")
+    folder_path = get_pretrained_model(const.URL)
+    set_seed(42)
+    tokenizer, device, model = prepare_model(folder_path)
 
     list_of_property_information = get_properties(url=url,project_name=project_name,output_file = "get_properties.csv")
     for property_line in list_of_property_information:
         count+=1
         prop = property_line.split(',')
         print("**************\n"+str(prop))
-        sentence_and_template_generator(expand_set=expand_set, original_count=depth,prop_dic=prop_dic,test_set=test_set,log=logger,diction=diction,output_file=output_file,mother_ontology=about.strip().replace("http://dbpedia.org/ontology/","dbo:"),vessel=vessel,project_name=project_name ,prop=prop, suffix = " of <A> ?",count = depth)
+        sentence_and_template_generator(original_count=depth,prop_dic=prop_dic,test_set=test_set,log=logger,diction=diction,output_file=output_file,mother_ontology=about.strip().replace("http://dbpedia.org/ontology/","dbo:"),vessel=vessel,project_name=project_name ,prop=prop, suffix = " of <A> ?",count = depth,expand_set=expand_set,tokenizer=tokenizer,device=device,model=model)
     output_file.close()    
 
 if __name__ == "__main__":

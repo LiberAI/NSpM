@@ -3,7 +3,7 @@ import argparse
 from generate_url import generate_url_spec, generate_url
 from get_properties import get_properties
 import urllib
-from urllib2 import urlopen
+# from urllib2 import urlopen
 import urllib.parse
 from bs4 import BeautifulSoup
 import os
@@ -29,10 +29,10 @@ def rank_check(query, diction, count, original_count):
     # url = "https://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&query="+query + \
     #    "&format=application%2Fsparql-results%2Bjson&CXML_redir_for_subjs=121&CXML_redir_for_hrefs=&timeout=30000&debug=on&run=+Run+Query+"
     # print(url)
-    try:  # python3
-        page = urllib.request.urlopen(url)
-    except:  # python2
-        page = urlopen(url)
+    # try:  # python3
+    #     page = urllib.request.urlopen(url)
+    # except:  # python2
+    page = urllib.request.urlopen(url)
     soup = BeautifulSoup(page, "html.parser")
     total = len(soup.find_all("tr"))
     accum = 0
@@ -66,7 +66,7 @@ def check_query(log, query):
     try:  # python3
         page = urllib.request.urlopen(url)
     except:  # python2
-        page = urlopen(url)
+        page = urllib.request.urlopen(url)
     soup = BeautifulSoup(page, "html.parser")
     # print((soup.text))
     if (soup.text == "false"):

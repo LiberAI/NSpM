@@ -30,23 +30,23 @@ def get_pretrained_model(zip_file_url):
     print('Finish {}'.format(model_name))
     return folder_path
 
-def set_seed(seed):
-  torch.manual_seed(seed)
-  if torch.cuda.is_available():
-    torch.cuda.manual_seed_all(seed)
-
-
-def paraphrase_questions(sentence):
-    sentence = sentence.replace("<A>", "XYZ")
-    folder_path = get_pretrained_model(const.URL)
-    set_seed(42)
-
+def prepare_model(folder_path):
     model = T5ForConditionalGeneration.from_pretrained(folder_path)
     tokenizer = T5Tokenizer.from_pretrained('t5-base')
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     print("device ", device)
     model = model.to(device)
+    return tokenizer, device, model
+
+def set_seed(seed):
+  torch.manual_seed(seed)
+  if torch.cuda.is_available():
+    torch.cuda.manual_seed_all(seed)
+
+
+def paraphrase_questions(tokenizer, device, model, sentence):
+    sentence = sentence.replace("<A>", "XYZ")
 
     text = "paraphrase: " + sentence + " </s>"
 
@@ -103,6 +103,8 @@ if __name__ == "__main__":
 
     # project_name = args.project_name
     # depth = args.depth
-
-    print(paraphrase_questions(sentence))
+    folder_path = get_pretrained_model(const.URL)
+    set_seed(42)
+    tokenizer, device, model = prepare_model(folder_path)
+    print(paraphrase_questions(tokenizer,device,model,sentence))
     pass
