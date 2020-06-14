@@ -73,8 +73,9 @@ py.test *.py
 
 ## Use cases & integrations
 
+* Components of the [Adam Medical platform](https://www.graphen.ai/products/mi_feature.html) partly developed by [Jose A. Alvarado](https://www.linkedin.com/in/josealvaradoguzman/) at Graphen (including a humanoid robot called Dr Adam), rely on NSpM technology.
 * The [Telegram NSpM chatbot](https://github.com/AKSW/NSpM/wiki/NSpM-Telegram-Bot) offers an integration of NSpM with the Telegram messaging platform.
-* A [neural question answering model for DBpedia](https://github.com/dbpedia/neural-qa) is a project supported by the [Google Summer of Code](https://summerofcode.withgoogle.com/) program that relies on NSpM.
+* The [Google Summer of Code](https://summerofcode.withgoogle.com/) program has been supporting 6 students to work on NSpM-backed project "[A neural question answering model for DBpedia](https://github.com/dbpedia/neural-qa)" since 2018.
 * A [question answering system](https://github.com/qasim9872/question-answering-system) was implemented on top of NSpM by [Muhammad Qasim](https://github.com/qasim9872).
 
 ## Papers
