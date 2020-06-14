@@ -8,7 +8,7 @@ from bs4 import BeautifulSoup
 
 
 def get_url(url):
-        """Fuction to extract the http://mappings.dbpedia.org/server/ontology/classes/<some entity> 
+        """Fuction to extract the http://mappings.dbpedia.org/server/ontology/classes/<some entity>
         page link for the given http://mappings.dbpedia.org/index.php/OntologyClass:<some entity>"""
         page = urllib.request.urlopen(url)
         soup = BeautifulSoup(page, "html.parser")
