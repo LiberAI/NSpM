@@ -1,0 +1,3 @@
+When is the  ,Who is the  ,What is the  ,Where is the  ,What is the number of  ,Which one is the oldest based on ,Which one the highest based on ,Which one the highest based on
+select ?x ,select ?x ,select ?x ,select ?x ,select count(*) as ?x ,select distinct(?x) ,select distinct(?x) ,select distinct(?x)
+} , } , } , } , } , } order by ?x limit 1 ,} order by ?x limit 1,} order by ?x limit 1
