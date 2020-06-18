@@ -21,7 +21,7 @@ def similarity(sentence1, sentence2):
     return cosine_similarities
 
 def cosine_similarity(v1, v2):
-    #Calculate semantic similarity between two
+    #Calculate semantic similarity between two sentence vectors
     mag1 = np.linalg.norm(v1)
     mag2 = np.linalg.norm(v2)
     if (not mag1) or (not mag2):
@@ -31,6 +31,7 @@ def cosine_similarity(v1, v2):
 
 
 def prof_similarity(v1, v2):
+    #Calculate the semantic similarity based on the angular distance
     cosine_similarity = cosine_similarity(v1, v2)
     prof_similarity = 1 - math.acos(cosine_similarity) / math.pi
     return prof_similarity

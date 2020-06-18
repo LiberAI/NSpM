@@ -16,6 +16,11 @@ const = Constant()
 const.URL = "https://datascience-models-ramsri.s3.amazonaws.com/t5_paraphraser.zip"
 
 def get_pretrained_model(zip_file_url):
+    """
+
+    @param zip_file_url: This url references to the download link of the pre-trained model
+    @return: folder_path: path to store the pre-trained model
+    """
     model_name = zip_file_url.split("/")[-1].replace(".zip", "")
     folder_path = './{}'.format(model_name)
     print('Get pretained model {}'.format(model_name))
@@ -31,6 +36,11 @@ def get_pretrained_model(zip_file_url):
     return folder_path
 
 def prepare_model(folder_path):
+    """
+
+    @param folder_path: This path contains the pre-trained model
+    @return: Tokenizer, Device, Model
+    """
     model = T5ForConditionalGeneration.from_pretrained(folder_path)
     tokenizer = T5Tokenizer.from_pretrained('t5-base')
 
@@ -46,6 +56,14 @@ def set_seed(seed):
 
 
 def paraphrase_questions(tokenizer, device, model, sentence):
+    """
+
+    @param tokenizer: Tokenizer is in charge of preparing the inputs for a model
+    @param device: Device the model will be run on
+    @param model: The pre-trained model
+    @param sentence: The sentence need to be paraphrased
+    @return: final_outputs: a num_return_sequences*2 matrix, each row contains an array [paraphrased_sentence, semantic_similarity]
+    """
     sentence = sentence.replace("<A>", "XYZ")
 
     text = "paraphrase: " + sentence + " </s>"
@@ -86,7 +104,7 @@ def paraphrase_questions(tokenizer, device, model, sentence):
 
 if __name__ == "__main__":
     """
-    Section to parse the command line arguments.
+    Section for testing the function of the Paraphraser
     """
     parser = argparse.ArgumentParser()
     requiredNamed = parser.add_argument_group('Required Arguments')
@@ -94,15 +112,10 @@ if __name__ == "__main__":
     requiredNamed.add_argument('--sentence', dest='sentence', metavar='sentence',
                                                             help='sentence', required=True)
 
-    # requiredNamed.add_argument(
-    #     '--project_name', dest='project_name', metavar='project_name', help='test', required=True)
-    # requiredNamed.add_argument(
-    #     '--depth', dest='depth', metavar='depth', help='Mention the depth you want to go in the knowledge graph (The number of questions will increase exponentially!), e.g. 2', required=False)
     args = parser.parse_args()
     sentence = args.sentence
 
-    # project_name = args.project_name
-    # depth = args.depth
+
     folder_path = get_pretrained_model(const.URL)
     set_seed(42)
     tokenizer, device, model = prepare_model(folder_path)
