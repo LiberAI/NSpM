@@ -75,4 +75,4 @@ else:  # any other language
 # print terms
 for v in vocabulary:
     if v != "":
-        print(v.encode("utf-8"))
+        print(v)
