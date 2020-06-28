@@ -12,7 +12,7 @@ const = Constant()
 
 const.URL = "https://datascience-models-ramsri.s3.amazonaws.com/t5_paraphraser.zip"
 
-def generate_templates(label,project_name,depth=1,output_file="sentence_and_template_generator"):
+def generate_templates(label,project_name,depth=1,output_file="sentence_and_template_generator", paraphraser=False):
     """
     The function acts as a wrapper for the whole package of supplied source code.
     """
@@ -27,7 +27,8 @@ def generate_templates(label,project_name,depth=1,output_file="sentence_and_temp
         os.makedirs(project_name)
     output_file = open(project_name+"/" + output_file, 'w')
     test_set = open(project_name+"/" + "test.csv", 'w')
-    expand_set = open(project_name+"/" + "expand.csv", 'w')
+    if paraphraser:
+        expand_set = open(project_name+"/" + "expand.csv", 'w')
     prop_dic = {}
     for iterator in range(depth):
         prop_dic[iterator] = []
@@ -46,17 +47,26 @@ def generate_templates(label,project_name,depth=1,output_file="sentence_and_temp
     #logger.warning("This is a warning message")  
     #logger.error("This is an error message")  
     #logger.critical("This is a critical message")
-    folder_path = get_pretrained_model(const.URL)
-    set_seed(42)
-    tokenizer, device, model = prepare_model(folder_path)
+    if paraphraser:
+        folder_path = get_pretrained_model(const.URL)
+        set_seed(42)
+        tokenizer, device, model = prepare_model(folder_path)
 
     list_of_property_information = get_properties(url=url,project_name=project_name,output_file = "get_properties.csv")
     for property_line in list_of_property_information:
         count+=1
         prop = property_line.split(',')
         print("**************\n"+str(prop))
-        sentence_and_template_generator(original_count=depth,prop_dic=prop_dic,test_set=test_set,log=logger,diction=diction,output_file=output_file,mother_ontology=about.strip().replace("http://dbpedia.org/ontology/","dbo:"),vessel=vessel,project_name=project_name ,prop=prop, suffix = " of <A> ?",count = depth,expand_set=expand_set,tokenizer=tokenizer,device=device,model=model)
-    output_file.close()    
+        if paraphraser:
+            sentence_and_template_generator(original_count=depth,prop_dic=prop_dic,test_set=test_set,log=logger,diction=diction,output_file=output_file,mother_ontology=about.strip().replace("http://dbpedia.org/ontology/","dbo:"),vessel=vessel,project_name=project_name ,prop=prop, suffix = " of <A> ?",count = depth,expand_set=expand_set,tokenizer=tokenizer,device=device,model=model)
+        else:
+            sentence_and_template_generator(original_count=depth, prop_dic=prop_dic, test_set=test_set, log=logger,
+                                            diction=diction, output_file=output_file,
+                                            mother_ontology=about.strip().replace("http://dbpedia.org/ontology/",
+                                                                                  "dbo:"), vessel=vessel,
+                                            project_name=project_name, prop=prop, suffix=" of <A> ?", count=depth)
+
+    output_file.close()
 
 if __name__ == "__main__":
     """
@@ -70,10 +80,18 @@ if __name__ == "__main__":
     requiredNamed.add_argument(
         '--project_name', dest='project_name', metavar='project_name', help='test', required=True)
     requiredNamed.add_argument(
-        '--depth', dest='depth', metavar='depth', help='Mention the depth you want to go in the knowledge graph (The number of questions will increase exponentially!), e.g. 2', required=False)
+        '--depth', dest='depth', metavar='depth',
+        help='Mention the depth you want to go in the knowledge graph (The number of questions will increase exponentially!), e.g. 2',
+        required=False)
+    requiredNamed.add_argument(
+        '--paraphraser', dest='paraphraser', metavar='[Whether enable paraphraser]',
+        help='Mention the True/False you want to enable the Paraphraser, e.g. True',
+        required=False)
+
     args = parser.parse_args()
     label = args.label
     project_name = args.project_name
     depth = args.depth
-    generate_templates(label=label,project_name=project_name,depth=depth)
+    paraphraser = args.paraphraser
+    generate_templates(label=label,project_name=project_name,depth=depth, paraphraser=paraphraser)
     pass
