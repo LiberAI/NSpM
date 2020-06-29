@@ -29,7 +29,9 @@ def retrieve(query):
         for td in rows.find_all("a"):
             for a in td:
                 answer_dict = {
-                    "results": {
+                    "head" : {
+                      "vars" : [ "uri" ]
+                    },"results": {
                         "bindings": [{
                             "uri": {
                                 "type": "uri",
@@ -45,8 +47,11 @@ def retrieve(query):
                 if len(pre) <= 50:
                     answer_dict = {
                         "results": {
+                            "head": {
+                                "vars": ["string"]
+                            },
                             "bindings": [{
-                                "uri": {
+                                "string": {
                                     "type": "literal",
                                     "value": pre
                                 }
@@ -70,7 +75,7 @@ if __name__ == "__main__":
     # query = args.query
     answer_groups = []
     i = 1
-    with open("../output_decoded.txt", 'r') as lines:
+    with open("./output_decoded.txt", 'r') as lines:
          for line in lines:
              i+=1
              try:
