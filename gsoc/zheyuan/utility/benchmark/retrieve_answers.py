@@ -26,39 +26,37 @@ def retrieve(query):
     answers = []
 
     for rows in (soup.find_all("tr")):
+        answer_dict = {
+            "head": {
+                "vars": ["uri"]
+            }, "results": {
+                "bindings": []
+            }
+        }
         for td in rows.find_all("a"):
             for a in td:
-                answer_dict = {
-                    "head" : {
-                      "vars" : [ "uri" ]
-                    },"results": {
-                        "bindings": [{
-                            "uri": {
-                                "type": "uri",
-                                "value": a
-                            }
-                        }]
+                uri = {
+                    "uri": {
+                        "type": "uri",
+                        "value": a
                     }
                 }
-                answers.append(answer_dict)
+
+                answer_dict["results"]["bindings"].append(uri)
+
         for td in rows.find_all("pre"):
             for pre in td:
                 # Eliminate the answer if it is longer than 50(not a URI nor a simple literal)
                 if len(pre) <= 50:
-                    answer_dict = {
-                        "results": {
-                            "head": {
-                                "vars": ["string"]
-                            },
-                            "bindings": [{
-                                "string": {
-                                    "type": "literal",
-                                    "value": pre
-                                }
-                            }]
+                    uri = {
+                        "uri": {
+                            "type": "uri",
+                            "value": a
                         }
                     }
-                    answers.append(answer_dict)
+                    answer_dict["results"]["bindings"].append(uri)
+        answers.append(answer_dict)
+
     return answers
 
 
