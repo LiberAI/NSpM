@@ -16,6 +16,6 @@ python benchmark.py --model monument_300 --test qald-9-train-multilingual.qald.j
 Finally, evaluate out answers using the irbench
 Remember to clone the project of irebench and download their release jar file
 ```bash
-java -jar irbench-v0.0.1-beta.2.jar -evaluate "qald-9-train-multilingual" "<yourpath>/answer.json" "f-score"
+java -jar irbench-v0.0.1-beta.2.jar -evaluate "qald-9-train-multilingual" "<yourpath>/answer.qald.json" "f-score"
 ```
 For other configurations details, please visit their [site](https://github.com/AKSW/irbench) and some tips are given for the jdk version in my [blogs](https://baiblanc.github.io/2020/06/23/GSOC-Week-Three/)

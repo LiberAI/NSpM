@@ -56,24 +56,27 @@ def check_query(log,query):
     query = urllib.parse.quote_plus(query)
     url = "https://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&query="+query+"&format=text%2Fhtml&CXML_redir_for_subjs=121&CXML_redir_for_hrefs=&timeout=30000&debug=on&run=+Run+Query+"
     #print(url)
-    page = urllib.request.urlopen(url)
-    soup = BeautifulSoup(page, "html.parser")
-    #print((soup.text))
-    if(soup.text=="false"):
-        log.error(url)
-        log.error(query_original )
-        return False
-    elif(soup.text == "true"):
-        #log.info(url)
-        #log.info(query_original )
-        return True
-    else:
-        log.error("Broken Link")
-        log.error(url)
-        log.error(query_original )
+    try:
+        page = urllib.request.urlopen(url)
+        soup = BeautifulSoup(page, "html.parser")
+        #print((soup.text))
+        if(soup.text=="false"):
+            log.error(url)
+            log.error(query_original )
+            return False
+        elif(soup.text == "true"):
+            #log.info(url)
+            #log.info(query_original )
+            return True
+        else:
+            log.error("Broken Link")
+            log.error(url)
+            log.error(query_original )
+    except:
+        print("Error, url: ", url)
 
 
-def sentence_and_template_generator(prop_dic,test_set,log,mother_ontology,vessel,prop,project_name,output_file,diction,expand_set,tokenizer,device,model,original_count=0,count=0, suffix = " of <A> ?", query_suffix = ""):
+def sentence_and_template_generator(prop_dic,test_set,log,mother_ontology,vessel,prop,project_name,output_file,diction,expand_set=[],tokenizer=None,device=None,model=None,original_count=0,count=0, suffix = " of <A> ?", query_suffix = ""):
 
     if(type(prop)==str):
         prop = prop.split(',')
@@ -139,14 +142,14 @@ def sentence_and_template_generator(prop_dic,test_set,log,mother_ontology,vessel
     #for temp_counter in range(original_count):
     if( not prop[0] in prop_dic[original_count-count-1]): 
         for number in range(len(natural_language_question)):
-            if count == original_count-1:
+            if count == original_count-1 and device:
                 candidates = paraphrase_questions(tokenizer,device,model,original_question)
                 # @todo establish a cirteria to determine whether to expand the current template pair
                 # For instance, just randomly pick up the first one from the candidates to expand templates
                 # and store it with the orignial SPARQL template
                 expanded_nl_question.append(candidates[0][0])
                 expanded_sparql_query.append(original_sparql)
-                pass
+
             if expanded_sparql_query:
                 expand_line = [mother_ontology,"","",expanded_nl_question[number],expanded_sparql_query[number],query_answer]
                 expand_set.write((';'.join(expand_line)+";"+str(rank)+"\n").replace("  "," "))

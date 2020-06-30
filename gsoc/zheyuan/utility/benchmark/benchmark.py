@@ -21,6 +21,7 @@ def benchmark(trained_model, test_set, answer_file="answers.json"):
     # Use the sparql endpoint (http://dbpedia.org/sparql) to retrieve answers of the queries
     sparqls = read_sparqls()
     answers = []
+    print("Retrieving answers of queries via SPARQL endpoint")
     for query in tqdm(sparqls):
         try:
             answer_group = retrieve(query)
@@ -30,7 +31,7 @@ def benchmark(trained_model, test_set, answer_file="answers.json"):
 
     json_file = construct_json("qald-9-train-multilingual", questions_info, questions, sparqls, answers)
     path = "../gsoc/zheyuan/utility/benchmark/"
-    with open(path+"answers.json", "w") as f:
+    with open(path+"answers.qald.json", "w") as f:
         # js = json.dumps(json_file, indent=4, separators=(',', ':'))
         json.dump(json_file, f)
 
