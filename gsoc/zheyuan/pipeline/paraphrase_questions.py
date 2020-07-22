@@ -9,7 +9,7 @@ import torch
 from transformers import T5ForConditionalGeneration,T5Tokenizer
 # pip install transformers==2.9.0
 from constant import Constant
-from textual_similarity import similarity
+from textual_similarity import similarity, minDistance, words_distance, tags_distance, has_NNP
 
 const = Constant()
 
@@ -62,7 +62,7 @@ def paraphrase_questions(tokenizer, device, model, sentence):
     @param device: Device the model will be run on
     @param model: The pre-trained model
     @param sentence: The sentence need to be paraphrased
-    @return: final_outputs: a num_return_sequences*2 matrix, each row contains an array [paraphrased_sentence, semantic_similarity]
+    @return: final_sentence: the sentence picked via a score ranking mechanism
     """
     sentence = sentence.replace("<A>", "XYZ")
 
@@ -88,15 +88,28 @@ def paraphrase_questions(tokenizer, device, model, sentence):
     final_outputs = []
     for beam_output in beam_outputs:
         sent = tokenizer.decode(beam_output, skip_special_tokens=True, clean_up_tokenization_spaces=True)
-        if sent.lower() != sentence.lower() and sent not in final_outputs:
-            sent = re.sub('XYZ', '<A>', sent, flags=re.IGNORECASE)
-            final_outputs.append([sent])
+        if sent.replace("?", " ?").lower() != sentence.lower() and sent.replace("?", " ?") not in final_outputs:
+            if has_NNP(sent.replace("?", " ?")):
+                sent = re.sub('XYZ', '<A>', sent, flags=re.IGNORECASE)
+                final_outputs.append(sent.replace("?", " ?"))
+            else:
+                print("******************", sent.replace("?", " ?"))
 
+    max_score = 0
+    final_sentence = ""
+    sentence = sentence.replace("XYZ", "<A>")
     for i, final_output in enumerate(final_outputs):
-        print("{}: {}".format(i, final_output[0]))
-        semantic_similarity = similarity(sentence, final_output[0])
-        final_output.append(semantic_similarity)
-    return final_outputs
+        print("{}: {}".format(i, final_output))
+        cos = similarity(sentence, final_output)
+        if cos > 0.7:
+            wd = words_distance(sentence, final_output)
+            td = tags_distance(sentence, final_output)
+            score = (wd + td) * cos
+            if score > max_score:
+                max_score = score
+                final_sentence = final_output
+            print(cos, wd, td, (wd + td) * cos)
+    return final_sentence
 
 
 
