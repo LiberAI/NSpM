@@ -4,6 +4,7 @@ from paraphrase_questions import get_pretrained_model,prepare_model,set_seed
 from get_properties import get_properties
 from generate_url import generate_url
 from sentence_and_template_generator import sentence_and_template_generator
+from basic_sentence_and_template_generator import basic_sentence_and_template_generator
 import os
 from fetch_ranks_sub import fetch_ranks
 import logging
@@ -13,7 +14,7 @@ const = Constant()
 
 const.URL = "https://datascience-models-ramsri.s3.amazonaws.com/t5_paraphraser.zip"
 
-def generate_templates(label,project_name,depth=1,output_file="sentence_and_template_generator", paraphraser=False, multi = False):
+def generate_templates(label,project_name,depth=1,output_file="basic_sentence_and_template_generator", paraphraser=False, multi = False):
     """
     The function acts as a wrapper for the whole package of supplied source code.
     """
@@ -64,7 +65,7 @@ def generate_templates(label,project_name,depth=1,output_file="sentence_and_temp
                 prop = property_line.split(',')
                 print("**************\n" + str(prop))
                 if paraphraser:
-                    sentence_and_template_generator(original_count=depth, prop_dic=prop_dic, test_set=test_set,
+                    basic_sentence_and_template_generator(original_count=depth, prop_dic=prop_dic, test_set=test_set,
                                                     log=logger, diction=diction, output_file=output_file,
                                                     mother_ontology=about.strip().replace(
                                                         "http://dbpedia.org/ontology/", "dbo:"), vessel=vessel,
@@ -72,7 +73,7 @@ def generate_templates(label,project_name,depth=1,output_file="sentence_and_temp
                                                     count=depth, expand_set=expand_set, tokenizer=tokenizer,
                                                     device=device, model=model)
                 else:
-                    sentence_and_template_generator(original_count=depth, prop_dic=prop_dic, test_set=test_set,
+                    basic_sentence_and_template_generator(original_count=depth, prop_dic=prop_dic, test_set=test_set,
                                                     log=logger,
                                                     diction=diction, output_file=output_file,
                                                     mother_ontology=about.strip().replace(
@@ -92,9 +93,9 @@ def generate_templates(label,project_name,depth=1,output_file="sentence_and_temp
         prop = property_line.split(',')
         print("**************\n"+str(prop))
         if paraphraser:
-            sentence_and_template_generator(original_count=depth,prop_dic=prop_dic,test_set=test_set,log=logger,diction=diction,output_file=output_file,mother_ontology=about.strip().replace("http://dbpedia.org/ontology/","dbo:"),vessel=vessel,project_name=project_name ,prop=prop, suffix = " of <A> ?",count = depth,expand_set=expand_set,tokenizer=tokenizer,device=device,model=model)
+            basic_sentence_and_template_generator(original_count=depth,prop_dic=prop_dic,test_set=test_set,log=logger,diction=diction,output_file=output_file,mother_ontology=about.strip().replace("http://dbpedia.org/ontology/","dbo:"),vessel=vessel,project_name=project_name ,prop=prop, suffix = " of <A> ?",count = depth,expand_set=expand_set,tokenizer=tokenizer,device=device,model=model)
         else:
-            sentence_and_template_generator(original_count=depth, prop_dic=prop_dic, test_set=test_set, log=logger,
+            basic_sentence_and_template_generator(original_count=depth, prop_dic=prop_dic, test_set=test_set, log=logger,
                                             diction=diction, output_file=output_file,
                                             mother_ontology=about.strip().replace("http://dbpedia.org/ontology/",
                                                                                   "dbo:"), vessel=vessel,

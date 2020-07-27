@@ -2,7 +2,7 @@
 import argparse
 from generate_url import generate_url_spec , generate_url
 from get_properties import get_properties
-from paraphrase_questions import paraphrase_questions
+from paraphrase_questions import paraphrase_questions, pick_final_sentence
 import urllib
 import urllib.parse
 from bs4 import BeautifulSoup
@@ -143,19 +143,20 @@ def sentence_and_template_generator(prop_dic,test_set,log,mother_ontology,vessel
     if( not prop[0] in prop_dic[original_count-count-1]): 
         for number in range(len(natural_language_question)):
             if count == original_count-1 and device:
-                candidates = paraphrase_questions(tokenizer,device,model,original_question)
+                final_candidates = paraphrase_questions(tokenizer,device,model,original_question)
+                final_quesiton = pick_final_sentence(original_question, final_candidates)
                 # @todo establish a cirteria to determine whether to expand the current template pair
                 # For instance, just randomly pick up the first one from the candidates to expand templates
                 # and store it with the orignial SPARQL template
-                expanded_nl_question.append(candidates[0][0])
+                expanded_nl_question.append(final_quesiton)
                 expanded_sparql_query.append(original_sparql)
 
             if expanded_sparql_query:
                 expand_line = [mother_ontology,"","",expanded_nl_question[number],expanded_sparql_query[number],query_answer]
-                expand_set.write((';'.join(expand_line)+";"+str(rank)+"\n").replace("  "," "))
+                expand_set.write((';'.join(expand_line)+";"+str(rank)+";"+"Paraphrased"+"\n").replace("  "," "))
             vessel.append([mother_ontology,"","",natural_language_question[number],sparql_query[number],query_answer])
-            output_file.write((';'.join(vessel[-1])+";"+str(rank)+"\n").replace("  "," "))
-            log.info(';'.join(vessel[-1])+str(rank)+"\n")
+            output_file.write((';'.join(vessel[-1]) + ";" + str(rank) + ";" + "Original" + "\n").replace("  ", " "))
+            log.info(';'.join(vessel[-1]) + str(rank) + "\n")
 
     else:
         for number in range(len(natural_language_question)):
