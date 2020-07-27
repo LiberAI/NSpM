@@ -9,7 +9,7 @@ import torch
 from transformers import T5ForConditionalGeneration,T5Tokenizer
 # pip install transformers==2.9.0
 from constant import Constant
-from textual_similarity import similarity, minDistance, words_distance, tags_distance, has_NNP
+from textual_similarity import similarities, minDistance, words_distance, tags_distance, has_NNP, count_NNP
 
 const = Constant()
 
@@ -61,8 +61,8 @@ def paraphrase_questions(tokenizer, device, model, sentence):
     @param tokenizer: Tokenizer is in charge of preparing the inputs for a model
     @param device: Device the model will be run on
     @param model: The pre-trained model
-    @param sentence: The sentence need to be paraphrased
-    @return: final_sentence: the sentence picked via a score ranking mechanism
+    @param sentence: The sentence need to be templates
+    @return: final_outputs: the candidates of templates questions
     """
     sentence = sentence.replace("<A>", "XYZ")
 
@@ -89,21 +89,31 @@ def paraphrase_questions(tokenizer, device, model, sentence):
     for beam_output in beam_outputs:
         sent = tokenizer.decode(beam_output, skip_special_tokens=True, clean_up_tokenization_spaces=True)
         if sent.replace("?", " ?").lower() != sentence.lower() and sent.replace("?", " ?") not in final_outputs:
-            if has_NNP(sent.replace("?", " ?")):
+            if has_NNP(sent.replace("?", " ?"), count_NNP(sent.replace("?", " ?"))):
                 sent = re.sub('XYZ', '<A>', sent, flags=re.IGNORECASE)
                 final_outputs.append(sent.replace("?", " ?"))
             else:
                 print("******************", sent.replace("?", " ?"))
+    sentence = sentence.replace("XYZ", "<A>")
+    return final_outputs
 
+def pick_final_sentence(origin, candidates):
+    """
+
+    @param origin: Orignial question
+    @param candidates: Paraphrased candidates
+    @return: Final question picked from the candidates via a score ranking mechanism
+    """
     max_score = 0
     final_sentence = ""
-    sentence = sentence.replace("XYZ", "<A>")
-    for i, final_output in enumerate(final_outputs):
+    similarity_arr = similarities(origin, candidates)
+    for i, final_output in enumerate(candidates):
         print("{}: {}".format(i, final_output))
-        cos = similarity(sentence, final_output)
+        cos = similarity_arr[i]
+        print(cos)
         if cos > 0.7:
-            wd = words_distance(sentence, final_output)
-            td = tags_distance(sentence, final_output)
+            wd = words_distance(origin, final_output)
+            td = tags_distance(origin, final_output)
             score = (wd + td) * cos
             if score > max_score:
                 max_score = score
