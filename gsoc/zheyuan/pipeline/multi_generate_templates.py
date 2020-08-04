@@ -14,7 +14,7 @@ const = Constant()
 
 const.URL = "https://datascience-models-ramsri.s3.amazonaws.com/t5_paraphraser.zip"
 
-def generate_templates(label,project_name,depth=1,output_file="basic_sentence_and_template_generator", paraphraser=False, multi = False):
+def generate_templates(label,project_name,depth=1,output_file="basic_sentence_and_template_generator_bis", paraphraser=False, multi = False, model_dir = None):
     """
     The function acts as a wrapper for the whole package of supplied source code.
     """
@@ -126,13 +126,15 @@ if __name__ == "__main__":
         '--multi', dest='multi', metavar='[Whether enable multi Ontologies]',
         help='Mention True/False you want to enable multi Ontologies, if you select True, you need to enter a list of ontologies for --label, e.g. --label \'[ontology1,ontology2,..]\'',
         required=False)
-
+    requiredNamed.add_argument('--model', dest='model', metavar='model folder',
+                               help='Bert fine-tuned model\'s folder path', required=False)
     args = parser.parse_args()
     label = args.label
     project_name = args.project_name
     depth = args.depth
     paraphraser = args.paraphraser
     multi = args.multi
+    model_dir = args.model
 
-    generate_templates(label=label,project_name=project_name,depth=depth, paraphraser=paraphraser, multi = multi)
+    generate_templates(label=label,project_name=project_name,depth=depth, paraphraser=paraphraser, multi = multi ,model_dir = model_dir)
     pass

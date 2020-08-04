@@ -2,7 +2,7 @@
 import argparse
 from generate_url import generate_url_spec, generate_url
 from get_properties import get_properties
-from paraphrase_questions import paraphrase_questions, pick_final_sentence
+from paraphrase_questions import paraphrase_questions, pick_final_sentence, pick_final_sentence_advanced
 import urllib
 import urllib.parse
 from bs4 import BeautifulSoup
@@ -80,7 +80,7 @@ def check_query(log, query):
 
 def basic_sentence_and_template_generator(prop_dic, test_set, log, mother_ontology, vessel, prop, project_name, output_file,
                                     diction, expand_set=[], tokenizer=None, device=None, model=None, original_count=0,
-                                    count=0, suffix=" of <A> ?", query_suffix=""):
+                                    count=0, suffix=" of <A> ?", query_suffix="", model_dir=None):
     if (type(prop) == str):
         prop = prop.split(',')
     # original_count = count
@@ -123,7 +123,7 @@ def basic_sentence_and_template_generator(prop_dic, test_set, log, mother_ontolo
         sparql_query.append(original_sparql)
 
     if (query_suffix == ""):
-        query_answer = ("select distinct(?a) where { ?a " + prop_link + " []  } ")
+        query_answer = ("select distinct(?a) where { ?a a " + mother_ontology+" ; " +prop_link+" []  } ")
     else:
         query_answer = ("select distinct(?a) where { ?a " + query_suffix.split(" ")[
             0] + " [] . ?a  " + query_suffix + " " + prop_link + " ?x } ")
@@ -149,9 +149,9 @@ def basic_sentence_and_template_generator(prop_dic, test_set, log, mother_ontolo
             if count == original_count - 1 and device:
                 final_candidates = paraphrase_questions(tokenizer, device, model, original_question)
                 final_quesiton = pick_final_sentence(original_question, final_candidates)
-                # @todo establish a cirteria to determine whether to expand the current template pair
-                # For instance, just randomly pick up the first one from the candidates to expand templates
-                # and store it with the orignial SPARQL template
+                advanced = pick_final_sentence_advanced( device, original_question, final_candidates, model_dir)
+
+
                 expanded_nl_question.append(final_quesiton)
                 expanded_sparql_query.append(original_sparql)
 
