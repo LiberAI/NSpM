@@ -53,8 +53,8 @@ def prof_similarity(v1, v2):
 
 def minDistance(s1, s2):
     """
-    :type word1: str
-    :type word2: str
+    :type s1: str
+    :type s2: str
     :rtype: int
     """
 
