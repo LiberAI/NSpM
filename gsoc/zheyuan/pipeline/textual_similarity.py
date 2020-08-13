@@ -16,18 +16,28 @@ const.MODULE_URL = "https://tfhub.dev/google/universal-sentence-encoder-large/5"
 print('start')
 embed = hub.load(const.MODULE_URL)
 
-
-def similarity(sentence1, sentence2):
-    texts = [sentence1, sentence2]
-    with tf.Session() as sess:
-        sess.run([tf.global_variables_initializer(), tf.tables_initializer()])
-        vectors = sess.run(embed(texts))
-        cosine_similarities = cosine_similarity(vectors[0],vectors[1])
+def similarities(sentence, paraphrases):
+    vectors = embed([sentence] + paraphrases)
+    cosine_similarities = []
+    for v2 in vectors[1:]:
+        cosine_similarities.append(cosine_similarity(np.array(vectors[0]), np.array(v2)))
 
     return cosine_similarities
 
+def similarity(sentence,paraphrase):
+    vectors = embed([sentence, paraphrase])
+    return cosine_similarity(vectors[0], vectors[1])
+
+# def cosine_similarities(v1, vectors):
+#     #Calculate semantic similarity between two original v1 and paraphrased vectors
+#     similarities = []
+#     for v2 in vectors:
+#         similarities.append(cosine_similarity(v1,v2))
+#     return similarities
+
+
 def cosine_similarity(v1, v2):
-    #Calculate semantic similarity between two sentence vectors
+    # Calculate semantic similarity between two sentence vectors
     mag1 = np.linalg.norm(v1)
     mag2 = np.linalg.norm(v2)
     if (not mag1) or (not mag2):
@@ -35,17 +45,16 @@ def cosine_similarity(v1, v2):
     return np.dot(v1, v2) / (mag1 * mag2)
 
 
-
 def prof_similarity(v1, v2):
     #Calculate the semantic similarity based on the angular distance
-    cosine_similarity = cosine_similarity(v1, v2)
-    prof_similarity = 1 - math.acos(cosine_similarity) / math.pi
+    cosine = cosine_similarity(v1, v2)
+    prof_similarity = 1 - math.acos(cosine) / math.pi
     return prof_similarity
 
 def minDistance(s1, s2):
     """
-    :type word1: str
-    :type word2: str
+    :type s1: str
+    :type s2: str
     :rtype: int
     """
 
@@ -80,13 +89,19 @@ def tags_distance(sentence1, sentence2):
 
 from collections import Counter
 
-
-def has_NNP(sentence):
+def count_NNP(sentence):
     tokens = word_tokenize(sentence)
     tagged = pos_tag(tokens)
     tag = [j for i, j in tagged]
     result = Counter(tag)
-    return result["NNP"] <= 1
+    return result["NNP"]
+
+def has_NNP(sentence, num):
+    tokens = word_tokenize(sentence)
+    tagged = pos_tag(tokens)
+    tag = [j for i, j in tagged]
+    result = Counter(tag)
+    return result["NNP"] <= num
 
 
 
