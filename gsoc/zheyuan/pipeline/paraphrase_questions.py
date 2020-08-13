@@ -113,7 +113,7 @@ def pick_final_sentence(origin, candidates):
         print("{}: {}".format(i, final_output))
         cos = similarity_arr[i]
         print(cos)
-        if cos > 0.7:
+        if cos > 0.7 and cos<1:
             wd = words_distance(origin, final_output)
             td = tags_distance(origin, final_output)
             if wd <= len(origin.strip().split()):

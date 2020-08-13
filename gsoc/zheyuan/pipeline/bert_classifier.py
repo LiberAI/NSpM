@@ -89,14 +89,16 @@ if __name__ == "__main__":
         device = torch.device("cpu")
 
 
-    testset = [['When is the birth date of <A> ??', 'When is the birthday of <A> ?'],
+    testset = [['When is the birth date of <A> ?', 'When is the birthday of <A> ?'],
                ["When is the birth date of <A> ?", "When was <A> born ?"],
                ["When is the birth date of <A> ?", "Where does <A> come from ?"],
-               ["When is the birth date of <A> ?","What is the birth name of <A> ?"]]
+               ["When is the birth date of <A> ?","What is the birth name of <A> ?"],
+               ["What is the ingredient of <A> ?","What is the Ingredient for <A> ?"],
+               ["What is the ingredient of <A> ?","What is <A>'s ingredient ?"]]
     args = parser.parse_args()
     model = args.model
     # testset = args.testset
     model, tokenizer = load_model(model, device)
-    pred_labels = predict(testset, model, tokenizer)
+    pred_labels = predict(device, testset, model, tokenizer)
     for i, pair in enumerate(testset):
         print(" ".join(pair), pred_labels[i])

@@ -80,7 +80,8 @@ def check_query(log, query):
 
 def basic_sentence_and_template_generator(prop_dic, test_set, log, mother_ontology, vessel, prop, project_name, output_file,
                                     diction, expand_set=[], tokenizer=None, device=None, model=None, original_count=0,
-                                    count=0, suffix=" of <A> ?", query_suffix="", model_dir=None):
+                                    count=0, suffix=" of <A> ?", query_suffix="", bert_model_dir=None):
+    seperator = "\t"
     if (type(prop) == str):
         prop = prop.split(',')
     # original_count = count
@@ -148,34 +149,42 @@ def basic_sentence_and_template_generator(prop_dic, test_set, log, mother_ontolo
         for number in range(len(natural_language_question)):
             if count == original_count - 1 and device:
                 final_candidates = paraphrase_questions(tokenizer, device, model, original_question)
-                final_quesiton = pick_final_sentence(original_question, final_candidates)
-                advanced = pick_final_sentence_advanced( device, original_question, final_candidates, model_dir)
+                final_quesition = pick_final_sentence(original_question, final_candidates)
+                advanced = pick_final_sentence_advanced( device, original_question, final_candidates, bert_model_dir)
 
 
-                expanded_nl_question.append(final_quesiton)
+                expanded_nl_question.append(final_quesition)
                 expanded_sparql_query.append(original_sparql)
 
-            if expanded_sparql_query:
-                expand_line = [mother_ontology, "", "", expanded_nl_question[number], expanded_sparql_query[number],
-                               query_answer]
-                expand_set.write(
-                    (';'.join(expand_line) + ";" + str(rank) + ";" + "Paraphrased" + "\n").replace("  ", " "))
             vessel.append(
                 [mother_ontology, "", "", natural_language_question[number], sparql_query[number], query_answer])
-            output_file.write((';'.join(vessel[-1]) + ";" + str(rank) + ";" + "Original" + "\n").replace("  ", " "))
-            log.info(';'.join(vessel[-1]) + str(rank) + ";" + "\n")
+            output_file.write(
+                (seperator.join(vessel[-1]) + seperator + str(rank) + seperator + "Original" + "\n").replace("  ", " "))
+            log.info(seperator.join(vessel[-1]) + str(rank) + seperator + "\n")
+            if final_quesition:
+                expand_line = [mother_ontology, "", "", final_quesition, original_sparql,
+                               query_answer]
+                output_file.write(
+                    (seperator.join(expand_line) + seperator + str(rank) + seperator + "Paraphrased" + "\n"))
+                log.info(seperator.join(expand_line) + seperator + str(rank) + seperator + "Paraphrased" + "\n")
+            if advanced:
+                advanced_expand_line = [mother_ontology, "", "", advanced, original_sparql,
+                               query_answer]
+                output_file.write(
+                    (seperator.join(advanced_expand_line) + seperator + str(rank) + seperator+ "Paraphrase Advanced" + "\n"))
+
 
     else:
         for number in range(len(natural_language_question)):
             if expanded_sparql_query:
                 expand_line = [mother_ontology, "", "", expanded_sparql_query[number], expanded_sparql_query[number],
                                query_answer]
-                expand_set.write((';'.join(expand_line) + ";" + str(rank) + "\n").replace("  ", " "))
+                expand_set.write((seperator.join(expand_line) + seperator + str(rank) + "\n").replace("  ", " "))
             vessel.append(
                 [mother_ontology, "", "", natural_language_question[number], sparql_query[number], query_answer])
-            test_set.write((';'.join(vessel[-1]) + ";" + str(rank) + "\n").replace("  ", " "))
+            test_set.write((seperator.join(vessel[-1]) + seperator + str(rank) + "\n").replace("  ", " "))
             print("++++++++++++++++++++", vessel[-1], "+++++++++++++++")
-            log.info("Test: " + ';'.join(vessel[-1]) + str(rank) + "\n")
+            log.info("Test: " + seperator.join(vessel[-1]) + str(rank) + "\n")
 
     prop_dic[original_count - count - 1].append(prop[0])
     # print(str(natural_language_question)+"\n"+str(sparql_query)+"\n"+query_answer+"\n*************")
