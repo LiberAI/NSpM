@@ -1,19 +1,23 @@
 import argparse
 import re
+import tensorflow as tf
+tf.compat.v1.enable_eager_execution()
 from paraphrase_questions import get_pretrained_model,prepare_model,set_seed
 from get_properties import get_properties
 from generate_url import generate_url
 from sentence_and_template_generator import sentence_and_template_generator
+from basic_sentence_and_template_generator import basic_sentence_and_template_generator
 import os
 from fetch_ranks_sub import fetch_ranks
 import logging
 from constant import Constant
 
+
 const = Constant()
 
 const.URL = "https://datascience-models-ramsri.s3.amazonaws.com/t5_paraphraser.zip"
 
-def generate_templates(label,project_name,depth=1,output_file="sentence_and_template_generator", paraphraser=False, multi = False):
+def generate_templates(label,project_name,depth=1,output_file="basic_sentence_and_template_generator_bis", paraphraser=False, multi = False, bert_model_dir = None):
     """
     The function acts as a wrapper for the whole package of supplied source code.
     """
@@ -64,15 +68,15 @@ def generate_templates(label,project_name,depth=1,output_file="sentence_and_temp
                 prop = property_line.split(',')
                 print("**************\n" + str(prop))
                 if paraphraser:
-                    sentence_and_template_generator(original_count=depth, prop_dic=prop_dic, test_set=test_set,
+                    basic_sentence_and_template_generator(original_count=depth, prop_dic=prop_dic, test_set=test_set,
                                                     log=logger, diction=diction, output_file=output_file,
                                                     mother_ontology=about.strip().replace(
                                                         "http://dbpedia.org/ontology/", "dbo:"), vessel=vessel,
                                                     project_name=project_name, prop=prop, suffix=" of <A> ?",
                                                     count=depth, expand_set=expand_set, tokenizer=tokenizer,
-                                                    device=device, model=model)
+                                                    device=device, model=model, bert_model_dir=bert_model_dir)
                 else:
-                    sentence_and_template_generator(original_count=depth, prop_dic=prop_dic, test_set=test_set,
+                    basic_sentence_and_template_generator(original_count=depth, prop_dic=prop_dic, test_set=test_set,
                                                     log=logger,
                                                     diction=diction, output_file=output_file,
                                                     mother_ontology=about.strip().replace(
@@ -92,9 +96,9 @@ def generate_templates(label,project_name,depth=1,output_file="sentence_and_temp
         prop = property_line.split(',')
         print("**************\n"+str(prop))
         if paraphraser:
-            sentence_and_template_generator(original_count=depth,prop_dic=prop_dic,test_set=test_set,log=logger,diction=diction,output_file=output_file,mother_ontology=about.strip().replace("http://dbpedia.org/ontology/","dbo:"),vessel=vessel,project_name=project_name ,prop=prop, suffix = " of <A> ?",count = depth,expand_set=expand_set,tokenizer=tokenizer,device=device,model=model)
+            basic_sentence_and_template_generator(original_count=depth,prop_dic=prop_dic,test_set=test_set,log=logger,diction=diction,output_file=output_file,mother_ontology=about.strip().replace("http://dbpedia.org/ontology/","dbo:"),vessel=vessel,project_name=project_name ,prop=prop, suffix = " of <A> ?",count = depth,expand_set=expand_set,tokenizer=tokenizer,device=device,model=model)
         else:
-            sentence_and_template_generator(original_count=depth, prop_dic=prop_dic, test_set=test_set, log=logger,
+            basic_sentence_and_template_generator(original_count=depth, prop_dic=prop_dic, test_set=test_set, log=logger,
                                             diction=diction, output_file=output_file,
                                             mother_ontology=about.strip().replace("http://dbpedia.org/ontology/",
                                                                                   "dbo:"), vessel=vessel,
@@ -125,13 +129,15 @@ if __name__ == "__main__":
         '--multi', dest='multi', metavar='[Whether enable multi Ontologies]',
         help='Mention True/False you want to enable multi Ontologies, if you select True, you need to enter a list of ontologies for --label, e.g. --label \'[ontology1,ontology2,..]\'',
         required=False)
-
+    requiredNamed.add_argument('--model', dest='model', metavar='model folder',
+                               help='Bert fine-tuned model\'s folder path', required=False)
     args = parser.parse_args()
     label = args.label
     project_name = args.project_name
     depth = args.depth
     paraphraser = args.paraphraser
     multi = args.multi
+    bert_model_dir = args.model
 
-    generate_templates(label=label,project_name=project_name,depth=depth, paraphraser=paraphraser, multi = multi)
+    generate_templates(label=label,project_name=project_name,depth=depth, paraphraser=paraphraser, multi = multi, bert_model_dir = bert_model_dir)
     pass

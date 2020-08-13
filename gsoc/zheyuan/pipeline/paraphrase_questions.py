@@ -9,12 +9,13 @@ import torch
 from transformers import T5ForConditionalGeneration,T5Tokenizer
 # pip install transformers==2.9.0
 from constant import Constant
-from textual_similarity import similarity, minDistance, words_distance, tags_distance, has_NNP
+from textual_similarity import similarities, minDistance, words_distance, tags_distance, has_NNP, count_NNP
+from bert_classifier import load_model, predict
 
 const = Constant()
 
 const.URL = "https://datascience-models-ramsri.s3.amazonaws.com/t5_paraphraser.zip"
-
+const.MODEL_DIR = "~/Downloads/model_save1/"
 def get_pretrained_model(zip_file_url):
     """
 
@@ -61,8 +62,8 @@ def paraphrase_questions(tokenizer, device, model, sentence):
     @param tokenizer: Tokenizer is in charge of preparing the inputs for a model
     @param device: Device the model will be run on
     @param model: The pre-trained model
-    @param sentence: The sentence need to be paraphrased
-    @return: final_sentence: the sentence picked via a score ranking mechanism
+    @param sentence: The sentence need to be templates
+    @return: final_outputs: the candidates of templates questions
     """
     sentence = sentence.replace("<A>", "XYZ")
 
@@ -89,26 +90,80 @@ def paraphrase_questions(tokenizer, device, model, sentence):
     for beam_output in beam_outputs:
         sent = tokenizer.decode(beam_output, skip_special_tokens=True, clean_up_tokenization_spaces=True)
         if sent.replace("?", " ?").lower() != sentence.lower() and sent.replace("?", " ?") not in final_outputs:
-            if has_NNP(sent.replace("?", " ?")):
+            if has_NNP(sent.replace("?", " ?"), count_NNP(sent.replace("?", " ?"))):
                 sent = re.sub('XYZ', '<A>', sent, flags=re.IGNORECASE)
                 final_outputs.append(sent.replace("?", " ?"))
             else:
                 print("******************", sent.replace("?", " ?"))
+    sentence = sentence.replace("XYZ", "<A>")
+    return final_outputs
+
+def pick_final_sentence(origin, candidates):
+    """
+
+    @param origin: Orignial question
+    @param candidates: Paraphrased candidates
+    @return: Final question picked from the candidates via a score ranking mechanism
+    """
 
     max_score = 0
     final_sentence = ""
-    sentence = sentence.replace("XYZ", "<A>")
-    for i, final_output in enumerate(final_outputs):
+    similarity_arr = similarities(origin, candidates)
+    for i, final_output in enumerate(candidates):
         print("{}: {}".format(i, final_output))
-        cos = similarity(sentence, final_output)
-        if cos > 0.7:
-            wd = words_distance(sentence, final_output)
-            td = tags_distance(sentence, final_output)
-            score = (wd + td) * cos
-            if score > max_score:
-                max_score = score
-                final_sentence = final_output
-            print(cos, wd, td, (wd + td) * cos)
+        cos = similarity_arr[i]
+        print(cos)
+        if cos > 0.7 and cos<1:
+            wd = words_distance(origin, final_output)
+            td = tags_distance(origin, final_output)
+            if wd <= len(origin.strip().split()):
+                score = 0.05*(wd + td) + cos
+                if score > max_score:
+                    max_score = score
+                    final_sentence = final_output
+                print(cos, wd, td, score)
+    return final_sentence
+def pick_final_sentence_advanced( device, origin, candidates, model_dir=None):
+    """
+    This advanced methode uses a fine-tuned BERT Classifier to determine whether a candidate is a good, neural or bad paraphrase
+    @param model_dir: the path of folder where the pre-trained model is saved
+    @param device: Cuda or CPU
+    @param origin: Orignial question
+    @param candidates: Paraphrased candidates
+    @return: Final question picked from the candidates via a score ranking mechanism
+    """
+    if model_dir:
+        model, tokenizer = load_model(model_dir, device)
+        text_pairs = []
+        for candidate in candidates:
+            text_pairs.append([origin, candidate])
+            pred_labels = predict(device, text_pairs, model, tokenizer)
+
+
+    max_score = 0
+    final_sentence = ""
+    similarity_arr = similarities(origin, candidates)
+
+
+
+
+    for i, final_output in enumerate(candidates):
+        print("{}: {}".format(i, final_output))
+        cos = similarity_arr[i]
+        print(cos)
+
+        if cos > 0.65:
+            wd = words_distance(origin, final_output)
+            td = tags_distance(origin, final_output)
+            if wd <= len(origin.strip().split()):
+                if pred_labels:
+                    score = 0.05*(wd + td) + cos + pred_labels[i]
+                else:
+                    score = 0.05 * (wd + td) + cos
+                if score > max_score:
+                    max_score = score
+                    final_sentence = final_output
+                print(cos, wd, td, score)
     return final_sentence
 
 
