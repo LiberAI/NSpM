@@ -1,5 +1,7 @@
 import argparse
 import re
+import tensorflow as tf
+tf.compat.v1.enable_eager_execution()
 from paraphrase_questions import get_pretrained_model,prepare_model,set_seed
 from get_properties import get_properties
 from generate_url import generate_url
@@ -10,11 +12,12 @@ from fetch_ranks_sub import fetch_ranks
 import logging
 from constant import Constant
 
+
 const = Constant()
 
 const.URL = "https://datascience-models-ramsri.s3.amazonaws.com/t5_paraphraser.zip"
 
-def generate_templates(label,project_name,depth=1,output_file="basic_sentence_and_template_generator_bis", paraphraser=False, multi = False, model_dir = None):
+def generate_templates(label,project_name,depth=1,output_file="basic_sentence_and_template_generator_bis", paraphraser=False, multi = False, bert_model_dir = None):
     """
     The function acts as a wrapper for the whole package of supplied source code.
     """
@@ -71,7 +74,7 @@ def generate_templates(label,project_name,depth=1,output_file="basic_sentence_an
                                                         "http://dbpedia.org/ontology/", "dbo:"), vessel=vessel,
                                                     project_name=project_name, prop=prop, suffix=" of <A> ?",
                                                     count=depth, expand_set=expand_set, tokenizer=tokenizer,
-                                                    device=device, model=model)
+                                                    device=device, model=model, bert_model_dir=bert_model_dir)
                 else:
                     basic_sentence_and_template_generator(original_count=depth, prop_dic=prop_dic, test_set=test_set,
                                                     log=logger,
@@ -134,7 +137,7 @@ if __name__ == "__main__":
     depth = args.depth
     paraphraser = args.paraphraser
     multi = args.multi
-    model_dir = args.model
+    bert_model_dir = args.model
 
-    generate_templates(label=label,project_name=project_name,depth=depth, paraphraser=paraphraser, multi = multi ,model_dir = model_dir)
+    generate_templates(label=label,project_name=project_name,depth=depth, paraphraser=paraphraser, multi = multi, bert_model_dir = bert_model_dir)
     pass
