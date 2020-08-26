@@ -161,13 +161,13 @@ def basic_sentence_and_template_generator(prop_dic, test_set, log, mother_ontolo
             output_file.write(
                 (seperator.join(vessel[-1]) + seperator + str(rank) + seperator + "Original" + "\n").replace("  ", " "))
             log.info(seperator.join(vessel[-1]) + str(rank) + seperator + "\n")
-            if final_quesition:
+            if device and final_quesition:
                 expand_line = [mother_ontology, "", "", final_quesition, original_sparql,
                                query_answer]
                 output_file.write(
                     (seperator.join(expand_line) + seperator + str(rank) + seperator + "Paraphrased" + "\n"))
                 log.info(seperator.join(expand_line) + seperator + str(rank) + seperator + "Paraphrased" + "\n")
-            if advanced:
+            if device and advanced:
                 advanced_expand_line = [mother_ontology, "", "", advanced, original_sparql,
                                query_answer]
                 output_file.write(
