@@ -1,4 +1,5 @@
 import argparse
+import argparse
 import re
 import tensorflow as tf
 tf.compat.v1.enable_eager_execution()
@@ -17,7 +18,7 @@ const = Constant()
 
 const.URL = "https://datascience-models-ramsri.s3.amazonaws.com/t5_paraphraser.zip"
 
-def generate_templates(label,project_name,depth=1,output_file="basic_sentence_and_template_generator_bis", paraphraser=False, multi = False, bert_model_dir = None):
+def generate_templates(label,project_name,depth=1,output_file="basic_sentence_and_template_generator", paraphraser=False, multi = False, bert_model_dir = None):
     """
     The function acts as a wrapper for the whole package of supplied source code.
     """
