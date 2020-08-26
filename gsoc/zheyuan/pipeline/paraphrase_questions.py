@@ -137,22 +137,23 @@ def pick_final_sentence_advanced( device, origin, candidates, model_dir=None):
         text_pairs = []
         for candidate in candidates:
             text_pairs.append([origin, candidate])
-            pred_labels = predict(device, text_pairs, model, tokenizer)
+        pred_labels = predict(device, text_pairs, model, tokenizer)
+
 
 
     max_score = 0
     final_sentence = ""
     similarity_arr = similarities(origin, candidates)
 
-
-
-
+    # print("Pred_labels", pred_labels)
+    # write_results(pred_labels, origin, candidates)
     for i, final_output in enumerate(candidates):
+
         print("{}: {}".format(i, final_output))
         cos = similarity_arr[i]
         print(cos)
 
-        if cos > 0.65:
+        if cos > 0.65 and cos<1:
             wd = words_distance(origin, final_output)
             td = tags_distance(origin, final_output)
             if wd <= len(origin.strip().split()):
@@ -167,7 +168,10 @@ def pick_final_sentence_advanced( device, origin, candidates, model_dir=None):
     return final_sentence
 
 
-
+def write_results(predict_labels, origin, candidates):
+    with open("bert_predicts.csv","w") as w:
+        for i, final_output in enumerate(candidates):
+            w.write(origin+"\t"+final_output+"\t"+str(predict_labels[i])+"\n")
 
 
 if __name__ == "__main__":
