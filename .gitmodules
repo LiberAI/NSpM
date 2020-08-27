@@ -1,3 +1,6 @@
 [submodule "nmt"]
 	path = nmt
 	url = https://github.com/tensorflow/nmt.git
+[submodule "GloVe"]
+	path = GloVe
+	url = https://github.com/stanfordnlp/GloVe.git
