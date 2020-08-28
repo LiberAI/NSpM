@@ -29,11 +29,11 @@ def benchmark(trained_model, test_set, answer_file="answers.json"):
             answer_group = []
         answers.append(answer_group)
 
-    json_file = construct_json("qald-9-train-multilingual", questions_info, questions, sparqls, answers)
+    json_file = construct_json(test_set.replace(".qald.json",""), questions_info, questions, sparqls, answers)
     path = "../gsoc/zheyuan/utility/benchmark/"
-    with open(path+"answers.qald.json", "w") as f:
+    with open(path+"answers-"+test_set, "w") as f:
         # js = json.dumps(json_file, indent=4, separators=(',', ':'))
-        json.dump(json_file, f)
+        json.dump(json_file, f, indent=4, separators=(', ', ': '))
 
 
 
