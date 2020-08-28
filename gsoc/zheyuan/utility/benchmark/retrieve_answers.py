@@ -8,7 +8,7 @@ from bs4 import BeautifulSoup
 def read_sparqls():
     os.system("pwd")
     sparqls = []
-    file_path = "../gsoc/zheyuan/utility/benchmark/output_decoded.txt"
+    file_path = "../gsoc/zheyuan/utility/benchmark/output_decoded1.txt"
     with open(file_path, 'r') as lines:
         for line in lines:
             sparqls.append(line)
@@ -42,6 +42,7 @@ def retrieve(query):
                     }
                 }
 
+
                 answer_dict["results"]["bindings"].append(uri)
 
         for td in rows.find_all("pre"):
@@ -54,9 +55,18 @@ def retrieve(query):
                             "value": a
                         }
                     }
-                    answer_dict["results"]["bindings"].append(uri)
-        answers.append(answer_dict)
 
+                    answer_dict["results"]["bindings"].append(uri)
+        if answer_dict["results"]["bindings"]:
+            answers.append(answer_dict)
+
+    if not answers:
+        return [{
+                  "head" : {
+                    "vars" : [ "date" ]
+                  },
+                  "results" : { }
+                }]
     return answers
 
 
@@ -73,7 +83,7 @@ if __name__ == "__main__":
     # query = args.query
     answer_groups = []
     i = 1
-    with open("./output_decoded.txt", 'r') as lines:
+    with open("../output_decoded.txt", 'r') as lines:
          for line in lines:
              i+=1
              try:
