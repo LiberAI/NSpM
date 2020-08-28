@@ -22,7 +22,7 @@ def generate_url(given_label):
         data types from the DBpedia database. (Like:​ http://mappings.dbpedia.org/server/ontology/classes/Place​ )
         - It returns a url string to the calling function.
         """
-        xmldoc = open('../utility/dbpedia.owl').read()
+        xmldoc = open('../utility/dbpedia.owl', encoding="utf-8").read()
         jsondoc = ((xmltodict.parse(xmldoc)))
         count = 0
 
@@ -68,7 +68,7 @@ if __name__ == "__main__":
         pass
 
 def generate_url_spec(given_label):
-        xmldoc = open('../utility/dbpedia.owl').read()
+        xmldoc = open('../utility/dbpedia.owl', encoding="utf-8").read()
         jsondoc = ((xmltodict.parse(xmldoc)))
         for onto in jsondoc['rdf:RDF'].keys():
                 if(not (onto == 'owl:DatatypeProperty' or onto == "owl:ObjectProperty")):

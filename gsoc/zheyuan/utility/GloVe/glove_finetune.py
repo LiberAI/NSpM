@@ -15,7 +15,7 @@ def glove2dict(glove_filename):
                 for line in reader}
     return embed
 
-def batch_finetune(finetune_glove, batch_word):
+def batch_finetune(finetune_glove, batch_word, dimension):
     oov = [token for token in batch_word if token not in finetune_glove.keys()]
 
     en_doc = [' '.join(batch_word)]
@@ -27,7 +27,7 @@ def batch_finetune(finetune_glove, batch_word):
     Xc.setdiag(0)
     coocc_ar = Xc.toarray()
 
-    mittens_model = Mittens(n=300, max_iter=1800)
+    mittens_model = Mittens(n=dimension, max_iter=1800)
     new_embeddings = mittens_model.fit(
       coocc_ar,
       vocab=corp_vocab,
@@ -37,14 +37,14 @@ def batch_finetune(finetune_glove, batch_word):
     finetune_glove.update(newglove)
     return finetune_glove
 
-def calculate_unknown(finetune_glove):
-    vecs = np.zeros((len(finetune_glove), 300), dtype=np.float32)
+def calculate_unknown(finetune_glove,dimension):
+    vecs = np.zeros((len(finetune_glove), dimension), dtype=np.float32)
     for i, key in enumerate(finetune_glove):
         vecs[i] = np.array(finetune_glove[key], dtype=np.float32)
     unknown = np.mean(vecs, axis=0)
     return unknown
 
-def finetune_glove(project_path, glove_path="glove.6B.300d.txt"):
+def finetune_glove(project_path, glove_path="glove.6B.300d.txt", dimension=300):
     word_en = []
     with open(project_path+"/data.en", "r") as lines:
         for sentence in lines:
@@ -64,11 +64,11 @@ def finetune_glove(project_path, glove_path="glove.6B.300d.txt"):
     while end<len(word_en):
         print("Start: ", start, "End: ", end)
         word_split = word_en[start:end]
-        finetune_glove = batch_finetune(finetune_glove, word_split)
+        finetune_glove = batch_finetune(finetune_glove, word_split, dimension)
         start = end
         end = start + stride
     finetune_glove = batch_finetune(finetune_glove, word_en[start:])
-    unk = calculate_unknown(finetune_glove)
+    unk = calculate_unknown(finetune_glove, dimension)
     finetune_glove["<UNK>"] = unk
     with open(project_path+"/embed.en", "w") as w:
         for word in finetune_glove:
@@ -80,7 +80,23 @@ if __name__=="__main__":
 
     requiredNamed.add_argument('--path', dest='path', metavar='path',
                                help='path of project that contains the data..eb/sparql files', required=True)
+    requiredNamed.add_argument('--dimension', dest='dimension', metavar='dimension',
+                               help='path of project that contains the data..eb/sparql files', required=False)
+
     args = parser.parse_args()
     path = args.path
-    finetune_glove(path, "glove.6B/glove.6B.300d.txt")
+    dimension = args.dimension
+
+    if dimension:
+        if dimension <= 50:
+            dimension = 50
+        elif dimension <= 100:
+            dimension = 100
+        elif dimension <= 200:
+            dimension = 200
+        else:
+            dimension = 300
+        finetune_glove(path,"glove.6B/glove.6B."+dimension+"d.txt", dimension=dimension)
+    else:
+        finetune_glove(path, "glove.6B/glove.6B.300d.txt")
     pass
