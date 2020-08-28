@@ -1,16 +1,23 @@
 
-# Pipeline #
-To run please use the command:
+# One-Command Pipeline #
+To run the complete pipeline, please use the command:
 
 ```bash
-python generate_templates.py --label <Ontology name : like Person, the casing matters > --project_name <Give a name to the project like test1 > --depth <Mention the depth to which you would like to penetrate: like 2 >
+./pipeline.sh [$1 Project's name] [$2 Integer] [$3 Integer]
 ```
+ $1 -- The project's name -- String -- Required
+ $2 -- Dimension of the GloVe embeddings -- Integer [50|100|200|300] -- Optional, 300 by default
+ $3 -- Number of unit in the LSTM cells -- Integer -- Optional, 512 by default
 
-Example
+Examples
 
 ```bash
-python generate_templates.py --label Person --project_name test1 --depth 2
+./pipeline.sh Project1
 ```
+```bash
+./pipeline.sh Project2 300 512
+```
+
 
 # Code Notes #
 ## Paraphrase Questions
