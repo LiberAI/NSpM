@@ -22,9 +22,9 @@ def get_properties(url,  project_name="test_project", output_file = "get_propert
     if(not os.path.isdir(project_name)):
         os.makedirs(project_name)
     if multi:
-        output_file = open(project_name + "/" + output_file, 'a')
+        output_file = open(project_name + "/" + output_file, 'a', encoding="utf-8")
     else:
-        output_file = open(project_name+"/" + output_file, 'w')
+        output_file = open(project_name+"/" + output_file, 'w', encoding="utf-8")
     fl = 0
     accum = []
     for rows in tqdm(soup.find_all("tr")):
