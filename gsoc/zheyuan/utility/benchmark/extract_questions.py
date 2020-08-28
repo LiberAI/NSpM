@@ -29,11 +29,10 @@ def read_json(file):
 
     return questions_info, questions
 def write_to_ask(questions):
-    with open('to_ask.txt', 'w') as write_f:
+    with open('to_ask1.txt', 'w') as write_f:
         for key in questions:
             question = questions[key]
-            write_f.write(question+"\n")
-
+            write_f.write(question.lower().replace("?"," ?")+"\n")
 
 if __name__ == "__main__":
     """
