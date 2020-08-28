@@ -1,9 +1,39 @@
 #!/bin/bash
 
+# $1 -- The project's name -- String -- Required
+# $2 -- Dimension of the GloVe embeddings -- Integer [50|100|200|300] -- Optional, 300 by default
+# $3 -- Number of unit in the LSTM cells -- Integer -- Optional, 512 by default
+
 if [ ! -n "$1" ] ;then
     echo "you have not input a project name!"
 else
     echo "The project name will be set to $1"
+if [ ! -n "$2" ] ;then
+    dimension=300
+elif [[ ! $2 =~ ^[0-9]*$ ]]; then
+    echo "Please enter an integer [50|100|200|300] to the second parameter to set the dimension of Glove Embeddings;"
+elif [ $2 -le 50 ]; then
+    dimension=50
+    echo "The dimension of GloVe embeddings is set to $dimension"
+elif [ $2 -le 100 ]; then
+    dimension=100
+    echo "The dimension of GloVe embeddings is set to $dimension"
+elif [ $2 -le 200 ]; then
+    dimension=200
+    echo "The dimension of GloVe embeddings is set to $dimension"
+else
+    dimension=300
+    echo "The dimension of GloVe embeddings is set to $dimension"
+fi
+if [ ! -n "$3" ] ;then
+    num_units=512
+elif [[ ! $2 =~ ^[0-9]*$ ]]; then
+    echo "Please enter an integer [ >=512 recommended ] to the third parameter to set the number of units of LSTM cells"
+
+else
+    num_units=$3
+    echo "The number of units of LSTM cells is set to $num_units"
+fi
 
 
     # 1. Generate templates
@@ -35,7 +65,7 @@ else
 
     # 3.3 Generate Glove embeddings:
 
-    #   3.3.1 Download GloVe 300d pretrained model
+    #   3.3.1 Download GloVe 6B pretrained model
         if [ ! -d ./GloVe/glove.6B ]; then
             curl --output ./GloVe/glove.6B.zip http://downloads.cs.stanford.edu/nlp/data/glove.6B.zip
 
@@ -48,33 +78,33 @@ else
     #   3.3.2 Fine-tune en and Train sparql
     cd ./GloVe
     python glove_finetune.py --path ../../../../data/$1
-    cd ./GloVe-master
+    cd ../../../../GloVe
     if [ "$(uname)"=="Darwin" ]; then
     # Mac OS X
       sed -i "" "s/CORPUS=.*/CORPUS=data_s.sparql/" demo.sh
       sed -i "" "s/SAVE_FILE=.*/SAVE_FILE=embed/" demo.sh
-      sed -i "" "s/VECTOR_SIZE=.*/VECTOR_SIZE=300/" demo.sh
+      sed -i "" "s/VECTOR_SIZE=.*/VECTOR_SIZE=$dimension/" demo.sh
       sed -i "" "s/VOCAB_MIN_COUNT=.*/VOCAB_MIN_COUNT=1/" demo.sh
     elif [ "$(expr substr $(uname -s) 1 5)"=="Linux" ]; then
     # GNU/Linux
       sed -i "s/CORPUS=.*/CORPUS=data_s.sparql/" demo.sh
       sed -i "s/SAVE_FILE=.*/SAVE_FILE=embed/" demo.sh
-      sed -i "s/VECTOR_SIZE=.*/VECTOR_SIZE=300/" demo.sh
+      sed -i "s/VECTOR_SIZE=.*/VECTOR_SIZE=$dimension/" demo.sh
       sed -i "s/VOCAB_MIN_COUNT=.*/VOCAB_MIN_COUNT=1/" demo.sh
     fi
     ./demo.sh
-    cp ./embed.txt ../../../../../data/$1/embed.sparql
+    cp ./embed.txt ../data/$1/embed.sparql
 
     # 4. NMT training
     # 4.1 Split into train/dev/test
-    cd ../../../../../data/$1
+    cd ../data/$1
     count=$(cat data.en |wc -l)
     echo $count "samples in total will be splitted into 8:1:1"
     python ../../split_in_train_dev_test.py --lines $count --dataset data.sparql
     cd ../../
     # 4.2 Training with embedding
     cd nmt
-    python -m nmt.nmt --src=en --tgt=sparql --embed_prefix=../data/$1/embed --vocab_prefix=../data/$1/vocab --dev_prefix=../data/$1/dev --test_prefix=../data/$1/test --train_prefix=../data/$1/train --out_dir=../data/$1"_300d_model" --num_train_steps=60000 --steps_per_stats=100 --num_layers=2 --num_units=512 --dropout=0.2 --metrics=bleu,accuracy
+    python -m nmt.nmt --src=en --tgt=sparql --embed_prefix=../data/$1/embed --vocab_prefix=../data/$1/vocab --dev_prefix=../data/$1/dev --test_prefix=../data/$1/test --train_prefix=../data/$1/train --out_dir=../data/$1"_"$dimension"d_model" --num_train_steps=60000 --steps_per_stats=100 --num_layers=2 --num_units=$num_units --dropout=0.2 --metrics=bleu,accuracy
     cd ..
 
 
