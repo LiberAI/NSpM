@@ -325,7 +325,7 @@ if __name__ == '__main__':
     use_resources_dump = args.continue_generation
     examples = args.examples
     if examples:
-        EXAMPLES_PER_TEMPLATE = examples
+        EXAMPLES_PER_TEMPLATE = int(examples)
     else:
         EXAMPLES_PER_TEMPLATE = 600
    # print use_resources_dump => False
