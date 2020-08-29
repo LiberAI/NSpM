@@ -37,7 +37,7 @@ fi
 
 
     # 1. Generate templates
-    python multi_generate_templates.py --label '['Colour', 'Organisation', 'Person', 'Software', 'Artwork', 'Place', 'Work', 'Bird']' --project_name $1 --depth 1 --multi True
+    python multi_generate_templates.py --label '['Agent', 'Place', 'Work', 'Species', 'TopicalConcept', 'MeanOfTransportation', 'Event', 'Algorithm', 'Altitude', 'AnatomicalStructure', 'Area', 'Award', 'Biomolecule', 'Blazon', 'Browser', 'ChartsPlacements', 'ChemicalSubstance', 'Cipher', 'Colour', 'Currency', 'Demographics', 'Depth', 'Device', 'Diploma', 'Disease', 'ElectionDiagram', 'ElectricalSubstation', 'EthnicGroup', 'FileSystem', 'Flag', 'Food', 'GeneLocation', 'GrossDomesticProduct', 'Holiday', 'Identifier', 'Language', 'List', 'Media', 'MedicalSpecialty', 'Medicine', 'Name', 'PersonFunction', 'Population', 'Protocol', 'PublicService', 'Relationship', 'PersonFunction', 'SportsSeason', 'Spreadsheet', 'StarCluster', 'Statistic', 'Tank', 'TimePeriod', 'UnitOfWork', 'Unknown']' --project_name $1 --depth 1 --multi True
 
     # 2. Batch Paraphrasing
     # 2.1 Download BERT-Classifier
