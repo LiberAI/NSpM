@@ -45,8 +45,8 @@ SPECIAL_CLASSES = {
     'dbo:Athlete': ['dbo:LacrossePlayer'],
     'dbo:SportsTeam': ['dboBasketballTeam']
 }
-EXAMPLES_PER_TEMPLATE = 600
 
+# EXAMPLES_PER_TEMPLATE = 600
 
 def extract_bindings(data, template):
     matches = list()
@@ -316,12 +316,18 @@ if __name__ == '__main__':
                                metavar='templateFile', help='templates', required=True)
     requiredNamed.add_argument(
         '--output', dest='output', metavar='outputDirectory', help='dataset directory', required=True)
+    requiredNamed.add_argument(
+        '--examples', dest='examples', metavar='examples per template', help='dataset directory', required=False)
     args = parser.parse_args()
 
     template_file = args.templates
     output_dir = args.output
     use_resources_dump = args.continue_generation
-
+    examples = args.examples
+    if examples:
+        EXAMPLES_PER_TEMPLATE = examples
+    else:
+        EXAMPLES_PER_TEMPLATE = 600
    # print use_resources_dump => False
 
     time = datetime.datetime.today()
