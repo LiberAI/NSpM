@@ -3,7 +3,7 @@
 # $1 -- The project's name -- String -- Required
 # $2 -- Dimension of the GloVe embeddings -- Integer [50|100|200|300] -- Optional, 300 by default
 # $3 -- Number of unit in the LSTM cells -- Integer -- Optional, 512 by default
-# $4 -- Training steps
+# $4 -- Training steps -- Integer -- Optional, 60000 by default
 # $5 -- EXAMPLES_PER_TEMPLATE -- Integer -- Optional, 600 by default
 
 if [ ! -n "$1" ] ;then
