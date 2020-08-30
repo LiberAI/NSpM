@@ -39,7 +39,7 @@ def sparql_vocab(project_path):
 
 def add_s_tokens(path):
     with open(path+"/data.sparql", "r") as lines:
-        with open("./GloVe/GloVe-master/data_s.sparql", "w") as w:
+        with open(path+"/../../GloVe/data_s.sparql", "w") as w:
             for line in lines:
                 new_line = "<s> " + line.strip() + " </s>\n"
                 w.write(new_line)

@@ -51,7 +51,7 @@ def finetune_glove(project_path, glove_path="glove.6B.300d.txt", dimension=300):
             sentence = sentence.strip("\n")
             sentence = "<s> " + sentence + " </s>"
             for word in sentence.split():
-                word_en.append(word.strip(":").strip("\"").strip("»").strip("+").strip("?").replace("i̇", ""))
+                word_en.append(word.strip(":").strip("\"").strip("»").strip("+").strip("?"))
     print(len(word_en), word_en[:20])
 
     vocab_en = list(set(word_en) - set(["<s>", "</s>"]))
