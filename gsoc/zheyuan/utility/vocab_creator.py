@@ -12,7 +12,10 @@ def english_vocab(project_path):
                 word_en.append(word.strip(":").strip("\"").strip("»").strip("+").strip("?"))
 
     vocab_en = list(set(word_en))
-    vocab_en.remove("")
+    try:
+        vocab_en.remove("")
+    except:
+        print("There is no \'\' in vocab_en")
     with open(project_path+"/vocab.en", "w") as w:
         for vocab in vocab_en:
 
@@ -36,7 +39,7 @@ def sparql_vocab(project_path):
 
 def add_s_tokens(path):
     with open(path+"/data.sparql", "r") as lines:
-        with open("./GloVe/GloVe-master/data_s.sparql", "w") as w:
+        with open(path+"/../../GloVe/data_s.sparql", "w") as w:
             for line in lines:
                 new_line = "<s> " + line.strip() + " </s>\n"
                 w.write(new_line)

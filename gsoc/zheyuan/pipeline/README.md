@@ -3,19 +3,20 @@
 To run the complete pipeline, please use the command:
 
 ```bash
-./pipeline.sh [$1 Project's name] [$2 Integer] [$3 Integer]
+./pipeline.sh [$1 Project's name] [$2 Integer] [$3 Integer] [$4 Integer] [$5 Integer]
 ```
  $1 -- The project's name -- String -- Required
  $2 -- Dimension of the GloVe embeddings -- Integer [50|100|200|300] -- Optional, 300 by default
  $3 -- Number of unit in the LSTM cells -- Integer -- Optional, 512 by default
-
+ $4 -- Training steps -- Integer -- Optional, 60000 by default
+ $5 -- EXAMPLES_PER_TEMPLATE -- Integer -- Optional, 600 by default
 Examples
 
 ```bash
 ./pipeline.sh Project1
 ```
 ```bash
-./pipeline.sh Project2 300 512
+./pipeline.sh Project2 300 512 60000 600
 ```
 
 
