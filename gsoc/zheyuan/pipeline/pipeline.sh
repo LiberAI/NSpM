@@ -10,11 +10,12 @@ if [ ! -n "$1" ] ;then
     echo "you have not input a project name!"
 else
     echo "The project name will be set to $1"
-fi
+
 if [ ! -n "$2" ] ;then
     dimension=300
 elif [[ ! $2 =~ ^[0-9]*$ ]]; then
     echo "Please enter an integer [50|100|200|300] to the second parameter to set the dimension of Glove Embeddings;"
+    dimension=300
 elif [ $2 -le 50 ]; then
     dimension=50
     echo "The dimension of GloVe embeddings is set to $dimension"
@@ -32,7 +33,7 @@ if [ ! -n "$3" ] ;then
     num_units=512
 elif [[ ! $3 =~ ^[0-9]*$ ]]; then
     echo "Please enter an integer [ >=512 recommended ] to the third parameter to set the number of units of LSTM cells"
-
+    num_units=512
 else
     num_units=$3
     echo "The number of units of LSTM cells is set to $num_units"
@@ -41,7 +42,7 @@ if [ ! -n "$4" ] ;then
     training_steps=60000
 elif [[ ! $4 =~ ^[0-9]*$ ]]; then
     echo "Please enter an integer [ >=60000 recommended ] to the fourth parameter to set the number of training steps for Learner"
-
+    training_steps=60000
 else
     training_steps=$4
     echo "The number of training steps for Learner is set to $training_steps"
@@ -50,7 +51,7 @@ if [ ! -n "$5" ] ;then
     examples_per_template=600
 elif [[ ! $5 =~ ^[0-9]*$ ]]; then
     echo "Please enter an integer [ >=600 recommended ] to the fifth parameter to set the number of examples per template"
-
+    examples_per_template=600
 else
     examples_per_template=$5
     echo "The number of examples per template is set to $examples_per_template"
@@ -137,4 +138,4 @@ fi
     python -m nmt.nmt --src=en --tgt=sparql --embed_prefix=../data/$1/embed --vocab_prefix=../data/$1/vocab --dev_prefix=../data/$1/dev --test_prefix=../data/$1/test --train_prefix=../data/$1/train --out_dir=../data/$1"_"$dimension"d_model" --num_train_steps=$training_steps --steps_per_stats=100 --num_layers=2 --num_units=$num_units --dropout=0.2 --metrics=bleu,accuracy
     cd ..
 
-
+fi
