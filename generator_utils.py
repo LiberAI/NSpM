@@ -91,9 +91,9 @@ REPLACEMENTS = [
     ['(', ' attr_open '],
     [') ', ')', ' attr_close '],
     ['{', ' brack_open '],
+    ['. }', ' sep_dot brack_close '],
     ['}', ' brack_close '],
     [' . ', ' sep_dot '],
-    ['. ', ' sep_dot '],
     ['?', 'var_'],
     ['*', 'wildcard'],
     [' <= ', ' math_leq '],
@@ -174,7 +174,7 @@ def read_template_file(file):
     line_number = 1
     with open(file) as f:
         for line in f:
-            values = line[:-1].split(';')
+            values = line[:-1].split('\t')
             target_classes = [values[0] or None, values[1] or None, values[2] or None]
             question = values[3]
             query = values[4]

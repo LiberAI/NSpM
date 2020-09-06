@@ -3,18 +3,14 @@ import pprint
 import json
 import sys
 import urllib
-from urllib2 import urlopen
 import argparse
 from bs4 import BeautifulSoup
 
 
 def get_url(url):
-        """Fuction to extract the http://mappings.dbpedia.org/server/ontology/classes/<some entity>
+        """Fuction to extract the http://mappings.dbpedia.org/server/ontology/classes/<some entity> 
         page link for the given http://mappings.dbpedia.org/index.php/OntologyClass:<some entity>"""
-        try:  # python3
-                page = urllib.request.urlopen(url)
-        except:  # python2
-                page = urlopen(url)
+        page = urllib.request.urlopen(url)
         soup = BeautifulSoup(page, "html.parser")
         link = soup.findAll('a', attrs={"rel": "nofollow"})[0]['href']
         return link
@@ -26,7 +22,7 @@ def generate_url(given_label):
         data types from the DBpedia database. (Like:​ http://mappings.dbpedia.org/server/ontology/classes/Place​ )
         - It returns a url string to the calling function.
         """
-        xmldoc = open('../utility/dbpedia.owl').read()
+        xmldoc = open('../utility/dbpedia.owl', encoding="utf-8").read()
         jsondoc = ((xmltodict.parse(xmldoc)))
         count = 0
 
@@ -49,7 +45,7 @@ def generate_url(given_label):
                                         #print("Sub-class of: "+val['rdfs:subClassOf']['@rdf:resource'])
                                         pass
                         url = val['prov:wasDerivedFrom']['@rdf:resource']
-                        #print("URL:" + url)
+                        # print("URL:" + get_url(url))
                         if(given_label == val['@rdf:about'].split('http://dbpedia.org/ontology/')[-1]):
                                 return [get_url(url),about]
         return ["None","None"]
@@ -72,7 +68,7 @@ if __name__ == "__main__":
         pass
 
 def generate_url_spec(given_label):
-        xmldoc = open('../utility/dbpedia.owl').read()
+        xmldoc = open('../utility/dbpedia.owl', encoding="utf-8").read()
         jsondoc = ((xmltodict.parse(xmldoc)))
         for onto in jsondoc['rdf:RDF'].keys():
                 if(not (onto == 'owl:DatatypeProperty' or onto == "owl:ObjectProperty")):
