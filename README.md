@@ -109,6 +109,20 @@ py.test *.py
 }
 ```
 
+### Exploring Sequence-to-Sequence Models for SPARQL Pattern Composition (2020)
+
+* arXiv: https://arxiv.org/abs/2010.10900
+
+```
+@inproceedings{panchbhai-2020,
+    author = "Anand Panchbhai and Tommaso Soru and Edgard Marx",
+    title = "Exploring Sequence-to-Sequence Models for {SPARQL} Pattern Composition",
+    year = "2020",
+    journal = "First Indo-American Knowledge Graph and Semantic Web Conference",
+    url = "https://arxiv.org/abs/2010.10900",
+}
+```
+
 ### Liber AI on Medium (2020)
 
 * [What is a Neural SPARQL Machine?](https://medium.com/liber-ai/what-is-a-neural-sparql-machine-c35945a5d278)
