@@ -10,8 +10,6 @@ gast==0.2.2
 grpcio==1.27.2
 h5py==2.10.0
 html5lib==0.9999999
-Keras-Applications==1.0.8
-Keras-Preprocessing==1.1.0
 Markdown==3.1.1
 mock==3.0.5
 numpy==1.16.6
@@ -20,8 +18,8 @@ pytest==5.4.1
 rdflib==4.2.2
 six==1.14.0
 soupsieve==1.9.5
-tensorboard==1.15.0
-tensorflow==1.15.2
+tensorboard==2.1.0
+tensorflow==2.1.0
 termcolor==1.1.0
 tqdm==4.43.0
 Werkzeug==1.0.0
