@@ -8,7 +8,7 @@ A Machine-Translation Approach for Question Answering over Knowledge Graphs.
 
 ## IMPORTANT
 
-If you are looking for the code for the papers _"SPARQL as a Foreign Language"_ or _"Neural Machine Translation for Query Construction and Composition"_ please checkout tag [v0.1.0-akaha](https://github.com/LiberAI/NSpM/tree/v0.1.0-akaha).
+If you are looking for the code for papers _"SPARQL as a Foreign Language"_ and _"Neural Machine Translation for Query Construction and Composition"_ please checkout tag [v0.1.0-akaha](https://github.com/LiberAI/NSpM/tree/v0.1.0-akaha) or branch [v1](https://github.com/LiberAI/NSpM/tree/v1).
 
 ## Install
 
@@ -24,22 +24,21 @@ Clone the repository.
 pip install -r requirements.txt
 ```
 
-## Usage
+## Example of usage
 
 ### The Generator module
 
 #### Pre-generated data
 
-You can extract pre-generated data and model checkpoints from `data/art_30.zip` in folders having the respective names.
+You can extract pre-generated data and model checkpoints from [here](https://github.com/LiberAI/NSpM/blob/7b2ac24f3d58df31c8e8b411d915c1a27429cc98/data/art_30.zip?raw=true) in folders having the respective names.
 
 #### Manual Generation (Alternative to using pre-generated data)
 
 The template used in the paper can be found in a file such as `Annotations_F30_art.csv`. `data/art_30` will be the ID of the working dataset used throughout the tutorial. To generate the training data, launch the following command.
 
-<!-- Made monument_300 directory in data directory due to absence of monument_300 folder in data directory  -->
 ```bash
-mkdir data/art_30
-python generator.py --templates data/Annotations_F30_art.csv --output data/art_30
+mkdir -p data/art_30
+python generator.py --templates data/templates/Annotations_F30_art.csv --output data/art_30
 ```
 
 Launch the command if you want to build dataset seprately else it will internally be called while training.
@@ -50,8 +49,7 @@ python data_gen.py --input data/art_30 --output data/art_30
 
 ### The Learner module
 
-<!-- Just a simple note to go back to the initial directory.-->
-Now go back to the initial directory and launch `train.py` to train the model. Currently the epochs and batch_size is not parametrized for that you can change the epoch is train.py and batch size in data_gen.py (recommended batch size for large 64, medium 32 and small like art_30 is 16) also epochs varies with batch size for art 30 its 40.
+Now go back to the initial directory and launch `learner.py` to train the model. Currently the epochs and batch_size is not parametrized for that you can change the epoch is train.py and batch size in data_gen.py (recommended batch size for large 64, medium 32 and small like art_30 is 16) also epochs varies with batch size for art 30 its 40.
 
 ```bash
 python learner.py --input data/art_30 --output data/art_30
