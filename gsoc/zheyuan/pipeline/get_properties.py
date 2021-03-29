@@ -1,5 +1,4 @@
 import urllib
-from urllib2 import urlopen
 import json
 import sys
 import csv
@@ -9,7 +8,7 @@ import os
 from bs4 import BeautifulSoup
 from tqdm import tqdm
 
-def get_properties(url,  project_name="test_project", output_file = "get_properties.csv"):
+def get_properties(url,  project_name="test_project", output_file = "get_properties.csv", multi=False):
     """
     - This function extracts the information regarding : [Name, Label, Domain, Range] from a page like this :
     http://mappings.dbpedia.org/server/ontology/classes/Place and saves it in a file in CSV format.
@@ -18,14 +17,14 @@ def get_properties(url,  project_name="test_project", output_file = "get_propert
     - This function also returns a 2D list of the information mentioned above to the calling
     function
     """
-    try:  # python3
-        page = urllib.request.urlopen(url)
-    except:  # python2
-        page = urlopen(url)
+    page = urllib.request.urlopen(url)
     soup = BeautifulSoup(page, "html.parser")
     if(not os.path.isdir(project_name)):
         os.makedirs(project_name)
-    output_file = open(project_name+"/" + output_file, 'w')
+    if multi:
+        output_file = open(project_name + "/" + output_file, 'a', encoding="utf-8")
+    else:
+        output_file = open(project_name+"/" + output_file, 'w', encoding="utf-8")
     fl = 0
     accum = []
     for rows in tqdm(soup.find_all("tr")):
@@ -40,7 +39,9 @@ def get_properties(url,  project_name="test_project", output_file = "get_propert
         label = rows.find_all("td")[1].get_text()
         dom = rows.find_all("td")[2].get_text()
         rng = rows.find_all("td")[3].get_text()
-        URL_name = ((rows.find_all("td")[0].find('a').attrs['href']))
+        if rows.find_all("td")[0].find('a'):
+            URL_name = ((rows.find_all("td")[0].find('a').attrs['href']))
+
         final = name + "," + label + "," + dom + "," + rng 
         #+ ","+ URL_name.split(':')[-1]
         accum.append(final)
