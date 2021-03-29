@@ -73,13 +73,14 @@ py.test *.py
 
 ## Use cases & integrations
 
+* Components of the [Adam Medical platform](https://www.graphen.ai/products/mi_feature.html) partly developed by [Jose A. Alvarado](https://www.linkedin.com/in/josealvaradoguzman/) at Graphen (including a humanoid robot called Dr Adam), rely on NSpM technology.
 * The [Telegram NSpM chatbot](https://github.com/AKSW/NSpM/wiki/NSpM-Telegram-Bot) offers an integration of NSpM with the Telegram messaging platform.
-* A [neural question answering model for DBpedia](https://github.com/dbpedia/neural-qa) is a project supported by the [Google Summer of Code](https://summerofcode.withgoogle.com/) program that relies on NSpM.
+* The [Google Summer of Code](https://summerofcode.withgoogle.com/) program has been supporting 6 students to work on NSpM-backed project "[A neural question answering model for DBpedia](https://github.com/dbpedia/neural-qa)" since 2018.
 * A [question answering system](https://github.com/qasim9872/question-answering-system) was implemented on top of NSpM by [Muhammad Qasim](https://github.com/qasim9872).
 
-## Papers
+## Publications
 
-### Soru and Marx et al., 2017
+### SPARQL as a Foreign Language (2017)
 
 * arXiv: https://arxiv.org/abs/1708.07624
 
@@ -93,7 +94,7 @@ py.test *.py
 }
 ```
 
-### Soru et al., 2018
+### Neural Machine Translation for Query Construction and Composition (2018)
 
 * NAMPI Website: https://uclnlp.github.io/nampi/
 * arXiv: https://arxiv.org/abs/1806.10478
@@ -108,11 +109,33 @@ py.test *.py
 }
 ```
 
+### Exploring Sequence-to-Sequence Models for SPARQL Pattern Composition (2020)
+
+* arXiv: https://arxiv.org/abs/2010.10900
+
+```
+@inproceedings{panchbhai-2020,
+    author = "Anand Panchbhai and Tommaso Soru and Edgard Marx",
+    title = "Exploring Sequence-to-Sequence Models for {SPARQL} Pattern Composition",
+    year = "2020",
+    journal = "First Indo-American Knowledge Graph and Semantic Web Conference",
+    url = "https://arxiv.org/abs/2010.10900",
+}
+```
+
+### Liber AI on Medium (2020)
+
+* [What is a Neural SPARQL Machine?](https://medium.com/liber-ai/what-is-a-neural-sparql-machine-c35945a5d278)
+
 ## Contact
 
+### Questions?
 * Primary contacts: [Tommaso Soru](http://tommaso-soru.it) and [Edgard Marx](http://emarx.org).
 * Neural SPARQL Machines [mailing list](https://groups.google.com/forum/#!forum/neural-sparql-machines).
-* Follow the [project on ResearchGate](https://www.researchgate.net/project/Neural-SPARQL-Machines).
-* Follow [Liber AI Research](http://liberai.org) on [Twitter](https://twitter.com/theLiberAI).
+* Join the conversation on [Gitter](https://gitter.im/LiberAI/community).
 
-    ![Liber AI logo.](http://www.liberai.org/img/Liber-AI-logo-name-200px.png "Liber AI")
+### Follow us
+* Follow the [project on ResearchGate](https://www.researchgate.net/project/Neural-SPARQL-Machines).
+* Follow Liber AI Research on [Twitter](https://twitter.com/theLiberAI).
+
+<p align="center"><img tooltip="Liber AI" src="http://www.liberai.org/img/Liber-AI-logo-name-200px.png" alt="Liber AI logo" border="0"></p>
