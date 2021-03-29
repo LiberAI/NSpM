@@ -2,19 +2,29 @@
 
 [![Python 3.7](https://img.shields.io/badge/python-3.7-blue.svg)](https://www.python.org/downloads/release/python-370/)
 
-A Attention-based Machine Translation Approach for Question Answering over Knowledge Graphs.(https://www.tensorflow.org/tutorials/text/nmt_with_attention)
+A Machine-Translation Approach for Question Answering over Knowledge Graphs.
 
 ![What does a NSpM do?](http://www.liberai.org/img/NSpM-image.png "What does a NSpM do?")
 
-## Code
+## IMPORTANT
 
-clone the repo
+If you are looking for the code for the papers _"SPARQL as a Foreign Language"_ or _"Neural Machine Translation for Query Construction and Composition"_ please checkout tag [v0.1.0-akaha](https://github.com/LiberAI/NSpM/tree/v0.1.0-akaha).
 
-### Python setup
+## Install
+
+### Via pip
+
+Coming soon!
+
+### Local setup
+
+Clone the repository.
 
 ```bash
 pip install -r requirements.txt
 ```
+
+## Usage
 
 ### The Generator module
 
@@ -44,7 +54,7 @@ python data_gen.py --input data/art_30 --output data/art_30
 Now go back to the initial directory and launch `train.py` to train the model. Currently the epochs and batch_size is not parametrized for that you can change the epoch is train.py and batch size in data_gen.py (recommended batch size for large 64, medium 32 and small like art_30 is 16) also epochs varies with batch size for art 30 its 40.
 
 ```bash
-python train.py --input data/art_30 --output data/art_30
+python learner.py --input data/art_30 --output data/art_30
 ```
 
 This command will create a model checkpoints in `data/art_30`.
@@ -54,9 +64,8 @@ This command will create a model checkpoints in `data/art_30`.
 Predict the SPARQL query for a given question it will store the detailed output in output_query.
 
 ```bash
-python translate.py --input data/art_30 --output data/art_30 --inputstr "yuncken freeman has architected in how many cities?"
+python interpreter.py --input data/art_30 --output data/art_30 --inputstr "yuncken freeman has architected in how many cities?"
 ```
-
 
 ## Use cases & integrations
 
