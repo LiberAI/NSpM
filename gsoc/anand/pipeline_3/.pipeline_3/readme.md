@@ -38,7 +38,7 @@ generate_url​ (namespace,class){
 }
 ```
 
-- To accomplish this, an owl file containing all ontology related details was used, [Owl File](http://mappings.dbpedia.org/server/ontology/dbpedia.owl). Based on the label first corresponding derived from page's URL was extracted by parsing the owl file.
+- To accomplish this, an owl file containing all ontology related details was used, [Owl File](https://nspm-models.s3.eu-west-2.amazonaws.com/misc/dbpedia.owl). Based on the label first corresponding derived from page's URL was extracted by parsing the owl file.
 
 - The page related to this URL contained the URL of the corresponding properties page for the given entity of the form:
 

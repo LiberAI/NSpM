@@ -16,7 +16,7 @@ python final_formatting.py --rs <0 IF TO RUN THE WHOLE CODE | 1 TO RUN THE FUNTI
 Example:
 
 ```bash
-python final_formatting.py --rs 0 --uri_file ../uri_file_dbpedia-201610-properties.tsv --url http://mappings.dbpedia.org/server/ontology/classes/Place --output_file test_res.csv --project_name test --namespace ontology
+python final_formatting.py --rs 0 --uri_file ../../../data/properties/dbpedia-201610-properties.tsv --url http://mappings.dbpedia.org/server/ontology/classes/Place --output_file test_res.csv --project_name test --namespace ontology
 
 ```
 
@@ -116,7 +116,7 @@ python composite_template.py --rs <0 IF TO RUN THE WHOLE CODE | 1 TO RUN THE FUN
 Example:
 
 ```bash
-python composite_template.py --rs 0 --uri_file ../uri_file_dbpedia-201610-properties.tsv --url http://mappings.dbpedia.org/server/ontology/classes/Place --output_file test_res.csv --project_name test --namespace ontology
+python composite_template.py --rs 0 --uri_file ../../../data/properties/dbpedia-201610-properties.tsv --url http://mappings.dbpedia.org/server/ontology/classes/Place --output_file test_res.csv --project_name test --namespace ontology
 
 ```
 

@@ -7,7 +7,7 @@ train set.
 - Frequency Thresholding: The vocabulary in the test set is present in the train 
 set for a given number of times.
 
-To run the code just run the following command:
+To run the code, download the files from [here](https://nspm-models.s3.eu-west-2.amazonaws.com/misc/anand-pipeline_3-Test_Fixer-files.zip), then run the following command:
 
 ```python 
 python text_fixer.py
