@@ -1,15 +1,16 @@
 #!/usr/bin/env python
 """
 
-Neural SPARQL Machines - Split into train, dev, and test sets.
+Neural SPARQL Machines - Script to split data into train, dev, and test sets.
 
 'SPARQL as a Foreign Language' by Tommaso Soru and Edgard Marx et al., SEMANTiCS 2017
 https://arxiv.org/abs/1708.07624
 
-Version 1.0.0
+Version 2.0.0
 
 """
 import argparse
+#!/usr/bin/env python
 import random
 import os
 import io

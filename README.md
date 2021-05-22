@@ -62,7 +62,7 @@ This command will create a model checkpoints in `data/art_30`.
 Predict the SPARQL query for a given question it will store the detailed output in output_query.
 
 ```bash
-python interpreter.py --input data/art_30 --output data/art_30 --inputstr "yuncken freeman has architected in how many cities?"
+python interpreter.py --input data/art_30 --output data/art_30 --query "yuncken freeman has architected in how many cities?"
 ```
 
 ## Use cases & integrations

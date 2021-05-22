@@ -1,16 +1,18 @@
+#!/usr/bin/env python
+"""
+
+Neural SPARQL Machines - Neural Machine Translation.
+
+'SPARQL as a Foreign Language' by Tommaso Soru and Edgard Marx et al., SEMANTiCS 2017
+https://arxiv.org/abs/1708.07624
+
+Version 2.0.0
+
+"""
 import tensorflow as tf
 
-import matplotlib.pyplot as plt
-import matplotlib.ticker as ticker
-from sklearn.model_selection import train_test_split
+import pickle
 
-import unicodedata
-import re
-import numpy as np
-import os
-import io
-import time
-from data_gen import *
 
 class Encoder(tf.keras.Model):
   def __init__(self, vocab_size, embedding_dim, enc_units, batch_sz):
@@ -31,13 +33,6 @@ class Encoder(tf.keras.Model):
   def initialize_hidden_state(self):
     return tf.zeros((self.batch_sz, self.enc_units))
 
-encoder = Encoder(vocab_inp_size, embedding_dim, units, BATCH_SIZE)
-
-# sample input
-sample_hidden = encoder.initialize_hidden_state()
-sample_output, sample_hidden = encoder(example_input_batch, sample_hidden)
-print ('Encoder output shape: (batch size, sequence length, units) {}'.format(sample_output.shape))
-print ('Encoder Hidden state shape: (batch size, units) {}'.format(sample_hidden.shape))
 
 class BahdanauAttention(tf.keras.layers.Layer):
   def __init__(self, units):
@@ -68,11 +63,6 @@ class BahdanauAttention(tf.keras.layers.Layer):
 
     return context_vector, attention_weights
 
-attention_layer = BahdanauAttention(10)
-attention_result, attention_weights = attention_layer(sample_hidden, sample_output)
-
-print("Attention result shape: (batch size, units) {}".format(attention_result.shape))
-print("Attention weights shape: (batch_size, sequence_length, 1) {}".format(attention_weights.shape))
 
 class Decoder(tf.keras.Model):
   def __init__(self, vocab_size, embedding_dim, dec_units, batch_sz):
@@ -110,27 +100,88 @@ class Decoder(tf.keras.Model):
 
     return x, state, attention_weights
 
-decoder = Decoder(vocab_tar_size, embedding_dim, units, BATCH_SIZE)
 
-sample_decoder_output, _, _ = decoder(tf.random.uniform((BATCH_SIZE, 1)),
-                                      sample_hidden, sample_output)
+class NeuralMTConfig(object):
+  """docstring for NeuralMTConfig"""
+  def __init__(self, 
+              vocab_inp_size, 
+              vocab_tar_size, 
+              embedding_dim, 
+              units, 
+              batch_size, 
+              example_input_batch, 
+              max_length_targ, 
+              max_length_inp,
+              inp_lang,
+              targ_lang
+              ):
+    self.vocab_inp_size = vocab_inp_size
+    self.vocab_tar_size = vocab_tar_size
+    self.embedding_dim = embedding_dim
+    self.units = units
+    self.batch_size = batch_size
+    self.example_input_batch = example_input_batch
+    self.max_length_targ = max_length_targ
+    self.max_length_inp = max_length_inp
+    self.inp_lang = inp_lang
+    self.targ_lang = targ_lang
 
-print ('Decoder output shape: (batch_size, vocab size) {}'.format(sample_decoder_output.shape))
 
-optimizer = tf.keras.optimizers.Adam()
-loss_object = tf.keras.losses.SparseCategoricalCrossentropy(
-    from_logits=True, reduction='none')
+class NeuralMT(object):
 
-def loss_function(real, pred):
-  mask = tf.math.logical_not(tf.math.equal(real, 0))
-  loss_ = loss_object(real, pred)
+  """docstring for NeuralMT"""
+  def __init__(self, config):
+    self.loss_object = tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True, 
+                                                                      reduction='none')
 
-  mask = tf.cast(mask, dtype=loss_.dtype)
-  loss_ *= mask
+    encoder = Encoder(config.vocab_inp_size, config.embedding_dim, config.units, config.batch_size)
 
-  return tf.reduce_mean(loss_)
+    # sample input
+    sample_hidden = encoder.initialize_hidden_state()
+    sample_output, sample_hidden = encoder(config.example_input_batch, sample_hidden)
+    print (f"Encoder output shape: (batch size, sequence length, units) {sample_output.shape}")
+    print (f"Encoder Hidden state shape: (batch size, units) {sample_hidden.shape}")
 
-checkpoint = tf.train.Checkpoint(optimizer=optimizer,
-                                 encoder=encoder,
-                                 decoder=decoder)
+    attention_layer = BahdanauAttention(10)
+    attention_result, attention_weights = attention_layer(sample_hidden, sample_output)
 
+    print(f"Attention result shape: (batch size, units) {attention_result.shape}")
+    print(f"Attention weights shape: (batch_size, sequence_length, 1) {attention_weights.shape}")
+
+    decoder = Decoder(config.vocab_tar_size, config.embedding_dim, config.units, config.batch_size)
+
+    sample_decoder_output, _, _ = decoder(tf.random.uniform((config.batch_size, 1)),
+                                          sample_hidden, sample_output)
+
+    print (f"Decoder output shape: (batch_size, vocab size) {sample_decoder_output.shape}")
+
+    optimizer = tf.keras.optimizers.Adam()
+
+    checkpoint = tf.train.Checkpoint(optimizer=optimizer,
+                                     encoder=encoder,
+                                     decoder=decoder)
+
+    self.config = config
+    self.encoder = encoder
+    self.decoder = decoder
+    self.optimizer = optimizer
+    self.checkpoint = checkpoint             # TODO: find way to save the parameters needed to recreate these objects
+
+  def loss_function(self, real, pred):
+    mask = tf.math.logical_not(tf.math.equal(real, 0))
+    loss_ = self.loss_object(real, pred)
+
+    mask = tf.cast(mask, dtype=loss_.dtype)
+    loss_ *= mask
+
+    return tf.reduce_mean(loss_)
+
+  def save(self, directory):
+    with open(f"{directory}/neuralmt.pkl", "wb") as f_out:
+      pickle.dump(self.config, f_out)
+
+  @staticmethod
+  def load(directory):
+    with open(f"{directory}/neuralmt.pkl", "rb") as f:
+      config = pickle.load(f)
+    return config
