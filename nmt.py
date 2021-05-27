@@ -1,16 +1,5 @@
 import tensorflow as tf
-
-import matplotlib.pyplot as plt
-import matplotlib.ticker as ticker
-from sklearn.model_selection import train_test_split
-
-import unicodedata
-import re
 import numpy as np
-import os
-import io
-import time
-from data_gen import *
 
 class Encoder(tf.keras.Model):
   def __init__(self, vocab_size, embedding_dim, enc_units, batch_sz):
@@ -31,13 +20,6 @@ class Encoder(tf.keras.Model):
   def initialize_hidden_state(self):
     return tf.zeros((self.batch_sz, self.enc_units))
 
-encoder = Encoder(vocab_inp_size, embedding_dim, units, BATCH_SIZE)
-
-# sample input
-sample_hidden = encoder.initialize_hidden_state()
-sample_output, sample_hidden = encoder(example_input_batch, sample_hidden)
-print ('Encoder output shape: (batch size, sequence length, units) {}'.format(sample_output.shape))
-print ('Encoder Hidden state shape: (batch size, units) {}'.format(sample_hidden.shape))
 
 class BahdanauAttention(tf.keras.layers.Layer):
   def __init__(self, units):
@@ -68,11 +50,6 @@ class BahdanauAttention(tf.keras.layers.Layer):
 
     return context_vector, attention_weights
 
-attention_layer = BahdanauAttention(10)
-attention_result, attention_weights = attention_layer(sample_hidden, sample_output)
-
-print("Attention result shape: (batch size, units) {}".format(attention_result.shape))
-print("Attention weights shape: (batch_size, sequence_length, 1) {}".format(attention_weights.shape))
 
 class Decoder(tf.keras.Model):
   def __init__(self, vocab_size, embedding_dim, dec_units, batch_sz):
@@ -110,18 +87,9 @@ class Decoder(tf.keras.Model):
 
     return x, state, attention_weights
 
-decoder = Decoder(vocab_tar_size, embedding_dim, units, BATCH_SIZE)
-
-sample_decoder_output, _, _ = decoder(tf.random.uniform((BATCH_SIZE, 1)),
-                                      sample_hidden, sample_output)
-
-print ('Decoder output shape: (batch_size, vocab size) {}'.format(sample_decoder_output.shape))
-
-optimizer = tf.keras.optimizers.Adam()
-loss_object = tf.keras.losses.SparseCategoricalCrossentropy(
-    from_logits=True, reduction='none')
 
 def loss_function(real, pred):
+  loss_object = tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True, reduction='none')
   mask = tf.math.logical_not(tf.math.equal(real, 0))
   loss_ = loss_object(real, pred)
 
@@ -129,8 +97,3 @@ def loss_function(real, pred):
   loss_ *= mask
 
   return tf.reduce_mean(loss_)
-
-checkpoint = tf.train.Checkpoint(optimizer=optimizer,
-                                 encoder=encoder,
-                                 decoder=decoder)
-

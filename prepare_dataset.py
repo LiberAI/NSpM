@@ -2,7 +2,6 @@ import tensorflow as tf
 
 import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
-from sklearn.model_selection import train_test_split
 
 import unicodedata
 import re
@@ -69,4 +68,21 @@ def convert(lang, tensor):
     if t!=0:
       print ("%d ----> %s" % (t, lang.index_word[t]))
 
+def merging_datafile(input_dir,output_dir):
+    input_diren=input_dir+'/data.en'
+    input_dirspq=input_dir+'/data.sparql'
+    output_dir+='/data.txt'
+    file1 = open(input_diren,'r',encoding="utf8")
+    Lines1 = file1.readlines()
+    file2 = open(input_dirspq,'r',encoding="utf8")
+    Lines2 = file2.readlines()
+    s=[]
+    for i in range(len(Lines1)):
+        s.append(Lines1[i].replace('\n'," ")+"\t "+Lines2[i])
 
+    filef = open(output_dir,'w',encoding="utf8")
+    filef.writelines(s)
+    file1.close()
+    file2.close()
+    filef.close()
+    return output_dir

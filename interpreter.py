@@ -3,15 +3,12 @@ import argparse
 
 import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
-from sklearn.model_selection import train_test_split
 
-import unicodedata
-import re
 import numpy as np
 import os
-import io
-import time
-from nmt import *
+import pickle
+from prepare_dataset import preprocess_sentence
+from nmt import Encoder,Decoder
 from generator_utils import decode, fix_URI
 
 def evaluate(sentence):
@@ -96,20 +93,69 @@ def translate(sentence,ou_dir):
   plot_attention(attention_plot, sentence.split(' '), result.split(' '),ou_dir)
   return result
 
-inputs = args.inputstr
-model_dir = input_dir
-model_dir+='/training_checkpoints'
-checkpoint.restore(tf.train.latest_checkpoint(model_dir))
-finaltrans = "input qurey : \n"
-finaltrans += inputs
-finaltrans += "\n \n \n output qurey : \n"
-finaltranso = translate(inputs,input_dir)
-finaltrans += finaltranso
-finaltrans += '\n \n \n output query decoded : \n'
-finaltranso = decode(finaltranso)
-finaltranso = fix_URI(finaltranso)
-print('Decoded translation: {}'.format(finaltranso))
-finaltrans += finaltranso
-outputfile = open((input_dir+'/output_query.txt'),'w',encoding="utf8")
-outputfile.writelines([finaltrans])
-outputfile.close()
+
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser()
+    requiredNamed = parser.add_argument_group('required named arguments')
+    requiredNamed.add_argument(
+        '--input', dest='input', metavar='inputDirectory', help='dataset directory', required=True)
+    requiredNamed.add_argument(
+        '--output', dest='output', metavar='outputDirectory', help='dataset directory', required=True)
+    requiredNamed.add_argument(
+            '--inputstr', dest='inputstr', metavar='inputString', help='Input string for translation', required=False)
+
+    args = parser.parse_args()
+    inputs = args.inputstr
+    model_dir = args.input
+    input_dir = args.input
+    model_dir+='/training_checkpoints'
+    pic_dir=input_dir+'/pickle_objects'
+
+    embedding_dim = 256
+    units = 1024
+
+
+    with open(pic_dir+'/input_tensor.pickle', 'rb') as f:
+	    input_tensor=pickle.load(f)
+    with open(pic_dir+'/target_tensor.pickle', 'rb') as f:
+	    target_tensor=pickle.load(f)
+    with open(pic_dir+'/inp_lang.pickle', 'rb') as f:
+	    inp_lang=pickle.load(f)
+    with open(pic_dir+'/targ_lang.pickle', 'rb') as f:
+	    targ_lang=pickle.load(f)
+    with open(pic_dir+'/BATCH_SIZE.pickle', 'rb') as f:
+	    BATCH_SIZE=pickle.load(f)
+
+    # Calculate max_length of the target tensors
+    max_length_targ, max_length_inp = target_tensor.shape[1], input_tensor.shape[1]
+
+    vocab_inp_size = len(inp_lang.word_index)+1
+    vocab_tar_size = len(targ_lang.word_index)+1
+
+
+    encoder = Encoder(vocab_inp_size, embedding_dim, units, BATCH_SIZE)
+    decoder = Decoder(vocab_tar_size, embedding_dim, units, BATCH_SIZE)
+
+    optimizer = tf.keras.optimizers.Adam()
+    checkpoint = tf.train.Checkpoint(optimizer=optimizer,
+                                 encoder=encoder,
+                                 decoder=decoder)
+
+
+    checkpoint.restore(tf.train.latest_checkpoint(model_dir))
+
+
+    finaltrans = "input qurey : \n"
+    finaltrans += inputs
+    finaltrans += "\n \n \n output qurey : \n"
+    finaltranso = translate(inputs,input_dir)
+    finaltrans += finaltranso
+    finaltrans += '\n \n \n output query decoded : \n'
+    finaltranso = decode(finaltranso)
+    finaltranso = fix_URI(finaltranso)
+    print('Decoded translation: {}'.format(finaltranso))
+    finaltrans += finaltranso
+    outputfile = open((input_dir+'/output_query.txt'),'w',encoding="utf8")
+    outputfile.writelines([finaltrans])
+    outputfile.close()
