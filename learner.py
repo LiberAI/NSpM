@@ -90,14 +90,14 @@ if __name__ == '__main__':
     requiredNamed.add_argument(
         '--output', dest='output', metavar='outputDirectory', help='dataset directory', required=True)
     requiredNamed.add_argument(
-            '-BatchSize', dest='BatchSize',type=int, help='Input Batch Size for dataset according to data size', required=True)
+            '--batch-size', dest='BatchSize', help='Input Batch Size for dataset according to data size', required=True)
     requiredNamed.add_argument(
-            '-Epochs', dest='Epochs',type=int, help='Input string for translation', required=True)
+            '--epochs', dest='Epochs', help='Input string for translation', required=True)
     args = parser.parse_args()
     input_dir = args.input
     output_dir = args.output
-    BATCH_SIZE = args.BatchSize
-    Epoc=args.Epochs
+    BATCH_SIZE = int(args.BatchSize)
+    Epoc=int(args.Epochs)
     output_direc = merging_datafile(input_dir,output_dir)
     pic_dir=input_dir+'/pickle_objects'
     os.mkdir(pic_dir)

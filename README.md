@@ -52,7 +52,7 @@ python data_gen.py --input data/art_30 --output data/art_30
 Now go back to the initial directory and launch `learner.py` to train the model. 
 
 ```bash
-python learner.py --input data/art_30 --output data/art_30 -BatchSize 32 -Epochs 40
+python learner.py --input data/art_30 --output data/art_30 --batch-size 32 --epochs 40
 ```
 
 This command will create a model checkpoints in `data/art_30` and some pickle files in `data/art_30/pickle_objects`.
