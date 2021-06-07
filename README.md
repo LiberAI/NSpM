@@ -49,13 +49,13 @@ python data_gen.py --input data/art_30 --output data/art_30
 
 ### The Learner module
 
-Now go back to the initial directory and launch `learner.py` to train the model. Currently the epochs and batch_size is not parametrized for that you can change the epoch is train.py and batch size in data_gen.py (recommended batch size for large 64, medium 32 and small like art_30 is 16) also epochs varies with batch size for art 30 its 40.
+Now go back to the initial directory and launch `learner.py` to train the model. 
 
 ```bash
-python learner.py --input data/art_30 --output data/art_30
+python learner.py --input data/art_30 --output data/art_30 --batch-size 32 --epochs 40
 ```
 
-This command will create a model checkpoints in `data/art_30`.
+This command will create a model checkpoints in `data/art_30` and some pickle files in `data/art_30/pickle_objects`.
 
 ### The Interpreter module
 
