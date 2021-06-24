@@ -30,7 +30,7 @@ pip install -r requirements.txt
 
 #### Pre-generated data
 
-You can extract pre-generated data and model checkpoints from [here](https://github.com/LiberAI/NSpM/blob/7b2ac24f3d58df31c8e8b411d915c1a27429cc98/data/art_30.zip?raw=true) in folders having the respective names.
+You can extract pre-generated data and model checkpoints from [here](https://nspm-models.s3.eu-west-2.amazonaws.com/v2/art_30.zip) (1.1 GB) in folders having the respective names.
 
 #### Manual Generation (Alternative to using pre-generated data)
 
