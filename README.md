@@ -2,73 +2,67 @@
 
 [![Python 3.7](https://img.shields.io/badge/python-3.7-blue.svg)](https://www.python.org/downloads/release/python-370/)
 
-A LSTM-based Machine Translation Approach for Question Answering over Knowledge Graphs.
+A Machine-Translation Approach for Question Answering over Knowledge Graphs.
 
 ![What does a NSpM do?](http://www.liberai.org/img/NSpM-image.png "What does a NSpM do?")
 
-## Code
+## IMPORTANT
 
-Install `git-lfs` in your machine, then fetch all files and submodules.
+If you are looking for the code for papers _"SPARQL as a Foreign Language"_ and _"Neural Machine Translation for Query Construction and Composition"_ please checkout tag [v0.1.0-akaha](https://github.com/LiberAI/NSpM/tree/v0.1.0-akaha) or branch [v1](https://github.com/LiberAI/NSpM/tree/v1).
 
-```bash
-git lfs fetch
-git lfs checkout
-git submodule update --init
-```
+## Install
 
-### Python setup
+### Via pip
+
+Coming soon!
+
+### Local setup
+
+Clone the repository.
 
 ```bash
 pip install -r requirements.txt
 ```
 
+## Example of usage
+
 ### The Generator module
 
 #### Pre-generated data
 
-You can extract pre-generated data from `data/monument_300.zip` and `data/monument_600.zip` in folders having the respective names.
+You can extract pre-generated data and model checkpoints from [here](https://nspm-models.s3.eu-west-2.amazonaws.com/v2/art_30.zip) (1.1 GB) in folders having the respective names.
 
 #### Manual Generation (Alternative to using pre-generated data)
 
-The template used in the paper can be found in a file such as `annotations_monument.tsv`. `data/monument_300` will be the ID of the working dataset used throughout the tutorial. To generate the training data, launch the following command.
+The template used in the paper can be found in a file such as `Annotations_F30_art.csv`. `data/art_30` will be the ID of the working dataset used throughout the tutorial. To generate the training data, launch the following command.
 
-<!-- Made monument_300 directory in data directory due to absence of monument_300 folder in data directory  -->
 ```bash
-mkdir data/monument_300
-python generator.py --templates data/annotations_monument.csv --output data/monument_300
+mkdir -p data/art_30
+python nspm/generator.py --templates data/templates/Annotations_F30_art.csv --output data/art_30
 ```
 
-Launch the command to build the vocabularies for the two languages (i.e., English and SPARQL) and split into train, dev, and test sets.
+Launch the command if you want to build dataset seprately else it will internally be called while training.
 
 ```bash
-./generate.sh data/monument_300
+python nspm/data_gen.py --input data/art_30 --output data/art_30
 ```
 
 ### The Learner module
 
-<!-- Just a simple note to go back to the initial directory.-->
-Now go back to the initial directory and launch `train.sh` to train the model. The first parameter is the prefix of the data directory and the second parameter is the number of training epochs.
+Now go back to the initial directory and launch `learner.py` to train the model. Currently the epochs and batch_size is not parametrized for that you can change the epoch is train.py and batch size in data_gen.py (recommended batch size for large 64, medium 32 and small like art_30 is 16) also epochs varies with batch size for art 30 its 40.
 
 ```bash
-./train.sh data/monument_300 12000
+python nspm/learner.py --input data/art_30 --output data/art_30
 ```
 
-This command will create a model directory called `data/monument_300_model`.
+This command will create a model checkpoints in `data/art_30`.
 
 ### The Interpreter module
 
-Predict the SPARQL query for a given question with a given model.
+Predict the SPARQL query for a given question it will store the detailed output in output_query.
 
 ```bash
-./ask.sh data/monument_300 "where is edward vii monument located in?"
-```
-
-### Unit tests
-
-Tests can be run, but exclusively within the root directory.
-
-```bash
-py.test *.py
+python nspm/interpreter.py --input data/art_30 --output data/art_30 --query "yuncken freeman has architected in how many cities?"
 ```
 
 ## Use cases & integrations

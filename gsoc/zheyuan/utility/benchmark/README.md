@@ -8,7 +8,7 @@ Then, run our pipeline to generate the answers JSON file
 ```bash
 python benchmark.py --model <trained modle ID> --test <test set ID> [--answer <answers file name>]
 ```
-For example:
+For example, using [this file](https://nspm-models.s3.eu-west-2.amazonaws.com/misc/qald-9-train-multilingual.qald.json):
 ```bash
 python benchmark.py --model monument_300 --test qald-9-train-multilingual.qald.json
 ```

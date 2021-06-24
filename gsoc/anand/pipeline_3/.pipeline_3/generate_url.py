@@ -3,18 +3,14 @@ import pprint
 import json
 import sys
 import urllib
-from urllib2 import urlopen
 import argparse
 from bs4 import BeautifulSoup
 
 
 def get_url(url):
-        """Fuction to extract the http://mappings.dbpedia.org/server/ontology/classes/<some entity>
+        """Fuction to extract the http://mappings.dbpedia.org/server/ontology/classes/<some entity> 
         page link for the given http://mappings.dbpedia.org/index.php/OntologyClass:<some entity>"""
-        try:  # python3
-                page = urllib.request.urlopen(url)
-        except:  # python2
-                page = urlopen(url)
+        page = urllib.request.urlopen(url)
         soup = BeautifulSoup(page, "html.parser")
         link = soup.findAll('a', attrs={"rel": "nofollow"})[0]['href']
         return link

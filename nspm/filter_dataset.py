@@ -1,12 +1,12 @@
 #!/usr/bin/env python
 """
 
-Neural SPARQL Machines - Filter dataset by a given criterion.
+Neural SPARQL Machines - Script to filter data by a given criterion.
 
 'SPARQL as a Foreign Language' by Tommaso Soru and Edgard Marx et al., SEMANTiCS 2017
 https://arxiv.org/abs/1708.07624
 
-Version 1.0.0
+Version 2.0.0
 
 """
 import argparse
@@ -17,6 +17,7 @@ import sys
 
 from generator_utils import encode, save_cache, extract_encoded_entities
 import importlib
+
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()

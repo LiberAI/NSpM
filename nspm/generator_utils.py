@@ -6,7 +6,7 @@ Neural SPARQL Machines - Generator utils.
 'SPARQL as a Foreign Language' by Tommaso Soru and Edgard Marx et al., SEMANTiCS 2017
 https://arxiv.org/abs/1708.07624
 
-Version 1.0.0
+Version 2.0.0
 
 """
 import collections

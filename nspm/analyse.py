@@ -1,12 +1,12 @@
 #!/usr/bin/env python
 """
 
-Neural SPARQL Machines - Analysis and validation of translated questions into queries.
+Neural SPARQL Machines - Script for analysis and validation of question-to-query translations.
 
 'SPARQL as a Foreign Language' by Tommaso Soru and Edgard Marx et al., SEMANTiCS 2017
 https://arxiv.org/abs/1708.07624
 
-Version 1.0.0
+Version 2.0.0
 
 """
 import argparse

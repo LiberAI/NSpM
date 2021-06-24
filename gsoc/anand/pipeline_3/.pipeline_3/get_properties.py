@@ -1,5 +1,4 @@
 import urllib
-from urllib2 import urlopen
 import json
 import sys
 import csv
@@ -18,10 +17,7 @@ def get_properties(url,  project_name="test_project", output_file = "get_propert
     - This function also returns a 2D list of the information mentioned above to the calling
     function
     """
-    try:  # python3
-        page = urllib.request.urlopen(url)
-    except:  # python2
-        page = urlopen(url)
+    page = urllib.request.urlopen(url)
     soup = BeautifulSoup(page, "html.parser")
     if(not os.path.isdir(project_name)):
         os.makedirs(project_name)
