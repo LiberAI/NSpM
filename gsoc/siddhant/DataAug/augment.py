@@ -49,8 +49,6 @@ for i in range(len(en_sp_dropout)):
 f.close()
 
 
-
-
 replaced_data = []
 for i in range(len(en_prob)):
     inde1, inde2 = syntax_aware.top2(en_prob[i])
@@ -73,4 +71,3 @@ for i in range(len(en_sp_replacement)):
     f.write(en_sp_replacement[i][1]+"\n")
 
 f.close()
-
