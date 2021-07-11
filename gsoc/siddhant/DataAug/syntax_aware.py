@@ -15,8 +15,8 @@ import math
 import re
 
 #import nltk
-# nltk.download("stopwords")
-# nltk.download("punkt")
+#nltk.download("stopwords")
+#nltk.download("punkt")
 
 nlp = spacy.load("en_core_web_sm")
 regex = re.compile('[@_!#$%^&*()<>/\|}{~:]')
@@ -125,7 +125,8 @@ def replacement(en_sen, inde1, inde2):
             if w in keys:
                 sen = sen.replace(w, synonyms_lexicon[w][0])
 
-    return sen + " ?"
+    return sen
+    #sentence_len = len(en_words)
 
 
 """ def wordvec_replacement(en_sen, inde1, inde2):
@@ -156,11 +157,10 @@ def replacement(en_sen, inde1, inde2):
             exit
 
     final = " ".join(en_words)
-    final = final + " ?"
+    final = final + "?"
 
     return final
  """
-
 
 def blanking():
     pass
