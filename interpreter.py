@@ -11,6 +11,10 @@ from prepare_dataset import preprocess_sentence
 from nmt import Encoder,Decoder
 from generator_utils import decode, fix_URI
 
+from airML import airML
+import json
+
+
 def evaluate(sentence):
   attention_plot = np.zeros((max_length_targ, max_length_inp))
 
@@ -94,23 +98,55 @@ def translate(sentence,ou_dir):
   return result
 
 
+def install_kb(url):
+    output = airML.execute('install kb ' + url + ' -o json')
+    output = json.loads(output)
+    if output['status_code'] == 200:
+        print(output['message'])
+    else:
+        raise Exception(output['message'])
+
+
+def locate_model(url):
+    install_kb(url)
+    output = airML.execute('locate kb ' + url + ' -o json')
+    output = json.loads(output)
+    if output['status_code'] == 200:
+        print(output['message'])
+        model_dir = output['results'][0]
+        return model_dir
+    else:
+        raise Exception(output['message'])
+
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     requiredNamed = parser.add_argument_group('required named arguments')
     requiredNamed.add_argument(
-        '--input', dest='input', metavar='inputDirectory', help='dataset directory', required=True)
+        '--input', dest='input', metavar='inputDirectory', help='dataset directory', required=False)
     requiredNamed.add_argument(
-        '--output', dest='output', metavar='outputDirectory', help='dataset directory', required=True)
+        '--airml', dest='airml', metavar='airmlURL', help='name of the knowledge base', required=False)
+    # requiredNamed.add_argument(
+    #     '--output', dest='output', metavar='outputDirectory', help='dataset directory', required=True)
     requiredNamed.add_argument(
-            '--inputstr', dest='inputstr', metavar='inputString', help='Input string for translation', required=False)
+        '--inputstr', dest='inputstr', metavar='inputString', help='Input string for translation', required=False)
 
     args = parser.parse_args()
     inputs = args.inputstr
-    model_dir = args.input
-    input_dir = args.input
-    model_dir+='/training_checkpoints'
-    pic_dir=input_dir+'/pickle_objects'
+    model_dir = None
+    input_dir = None
+    if args.input is not None:
+        model_dir = args.input
+        input_dir = args.input
+    elif args.airml is not None:
+        airml_url = args.airml
+        model_dir = locate_model(airml_url)
+        input_dir = model_dir
+    else:
+        print('--input or --airml argument should be provided to load the model.')
+
+    model_dir += '/training_checkpoints'
+    pic_dir = input_dir + '/pickle_objects'
 
     embedding_dim = 256
     units = 1024
