@@ -126,8 +126,8 @@ if __name__ == '__main__':
         '--input', dest='input', metavar='inputDirectory', help='dataset directory', required=False)
     requiredNamed.add_argument(
         '--airml', dest='airml', metavar='airmlURL', help='name of the knowledge base', required=False)
-    # requiredNamed.add_argument(
-    #     '--output', dest='output', metavar='outputDirectory', help='dataset directory', required=True)
+    requiredNamed.add_argument(
+        '--output', dest='output', metavar='outputDirectory', help='dataset directory', required=True)
     requiredNamed.add_argument(
         '--inputstr', dest='inputstr', metavar='inputString', help='Input string for translation', required=False)
 
