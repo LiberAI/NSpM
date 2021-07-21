@@ -1,3 +1,5 @@
+import sys
+
 import tensorflow as tf
 import argparse
 
@@ -99,7 +101,7 @@ def translate(sentence,ou_dir):
 
 
 def install_kb(url):
-    output = airML.execute('install kb ' + url + ' -o json')
+    output = airML.execute('install ' + url + ' -format nspm -o json')
     output = json.loads(output)
     if output['status_code'] == 200:
         print(output['message'])
@@ -109,7 +111,7 @@ def install_kb(url):
 
 def locate_model(url):
     install_kb(url)
-    output = airML.execute('locate kb ' + url + ' -o json')
+    output = airML.execute('locate ' + url + ' -format nspm -o json')
     output = json.loads(output)
     if output['status_code'] == 200:
         print(output['message'])
@@ -144,6 +146,7 @@ if __name__ == '__main__':
         input_dir = model_dir
     else:
         print('--input or --airml argument should be provided to load the model.')
+        sys.exit()
 
     model_dir += '/training_checkpoints'
     pic_dir = input_dir + '/pickle_objects'
