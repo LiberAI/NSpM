@@ -64,6 +64,10 @@ Predict the SPARQL query for a given question it will store the detailed output 
 ```bash
 python interpreter.py --input data/art_30 --output data/art_30 --inputstr "yuncken freeman has architected in how many cities?"
 ```
+or, if you want to use [airml](https://github.com/sahandilshan/airML) to retrieve the model from KBox,
+```bash
+python interpreter.py --airml http://nspm.org/arts --output data/art_30 --inputstr "yuncken freeman has architected in how many cities?"
+```
 
 ## Use cases & integrations
 
