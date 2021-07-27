@@ -7,7 +7,6 @@ import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
 
 import numpy as np
-import os
 import pickle
 from prepare_dataset import preprocess_sentence
 from nmt import Encoder,Decoder
@@ -101,7 +100,7 @@ def translate(sentence,ou_dir):
 
 
 def install_kb(url):
-    output = airML.execute('install ' + url + ' -format nspm -o json')
+    output = airML.install(url, format='nspm')
     output = json.loads(output)
     if output['status_code'] == 200:
         print(output['message'])
@@ -111,7 +110,7 @@ def install_kb(url):
 
 def locate_model(url):
     install_kb(url)
-    output = airML.execute('locate ' + url + ' -format nspm -o json')
+    output = airML.locate(url, format='nspm')
     output = json.loads(output)
     if output['status_code'] == 200:
         print(output['message'])
