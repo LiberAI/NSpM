@@ -23,3 +23,5 @@ tensorflow==2.1.0
 termcolor==1.1.0
 tqdm==4.43.0
 Werkzeug==1.0.0
+
+airML==0.0.2
