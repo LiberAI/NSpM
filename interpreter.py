@@ -99,7 +99,7 @@ def translate(sentence,ou_dir):
   return result
 
 
-def install_kb(url):
+def install_model(url):
     output = airML.install(url, format='nspm')
     output = json.loads(output)
     if output['status_code'] == 200:
@@ -109,7 +109,7 @@ def install_kb(url):
 
 
 def locate_model(url):
-    install_kb(url)
+    install_model(url)
     output = airML.locate(url, format='nspm')
     output = json.loads(output)
     if output['status_code'] == 200:
