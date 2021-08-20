@@ -1,3 +1,0 @@
-spacy == 3.0.6
-networkx == 2.5.1
-gensim == 4.0.1
