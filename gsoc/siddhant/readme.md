@@ -52,3 +52,6 @@ The pipeline prepares a subset of data with the **ratio** passed in as argument 
 * This data would help add robustness to noise 
 * Using BERT as embeddings at a initial state
 * Expecting a better translation performance 
+
+
+For Detailed documentation checkout : [Blog](https://imsiddhant07.github.io/Neural-QA-Model-for-DBpedia/)
