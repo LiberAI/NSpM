@@ -1,6 +1,6 @@
 ## Google Summer of Code 2021 - DBpedia
 
-### The [Code](gsoc/siddhant) folder contains all the work done through the coding period.
+### The Code folder contains all the work done through the coding period.
 
 ### To run and test the code, make sure to have all the dependencies from the requirements file installed.
 
@@ -8,7 +8,7 @@
 
 ### Work done : 
 
-1. [Syntax Aware Augmentation](gsoc/siddhant/DataAug/Syntax-aware)
+1. Syntax Aware Augmentation
 
 to run the code,
 
@@ -21,7 +21,7 @@ python augment.py
 
 Involving dependency tree as a starting point this creates two pairs of augmented data, specifically for -Dropout and Replacement methods.
 
-2. [Back Translation](gsoc/siddhant/DataAug/BackTranslation)
+2. Back Translation
 
 to run the code,
 
