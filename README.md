@@ -64,7 +64,7 @@ Predict the SPARQL query for a given question it will store the detailed output 
 ```bash
 python interpreter.py --input data/art_30 --output data/art_30 --inputstr "yuncken freeman has architected in how many cities?"
 ```
-or, if you want to use NSpM with [airml](https://github.com/sahandilshan/airML) to retrieve the model from KBox, follow these steps,
+or, if you want to use NSpM with [airml](https://github.com/sahandilshan/airML) to install pre-trained models, follow these steps,
 1. Install airML latest version from [here](https://pypi.org/project/airML/)
 2. Navigate to the table.kns [here](https://github.com/sahandilshan/KBox/blob/dev/kns/2.0/table.kns) and check if your model is listed in that file.
 3. Then copy the name of that model and use it with the `interpreter.py` as follows
