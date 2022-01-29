@@ -49,13 +49,13 @@ python nspm/data_gen.py --input data/art_30 --output data/art_30
 
 ### The Learner module
 
-Now go back to the initial directory and launch `learner.py` to train the model. Currently the epochs and batch_size is not parametrized for that you can change the epoch is train.py and batch size in data_gen.py (recommended batch size for large 64, medium 32 and small like art_30 is 16) also epochs varies with batch size for art 30 its 40.
+Now go back to the initial directory and launch `learner.py` to train the model. 
 
 ```bash
 python nspm/learner.py --input data/art_30 --output data/art_30
 ```
 
-This command will create a model checkpoints in `data/art_30`.
+This command will create a model checkpoints in `data/art_30` and some pickle files in `data/art_30/pickle_objects`.
 
 ### The Interpreter module
 
@@ -63,6 +63,13 @@ Predict the SPARQL query for a given question it will store the detailed output 
 
 ```bash
 python nspm/interpreter.py --input data/art_30 --output data/art_30 --query "yuncken freeman has architected in how many cities?"
+```
+or, if you want to use NSpM with [airml](https://github.com/sahandilshan/airML) to install pre-trained models, follow these steps,
+1. Install airML latest version from [here](https://pypi.org/project/airML/)
+2. Navigate to the table.kns [here](https://github.com/sahandilshan/KBox/blob/dev/kns/2.0/table.kns) and check if your model is listed in that file.
+3. Then copy the name of that model and use it with the `interpreter.py` as follows
+```bash
+python interpreter.py --airml http://nspm.org/art --output data/art_30 --inputstr "yuncken freeman has architected in how many cities?"
 ```
 
 ## Use cases & integrations
