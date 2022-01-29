@@ -6,7 +6,7 @@ Neural SPARQL Machines - Generator module.
 'SPARQL as a Foreign Language' by Tommaso Soru and Edgard Marx et al., SEMANTiCS 2017
 https://arxiv.org/abs/1708.07624
 
-Version 1.0.0
+Version 2.0.0
 
 """
 import argparse
@@ -26,13 +26,6 @@ import io
 from generator_utils import log_statistics, save_cache, query_dbpedia, strip_brackets, encode, read_template_file
 import importlib
 
-CELEBRITY_LIST = [
-    'dbo:Royalty',
-    '<http://dbpedia.org/class/yago/Wikicat21st-centuryActors>',
-    '<http://dbpedia.org/class/yago/WikicatEnglishMusicians>',
-    '<http://dbpedia.org/class/yago/Wikicat20th-centuryNovelists>',
-    '<http://dbpedia.org/class/yago/Honoree110183757>'
-]
 
 SPECIAL_CLASSES = {
     'dbo:Person': [

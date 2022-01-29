@@ -5,7 +5,7 @@ import unittest
 class TestAirML(unittest.TestCase):
     def test_airml_input_args_with_valid_kn(self):
         process = subprocess.Popen(
-            ['python', 'interpreter.py', "--airml", "http://nspm.org/art", "--output", "test", "--inputstr",
+            ['python3', 'interpreter.py', "--airml", "http://nspm.org/art", "--output", "test", "--inputstr",
              '"yuncken freeman has architected in how many cities?"'], stdout=subprocess.PIPE)
         output, err = process.communicate()
         output = output.decode("utf-8")
@@ -14,7 +14,7 @@ class TestAirML(unittest.TestCase):
 
     def test_airml_input_args_with_invalid_kn(self):
         process = subprocess.Popen(
-            ['python', 'interpreter.py', "--airml", "http://nspm.org/arts", "--output", "test", "--inputstr",
+            ['python3', 'interpreter.py', "--airml", "http://nspm.org/arts", "--output", "test", "--inputstr",
              '"yuncken freeman has architected in how many cities?"'], stdout=subprocess.PIPE)
         output, err = process.communicate()
         output = output.decode("utf-8")
@@ -22,7 +22,7 @@ class TestAirML(unittest.TestCase):
 
     def test_airml_without_input_arg(self):
         process = subprocess.Popen(
-            ['python', 'interpreter.py', "--output", "test", "--inputstr",
+            ['python3', 'interpreter.py', "--output", "test", "--inputstr",
              '"yuncken freeman has architected in how many cities?"'], stdout=subprocess.PIPE)
         output, err = process.communicate()
         output = output.decode("utf-8")

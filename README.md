@@ -38,13 +38,13 @@ The template used in the paper can be found in a file such as `Annotations_F30_a
 
 ```bash
 mkdir -p data/art_30
-python generator.py --templates data/templates/Annotations_F30_art.csv --output data/art_30
+python nspm/generator.py --templates data/templates/Annotations_F30_art.csv --output data/art_30
 ```
 
 Launch the command if you want to build dataset seprately else it will internally be called while training.
 
 ```bash
-python data_gen.py --input data/art_30 --output data/art_30
+python nspm/data_gen.py --input data/art_30 --output data/art_30
 ```
 
 ### The Learner module
@@ -52,7 +52,7 @@ python data_gen.py --input data/art_30 --output data/art_30
 Now go back to the initial directory and launch `learner.py` to train the model. 
 
 ```bash
-python learner.py --input data/art_30 --output data/art_30 --batch-size 32 --epochs 40
+python nspm/learner.py --input data/art_30 --output data/art_30
 ```
 
 This command will create a model checkpoints in `data/art_30` and some pickle files in `data/art_30/pickle_objects`.
@@ -62,7 +62,7 @@ This command will create a model checkpoints in `data/art_30` and some pickle fi
 Predict the SPARQL query for a given question it will store the detailed output in output_query.
 
 ```bash
-python interpreter.py --input data/art_30 --output data/art_30 --inputstr "yuncken freeman has architected in how many cities?"
+python nspm/interpreter.py --input data/art_30 --output data/art_30 --query "yuncken freeman has architected in how many cities?"
 ```
 or, if you want to use NSpM with [airml](https://github.com/sahandilshan/airML) to install pre-trained models, follow these steps,
 1. Install airML latest version from [here](https://pypi.org/project/airML/)
