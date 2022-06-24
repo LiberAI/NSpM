@@ -39,5 +39,5 @@ if __name__ == '__main__':
     prediction_file = args.prediction_file
 
     target, predicted = read(true_file, prediction_file)
-    bleu(target, predicted)
-    
+    bleu_score = bleu(target, predicted)
+    print('bleu score for given model {}'.format(bleu_score))

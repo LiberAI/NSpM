@@ -13,6 +13,8 @@ import os
 import re
 from tqdm import tqdm
 # from sentence_and_template_generator import sentence_and_template_generator
+# question generator module
+from question_generator import question_generator
 
 
 def check_query(log, query):
@@ -42,7 +44,7 @@ def check_query(log, query):
 
 
 def template_generator(prop_dic, test_set, log, mother_ontology, vessel, prop, project_name, output_file,
-                                          original_count=0, count=0, suffix=" of <A> ?", query_suffix=""):
+                        original_count=0, count=0, suffix=" of <A> ?", query_suffix="", qg=None, property_base=False):
     seperator = ";"
     if (type(prop) == str):
         prop = prop.split(',')
@@ -79,10 +81,16 @@ def template_generator(prop_dic, test_set, log, mother_ontology, vessel, prop, p
     prop_link = "dbo:" + \
         prop_link.strip().split('http://dbpedia.org/ontology/')[-1]
 
+    # question generator module
+    qg_nlq = []
+
     for number in question_number:
         original_question = question_starts_with[number] + prop[1] + suffix
         original_sparql = query_starts_with[number] + "where { <A>  " + query_suffix + prop_link + " ?x " + \
             query_ends_with[number]
+
+        qg_question = question_generator(qg, prop[1], property_base[1])
+        qg_nlq.append(qg_question)
 
         natural_language_question.append(original_question)
         sparql_query.append(original_sparql)
@@ -102,7 +110,6 @@ def template_generator(prop_dic, test_set, log, mother_ontology, vessel, prop, p
     if (not flag):
         return
 
-
     count = count - 1
     if (count == 0):
         variable = "?x"
@@ -112,8 +119,9 @@ def template_generator(prop_dic, test_set, log, mother_ontology, vessel, prop, p
     # for temp_counter in range(original_count):
     if (not prop[0] in prop_dic[original_count - count - 1]):
         for number in range(len(natural_language_question)):
+            # Appending qg output and both the properties for elimination check
             vessel.append(
-                [mother_ontology, "", "", natural_language_question[number], sparql_query[number], query_answer])
+                [mother_ontology, "", "", natural_language_question[number], sparql_query[number], query_answer, qg_nlq[number], prop[1], property_base[1]])
             output_file.write(
                 (seperator.join(vessel[-1]) + seperator + "Original" + "\n").replace("  ", " "))
             log.info(seperator.join(vessel[-1]) + seperator + "\n")
@@ -125,7 +133,7 @@ def template_generator(prop_dic, test_set, log, mother_ontology, vessel, prop, p
                                query_answer]
 
             vessel.append(
-                [mother_ontology, "", "", natural_language_question[number], sparql_query[number], query_answer])
+                [mother_ontology, "", "", natural_language_question[number], sparql_query[number], query_answer, qg_nlq[number], prop[1], property_base[1]])
             test_set.write(
                 (seperator.join(vessel[-1]) + seperator + "\n").replace("  ", " "))
             print("++++++++++++++++++++", vessel[-1], "+++++++++++++++")
@@ -135,6 +143,8 @@ def template_generator(prop_dic, test_set, log, mother_ontology, vessel, prop, p
     # print(str(natural_language_question)+"\n"+str(sparql_query)+"\n"+query_answer+"\n*************")
 
     suffix = " of " + prop[1] + " of <A> ?"
+    # property base to store the value for question generation module (2 properties required for composite questions)
+    property_base = prop
     if (count > 0):
         print(prop[3].split(":")[-1])
         val = generate_url(prop[3].split(":")[-1])
@@ -149,4 +159,4 @@ def template_generator(prop_dic, test_set, log, mother_ontology, vessel, prop, p
                                             original_count=original_count, output_file=output_file,
                                             mother_ontology=mother_ontology, vessel=vessel, prop=prop_inside,
                                             suffix=suffix, count=count, project_name=project_name,
-                                            query_suffix=query_suffix)
+                                            query_suffix=query_suffix, qg=qg, property_base=property_base)

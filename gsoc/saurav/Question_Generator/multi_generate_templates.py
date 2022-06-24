@@ -8,6 +8,11 @@ from get_properties import get_properties
 import argparse
 import re
 
+# Question Generator
+import nltk
+nltk.download('stopwords')
+from Questgen import main
+
 import tensorflow as tf
 tf.compat.v1.enable_eager_execution()
 
@@ -17,6 +22,9 @@ def generate_templates(label, project_name, depth=1, output_file="template_gener
     """
     The function acts as a wrapper for the whole package of supplied source code.
     """
+
+    # Question Generator
+    qg = main.QGen()
 
     count = 0
     vessel = []
@@ -63,7 +71,7 @@ def generate_templates(label, project_name, depth=1, output_file="template_gener
                                                         "http://dbpedia.org/ontology/",
                                                         "dbo:"), vessel=vessel,
                                                     project_name=project_name, prop=prop, suffix=" of <A> ?",
-                                                    count=depth)
+                                                    count=depth, qg=qg, property_base=prop)
 
     else:
 
@@ -81,7 +89,7 @@ def generate_templates(label, project_name, depth=1, output_file="template_gener
             template_generator(original_count=depth, prop_dic=prop_dic, test_set=test_set, log=logger, output_file=output_file,
                                                 mother_ontology=about.strip().replace("http://dbpedia.org/ontology/",
                                                                                         "dbo:"), vessel=vessel,
-                                                project_name=project_name, prop=prop, suffix=" of <A> ?", count=depth)
+                                                project_name=project_name, prop=prop, suffix=" of <A> ?", count=depth, qg=qg, property_base=prop)
 
     output_file.close()
 

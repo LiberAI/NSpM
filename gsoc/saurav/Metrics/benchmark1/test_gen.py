@@ -40,8 +40,8 @@ def query_dbpedia( query ):
     return json.loads(j)
 
 def write_results(data):
-    with open("./gsoc/saurav/Metrics/benchmark1/qald_result.json", "w") as w:
-        json.dump(data, w)
+    with open("./gsoc/saurav/Metrics/benchmark1/qald_prediction.json", "w") as w:
+        json.dump(data, w, ensure_ascii = False)
 
 def fetch_answers(filename):
 
@@ -53,13 +53,10 @@ def fetch_answers(filename):
         test_sparql.append(Lines1[i].replace('\n', " "))
 
     data = []
-    test_sparql = test_sparql[:20]
     for i in tqdm(range(len(test_sparql))):
         
         query = test_sparql[i]
-        finaltranso = decode(query)
-        # finaltranso = fix_URI(finaltranso)
-        # print('Decoded translation: {}'.format(finaltranso))
+        finaltranso = decode(query)[:-6]
         results = query_dbpedia(finaltranso)
         results = results['results']['bindings']
         res = []

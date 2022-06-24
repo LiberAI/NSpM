@@ -1,6 +1,6 @@
 """
 Parses the qald-9-train-multilingual.json file and generates qald_true.json 
-file with the answers.
+file with the answers, and qald_nlq with the questions.
 """
 
 import json
@@ -43,11 +43,16 @@ def read(qald_file):
 
             answers.append({"answers": answer})
 
-    return answers
+    return answers, questions
 
-def write_results(data):
+def write_answers(data):
     with open("gsoc/saurav/Metrics/benchmark1/qald_true.json", "w") as w:
-        json.dump(data, w)
+        json.dump(data, w, ensure_ascii = False)
+
+def write_nlq(data):
+    output_file = open("gsoc/saurav/Metrics/benchmark1/qald_nlq", 'w')
+    for sub_data in data:
+        output_file.write(sub_data+'\n')
 
 if __name__ == '__main__':
     
@@ -58,5 +63,6 @@ if __name__ == '__main__':
     args = parser.parse_args()
     qald_file = args.qald_file
 
-    answers = read(qald_file)
-    write_results(answers)
+    answers, questions = read(qald_file)
+    write_answers(answers)
+    write_nlq(questions)
