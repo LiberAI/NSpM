@@ -51,7 +51,7 @@ def create_dataset(path, num_examples):
 
 def tokenize(lang):
   lang_tokenizer = tf.keras.preprocessing.text.Tokenizer(
-      filters='',lower=False)
+      filters='',lower=False, oov_token='OOV')
   lang_tokenizer.fit_on_texts(lang)
 
   tensor = lang_tokenizer.texts_to_sequences(lang)
