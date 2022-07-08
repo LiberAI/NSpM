@@ -37,7 +37,8 @@ def transform_sparql(sparql, num):
 def refine_superlative(output_dir):
     
     data = read(output_dir+'/superlative/templates')
-    terms = [["highest ", "largest "], ["lowest ", "smallest "]]
+    terms = [["highest ", "largest ", "most recent "], ["lowest ", "smallest ", "oldest "]]
+    date_data = ["xsd:gYear", "xsd:dateTime", "year", "xsd:date"]
     final_data = []
     for sub_data in data:
         sub_data = sub_data.split(';')
@@ -47,26 +48,33 @@ def refine_superlative(output_dir):
         p2 = sub_data[7].strip()
         nlq_type = sub_data[-1].strip()
         new_nlq = ""
+
+        rng_outer = int(round(random.uniform(0,1)))
+        dict_data = get_properties_data()
         try:
-            rng_outer = int(round(random.uniform(0,1)))
-            rng_inner = int(round(random.uniform(0,1)))
-            term = terms[rng_outer][rng_inner]
-            p1_index = nlq.index(p1)
-            f1 = nlq[:p1_index]
-            f2 = term + nlq[p1_index:]
-            new_nlq = f1 + f2
-
-            if rng_outer == 0:
-                sparql = transform_sparql(sparql, 0)
+            val = dict_data[p1].strip()
+            if val in date_data:
+                rng_inner = 2
             else:
-                sparql = transform_sparql(sparql, 1)
-
-            sub_data[3] = new_nlq
-            sub_data[4] = sparql
-            sub_data = ';'.join(sub_data)
-            final_data.append(sub_data)
+                rng_inner = int(round(random.uniform(0,1)))
         except:
-            pass
+            rng_inner = int(round(random.uniform(0,1)))
+
+        term = terms[rng_outer][rng_inner]
+        p1_index = nlq.index(p1)
+        f1 = nlq[:p1_index]
+        f2 = term + nlq[p1_index:]
+        new_nlq = f1 + f2
+
+        if rng_outer == 0:
+            sparql = transform_sparql(sparql, 0)
+        else:
+            sparql = transform_sparql(sparql, 1)
+
+        sub_data[3] = new_nlq
+        sub_data[4] = sparql
+        sub_data = ';'.join(sub_data)
+        final_data.append(sub_data)
 
     return final_data
     

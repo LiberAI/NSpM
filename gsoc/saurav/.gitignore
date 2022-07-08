@@ -1,5 +1,7 @@
 venvs/
 __pycache__/
-
-
+Paraphraser/Data
+Paraphraser/Model
+# Test file
+combine.py 
 *.gz
