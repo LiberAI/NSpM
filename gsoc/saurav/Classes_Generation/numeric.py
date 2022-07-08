@@ -25,8 +25,8 @@ def refine_numeric(output_dir):
     
     data = read(output_dir+'/numeric/templates')
     quantitative_data = ["xsd:nonNegativeInteger", "Length", "xsd:integer", "xsd:float", "xsd:positiveInteger",  
-                "Temperature", "xsd:gYear", "Area", "xsd:dateTime", "Density", "Volume", "Currency", 
-                "year", "Sales", "xsd:double", "xsd:date", "Mass"]
+                "Temperature", "Area", "Density", "Volume", "Currency", "Sales", "xsd:double", "Mass"]
+    quantitative_data_date = ["xsd:gYear", "xsd:dateTime", "year", "xsd:date"] # no date type values
     dict_data = get_properties_data()
     final_data = []
     for sub_data in data:
@@ -44,6 +44,8 @@ def refine_numeric(output_dir):
                 if val in quantitative_data:
                     # quantitative peroperties
                     new_nlq = "How much is the " + p1 + " of <A> ?"
+                elif val in quantitative_data_date:
+                    pass
                 else:
                     # !quantitative properties
                     new_nlq = "How many " + p1 + " did <A> have ?"
@@ -55,8 +57,9 @@ def refine_numeric(output_dir):
         except:
             new_nlq = nlq
 
-        sub_data[3] = new_nlq
-        sub_data = ';'.join(sub_data)
-        final_data.append(sub_data)
+        if new_nlq != "":
+            sub_data[3] = new_nlq
+            sub_data = ';'.join(sub_data)
+            final_data.append(sub_data)
 
     return final_data

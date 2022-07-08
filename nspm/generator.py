@@ -23,7 +23,7 @@ import traceback
 from tqdm import tqdm
 import io
 
-from generator_utils import log_statistics, save_cache, query_dbpedia, strip_brackets, encode, read_template_file
+from generator_utils2 import log_statistics, save_cache, query_dbpedia, strip_brackets, encode, read_template_file
 import importlib
 
 
@@ -150,18 +150,38 @@ def prioritize_triple_match(usages):
 
     return sum(usages)
 
+# replacing placeholder 2 by a random entity from a set of entities
+def random_second_placeholder(examples):
+    
+    rng = random.randint(0, len(examples)-1)
+    return examples[rng]
 
-def build_dataset_pair(binding, template):
+def build_dataset_pair(binding, template, examples):
     english = getattr(template, 'question')
     sparql = getattr(template, 'query')
+
+    # calculating placeholder count
+    pattern = '<*>'
+    placeholder_count = len(re.findall(pattern, english))
+
     for variable in binding:
         uri = binding[variable]['uri']
         label = binding[variable]['label']
-        placeholder = '<{}>'.format(str.upper(variable))
-        if placeholder in english and label is not None:
-            english = english.replace(placeholder, strip_brackets(label))
-        if placeholder in sparql and uri is not None:
-            sparql = sparql.replace(placeholder, uri)
+
+        # iterating 'placeholder count' times to replace placeholder by entities 
+        for count in range(placeholder_count):
+            if count == 0:
+                placeholder = '<{}>'.format(str.upper(variable))
+            else:
+                variable = chr(ord(variable) + 1)
+                placeholder = '<{}>'.format(str.upper(variable))
+                random_example = random_second_placeholder(examples)
+                uri = random_example['uri']
+                label = random_example['label']
+            if placeholder in english and label is not None:
+                english = english.replace(placeholder, strip_brackets(label))
+            if placeholder in sparql and uri is not None:
+                sparql = sparql.replace(placeholder, uri)
 
     sparql = encode(sparql)
     dataset_pair = {'english': english, 'sparql': sparql}
@@ -188,9 +208,15 @@ def generate_dataset(templates, output_dir, file_mode):
                     logging.debug("no data for {}".format(id_or_question))
                     not_instanced_templates.update([id_or_question])
                     continue
+                
+                # Extracting all the entities to fill the placeholders
+                examples = []
+                for binding in bindings:
+                    for variable in binding:
+                        examples.append(binding[variable])
 
                 for binding in bindings:
-                    dataset_pair = build_dataset_pair(binding, template)
+                    dataset_pair = build_dataset_pair(binding, template, examples)
                     # print "x", det_pair
                     if (dataset_pair):
                         dataset_pair['english'] = " ".join(
