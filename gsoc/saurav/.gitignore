@@ -5,3 +5,5 @@ Paraphraser/Model
 # Test file
 combine.py 
 *.gz
+Elimination/combined_paraphrased_data
+Elimination/score_data
