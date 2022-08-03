@@ -1,14 +1,14 @@
 import random
 from utils import read, get_properties_data
 
-def categorize_superlative(data):
+def categorize_superlative(data, ontology):
     
     # check for only composite questions that contain a quantitative secondary property and number keyword
     final_data = []
     quantitative_data = ["xsd:nonNegativeInteger", "Length", "xsd:integer", "xsd:float", "xsd:positiveInteger",  
                 "Temperature", "xsd:gYear", "Area", "xsd:dateTime", "Density", "Volume", "Currency", 
                 "year", "Sales", "xsd:double", "xsd:date", "Mass"]
-    dict_data = get_properties_data()
+    dict_data = get_properties_data(ontology)
     for sub_data in data:
         sub_data_split = sub_data.split(';')
         nlq = sub_data_split[3]
@@ -34,7 +34,7 @@ def transform_sparql(sparql, num):
     
     return query
 
-def refine_superlative(output_dir):
+def refine_superlative(output_dir, ontology):
     
     data = read(output_dir+'/superlative/templates')
     terms = [["highest ", "largest ", "most recent "], ["lowest ", "smallest ", "oldest "]]
@@ -50,7 +50,7 @@ def refine_superlative(output_dir):
         new_nlq = ""
 
         rng_outer = int(round(random.uniform(0,1)))
-        dict_data = get_properties_data()
+        dict_data = get_properties_data(ontology)
         try:
             val = dict_data[p1].strip()
             if val in date_data:

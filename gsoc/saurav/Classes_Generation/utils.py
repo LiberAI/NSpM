@@ -29,9 +29,9 @@ def remove_bracket(question):
     r = r.replace("  ", " ")
     return r
 
-def get_properties_data():
+def get_properties_data(ontology):
 
-    data = read('data/Person_Work_Composite/get_properties.csv')
+    data = read('data/' +ontology+ '/get_properties.csv')
     dict_data = {}
     for i, row in enumerate(data):
         x = row.split(',')
@@ -41,9 +41,9 @@ def get_properties_data():
     return dict_data
 
 
-def get_property():
+def get_property(ontology):
 
-    data = read('data/Person_Work_Composite/get_properties.csv')
+    data = read('data/' +ontology+ '/get_properties.csv')
     dict_data = {}
     for i, row in enumerate(data):
         x = row.split(',')

@@ -1,6 +1,6 @@
 from utils import read
 
-def categorize_subordinate(data):
+def categorize_subordinate(data, ontology):
     
     # check for both simple and composite questions 
     final_data = []
@@ -10,7 +10,7 @@ def categorize_subordinate(data):
 
     return final_data
 
-def refine_subordinate(output_dir):
+def refine_subordinate(output_dir, ontology):
     
     data = read(output_dir+'/subordinate/templates')
     final_data = []

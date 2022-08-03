@@ -1,7 +1,7 @@
 import random
 from utils import read, get_property
 
-def categorize_con_disjunction(data):
+def categorize_con_disjunction(data, ontology):
     
     # check for all simple questions
     final_data = []
@@ -15,18 +15,18 @@ def categorize_con_disjunction(data):
 
     return final_data
 
-def transform_sparql(sparql, p1, p2):
+def transform_sparql(sparql, p1, p2, ontology):
     
     # the structure changes s -> o, and o -> s plus 2 placeholders are added
-    dict_data = get_property()
+    dict_data = get_property(ontology)
     try:
-        query = 'select ?x where { ?x dbo:' + dict_data[p1] + ' <A> . ?x dbo:' + dict_data[p2] + ' <B> }'
+        query = 'select ?x where { <A> dbo:' + dict_data[p1] + ' ?x . <B> dbo:' + dict_data[p2] + ' ?x }'
     except:
-        query = 'select ?x where { ?x dbo:' + p1 + ' <A> . ?x dbo:' + p2 + ' <B> }'
+        query = 'select ?x where { <A> dbo:' + p1 + ' ?x . <B> dbo:' + p2 + ' ?x }'
 
     return query
 
-def refine_con_disjunction(output_dir):
+def refine_con_disjunction(output_dir, ontology):
     
     data = read(output_dir+'/con_disjunction/templates')
     terms = [" and ", " as well as "]
@@ -44,7 +44,7 @@ def refine_con_disjunction(output_dir):
         rng = int(round(random.uniform(0,1)))
         term = "<A>" + terms[rng] + "<B>"
         new_nlq = nlq.replace("<A>", term)
-        new_sparql = transform_sparql(sparql, p1, p2)
+        new_sparql = transform_sparql(sparql, p1, p2, ontology)
 
         sub_data[3] = new_nlq
         sub_data[4] = new_sparql

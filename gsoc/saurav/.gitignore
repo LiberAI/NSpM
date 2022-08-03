@@ -3,7 +3,12 @@ __pycache__/
 Paraphraser/Data
 Paraphraser/Model
 # Test file
-combine.py 
 *.gz
 Elimination/combined_paraphrased_data
 Elimination/score_data
+Elimination/Commonsense_data
+Elimination/Quora_Question_Pairs_Dataset
+Elimination/final_template
+Elimination/*.en
+Elimination/*.sparql
+Elimination/*.json
