@@ -24,23 +24,17 @@ def read(input_file):
 
     return data
 
-def write_results(output_file, data):
-
-    for sub_data in data:
-        sub_data = ';'.join(sub_data) + '\n'
-        output_file.write(sub_data)
-
 def write_score_data(output_file, data):
 
     output_file = open(output_file, 'w')
     for sub_data in data:
-        sub_data[3] = str(sub_data[3])
+        sub_data[-1] = str(sub_data[-1])
         sub_data = ';'.join(sub_data) + '\n'
         output_file.write(sub_data)
 
 def sort_score(data):
-    
-    sorted_data = sorted(data, key=lambda x: x[3], reverse=True)
+
+    sorted_data = sorted(data, key=lambda x: x[-1], reverse=True)
     return sorted_data
 
 def semantic_similarity(model, s1, s2):
@@ -63,12 +57,14 @@ def eliminate(input_file, output_dir, threshold):
     data = read(input_file)
     score_data = []
     for sub_data in tqdm(data):
-        sub_data = sub_data.split(';')
-        ontology = sub_data[0]
-        og = sub_data[1]
-        para = sub_data[2]
+        split_data = sub_data.split(';')
+        ontology = split_data[0]
+        og = split_data[1]
+        para = split_data[2]
         score = semantic_similarity(model, og, para)
-        score_data.append([ontology, og, para, score])
+        if score >= threshold:
+            split_data.append(score)
+            score_data.append(split_data)
 
     sorted_data = sort_score(score_data)
     write_score_data(output_dir+"/score_data", sorted_data)

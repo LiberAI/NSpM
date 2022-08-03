@@ -1,6 +1,6 @@
 from utils import read, get_properties_data
 
-def categorize_numeric(data):
+def categorize_numeric(data, ontology):
     
     # check for all simple questions and composite questions that contain number keyword
     final_data = []
@@ -21,13 +21,13 @@ def transform_sparql(sparql):
 
     return query
 
-def refine_numeric(output_dir):
+def refine_numeric(output_dir, ontology):
     
     data = read(output_dir+'/numeric/templates')
     quantitative_data = ["xsd:nonNegativeInteger", "Length", "xsd:integer", "xsd:float", "xsd:positiveInteger",  
                 "Temperature", "Area", "Density", "Volume", "Currency", "Sales", "xsd:double", "Mass"]
     quantitative_data_date = ["xsd:gYear", "xsd:dateTime", "year", "xsd:date"] # no date type values
-    dict_data = get_properties_data()
+    dict_data = get_properties_data(ontology)
     final_data = []
     for sub_data in data:
         sub_data = sub_data.split(';')
