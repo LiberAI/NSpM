@@ -12,6 +12,7 @@ Version 2.0.0
 import argparse
 import tensorflow as tf
 from sklearn.model_selection import train_test_split
+from torch import le
 
 from prepare_dataset import load_dataset, convert
 
@@ -29,7 +30,8 @@ def merging_datafile(input_dir, output_dir):
     Lines2 = file2.readlines()
     s = []
     for i in range(len(Lines1)):
-        s.append(Lines1[i].replace('\n', " ") + "\t " + Lines2[i])
+        if '.' not in Lines1[i] and '.' not in Lines2[i] and ' _' not in Lines1[i] and ' _' not in Lines2[i]: 
+            s.append(Lines1[i].replace('\n', " ") + "\t " + Lines2[i])
 
     filef = open(output_dir, 'w', encoding="utf8")
     filef.writelines(s)
@@ -42,7 +44,7 @@ def merging_datafile(input_dir, output_dir):
 def data_gen(input_dir, output_dir):
 
     output_direc = merging_datafile(input_dir, output_dir)
-
+    
     input_tensor, target_tensor, inp_lang, targ_lang = load_dataset(output_direc)
 
     # Calculate max_length of the target tensors
@@ -57,19 +59,25 @@ def data_gen(input_dir, output_dir):
     print()
     print("Target Language; index to word mapping")
     convert(targ_lang, target_tensor_train[0])
-    buffer_size = len(input_tensor_train)
-    batch_size = 16
+    buffer_size_train = len(input_tensor_train)
+    buffer_size_val = len(input_tensor_val)
+    batch_size = 4
+    batch_accumulate_num = 32 # Gradient Accumulation parameter batch_size*batch_accumulate_num = effective batch_size
     steps_per_epoch = len(input_tensor_train) // batch_size
+    steps_per_epoch = steps_per_epoch // batch_accumulate_num
     embedding_dim = 256
-    units = 1024
+    units = 512
     vocab_inp_size = len(inp_lang.word_index) + 1
     vocab_tar_size = len(targ_lang.word_index) + 1
 
-    dataset = tf.data.Dataset.from_tensor_slices((input_tensor_train, target_tensor_train)).shuffle(buffer_size)
-    dataset = dataset.batch(batch_size, drop_remainder=True)
-    example_input_batch, example_target_batch = next(iter(dataset))
+    train_dataset = tf.data.Dataset.from_tensor_slices((input_tensor_train, target_tensor_train)).shuffle(buffer_size_train)
+    train_dataset = train_dataset.batch(batch_size, drop_remainder=True)
+    example_input_batch, example_target_batch = next(iter(train_dataset))
 
-    return dataset, vocab_inp_size, vocab_tar_size, embedding_dim, units, batch_size, example_input_batch, steps_per_epoch, targ_lang, max_length_targ, max_length_inp, inp_lang, targ_lang
+    val_dataset = tf.data.Dataset.from_tensor_slices((input_tensor_val, target_tensor_val)).shuffle(buffer_size_val)
+    val_dataset = val_dataset.batch(batch_size, drop_remainder=True)
+
+    return train_dataset, val_dataset, vocab_inp_size, vocab_tar_size, embedding_dim, units, batch_size, batch_accumulate_num, example_input_batch, steps_per_epoch, targ_lang, max_length_targ, max_length_inp, inp_lang, targ_lang
 
 
 if __name__ == '__main__':

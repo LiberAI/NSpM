@@ -174,8 +174,13 @@ def read_template_file(file):
     line_number = 1
     with open(file) as f:
         for line in f:
-            values = line[:-1].split('\t')
-            target_classes = [values[0] or None, values[1] or None, values[2] or None]
+            target_classes = ""
+            try:
+                values = line[:-1].split('\t')
+                target_classes = [values[0] or None, values[1] or None, values[2] or None]
+            except:
+                values = line[:-1].split(';')
+                target_classes = [values[0] or None, values[1] or None, values[2] or None]
             question = values[3]
             query = values[4]
             generator_query = values[5]

@@ -51,7 +51,7 @@ def create_dataset(path, num_examples):
 
 def tokenize(lang):
   lang_tokenizer = tf.keras.preprocessing.text.Tokenizer(
-      filters='',lower=False)
+      filters='',lower=False, oov_token='OOV')
   lang_tokenizer.fit_on_texts(lang)
 
   tensor = lang_tokenizer.texts_to_sequences(lang)
@@ -76,3 +76,23 @@ def convert(lang, tensor):
   for t in tensor:
     if t!=0:
       print ("%d ----> %s" % (t, lang.index_word[t]))
+
+
+def merging_datafile(input_dir,output_dir):
+    input_diren=input_dir+'/data.en'
+    input_dirspq=input_dir+'/data.sparql'
+    output_dir+='/data.txt'
+    file1 = open(input_diren,'r',encoding="utf8")
+    Lines1 = file1.readlines()
+    file2 = open(input_dirspq,'r',encoding="utf8")
+    Lines2 = file2.readlines()
+    s=[]
+    for i in range(len(Lines1)):
+        s.append(Lines1[i].replace('\n'," ")+"\t "+Lines2[i])
+
+    filef = open(output_dir,'w',encoding="utf8")
+    filef.writelines(s)
+    file1.close()
+    file2.close()
+    filef.close()
+    return output_dir
