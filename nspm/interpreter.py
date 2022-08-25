@@ -25,6 +25,9 @@ from nmt import NeuralMT, NeuralMTConfig
 from prepare_dataset import preprocess_sentence
 from generator_utils import decode, fix_URI
 
+from airML import airML
+import json
+
 
 def evaluate(sentence, config, neural_mt):
 
@@ -168,16 +171,50 @@ def interpret(input_dir, queries):
 
   return sparql_queries
 
+def install_model(url):
+  output = airML.install(url, format='nspm')
+  output = json.loads(output)
+  if output['status_code'] == 200:
+      print(output['message'])
+  else:
+      raise Exception(output['message'])
+
+
+def locate_model(url):
+  install_model(url)
+  output = airML.locate(url, format='nspm')
+  output = json.loads(output)
+  if output['status_code'] == 200:
+      print(output['message'])
+      model_dir = output['results'][0]
+      return model_dir
+  else:
+      raise Exception(output['message'])
+
+
 if __name__ == '__main__':
   parser = argparse.ArgumentParser()
   requiredNamed = parser.add_argument_group('required named arguments')
   requiredNamed.add_argument(
-      '--input', dest='input', metavar='inputDirectory', help='dataset directory', required=True)
+        '--input', dest='input', metavar='inputDirectory', help='dataset directory', required=False)
   requiredNamed.add_argument(
-          '--query', dest='query', metavar='query', help='Input query in natural language', required=True)
+        '--airml', dest='airml', metavar='airmlURL', help='name of the knowledge base', required=False)
+  requiredNamed.add_argument(
+        '--query', dest='query', metavar='query', help='Input query in natural language', required=True)
+
 
   args = parser.parse_args()
-  input_dir = args.input
+
+  if args.input is not None:
+    model_dir = args.input
+    input_dir = args.input
+  elif args.airml is not None:
+    airml_url = args.airml
+    model_dir = locate_model(airml_url)
+    input_dir = model_dir
+  else:
+    print('--input or --airml argument should be provided to load the model.')
+
   query = args.query
 
   query = interpret(input_dir, [query])
