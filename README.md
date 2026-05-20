@@ -4,19 +4,13 @@
 
 A Machine-Translation Approach for Question Answering over Knowledge Graphs.
 
-![What does a NSpM do?](http://www.liberai.org/img/NSpM-image.png "What does a NSpM do?")
+![What does a NSpM do?](http://www.liberai.org/images/NSpM-image.png "What does a NSpM do?")
 
 ## IMPORTANT
 
 If you are looking for the code for papers _"SPARQL as a Foreign Language"_ and _"Neural Machine Translation for Query Construction and Composition"_ please checkout tag [v0.1.0-akaha](https://github.com/LiberAI/NSpM/tree/v0.1.0-akaha) or branch [v1](https://github.com/LiberAI/NSpM/tree/v1).
 
-## Install
-
-### Via pip
-
-Coming soon!
-
-### Local setup
+## Local setup
 
 Clone the repository.
 
