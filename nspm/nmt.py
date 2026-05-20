@@ -9,6 +9,10 @@ https://arxiv.org/abs/1708.07624
 Version 2.0.0
 
 """
+import os
+
+os.environ.setdefault("TF_USE_LEGACY_KERAS", "1")
+
 import tensorflow as tf
 
 import pickle

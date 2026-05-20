@@ -33,10 +33,6 @@ if __name__ == '__main__':
     MINIMUM = int(args.minimum)
     COMP = any if args.comp == 'any' else all
 
-    importlib.reload(sys)
-    sys.setdefaultencoding("utf-8")
-
-
     dataset_root, _ = os.path.splitext(dataset_file)
     used_resources_root, _ = os.path.splitext(used_resources_file)
     filtered_sparql_file = '{}_filtered_{:d}_{}.sparql'.format(dataset_root, MINIMUM, COMP.__name__)

@@ -1,6 +1,6 @@
 # 🤖 Neural SPARQL Machines
 
-[![Python 3.7](https://img.shields.io/badge/python-3.7-blue.svg)](https://www.python.org/downloads/release/python-370/)
+[![Python 3.11](https://img.shields.io/badge/python-3.11-blue.svg)](https://www.python.org/downloads/release/python-3110/)
 
 A Machine-Translation Approach for Question Answering over Knowledge Graphs.
 
@@ -56,7 +56,7 @@ This command will create a model checkpoints in `data/art_30` and some pickle fi
 Predict the SPARQL query for a given question it will store the detailed output in output_query.
 
 ```bash
-python nspm/interpreter.py --input data/art_30 --output data/art_30 --query "yuncken freeman has architected in how many cities?"
+python nspm/interpreter.py --input data/art_30 --query "yuncken freeman has architected in how many cities?"
 ```
 or, if you want to use NSpM with [airml](https://github.com/sahandilshan/airML) to install pre-trained models, follow these steps,
 1. Install airML latest version from [here](https://pypi.org/project/airML/)
@@ -70,7 +70,7 @@ python interpreter.py --airml http://nspm.org/art --output data/art_30 --inputst
 
 * Components of the [Adam Medical platform](https://www.graphen.ai/products/mi_feature.html) partly developed by [Jose A. Alvarado](https://www.linkedin.com/in/josealvaradoguzman/) at Graphen (including a humanoid robot called Dr Adam), rely on NSpM technology.
 * The [Telegram NSpM chatbot](https://github.com/AKSW/NSpM/wiki/NSpM-Telegram-Bot) offers an integration of NSpM with the Telegram messaging platform.
-* The [Google Summer of Code](https://summerofcode.withgoogle.com/) program has been supporting 6 students to work on NSpM-backed project "[A neural question answering model for DBpedia](https://github.com/dbpedia/neural-qa)" since 2018.
+* The [Google Summer of Code](https://summerofcode.withgoogle.com/) program has supported several contributors to work on NSpM-backed project "[A neural question answering model for DBpedia](https://github.com/dbpedia/neural-qa)" since 2018.
 * A [question answering system](https://github.com/qasim9872/question-answering-system) was implemented on top of NSpM by [Muhammad Qasim](https://github.com/qasim9872).
 
 ## Publications
@@ -133,4 +133,4 @@ python interpreter.py --airml http://nspm.org/art --output data/art_30 --inputst
 * Follow the [project on ResearchGate](https://www.researchgate.net/project/Neural-SPARQL-Machines).
 * Follow Liber AI Research on [Twitter](https://twitter.com/theLiberAI).
 
-<p align="center"><img tooltip="Liber AI" src="http://www.liberai.org/img/Liber-AI-logo-name-200px.png" alt="Liber AI logo" border="0"></p>
+<p align="center"><img tooltip="Liber AI" src="http://www.liberai.org/images/Liber-AI-logo-name-200px.png" alt="Liber AI logo" border="0"></p>

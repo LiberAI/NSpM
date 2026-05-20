@@ -13,6 +13,7 @@ import os
 
 # suppress tf and cuda messages
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
+os.environ.setdefault("TF_USE_LEGACY_KERAS", "1")
 import tensorflow as tf
 
 import argparse

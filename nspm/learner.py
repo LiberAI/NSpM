@@ -10,9 +10,12 @@ Version 2.0.0
 
 """
 import argparse
+import os
+
+os.environ.setdefault("TF_USE_LEGACY_KERAS", "1")
+
 import tensorflow as tf
 import numpy as np
-import os
 import io
 import time
 

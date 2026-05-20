@@ -170,9 +170,6 @@ if __name__ == '__main__':
     targets_file = args.target
     ask_output_file = args.generated
 
-    importlib.reload(sys)
-    sys.setdefaultencoding("utf-8")
-
     TESTS = {
         'valid_sparql': validate,
         'correct_query_type': check_type,

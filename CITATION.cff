@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the paper below."
+title: "Neural SPARQL Machines"
+type: software
+authors:
+  - family-names: Soru
+    given-names: Tommaso
+  - family-names: Marx
+    given-names: Edgard
+repository-code: "https://github.com/LiberAI/NSpM"
+preferred-citation:
+  type: conference-paper
+  title: "SPARQL as a Foreign Language"
+  year: 2017
+  authors:
+    - family-names: Soru
+      given-names: Tommaso
+    - family-names: Marx
+      given-names: Edgard
+    - family-names: Moussallem
+      given-names: Diego
+    - family-names: Publio
+      given-names: Gustavo
+    - family-names: Valdestilhas
+      given-names: André
+    - family-names: Esteves
+      given-names: Diego
+    - family-names: Baron Neto
+      given-names: Ciro
+  conference:
+    name: "13th International Conference on Semantic Systems (SEMANTiCS 2017) - Posters and Demos"
+  url: "https://arxiv.org/abs/1708.07624"
